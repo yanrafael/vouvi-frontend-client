@@ -6,7 +6,6 @@
 </p>
 
 <br>
-<br>
 <!-- Primeira linha de imagens -->
 <p align="center">
   <img src="image/HTML.png" alt="HTML" width="110" />
