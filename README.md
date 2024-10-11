@@ -1,3 +1,8 @@
+
+<p align="center">
+ <img src="image/FRONT-END.png" alt="HTML" width="300" />
+</p>
+
 <!-- Primeira linha de imagens -->
 <p align="center">
   <img src="image/HTML.png" alt="HTML" width="130" />
