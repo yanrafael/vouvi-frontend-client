@@ -1,12 +1,18 @@
 import HeaderWhite from "./components/Header/HeaderWhite";
 import Home from './components/pages/Home/Home'
-import Profile from './components/pages/profile/Profile'
+import Login from './components/pages/Login/Login'
+// import Profile from './components/pages/profile/Profile'
+
+import { Link, Route, Routes } from "react-router-dom";
 function App() {
 
   return (
     <>
       <HeaderWhite />
-      <Home/>
+      <Routes>
+        <Route Component={Home} path="/" />
+        <Route Component={Login} path="/login" />
+      </Routes>
     </>
   )
 }
