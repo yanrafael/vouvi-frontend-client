@@ -36,7 +36,7 @@ export default {
 
     extend: {
       fontFamily: {
-        sans: "['Outfit']",
+        sans: ["Outfit"],
       },
 
       borderRadius: {
