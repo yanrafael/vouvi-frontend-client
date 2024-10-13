@@ -4,7 +4,7 @@ import SecondaryButton from '../Buttons/SecondaryButton'
 
 function Header(){
     return(
-        <header className="flex justify-between items-center w-[88%] bg-black m-auto relative mt-10 ">
+        <header className="flex justify-between items-center w-[88%] m-auto relative mt-10 ">
             <LogoWhite Name={VouviWord}/>
             <SecondaryButton text={"Entrar"}/>
         </header>
