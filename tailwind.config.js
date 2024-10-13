@@ -34,6 +34,16 @@ export default {
       },
     },
 
+    fontSize: {
+      xs: ["0.875rem", "1rem"] /* 14px */,
+      sm: ["1rem", "1.5rem"] /* 16px */,
+      // base: ["1.5rem", "1.8rem"] /* 14px */,
+      base: ["2.25rem", "2.5rem"] /* 36px */,
+      lg: ["3rem", 1] /* 48px */,
+      xl: ["4rem", 1] /* 64px */,
+      "2xl": ["6rem", 1] /* 96px */,
+    },
+
     extend: {
       fontFamily: {
         sans: ["Outfit"],
