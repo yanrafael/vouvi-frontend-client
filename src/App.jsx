@@ -1,4 +1,3 @@
-import HeaderWhite from "./components/Header/HeaderWhite";
 import Home from './components/pages/Home/Home'
 import Login from './components/pages/Login/Login'
 
