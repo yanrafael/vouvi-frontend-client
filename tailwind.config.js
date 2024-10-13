@@ -33,7 +33,18 @@ export default {
         300: "#350223",
       },
     },
-    extend: {},
+
+    extend: {
+      fontFamily: {
+        sans: "[Outfit]",
+      },
+
+      borderRadius: {
+        sm: "20px",
+        md: "24px",
+        lg: "30px",
+      },
+    },
   },
   plugins: [],
 };
