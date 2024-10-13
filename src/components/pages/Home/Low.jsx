@@ -23,7 +23,7 @@ function Low() {
 
                 <div className="flex flex-col justify-center items-start ml-10 w-[40%]">
                     <div className="flex flex-col">
-                        <h1 className={`${TextGradient} text-2xl`}>A Gente Cresce Com Seu Feedback</h1>
+                        <h1 className={`${TextGradient} text-2xl font-medium`}>A Gente Cresce Com Seu Feedback</h1>
                         <p className={`${TextGradient} text-base mt-5 mb-16`}>Você faz parte do Time!<br /> Queremos te ouvir!</p>
                     </div>
                     <SecondaryButton text={"Enviar Feedback!"} />
@@ -31,11 +31,11 @@ function Low() {
             </section>
 
             <section>
-                <h1 className={`${TextGradient} text-2xl text-center xl:leading-[1.2] mt-[160px]`}>Escolha o plano para virar o jogo</h1>
-                <p>Do básico ao premium, tem um plano certinho pra sua caminhada financeira. Bora começar e subir de nível!</p>
-                <div className="flex justify-around">
+                <h1 className={`${TextGradient} text-2xl text-center xl:leading-[1.2] mt-[160px] font-medium`}>Escolha o plano para virar o jogo</h1>
+                <p className={`${TextGradient} text-base text-center m-auto mb-20 w-4/6`}>Do básico ao premium, tem um plano certinho pra sua caminhada financeira. Bora começar e subir de nível!</p>
+                <div className="flex justify-evenly">
                     <Subscription
-                        color={"bg-secondary-200"}
+                        color={"bg-[#007FFF99]"}
                         colortitle={"text-[#002952]"}
                         title={"Free"} price={"Gratuito"}
                         text1={"Acesso a materiais gratuitos de educação financeira"}
@@ -43,12 +43,13 @@ function Low() {
                         text3={"Ideal para quem está começando a aprender sobre finanças."}
                     />
                     <Subscription
-                        color={"bg-primary-200"}
+                        color={"bg-primary-200 border-8 border-black outline outline-8 outline-primary-300"}
                         colortitle={"text-[#35005B]"}
                         title={"Premium"} price={"R$29,99"} mes={"/Mês"}
                         text1={"Relatórios detalhados de despesas."}
                         text2={"Suporte financeira por chat."}
                         text3={"Ferramentas avançadas de orçamento e metas de poupança."}
+                        bold={"font-medium"}
                     />
                     <Subscription color={"bg-[#FFB12099]"}
                         colortitle={"text-[#583900]"}
@@ -60,8 +61,10 @@ function Low() {
                 </div>
             </section>
 
-            <section>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor ex repellat sint soluta explicabo libero voluptate dignissimos perferendis doloribus at, est quasi eaque ab, suscipit eos qui nostrum quas necessitatibus.</p>
+            <section className="w-8/12 m-auto ">
+                <p className={`${TextGradient} text-base text-center mt-[200px] font-light mb-16`}>
+                    Não deixe seu dinheiro trabalhar sozinho, venha com a gente e faça valer cada centavo! <strong className="font-bold">Junte-se à <strong className="text-primary-200 bg-black ">Vouvi</strong> e transforme sua vida financeira!</strong>
+                </p>
                 <PrimaryButton text={"Começar agora!"} />
             </section>
         </>

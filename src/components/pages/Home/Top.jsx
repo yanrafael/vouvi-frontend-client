@@ -14,10 +14,10 @@ function Top() {
             <section className="flex flex-col">
 
                 <div className="flex flex-col justify-center text-center m-auto text-white mt-[200px]">
-                    <h1 className="text-[90px] font-semibold leading-[0.85]"><strong className=" text-secondary-200 font-semibold drop-shadow-[0px_0px_50px_#007FFF] ">
-                        Transforme</strong> suas <strong className="text-primary-200 font-semibold">finanças</strong>
+                    <h1 className="text-[90px] font-normal leading-[0.85]"><strong className=" text-secondary-200 font-medium drop-shadow-[0px_0px_50px_#007FFF] ">
+                        Transforme</strong> suas <strong className="text-primary-200 font-medium">finanças</strong>
                         <br />
-                        em uma <strong className="text-primary-200 font-semibold">aventura</strong></h1>
+                        em uma <strong className="text-primary-200 font-medium">aventura</strong></h1>
                     <p className="text-[36px] mt-7">Aprenda a fazer essa grana durar!</p>
                 </div>
 
@@ -31,7 +31,7 @@ function Top() {
             </section>
 
             <h1
-                className={`flex text-2xl justify-center mt-40 mb-10 leading-[1.2] text-center ${TextGradient}`}>Educação Financeira
+                className={`flex text-2xl justify-center mt-40 mb-10 leading-[1.2] font-medium text-center ${TextGradient}`}>Educação Financeira
             </h1>
 
             <section className="flex justify-center">
