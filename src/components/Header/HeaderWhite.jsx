@@ -11,7 +11,7 @@ function Header(){
     </svg>
     
     return(
-        <header className="flex justify-between items-center w-[88%] m-auto relative mt-10 ">
+        <header className="flex justify-between items-center w-[88%] m-auto relative py-10 ">
             <LogoWhite Name={VouviWord} width={"111"} height={"61"}/>
             <SecondaryButton text={"Entrar"}/>
         </header>

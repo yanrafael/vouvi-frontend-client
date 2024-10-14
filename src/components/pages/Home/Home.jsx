@@ -5,13 +5,13 @@ import Mid from "./Mid"
 import Low from "./Low"
 function Home(){
     return(
-        <>
-        <HeaderWhite/>
-        <Top/>
-        <Mid/>
-        <Low/>
-        <Footer/>
-        </>
+        <main className=' overflow-x-hidden'>
+            <HeaderWhite/>
+            <Top/>
+            <Mid/>
+            <Low/>
+            <Footer/>
+        </main>
     )
 }
 export default Home
