@@ -4,6 +4,7 @@ import Cards from "../../Cards/MarketingCards";
 import FireIcon from '../../../assets/images/fire-icon.svg'
 import GreenIcon from '../../../assets/images/graphicgreen-icon.svg'
 import HeartIcon from '../../../assets/images/heart-icon.svg'
+import BackgroundV from '../../../assets/images/video-background.mp4'
 import { Icon } from '@iconify/react';
 function Top() {
 
@@ -12,6 +13,15 @@ function Top() {
     return (
         <>
             <section className="flex flex-col">
+                {/* Background */}
+                <div className="absolute top-0 w-full -z-10 h-screen overflow-hidden ">
+                    <video className="min-h-full opacity-20 object-cover blur-md  "
+                        src={BackgroundV}
+                        autoPlay
+                        muted
+                        loop>
+                    </video>
+                </div>
 
                 <div className="flex flex-col justify-center text-center m-auto text-white mt-[200px]">
                     <h1 className="text-[90px] font-normal leading-[0.85]"><strong className=" text-secondary-200 font-medium drop-shadow-[0px_0px_50px_#007FFF] ">
