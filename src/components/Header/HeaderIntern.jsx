@@ -38,7 +38,7 @@ function HeaderIntern() {
     </svg>
 
     return (
-        <header className=" flex items-center justify-between w-10/12 m-auto py-10">
+        <header className="flex items-center justify-around w-11/12 m-auto py-10">
             <LogoWhite Name={VouviWord} width={"111px"} />
             <nav className="flex">
                 <Navigation width={"w-[224px]"} icon={Learn} title={"Aprender"} />
@@ -62,6 +62,7 @@ function HeaderIntern() {
                 /> */}
 
             </div>
+            <hr className="h-[1px] border-0 absolute w-[100%] bg-[#F5F5F442] mt-36 left-0"/>
         </header>
     )
 }
