@@ -26,7 +26,7 @@ function Low() {
                         <h1 className={`${TextGradient} text-2xl font-medium`}>A Gente Cresce Com Seu Feedback</h1>
                         <p className={`${TextGradient} text-base mt-5 mb-16`}>Você faz parte do Time!<br /> Queremos te ouvir!</p>
                     </div>
-                    <SecondaryButton text={"Enviar Feedback!"} />
+                    <SecondaryButton color={"hover:text-white"} text={"Enviar Feedback!"} />
                 </div>
             </section>
 
@@ -38,25 +38,31 @@ function Low() {
                         color={"bg-[#007FFF99]"}
                         colortitle={"text-[#002952]"}
                         title={"Free"} price={"Gratuito"}
-                        text1={"Acesso a materiais gratuitos de educação financeira"}
+                        text1={"Acesso limitado às aulas de educação financeira."}
                         text2={"Dicas semanais sobre economia."}
-                        text3={"Ideal para quem está começando a aprender sobre finanças."}
+                        text3={"Ferramentas básicas de orçamento."}
+                        colorbutton={"bg-[#002952] hover:outline-[#002952] hover:text-[#002952] "}
+                        texthover={"Ideal para quem está começando a aprender sobre finanças."}
                     />
                     <Subscription
                         color={"bg-primary-200 border-8 border-black outline outline-8 outline-primary-300"}
                         colortitle={"text-[#35005B]"}
                         title={"Premium"} price={"R$29,99"} mes={"/Mês"}
-                        text1={"Relatórios detalhados de despesas."}
-                        text2={"Suporte financeira por chat."}
-                        text3={"Ferramentas avançadas de orçamento e metas de poupança."}
+                        text1={"Acesso a todas as aulas de educação financeira."}
+                        text2={"Ferramentas avançadas de orçamento e metas de poupança."}
+                        text3={"Relatórios mensais detalhados em PDF"}
                         bold={"font-medium"}
+                        colorbutton={"bg-primary-300 hover:outline-primary-300 hover:text-primary-300 "}
+                        texthover={"Perfeito para quem quer se aprofundar no controle financeiro."}
                     />
                     <Subscription color={"bg-[#FFB12099]"}
                         colortitle={"text-[#583900]"}
                         title={"Bussines"} price={"R$99,99"} mes={"/Mês"}
-                        text1={"Relatórios e controle de fluxo de caixa."}
+                        text1={"Todos os benefícios do Plano Premium"}
                         text2={"Múltiplos usuários com permissões personalizadas."}
-                        text3={"Suporte financeira especializada para negócios."}
+                        text3={`Suporte prioritário. `}
+                        colorbutton={"bg-[#6B4B08] hover:outline-[#6B4B08] hover:text-[#6B4B08] "}
+                        texthover={"Para profissionais e empresários que buscam otimizar finanças."}
                     />
                 </div>
             </section>
