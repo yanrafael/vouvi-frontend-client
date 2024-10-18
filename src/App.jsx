@@ -11,7 +11,8 @@ function App() {
         <Route Component={Home} path="/" />
         <Route Component={Login} path="/login" />
       </Routes>
-
+      <HeaderIntern /> {/* QA */}
+      <Profile/>
     </>
   )
 }
