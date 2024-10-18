@@ -1,6 +1,6 @@
 function Rewards({ xp, vicon, vcoin, gift, tgift, pad, pad2, pad3 }) {
     return (
-        <div className=" ml-10 w-[330px] p-5 bg-[#D9D9D9] rounded-md text-[32px] font-bold flex justify-between">
+        <div className=" ml-10 w-[400px] p-5 bg-[#D9D9D9] rounded-md text-[32px] font-bold flex justify-between">
             <div className={`${pad} bg-[#014085] flex flex-col items-center justify-center rounded-md `}>
                 <div className="bg-secondary-200 rounded-xl text-[#014085] px-2">XP</div>
                 <p className="text-secondary-200">{xp}</p>

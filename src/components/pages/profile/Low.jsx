@@ -14,8 +14,8 @@ function Low({ friends }) {
                 </div>
                 <div>
                     <Friends icon={"red"} name={"Wesley rocha"} level={"15"} xp={"7.000"} vcoin={"5.000"} />
-                    <Friends icon={"red"} name={"Wesley rocha"} level={"15"} xp={"7.000"} vcoin={"5.000"} />
-                    <Friends icon={"red"} name={"Wesley rocha"} level={"15"} xp={"7.000"} vcoin={"5.000"} />
+                    <Friends icon={"blue"} name={"Wesley rocha"} level={"15"} xp={"7.000"} vcoin={"5.000"} />
+                    <Friends icon={"green"} name={"Wesley rocha"} level={"15"} xp={"7.000"} vcoin={"5.000"} />
                 </div>
                 <div className='flex justify-end mx-5 mt-3 items-center'>
                     <p className='font-extralight text-[32px] mx-2'>Ver todos</p>
