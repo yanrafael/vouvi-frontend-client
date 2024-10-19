@@ -7,6 +7,19 @@
         font-family: Outfit;
         src: url("/fonts/Outfit/Outfit-VariableFont_wght.ttf");
     }
+
+    progress::-moz-progress-bar {
+        @apply bg-secondary-200;
+    }
+
+    progress::-webkit-progress-value {
+        @apply bg-secondary-200;
+
+    }
+
+    progress {
+        @apply text-secondary-200;
+    }
 }
 
 @layer components {
