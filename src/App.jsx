@@ -1,6 +1,6 @@
 import Home from './components/pages/Home/Home'
 import Login from './components/pages/Login/Login'
-import CreateAccount from './components/pages/Login/CreateAccount';
+import CreateAccount from './components/pages/CreateAccount/CreateAccount';
 import Profile from './components/pages/profile/Profile';
 import HeaderIntern from './components/Header/HeaderIntern';
 import { Route, Routes } from "react-router-dom";
