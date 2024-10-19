@@ -26,7 +26,7 @@ function Low() {
                         <h1 className={`${TextGradient} text-2xl font-medium`}>A Gente Cresce Com Seu Feedback</h1>
                         <p className={`${TextGradient} text-base mt-5 mb-16`}>Você faz parte do Time!<br /> Queremos te ouvir!</p>
                     </div>
-                    <SecondaryButton color={"hover:text-white"} text={"Enviar Feedback!"} />
+                    <SecondaryButton color={"hover:text-white bg-white"} text={"Enviar Feedback!"} />
                 </div>
             </section>
 
@@ -41,7 +41,7 @@ function Low() {
                         text1={"Acesso limitado às aulas de educação financeira."}
                         text2={"Dicas semanais sobre economia."}
                         text3={"Ferramentas básicas de orçamento."}
-                        colorbutton={"bg-[#002952] hover:outline-[#002952] hover:text-[#002952] "}
+                        colorbutton={"bg-[#002952] hover:outline-[#002952] hover:text-[#002952]"}
                         texthover={"Ideal para quem está começando a aprender sobre finanças."}
                     />
                     <Subscription
