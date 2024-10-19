@@ -13,8 +13,6 @@ function App() {
         <Route Component={Login} path="/login" />
         <Route Component={CreateAccount} path="/create-account" />
       </Routes>
-      <HeaderIntern /> {/* QA */}
-      <Profile />
     </>
   )
 }

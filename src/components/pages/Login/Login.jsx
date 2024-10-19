@@ -19,7 +19,7 @@ function Form() {
                 <input className="w-full bg-primary-200 hover:bg-secondary-200 text-white hover:text-secondary-300 transition-all hover:cursor-pointer py-4 rounded-md text-base font-bold" type="submit" value="Entrar" />
 
                 <div className="flex justify-between">
-                    <Link className="login-link" to="/new-account">criar conta</Link> <Link className="login-link" to="/forget-password">esqueci a senha</Link>
+                    <Link className="login-link" to="/create-account">criar conta</Link> <Link className="login-link" to="/forget-password">esqueci a senha</Link>
                 </div>
 
                 <div className="w-full my-5 flex flex-row justify-center items-center gap-5">
