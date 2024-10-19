@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import PasswordInput from "./PasswordInput";
-import KeepConected from "./KeepConected";
+import PasswordInput from "../../Forms/PasswordInput";
+import KeepConected from "../../Forms/Radio";
 
 function Form() {
-    let logged = false
-
     return (
         <div className="flex justify-center items-center h-[90vh] m-5">
             <form className="flex flex-col gap-4 bg-white bg-opacity-90 w-[40%] h-full rounded-sm p-10" action="">
