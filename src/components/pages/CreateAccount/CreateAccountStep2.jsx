@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { Icon } from "@iconify/react";
 import ProgressBar from "../../Forms/ProgressBar";
 
-function CreateAccountStep1({ pais = "Brasil", setPais, cep, setCep, estado, setEstado, cidade, setCidade }) {
+function CreateAccountStep2({ pais = "Brasil", setPais, cep, setCep, estado, setEstado, cidade, setCidade }) {
     return (
         <>
-            <ProgressBar value={20} />
+            <ProgressBar value={40} />
 
             {/* Área onde o usuário insere informações */}
             <div className="flex flex-col gap-5 justify-around">
@@ -38,7 +37,7 @@ function CreateAccountStep1({ pais = "Brasil", setPais, cep, setCep, estado, set
                 </div>
 
                 <div className="flex flex-row justify-around">
-                    <span className="flex flex-col w-[40%]">
+                    <span className="flex flex-col w-[25%]">
                         <label className="text-base w-fit" htmlFor="">Estado:</label>
                         <input
                             className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
@@ -49,7 +48,18 @@ function CreateAccountStep1({ pais = "Brasil", setPais, cep, setCep, estado, set
                             required
                         />
                     </span>
-                    <span className="flex flex-col w-[40%]">
+                    <span className="flex flex-col w-[25%]">
+                        <label className="text-base w-fit" htmlFor="">Cidade:</label>
+                        <input
+                            className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
+                            type="text"
+                            name="city"
+                            id="city"
+                            placeholder=""
+                            required
+                        />
+                    </span>
+                    <span className="flex flex-col w-[25%]">
                         <label className="text-base w-fit" htmlFor="">Cidade:</label>
                         <input
                             className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
@@ -73,20 +83,8 @@ function CreateAccountStep1({ pais = "Brasil", setPais, cep, setCep, estado, set
                 type="button"
                 value="Próximo"
             />
-
-            <div className="w-full my-5 flex flex-row justify-center items-center gap-5">
-                <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>
-                OU
-                <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>
-            </div>
-
-            <div className="flex flex-row justify-center items-center gap-3">
-                <span className="cursor-pointer border-4 p-1 bg-white border-secondary-200 rounded-full"><Icon icon={"flat-color-icons:google"} width={"60px"} /></span>
-                <span className="cursor-pointer border-4 p-1 bg-white border-secondary-200 rounded-full"><Icon icon={"ic:baseline-facebook"} width={"60px"} /></span>
-                <span className="cursor-pointer border-4 p-1 bg-white border-secondary-200 rounded-full"><Icon icon={"ic:baseline-apple"} width={"60px"} /></span>
-            </div>
         </>
     );
 }
 
-export default CreateAccountStep1
+export default CreateAccountStep2
