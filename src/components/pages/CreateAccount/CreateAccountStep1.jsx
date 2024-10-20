@@ -1,64 +1,36 @@
-import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import ProgressBar from "../../Forms/ProgressBar";
+import Label from "../../Forms/Label";
+import Input from "../../Forms/Input";
+import Submit from "../../Forms/Submit";
 
-function CreateAccountStep1({ pais = "Brasil", setPais, cep, setCep, estado, setEstado, cidade, setCidade }) {
+function CreateAccountStep1({ setStep, cep, setCep, state, setState, city, setCity }) {
+
     return (
         <>
-            <ProgressBar value={20} />
+            <ProgressBar value={0} />
 
             {/* Área onde o usuário insere informações */}
             <div className="flex flex-col gap-5 justify-around">
-                <div className="flex flex-row justify-around">
-                    <span className="flex flex-col w-[40%]">
-                        <label className="text-base w-fit" htmlFor="">País:</label>
-                        <input
-                            className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-black focus:outline outline-secondary-200 text-base"
-                            type="text"
-                            name="country"
-                            id="country"
-                            value={pais}
-                            onChange={e => setPais(e.target.value)}
-                            readOnly
-                        />
+                <div className="grid grid-cols-2 gap-4">
+                    <span className="grid">
+                        <Label htmlFor="country">País:</Label>
+                        <Input name="country" id="country" value={"Brasil"} isReadOnly />
                     </span>
-                    <span className="flex flex-col w-[40%]">
-                        <label className="text-base w-fit" htmlFor="">CEP:</label>
-                        <input
-                            className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
-                            type="text"
-                            value={cep}
-                            onChange={e => setCep(e.target.value)}
-                            name="cep"
-                            id="cep"
-                            placeholder=""
-                            required
-                        />
-                    </span>
-                </div>
 
-                <div className="flex flex-row justify-around">
-                    <span className="flex flex-col w-[40%]">
-                        <label className="text-base w-fit" htmlFor="">Estado:</label>
-                        <input
-                            className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
-                            type="text"
-                            name="state"
-                            id="state"
-                            placeholder=""
-                            required
-                        />
+                    <span className="grid">
+                        <Label htmlFor="cep">CEP:</Label>
+                        <Input name="cep" id="cep" value={cep} onChange={(e) => setCep(e.target.value)} isRequired />
                     </span>
-                    <span className="flex flex-col w-[40%]">
-                        <label className="text-base w-fit" htmlFor="">Cidade:</label>
-                        <input
-                            className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
-                            type="text"
-                            name="city"
-                            id="city"
-                            placeholder=""
-                            required
-                        />
+
+                    <span className="grid">
+                        <Label htmlFor="state">Estado:</Label>
+                        <Input name="state" id="State" value={state} onChange={(e) => setState(e.target.value)} isRequired />
+                    </span>
+
+                    <span className="grid">
+                        <Label htmlFor="city">Cidade:</Label>
+                        <Input name="city" id="city" value={city} onChange={(e) => setCity(e.target.value)} isRequired />
                     </span>
                 </div>
             </div>
@@ -68,11 +40,7 @@ function CreateAccountStep1({ pais = "Brasil", setPais, cep, setCep, estado, set
             </p>
 
             {/* Botão de enviar/próximo */}
-            <input
-                className="w-full bg-primary-200 hover:bg-secondary-200 text-white hover:text-secondary-300 transition-all hover:cursor-pointer py-4 rounded-md text-base font-bold"
-                type="button"
-                value="Próximo"
-            />
+            <Submit setStep={setStep} text={"Próximo"} />
 
             <div className="w-full my-5 flex flex-row justify-center items-center gap-5">
                 <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>

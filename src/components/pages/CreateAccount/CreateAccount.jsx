@@ -1,16 +1,57 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CreateAccountStep1 from "./CreateAccountStep1";
 import CreateAccountStep2 from "./CreateAccountStep2";
+import CreateAccountStep3 from "./CreateAccountStep3";
 
 function CreateAccount() {
-    const [step, setStep] = useState(2);
+    const [step, setStep] = useState(1);
+
+    // Step 1
+    const [cep, setCep] = useState();
+    const [state, setState] = useState();
+    const [city, setCity] = useState();
+
+    // Step 2
+    const [day, setDay] = useState(1);
+    const [month, setMonth] = useState(1);
+    const [year, setYear] = useState(2000);
+    const [age, setAge] = useState(1);
+    const [gender, setGender] = useState("select");
+    const [pronoum, setPronoum] = useState("select");
+
+    // Step 3
+    const [username, setUsername] = useState();
+    const [name, setName] = useState();
+    const [lastName, setLastName] = useState();
+
+    // Calcula a idade
+    useEffect(() => {
+
+        const date = new Date()
+
+        if (year < 1900 || year > date.getUTCFullYear()) {
+            return;
+        }
+
+        if (month < 1 || month > 12) {
+            return;
+        }
+
+        if (day < 1 || day > 31) {
+            return;
+        }
+
+        setAge(date.getUTCFullYear() - year);
+    }, [day, month, year])
 
     const verifyStep = () => {
         switch (step) {
             case 1:
-                return (<CreateAccountStep1 />);
+                return (<CreateAccountStep1 setStep={setStep} cep={cep} setCep={setCep} state={state} setState={setState} city={city} setCity={setCity} />);
             case 2:
-                return (<CreateAccountStep2 />)
+                return (<CreateAccountStep2 setStep={setStep} day={day} setDay={setDay} month={month} setMonth={setMonth} year={year} setYear={setYear} age={age} setAge={setAge} gender={gender} setGender={setGender} pronoum={pronoum} setPronoum={setPronoum} />)
+            case 3:
+                return (<CreateAccountStep3 setStep={setStep} username={username} setUsername={setUsername} name={name} setName={setName} lastName={lastName} setLastName={setLastName} />)
             default:
                 break;
         }
@@ -19,7 +60,7 @@ function CreateAccount() {
     return (
         <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5">
             <form className="flex flex-col justify-around gap-4 bg-white bg-opacity-90 w-[600px] h-full rounded-sm p-10" action="">
-                <h1 onClick={() => setStep(s => s + 1)} className="text-lg text-center font-bold">Criar uma conta</h1>
+                <h1 className="text-lg text-center font-bold">Criar uma conta</h1>
 
                 {verifyStep()}
             </form>
