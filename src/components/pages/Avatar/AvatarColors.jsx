@@ -24,7 +24,7 @@ function AvatarColors() {
 
     return (
         <div className="bg-[#151515] w-[520px] flex flex-col items-center py-10 rounded-md">
-            <div className={`w-10/12 bg-[${Bg[IconBorder]}] flex pt-16 rounded-md border-[10px] border-black transition-all duration-500`}>
+            <div style={{ backgroundColor: Bg[IconBorder] }} className={`w-10/12 flex pt-16 rounded-md border-[10px] border-black transition-all duration-500`}>
                 {AvatarStyle}
             </div>
             <div className="flex w-10/12 justify-around py-6">
