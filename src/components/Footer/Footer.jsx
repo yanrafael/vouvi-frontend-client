@@ -12,7 +12,7 @@ function Footer() {
 
     return (
         <footer className="flex justify-around p-12 w-12/12 m-auto items-center bg-primary-200 mt-60">
-            <LogoWhite Name={VouviWord} width={"60"} />
+            <LogoWhite Name={VouviWord} width={"90"} />
             <p className=" text-center font-light text-[24px] text-white">© 2024 Vouvi. Todos os direitos reservados.</p>
             <div className="flex">
                 {/* Insta */}
