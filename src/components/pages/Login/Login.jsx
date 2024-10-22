@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import PasswordInput from "./PasswordInput";
-import KeepConected from "./KeepConected";
+import PasswordInput from "../../Forms/PasswordInput";
+import KeepConected from "../../Forms/Radio";
 
 function Form() {
-    let logged = false
-
     return (
-        <div className="flex justify-center items-center h-[90vh] m-5">
-            <form className="flex flex-col gap-4 bg-white bg-opacity-90 w-[40%] h-full rounded-sm p-10" action="">
+        <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5">
+            <form className="flex flex-col justify-around gap-4 bg-white bg-opacity-90 w-[40%] h-full rounded-sm p-10" action="">
                 <h1 className="text-lg text-center font-bold">Bem vindo de volta</h1>
 
                 <label className="text-base" htmlFor="email">E-mail:</label>
@@ -21,7 +19,7 @@ function Form() {
                 <input className="w-full bg-primary-200 hover:bg-secondary-200 text-white hover:text-secondary-300 transition-all hover:cursor-pointer py-4 rounded-md text-base font-bold" type="submit" value="Entrar" />
 
                 <div className="flex justify-between">
-                    <Link className="login-link" to="/new-account">criar conta</Link> <Link className="login-link" to="/forget-password">esqueci a senha</Link>
+                    <Link className="login-link" to="/create-account">criar conta</Link> <Link className="login-link" to="/forget-password">esqueci a senha</Link>
                 </div>
 
                 <div className="w-full my-5 flex flex-row justify-center items-center gap-5">

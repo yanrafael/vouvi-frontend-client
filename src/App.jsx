@@ -1,5 +1,6 @@
 import Home from './components/pages/Home/Home'
 import Login from './components/pages/Login/Login'
+import CreateAccount from './components/pages/CreateAccount/CreateAccount';
 import Profile from './components/pages/profile/Profile';
 import HeaderIntern from './components/Header/HeaderIntern';
 import Store from './components/pages/Store/Store';
@@ -14,12 +15,8 @@ function App() {
       <Routes>
         <Route Component={Home} path="/" />
         <Route Component={Login} path="/login" />
+        <Route Component={CreateAccount} path="/create-account" />
       </Routes>
-      <About/> {/* QA */}
-      <HeaderIntern /> {/* QA */}
-      <Store/> {/* QA */}
-      <Profile/>
-      <Avatar/> {/* QA */}
     </>
   )
 }
