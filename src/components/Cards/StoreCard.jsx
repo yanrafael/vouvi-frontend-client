@@ -1,6 +1,6 @@
 function StoreCards({children,color}) {
     return (
-        <div className="bg-black rounded-md p-5 flex flex-col items-center w-[290px] mx-3 mb-5">
+        <div className="bg-black rounded-md p-5 flex flex-col items-center w-[290px] mx-3 mb-5 flex-none">
             <div className={`${color} w-full h-[230px] rounded-sm flex items-center justify-center`}>
                 {children}
             </div>

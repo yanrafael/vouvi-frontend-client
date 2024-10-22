@@ -12,7 +12,7 @@ function StoreDoubleCard({ icon1, icon2, title1, title2, text1, text2, color1, i
                 <p className='font-extralight'>{text1}</p>
             </div>
 
-            <div className='flex justify-between flex-wrap'>
+            <div className='flex justify-between overflow-x-scroll'>
                 <StoreCard color={color1}>
                     <img className='rounded-sm' src={img1} alt="" />
                 </StoreCard>
@@ -38,7 +38,7 @@ function StoreDoubleCard({ icon1, icon2, title1, title2, text1, text2, color1, i
                 <p className='font-extralight'>{text2}</p>
             </div>
 
-            <div className='flex justify-between flex-wrap'>
+            <div className='flex justify-between overflow-x-scroll'>
                 <StoreCard color={'bg-white'}>
                     <img className='rounded-sm' src={img6} alt="" />
                 </StoreCard>

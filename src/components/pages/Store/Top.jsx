@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Icon } from '@iconify/react';
 function Top() {
 
-    const activeButtonColor = 'bg-white text-black'
+    const activeButtonColor = 'bg-white text-[#02020b]'
     const [btColor,noBtColor] = useState(0)
 
     const activeButton = (index) =>{
