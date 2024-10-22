@@ -1,5 +1,4 @@
 import Avatar from '../../../assets/images/avatar.svg'
-import AvatarBg from '../../../assets/images/avatar-background.svg'
 import ProfileTags from '../../Cards/ProfileTags'
 import CoinCard from '../../Cards/CoinCard'
 import Vicon from '../../../assets/images/vcoins-icon.svg'
