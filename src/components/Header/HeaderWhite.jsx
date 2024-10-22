@@ -13,7 +13,7 @@ function Header(){
     return(
         <header className="flex justify-between items-center w-[88%] m-auto relative py-10 ">
             <LogoWhite Name={VouviWord} width={"111"} height={"61"}/>
-            <SecondaryButton text={"Entrar"}/>
+            <SecondaryButton color={"hover:text-secondary-200 bg-white"} text={"Entrar"}/>
         </header>
     )
 }

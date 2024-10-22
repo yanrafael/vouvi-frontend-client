@@ -3,6 +3,7 @@ import Login from './components/pages/Login/Login'
 import Profile from './components/pages/profile/Profile';
 import HeaderIntern from './components/Header/HeaderIntern';
 import About from './components/pages/About/About';
+import Avatar from './components/pages/Avatar/Avatar';
 import { Route, Routes } from "react-router-dom";
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <About/> {/* QA */}
       <HeaderIntern /> {/* QA */}
       <Profile/>
+      <Avatar/> {/* QA */}
     </>
   )
 }
