@@ -3,6 +3,7 @@ import CreateAccountStep1 from "./CreateAccountStep1";
 import CreateAccountStep2 from "./CreateAccountStep2";
 import CreateAccountStep3 from "./CreateAccountStep3";
 import CreateAccountStep4 from "./CreateAccountStep4";
+import CreateAccountStep5 from "./CreateAccountStep5";
 
 function CreateAccount() {
   const [step, setStep] = useState(1);
@@ -102,6 +103,8 @@ function CreateAccount() {
             setPassword={setPassword}
           />
         );
+      case 5:
+        return <CreateAccountStep5 />;
       default:
         break;
     }
