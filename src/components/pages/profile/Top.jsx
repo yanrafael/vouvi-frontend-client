@@ -17,7 +17,7 @@ function Top() {
             <div className='flex flex-col justify-evenly font-medium ml-16 text-white w-6/12'>
                 <h1 className='text-lg'>Ana carolina</h1>
                 <div className=' bg-blue-500 w-[70%] bg-[#014085] rounded-md px-6'>
-                    <div className='flex justify-between text-[32px] font-semibold'>
+                    <div className='flex justify-between text-[32px] font-semibold text-right'>
                         <h2>Nivel</h2>
                         <h2 className='text-secondary-200'>Faltam 200XP</h2>
                     </div>
