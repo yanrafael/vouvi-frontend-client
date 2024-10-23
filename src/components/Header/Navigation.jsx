@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import PropTypes from "prop-types";
 function Navigation({ icon, title, width, fill }) {
 
 
@@ -18,6 +17,13 @@ function Navigation({ icon, title, width, fill }) {
             </p>
         </li>
     );
+}
+
+Navigation.propTypes = {
+    icon: PropTypes.element,
+    title: PropTypes.string,
+    width: PropTypes.string,
+    fill: PropTypes.string,
 }
 
 export default Navigation;

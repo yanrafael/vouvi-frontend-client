@@ -1,6 +1,6 @@
 import Avatar from '../../../assets/images/avatar.svg'
 import PrimaryButton from '../../Buttons/PrimaryButton'
-function CreateAvatar(){
+function CreateAvatar({onClick}){
     return(
         <section className="bg-[#151515] w-[600px] flex flex-col items-center py-10 rounded-md">
 
@@ -15,7 +15,7 @@ function CreateAvatar(){
                 <img width={'400'} src={Avatar} alt="" />
             </div>
 
-            <PrimaryButton color={"mt-[45px]"} text={"Criar agora"}/>
+            <PrimaryButton onClick={onClick} color={"mt-[45px]"} text={"Criar agora"}/>
         </section>
     )
 }

@@ -43,7 +43,6 @@ function HeaderIntern() {
       setActiveIcon(iconId); // Ativa o ícone clicado
     }
   };
-
   const Learn = (
     <svg
       className="m-1 overflow-visible"
@@ -71,7 +70,6 @@ function HeaderIntern() {
       />
     </svg>
   );
-
   const Planning = (
     <svg
       className="m-1 overflow-visible"

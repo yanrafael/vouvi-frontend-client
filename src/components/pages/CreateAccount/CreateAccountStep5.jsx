@@ -70,7 +70,7 @@ function CreateAccountStep5() {
       </p>
 
       {/* Botão de enviar/próximo */}
-      <Link to="/">
+      <Link to="/avatar">
         <SubmitButton text={"Confirmar"} onClick={() => {}} />
       </Link>
     </>
