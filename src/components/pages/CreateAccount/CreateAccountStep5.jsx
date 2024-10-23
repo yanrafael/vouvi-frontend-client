@@ -5,54 +5,71 @@ function CreateAccountStep5() {
   // const inputs = document.querySelectorAll(".inputs");
   // const container = document.getElementById('input-container');
 
-    const changeToNext = (e) => {
-      const nextInput = e.target.nextElementSibling;
+  const changeToNext = (e) => {
+    const nextInput = e.target.nextElementSibling;
+    const previousInput = e.target.previousElementSibling;
 
-        if (nextInput && e.value !== "") {
-          console.log(nextInput);
-        }
+    if (nextInput && e.target.value.trim() !== "") {
+      nextInput.focus();
     }
+
+    if (e.code == "Backspace" && previousInput) {
+      previousInput.focus();
+    }
+  };
 
   return (
     <>
-      <ProgressBar value={60} />
+      <ProgressBar value={80} />
+
+      <h2 className="text-lg text-center">
+        Agora é só
+        <br />
+        confirmar o seu e-mail
+      </h2>
 
       {/* Área onde o usuário insere informações */}
       <div>
-        <h2>Agora é só confirmar o seu e-mail</h2>
-        <div id="input-container" className="flex justify-center items-center gap-4">
+        <div
+          id="input-container"
+          className="flex justify-center mt-16 mb-0 items-center gap-4"
+        >
           <input
-            className="w-20 h-20 text-base text-center border-none rounded-md font-bold cursor-pointer"
+            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="w-20 h-20 text-base text-center border-none rounded-md font-bold cursor-pointer"
+            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="w-20 h-20 text-base text-center border-none rounded-md font-bold cursor-pointer"
+            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="w-20 h-20 text-base text-center border-none rounded-md font-bold cursor-pointer"
+            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
             type="text"
             maxLength={1}
             required
+            onKeyUp={changeToNext}
           />
         </div>
       </div>
+      <p className="text-center mt-0 p-0">
+        Enviamos um código de 4 digitos no seu email
+      </p>
 
       {/* Botão de enviar/próximo */}
-      <SubmitButton />
+      <SubmitButton text={"Confirmar"} onClick={() => {}} />
     </>
   );
 }
