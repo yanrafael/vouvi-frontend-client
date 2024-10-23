@@ -4,7 +4,7 @@ import Cards from "../../Cards/MarketingCards";
 import FireIcon from "../../../assets/images/fire-icon.svg";
 import GreenIcon from "../../../assets/images/graphicgreen-icon.svg";
 import HeartIcon from "../../../assets/images/heart-icon.svg";
-import BackgroundV from "../../../assets/images/video-background.mp4";
+import BackgroundV from "../../../assets/videos/video-background.mp4";
 // import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
