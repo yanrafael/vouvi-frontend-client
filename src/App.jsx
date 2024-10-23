@@ -20,7 +20,8 @@ function App() {
         <Route Component={Avatar} path="/avatar" />
         <Route Component={About} path="/about" />
         <Route Component={Profile} path="/profile" />
-        <Route Component={GameHome} path="/app" />
+        <Route Component={GameHome} path="/learn" />
+        <Route Component={Home} path="/*" />
       </Routes>
     </>
   );
