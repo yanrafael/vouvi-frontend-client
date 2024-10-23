@@ -2,10 +2,9 @@ import Home from "./components/pages/Home/Home";
 import Login from "./components/pages/Login/Login";
 import CreateAccount from "./components/pages/CreateAccount/CreateAccount";
 import Store from "./components/pages/Store/Store";
-import Avatar from "./components/pages/Avatar/Avatar";
 import About from "./components/pages/About/About";
 import Profile from "./components/pages/profile/Profile";
-import GameHome from "./components/pages/GameHome/GameHome";
+import Learn from "./components/pages/Learn/Learn";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -17,10 +16,9 @@ function App() {
         <Route Component={Login} path="/login" />
         <Route Component={CreateAccount} path="/create-account" />
         <Route Component={Store} path="/store" />
-        <Route Component={Avatar} path="/avatar" />
         <Route Component={About} path="/about" />
         <Route Component={Profile} path="/profile" />
-        <Route Component={GameHome} path="/learn" />
+        <Route Component={Learn} path="/learn" />
         <Route Component={Home} path="/*" />
       </Routes>
     </>
