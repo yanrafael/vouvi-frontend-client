@@ -3,12 +3,14 @@ import PrimaryButton from "../../Buttons/PrimaryButton";
 import StoreButton from "../../Buttons/StoreButton";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+
 function Top() {
-  const [btColor, noBtColor] = useState(0);
+  const [btnColor, setBtnColor] = useState(0);
 
   const activeButton = (index) => {
-    noBtColor(index);
+    setBtnColor(index);
   };
+
   return (
     <>
       <section className="w-11/12 m-auto flex justify-between bg-primary-100 outline outline-[26px] outline-[#7C20BE33] rounded-md px-10 pt-10 mt-24">
@@ -34,45 +36,65 @@ function Top() {
             <p className="font-light">Gaste vcoins!</p>
           </div>
 
-          <div onClick={() => activeButton(0)}>
+          <div onClick={() => setBtnColor(0)}>
             <StoreButton
-              color={`${btColor === 0 ? 'bg-white text-[#02020b]' : ""}`}
+              color={
+                btnColor === 0
+                  ? "bg-white text-black"
+                  : "bg-[#1F1F1F] text-white"
+              }
               text={"Todos"}
             >
               <Icon icon={"solar:star-shine-bold"} />
             </StoreButton>
           </div>
 
-          <div onClick={() => activeButton(1)}>
+          <div onClick={() => setBtnColor(1)}>
             <StoreButton
-              color={`${btColor === 1 ? 'bg-white text-[#02020b]' : ""}`}
+              color={
+                btnColor === 1
+                  ? "bg-white text-black"
+                  : "bg-[#1F1F1F] text-white"
+              }
               text={"Olhos"}
             >
               <Icon icon={"mingcute:eye-fill"} />
             </StoreButton>
           </div>
 
-          <div onClick={() => activeButton(2)}>
+          <div onClick={() => setBtnColor(2)}>
             <StoreButton
-              color={`${btColor === 2 ? 'bg-white text-[#02020b]' : ""}`}
+              color={
+                btnColor === 2
+                  ? "bg-white text-black"
+                  : "bg-[#1F1F1F] text-white"
+              }
               text={"Pelos"}
             >
               <Icon icon={"icon-park-outline:texture"} />
             </StoreButton>
           </div>
 
-          <div onClick={() => activeButton(3)}>
+          <div onClick={() => setBtnColor(3)}>
             <StoreButton
-              color={`${btColor === 3 ? 'bg-white text-[#02020b]' : ""}`}
+              color={
+                btnColor === 3
+                  ? "bg-white text-black"
+                  : "bg-[#1F1F1F] text-white"
+              }
               text={"Coleiras"}
             >
               <Icon icon={"carbon:circle-dash"} />
             </StoreButton>
           </div>
 
-          <div onClick={() => activeButton(4)}>
+          <div onClick={() => setBtnColor(4)}>
             <StoreButton
-              color={`${btColor === 4 ? 'bg-white text-[#02020b]' : ""}`}
+              color={
+                btnColor === 4
+                  ? "bg-white text-black"
+                  : "bg-[#1F1F1F] text-white"
+              }
               text={"Pingente"}
             >
               <Icon icon={"mdi:necklace"} />
@@ -81,7 +103,7 @@ function Top() {
 
           <div onClick={() => activeButton(5)}>
             <StoreButton
-              color={`${btColor === 5 ? 'bg-white text-[#02020b]' : ""}`}
+              color={`${btnColor === 5 ? "bg-white text-[#02020b]" : ""}`}
               text={"Fundos"}
             >
               <Icon icon={"mynaui:square-solid"} />
