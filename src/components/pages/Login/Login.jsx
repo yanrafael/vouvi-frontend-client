@@ -23,7 +23,7 @@ function Form() {
           E-mail:
         </label>
         <input
-          className="bg-black bg-opacity-15 p-1 w-full border-b-4 border-b-secondary-200 focus:outline outline-secondary-200 text-base"
+          className="bg-black bg-opacity-15 p-1 w-full border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:outline-none text-base transition-all"
           type="email"
           name="email"
           id="email"
