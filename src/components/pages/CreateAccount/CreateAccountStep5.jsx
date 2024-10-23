@@ -1,5 +1,6 @@
 import ProgressBar from "../../Forms/ProgressBar";
 import SubmitButton from "../../Forms/SubmitButton";
+import { Link } from "react-router-dom";
 
 function CreateAccountStep5() {
   // const inputs = document.querySelectorAll(".inputs");
@@ -69,7 +70,9 @@ function CreateAccountStep5() {
       </p>
 
       {/* Botão de enviar/próximo */}
-      <SubmitButton text={"Confirmar"} onClick={() => {}} />
+      <Link to="/">
+        <SubmitButton text={"Confirmar"} onClick={() => {}} />
+      </Link>
     </>
   );
 }
