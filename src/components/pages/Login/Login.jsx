@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import PasswordInput from "../../Forms/PasswordInput";
 import KeepConected from "../../Forms/Radio";
+import bgVideo from "/src/assets/videos/video-background.mp4";
 
 function Form() {
   return (
     <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5">
+      <video
+        src={bgVideo}
+        className="absolute -z-10 opacity-40"
+        autoPlay
+        loop
+      ></video>
       <form
         className="flex flex-col justify-around gap-4 bg-white bg-opacity-90 w-[600px] h-full rounded-sm p-10"
         action=""
