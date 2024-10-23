@@ -4,7 +4,6 @@ import StoreButton from "../../Buttons/StoreButton";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 function Top() {
-  const activeButtonColor = "bg-white text-[#02020B]";
   const [btColor, noBtColor] = useState(0);
 
   const activeButton = (index) => {
@@ -37,7 +36,7 @@ function Top() {
 
           <div onClick={() => activeButton(0)}>
             <StoreButton
-              color={`${btColor === 0 ? activeButtonColor : ""}`}
+              color={`${btColor === 0 ? 'bg-white text-[#02020b]' : ""}`}
               text={"Todos"}
             >
               <Icon icon={"solar:star-shine-bold"} />
@@ -46,7 +45,7 @@ function Top() {
 
           <div onClick={() => activeButton(1)}>
             <StoreButton
-              color={`${btColor === 1 ? activeButtonColor : ""}`}
+              color={`${btColor === 1 ? 'bg-white text-[#02020b]' : ""}`}
               text={"Olhos"}
             >
               <Icon icon={"mingcute:eye-fill"} />
@@ -55,7 +54,7 @@ function Top() {
 
           <div onClick={() => activeButton(2)}>
             <StoreButton
-              color={`${btColor === 2 ? activeButtonColor : ""}`}
+              color={`${btColor === 2 ? 'bg-white text-[#02020b]' : ""}`}
               text={"Pelos"}
             >
               <Icon icon={"icon-park-outline:texture"} />
@@ -64,7 +63,7 @@ function Top() {
 
           <div onClick={() => activeButton(3)}>
             <StoreButton
-              color={`${btColor === 3 ? activeButtonColor : ""}`}
+              color={`${btColor === 3 ? 'bg-white text-[#02020b]' : ""}`}
               text={"Coleiras"}
             >
               <Icon icon={"carbon:circle-dash"} />
@@ -73,7 +72,7 @@ function Top() {
 
           <div onClick={() => activeButton(4)}>
             <StoreButton
-              color={`${btColor === 4 ? activeButtonColor : ""}`}
+              color={`${btColor === 4 ? 'bg-white text-[#02020b]' : ""}`}
               text={"Pingente"}
             >
               <Icon icon={"mdi:necklace"} />
@@ -82,7 +81,7 @@ function Top() {
 
           <div onClick={() => activeButton(5)}>
             <StoreButton
-              color={`${btColor === 5 ? activeButtonColor : ""}`}
+              color={`${btColor === 5 ? 'bg-white text-[#02020b]' : ""}`}
               text={"Fundos"}
             >
               <Icon icon={"mynaui:square-solid"} />
