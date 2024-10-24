@@ -3,6 +3,8 @@ import Login from './components/pages/Login/Login'
 import Profile from './components/pages/profile/Profile';
 import HeaderIntern from './components/Header/HeaderIntern';
 import { Route, Routes } from "react-router-dom";
+import Ranking from './components/pages/Rank/Ranking';
+
 function App() {
 
   return (
@@ -11,6 +13,7 @@ function App() {
         <Route Component={Home} path="/" />
         <Route Component={Login} path="/login" />
       </Routes>
+      <Ranking></Ranking>
       <HeaderIntern /> {/* QA */}
       <Profile/>
     </>
