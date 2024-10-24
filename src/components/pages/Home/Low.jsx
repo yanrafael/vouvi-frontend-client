@@ -42,7 +42,7 @@ function Low() {
               A Gente Cresce Com Seu Feedback
             </h1>
             <p className={`${TextGradient} text-base mt-5 mb-16`}>
-              Você faz parte do Time!
+              Você faz parte do Time.
               <br /> Queremos te ouvir!
             </p>
           </div>
@@ -57,12 +57,12 @@ function Low() {
         <h1
           className={`${TextGradient} text-2xl text-center xl:leading-[1.2] mt-[160px] font-medium`}
         >
-          Escolha o plano para virar o jogo
+          Escolha o plano e vire o jogo
         </h1>
         <p
           className={`${TextGradient} text-base text-center m-auto mb-20 w-4/6`}
         >
-          Do básico ao premium, tem um plano certinho pra sua caminhada
+          Do básico ao premium, tem um plano certinho para sua caminhada
           financeira. Bora começar e subir de nível!
         </p>
         <div className="flex justify-evenly">
@@ -71,9 +71,9 @@ function Low() {
             colortitle={"text-[#002952]"}
             title={"Free"}
             price={"Gratuito"}
-            text1={"Acesso limitado às aulas de educação financeira."}
-            text2={"Dicas semanais sobre economia."}
-            text3={"Ferramentas básicas de orçamento."}
+            text1={"Acesso às aulas de educação financeira."}
+            text2={"Newsletter duas vezes por semana."}
+            text3={"Ferramentas de planejamento."}
             colorbutton={
               "bg-[#002952] hover:outline-[#002952] hover:text-[#002952]"
             }
@@ -87,11 +87,11 @@ function Low() {
             }
             colortitle={"text-[#35005B]"}
             title={"Premium"}
-            price={"R$29,99"}
+            price={"R$14,90"}
             mes={"/Mês"}
-            text1={"Acesso a todas as aulas de educação financeira."}
-            text2={"Ferramentas avançadas de orçamento e metas de poupança."}
-            text3={"Relatórios mensais detalhados em PDF"}
+            text1={"Acesso às aulas personalizadas."}
+            text2={"Vida infinita e recompensas únicas."}
+            text3={"Relatórios mensais detalhados."}
             bold={"font-medium"}
             colorbutton={
               "bg-primary-300 hover:outline-primary-300 hover:text-primary-300 "
@@ -103,12 +103,12 @@ function Low() {
           <Subscription
             color={"bg-[#FFB12099]"}
             colortitle={"text-[#583900]"}
-            title={"Bussines"}
-            price={"R$99,99"}
+            title={"Family"}
+            price={"R$39,90"}
             mes={"/Mês"}
-            text1={"Todos os benefícios do Plano Premium"}
-            text2={"Múltiplos usuários com permissões personalizadas."}
-            text3={`Suporte prioritário. `}
+            text1={"Todos os benefícios do Plano Premium."}
+            text2={"Acesso para até 4 pessoas."}
+            text3={`Suporte com o fin.`}
             colorbutton={
               "bg-[#6B4B08] hover:outline-[#6B4B08] hover:text-[#6B4B08] "
             }
@@ -123,10 +123,9 @@ function Low() {
         <p
           className={`${TextGradient} text-base text-center mt-[200px] font-light mb-16`}
         >
-          Não deixe seu dinheiro trabalhar sozinho, venha com a gente e faça
-          valer cada centavo!{" "}
+          Venha com a gente e faça valer cada centavo. <br />
           <strong className="font-bold">
-            Junte-se à{" "}
+            Junte-se à
             <strong className="text-primary-200 bg-black ">Vouvi</strong> e
             transforme sua vida financeira!
           </strong>

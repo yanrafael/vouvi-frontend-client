@@ -18,13 +18,13 @@ function Low() {
                 </div>
                 <div className='text-white leading-[1] p-20 pb-40 w-5/12 bg-[#0029524D] rounded-[72px]'>
                     <h1 className='text-xl font-medium'>Impacto Social</h1>
-                    <p className='text-[40px] font-light mt-28'>Estamos comprometidos em impactar positivamente a vida das pessoas. Oferecemos educação financeira para comunidades de baixa renda, ajudando a construir um futuro mais sustentável.</p>
+                    <p className='text-[40px] font-light mt-28'>Estamos comprometidos em impactar positivamente a vida das pessoas. Oferecemos educação financeira para comunidades de baixa renda, ajudamos a construir um futuro mais sustentável.</p>
                 </div>
             </section>
 
             <section className="w-8/12 m-auto ">
                 <p className={`text-base text-center mt-[200px] font-light mb-16 text-white`}>
-                    Na <strong className="text-primary-200 font-bold">Vouvi</strong>, acreditamos que todos podem aprender a lidar melhor com seu dinheiro. <strong className="font-bold">Junte-se à nós e transforme sua vida financeira!</strong>
+                    Na <strong className="text-primary-200 font-bold">Vouvi</strong>, acreditamos que todos podem aprender a lidar melhor com seu dinheiro. <strong className="font-bold">Junte-se à nós e transforme sua vida financeira.</strong>
                 </p>
                 <PrimaryButton text={"Começar agora!"} />
             </section>

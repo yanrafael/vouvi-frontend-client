@@ -41,7 +41,7 @@ function Top() {
         </div>
 
         <Link to={"/create-account"}>
-          <PrimaryButton text={"Começar agora!"} />
+          <PrimaryButton text={"Começar agora"} />
         </Link>
 
         <div className="m-auto flex flex-col justify-center items-center mt-[150px]">
@@ -60,7 +60,7 @@ function Top() {
         <Cards
           img={FireIcon}
           title={"Zero dívidas!"}
-          text={"Aprenda a se livrar das dívidas e manter sua conta no azul!"}
+          text={"Aprenda a se livrar das despesas e manter sua conta no azul."}
           color="text-[#FFB515] bg-[radial-gradient(105.89%_105.89%_at_50%_105.89%,rgba(253,163,61,0.26)_0%,rgba(2,2,11,0.26)_100%)]"
         />
         <Cards
@@ -72,7 +72,7 @@ function Top() {
         <Cards
           img={HeartIcon}
           title={"Realize sonhos!"}
-          text={"Com planejamento, seu sonho tá logo ali na esquina!"}
+          text={"Com planejamento, seu sonho tá logo ali na esquina."}
           color="text-[#FF0084] bg-[linear-gradient(0deg,rgba(255,0,132,0.26)_-8.57%,rgba(255,0,132,0.00)_100%)]"
         />
       </section>

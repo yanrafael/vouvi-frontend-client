@@ -17,8 +17,8 @@ function Top() {
         <div className="text-primary-200 w-3/6 mt-5 ml-5">
           <h1 className="text-xl font-bold">Seja Premium</h1>
           <p className="text-lg font-light mt-6">
-            Energia infinita, ferramentas avançadas e relatórios em PDF para
-            toda a família!
+            Energia infinita, ferramentas avançadas, e relatórios em PDF, para
+            toda a família.
           </p>
           <div className="w-fit mt-14 relative pb-10">
             <PrimaryButton text={"Assinar agora!"} />

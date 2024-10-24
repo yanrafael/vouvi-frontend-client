@@ -11,7 +11,7 @@ function Top() {
                 <div className='flex m-auto'>
                     <img src={Target} alt="" />
                     <div className='bg-[#0029524D] flex flex-col w-[40rem] relative p-8 h-fit rounded-md text-white mx-20'>
-                        <h1 className='text-xl text-secondary-200 font-medium'>Missões</h1>
+                        <h1 className='text-xl text-secondary-200 font-medium'>Missão</h1>
                         <p className='text-[40px] font-light mt-5'>Empoderar <strong className='text-secondary-200'>todos</strong> a conquistar um <strong className='text-primary-200'>futuro</strong> financeiro saudável por meio de educação <strong className='text-secondary-200'>acessível</strong> e <strong className='text-primary-200'>gamificada.</strong></p>
                     </div>
                 </div>
