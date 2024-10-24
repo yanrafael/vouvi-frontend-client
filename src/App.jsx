@@ -6,6 +6,7 @@ import About from "./components/pages/About/About";
 import Profile from "./components/pages/profile/Profile";
 import Learn from "./components/pages/Learn/Learn";
 import Avatar from "./components/pages/Avatar/Avatar";
+import Ranking from "./components/pages/Rank/Ranking";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route Component={Profile} path="/profile" />
         <Route Component={Learn} path="/learn" />
         <Route Component={Avatar} path="/avatar" />
+        <Route Component={Ranking} path="/ranking" />
       </Routes>
     </>
   );
