@@ -5,9 +5,8 @@ import Store from "./components/pages/Store/Store";
 import About from "./components/pages/About/About";
 import Profile from "./components/pages/profile/Profile";
 import Learn from "./components/pages/Learn/Learn";
-import Avatar from './components/pages/Avatar/Avatar'
+import Avatar from "./components/pages/Avatar/Avatar";
 import { Route, Routes } from "react-router-dom";
-
 function App() {
   return (
     <>
