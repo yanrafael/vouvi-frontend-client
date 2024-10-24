@@ -3,15 +3,22 @@ import { Icon } from "@iconify/react";
 import PasswordInput from "../../Forms/PasswordInput";
 import KeepConected from "../../Forms/Radio";
 import bgVideo from "/src/assets/videos/video-background.mp4";
+import { useEffect } from "react";
 
 function Form() {
+  useEffect(() => {
+    document.getElementById("bg-video").play();
+  });
+
   return (
     <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5">
       <video
         src={bgVideo}
         className="absolute -z-10 opacity-40"
         autoPlay
+        muted
         loop
+        id="bg-video"
       ></video>
       <form
         className="flex flex-col justify-around gap-4 bg-white bg-opacity-90 w-[600px] h-full rounded-sm p-10"
