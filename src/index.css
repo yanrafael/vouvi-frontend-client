@@ -3,38 +3,41 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: Outfit;
-        src: url("/fonts/Outfit/Outfit-VariableFont_wght.ttf");
-    }
+  @font-face {
+    font-family: Outfit;
+    src: url("/fonts/Outfit/Outfit-VariableFont_wght.ttf");
+  }
 
-    progress::-moz-progress-bar {
-        @apply bg-secondary-200;
-    }
+  progress::-moz-progress-bar {
+    @apply bg-secondary-200;
+  }
 
-    progress::-webkit-progress-value {
-        @apply bg-secondary-200;
+  progress::-webkit-progress-value {
+    @apply bg-secondary-200;
+  }
 
-    }
+  progress {
+    @apply text-secondary-200;
+  }
 
-    progress {
-        @apply text-secondary-200;
-    }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: textfield;
+    margin: 0;
+  }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: textfield;
-        margin: 0;
-    }
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
 
-    input[type=number] {
-        -moz-appearance: textfield;
-        appearance: textfield;
-    }
+  body {
+    @apply dark:bg-black;
+  }
 }
 
 @layer components {
-    .login-link {
-        @apply underline text-md hover:text-primary-300;
-    }
+  .login-link {
+    @apply underline text-md hover:text-primary-300;
+  }
 }

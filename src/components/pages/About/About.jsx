@@ -1,15 +1,21 @@
-import Top from "./Top"
-import Low from "./Low"
-import HeaderWhite from '../../Header/HeaderWhite'
-import Footer from "../../Footer/Footer"
+import Top from "./Top";
+import Low from "./Low";
+import HeaderWhite from "../../Header/HeaderWhite";
+import Footer from "../../Footer/Footer";
+import { useState } from "react";
+
 function About() {
-    return (
-        <>
-            <HeaderWhite/>
-            <Top />
-            <Low />
-            <Footer/>
-        </>
-    )
+  const [darkMode, setDarkMode] = useState(
+    document.body.classList.contains("dark")
+  );
+  return (
+    <>
+      <HeaderWhite darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Top />
+      <Low />
+      <Footer darkMode={darkMode} />
+    </>
+  );
 }
-export default About
+
+export default About;

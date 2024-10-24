@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Low() {
   const TextGradient =
-    "text-[transparent] bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
+    "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
   return (
     <>
@@ -47,8 +47,10 @@ function Low() {
             </p>
           </div>
           <SecondaryButton
-            color={"hover:text-white bg-white"}
-            text={"Enviar Feedback!"}
+            color={
+              " text-white hover:text-black bg-black dark:text-black dark:bg-white"
+            }
+            text={"Enviar feedback"}
           />
         </div>
       </section>
@@ -67,7 +69,7 @@ function Low() {
         </p>
         <div className="flex justify-evenly">
           <Subscription
-            color={"bg-[#007FFF99]"}
+            color={"bg-[#007FFF]"}
             colortitle={"text-[#002952]"}
             title={"Free"}
             price={"Gratuito"}
@@ -101,7 +103,7 @@ function Low() {
             }
           />
           <Subscription
-            color={"bg-[#FFB12099]"}
+            color={"bg-[#FFB120] dark:bg-[#FFB12099]"}
             colortitle={"text-[#583900]"}
             title={"Family"}
             price={"R$39,90"}
@@ -126,7 +128,7 @@ function Low() {
           Venha com a gente e faça valer cada centavo. <br />
           <strong className="font-bold">
             Junte-se à
-            <strong className="text-primary-200 bg-black ">Vouvi</strong> e
+            <strong className="text-primary-200 dark:bg-black ">Vouvi</strong> e
             transforme sua vida financeira!
           </strong>
         </p>

@@ -5,12 +5,12 @@ import FireIcon from "../../../assets/images/fire-icon.svg";
 import GreenIcon from "../../../assets/images/graphicgreen-icon.svg";
 import HeartIcon from "../../../assets/images/heart-icon.svg";
 import BackgroundV from "../../../assets/videos/video-background.mp4";
-// import { Icon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
 function Top() {
   const TextGradient =
-    "text-[transparent] bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
+    "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
   return (
     <>
@@ -26,7 +26,7 @@ function Top() {
           ></video>
         </div>
 
-        <div className="flex flex-col justify-center text-center m-auto text-white mt-[200px]">
+        <div className="flex flex-col justify-center text-center m-auto text-black dark:text-white mt-[200px]">
           <h1 className="text-[90px] font-normal leading-[0.85]">
             <strong className=" text-secondary-200 font-medium drop-shadow-[0px_0px_50px_#007FFF] ">
               Transforme
@@ -45,8 +45,12 @@ function Top() {
         </Link>
 
         <div className="m-auto flex flex-col justify-center items-center mt-[150px]">
-          <p className="text-white text-[36px]">Saiba mais</p>
-          <img className="relative bottom-6" src={Arrow} alt="" />
+          <p className="dark:text-white text-[36px]">Saiba mais</p>
+          <Icon
+            className="relative bottom-6 text-black dark:text-white"
+            icon="ep:arrow-down-bold"
+            width="7rem"
+          />
         </div>
       </section>
 
@@ -61,7 +65,7 @@ function Top() {
           img={FireIcon}
           title={"Zero dívidas!"}
           text={"Aprenda a se livrar das despesas e manter sua conta no azul."}
-          color="text-[#FFB515] bg-[radial-gradient(105.89%_105.89%_at_50%_105.89%,rgba(253,163,61,0.26)_0%,rgba(2,2,11,0.26)_100%)]"
+          color="text-[#FFB515] bg-[radial-gradient(105.89%_105.89%_at_50%_105.89%,rgba(255,184,104,0.26)_0%,rgba(2,2,11,0.00)_100%);] dark:bg-[radial-gradient(105.89%_105.89%_at_50%_105.89%,rgba(253,163,61,0.26)_0%,rgba(2,2,11,0.26)_100%)]"
         />
         <Cards
           img={GreenIcon}
