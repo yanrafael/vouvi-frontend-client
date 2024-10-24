@@ -21,7 +21,7 @@ function Mid() {
                 </h1>
 
                 <p
-                    className={`text-base text-center ${TextGradient} relative top-3 text-center`}>Inteligência artificial? Aqui é pra organizar sua vida!
+                    className={`text-base text-center ${TextGradient} relative top-3 text-center`}>Inteligência artificial? Aqui é para organizar sua vida!
                 </p>
 
                 <div className='flex flex-col'>
@@ -75,7 +75,7 @@ function Mid() {
 
             <section className='flex flex-col items-center mt-52'>
                 <h1 className={`${TextGradient} text-2xl xl:leading-[1.2] text-center font-medium`}>Domine o jogo, domine o dinheiro!</h1>
-                <p className={`${TextGradient} text-base`}>Economize de verdade com cada missão completa</p>
+                <p className={`${TextGradient} text-base`}>Economize de verdade com cada missão completa.</p>
 
                 <div className='w-11/12 flex justify-evenly items-center m-auto bg-[#D9D9D9] rounded-md relative mt-[100px]'>
                     <img className='w-[58%]' src={Rewards} alt="" />
