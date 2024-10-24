@@ -5,7 +5,7 @@ import Store from "./components/pages/Store/Store";
 import About from "./components/pages/About/About";
 import Profile from "./components/pages/profile/Profile";
 import Learn from "./components/pages/Learn/Learn";
-
+import Avatar from './components/pages/Avatar/Avatar'
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
         <Route Component={About} path="/about" />
         <Route Component={Profile} path="/profile" />
         <Route Component={Learn} path="/learn" />
+        <Route Component={Avatar} path="/avatar" />
       </Routes>
     </>
   );

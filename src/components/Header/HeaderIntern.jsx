@@ -191,70 +191,72 @@ function HeaderIntern() {
   );
 
   return (
-    <header className="flex items-center justify-around w-11/12 m-auto py-10">
-      <LogoWhite Name={VouviWord} width={"90px"} />
-      <nav className="flex">
-        <div onClick={() => IconStates(0)}>
-          <Navigation
-            width={`w-[224px] group ${
-              textColor === 0 ? UseTextColor : "text-secondary-200"
-            } ${useOutline === 0 ? Outline : ""}`}
-            fill={` ${fillComponent === 0 ? Fill : ""}`}
-            icon={Learn}
-            title={"Aprender"}
-          />
+    <>
+      <header className="flex items-center justify-around w-full m-auto py-10 sticky backdrop-blur-sm top-0 left-0 z-10 bg-[rgba(2,2,11,0.80);]">
+        <LogoWhite Name={VouviWord} width={"90px"} />
+        <nav className="flex">
+          <div onClick={() => IconStates(0)}>
+            <Navigation
+              width={`w-[224px] group ${
+                textColor === 0 ? UseTextColor : "text-secondary-200"
+              } ${useOutline === 0 ? Outline : ""}`}
+              fill={` ${fillComponent === 0 ? Fill : ""}`}
+              icon={Learn}
+              title={"Aprender"}
+            />
+          </div>
+
+          <div onClick={() => IconStates(1)}>
+            <Navigation
+              width={`w-[204px] group ${
+                textColor === 1 ? UseTextColor : "text-secondary-200"
+              } ${useOutline === 1 ? Outline : ""} `}
+              fill={` ${fillComponent === 1 ? Fill : ""}`}
+              icon={Planning}
+              title={"Planejar"}
+            />
+          </div>
+
+          <div onClick={() => IconStates(2)}>
+            <Navigation
+              width={`w-[204px] group ${
+                textColor === 2 ? UseTextColor : "text-secondary-200"
+              } ${useOutline === 2 ? Outline : ""} `}
+              fill={` ${fillComponent === 2 ? Fill : ""}`}
+              icon={Ranking}
+              title={"Ranking"}
+            />
+          </div>
+
+          <div onClick={() => IconStates(3)}>
+            <Navigation
+              width={`w-[145px] group ${
+                textColor === 3 ? UseTextColor : "text-secondary-200"
+              } ${useOutline === 3 ? Outline : ""} `}
+              fill={` ${fillComponent === 3 ? Fill : ""}`}
+              icon={Store}
+              title={"Loja"}
+            />
+          </div>
+        </nav>
+        <div className="flex">
+          {/* Confira o arquivo AvatarFull */}
+
+          <AvatarBasic name={"Ana Caroline"} />
+
+          {/* <Settings/> */}
+
+          {/* <AvatarFull
+                nome={"Ana carolina"}
+                xp={"XP"}
+                xpvalue={"13.657"}
+                vcoins={Vicon} // img
+                vcoinsvalue={"938"}
+            /> */}
         </div>
-
-        <div onClick={() => IconStates(1)}>
-          <Navigation
-            width={`w-[204px] group ${
-              textColor === 1 ? UseTextColor : "text-secondary-200"
-            } ${useOutline === 1 ? Outline : ""} `}
-            fill={` ${fillComponent === 1 ? Fill : ""}`}
-            icon={Planning}
-            title={"Planejar"}
-          />
-        </div>
-
-        <div onClick={() => IconStates(2)}>
-          <Navigation
-            width={`w-[204px] group ${
-              textColor === 2 ? UseTextColor : "text-secondary-200"
-            } ${useOutline === 2 ? Outline : ""} `}
-            fill={` ${fillComponent === 2 ? Fill : ""}`}
-            icon={Ranking}
-            title={"Ranking"}
-          />
-        </div>
-
-        <div onClick={() => IconStates(3)}>
-          <Navigation
-            width={`w-[145px] group ${
-              textColor === 3 ? UseTextColor : "text-secondary-200"
-            } ${useOutline === 3 ? Outline : ""} `}
-            fill={` ${fillComponent === 3 ? Fill : ""}`}
-            icon={Store}
-            title={"Loja"}
-          />
-        </div>
-      </nav>
-      <div className="flex">
-        {/* Confira o arquivo AvatarFull */}
-
-        <AvatarBasic name={"Ana Caroline"} />
-
-        {/* <Settings/> */}
-
-        {/* <AvatarFull
-                    nome={"Ana carolina"}
-                    xp={"XP"}
-                    xpvalue={"13.657"}
-                    vcoins={Vicon} // img
-                    vcoinsvalue={"938"}
-                /> */}
-      </div>
-      <hr className="h-[1px] border-0 absolute w-[100%] bg-[#F5F5F442] mt-36 left-0" />
-    </header>
+      </header>
+      <hr className="h-[1px] border-0  w-[100%] bg-[#F5F5F442] left-0 "/>
+    </>
   );
 }
 export default HeaderIntern;

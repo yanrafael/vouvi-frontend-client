@@ -1,13 +1,17 @@
-import Top from "./Top"
-import Mid from "./Mid"
-import Low from "./Low"
+import Top from "./Top";
+import Mid from "./Mid";
+import Low from "./Low";
+import HeaderIntern from "../../Header/HeaderIntern";
+import Footer from "../../Footer/Footer";
 function Profile() {
-    return (
-        <>
-            <Top />
-            <Mid/>
-            <Low friends={"15"}/>
-        </>
-    )
+  return (
+    <>
+      <HeaderIntern></HeaderIntern>
+      <Top />
+      <Mid />
+      <Low friends={"15"} />
+      <Footer></Footer>
+    </>
+  );
 }
-export default Profile
+export default Profile;
