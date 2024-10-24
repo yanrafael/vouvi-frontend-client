@@ -34,7 +34,7 @@ function Top() {
             <div className='flex flex-col justify-center'>
                 <div className='flex'>
                     <CoinCard color={"mr-10 bg-[linear-gradient(180deg,rgba(255,77,0,0.80)_0%,rgba(255,216,46,0.80)_100%);]"} icon={Vicon} title={"928"} text={"vcoins"} />
-                    <CoinCard background={{ backgroundImage: `url(${purpleBg})` }} color={"bg-cover bg-center"} icon={VouviLover} title={"928"} text={"vcoins"} />
+                    <CoinCard background={{ backgroundImage: `url(${purpleBg})` }} color={"bg-cover bg-center"} icon={VouviLover} title={"02/20"} text={"emblemas"} />
                 </div>
                 <div className='mt-4 bg-[#14A90033] text-[#14A900] px-4 py-2 text-[32px] font-bold justify-center flex rounded-md'>Sequência: 23 dias</div>
                 <div className='mt-4 bg-[#7C20BE33] text-primary-200 px-4 py-2 text-[32px] font-bold justify-center flex rounded-md'>Especialista em economia</div>
