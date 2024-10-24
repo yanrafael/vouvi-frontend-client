@@ -4,7 +4,7 @@ import AvatarBasic from "./AvatarBasic";
 // import AvatarFull from "./AvatarFull"
 // import Settings from './Settings'
 import { useState } from "react";
-
+import { Link } from "react-router-dom"
 function HeaderIntern() {
   // Borda ao clicar
   const Outline = "outline outline-[10px] outline-[rgba(0,127,255,0.15)]";
@@ -195,54 +195,64 @@ function HeaderIntern() {
       <header className="flex items-center justify-around w-full m-auto py-10 sticky backdrop-blur-sm top-0 left-0 z-10 bg-[rgba(2,2,11,0.80);]">
         <LogoWhite Name={VouviWord} width={"90px"} />
         <nav className="flex">
-          <div onClick={() => IconStates(0)}>
-            <Navigation
-              width={`w-[224px] group ${
-                textColor === 0 ? UseTextColor : "text-secondary-200"
-              } ${useOutline === 0 ? Outline : ""}`}
-              fill={` ${fillComponent === 0 ? Fill : ""}`}
-              icon={Learn}
-              title={"Aprender"}
-            />
-          </div>
+          <Link to={'/learn'}>
+            <div onClick={() => IconStates(0)}>
+              <Navigation
+                width={`w-[224px] group ${
+                  textColor === 0 ? UseTextColor : "text-secondary-200"
+                } ${useOutline === 0 ? Outline : ""}`}
+                fill={` ${fillComponent === 0 ? Fill : ""}`}
+                icon={Learn}
+                title={"Aprender"}
+              />
+            </div>
+          </Link>
 
-          <div onClick={() => IconStates(1)}>
-            <Navigation
-              width={`w-[204px] group ${
-                textColor === 1 ? UseTextColor : "text-secondary-200"
-              } ${useOutline === 1 ? Outline : ""} `}
-              fill={` ${fillComponent === 1 ? Fill : ""}`}
-              icon={Planning}
-              title={"Planejar"}
-            />
-          </div>
+          <Link to={''}>
+            <div onClick={() => IconStates(1)}>
+              <Navigation
+                width={`w-[204px] group ${
+                  textColor === 1 ? UseTextColor : "text-secondary-200"
+                } ${useOutline === 1 ? Outline : ""} `}
+                fill={` ${fillComponent === 1 ? Fill : ""}`}
+                icon={Planning}
+                title={"Planejar"}
+              />
+            </div>
+          </Link>
 
-          <div onClick={() => IconStates(2)}>
-            <Navigation
-              width={`w-[204px] group ${
-                textColor === 2 ? UseTextColor : "text-secondary-200"
-              } ${useOutline === 2 ? Outline : ""} `}
-              fill={` ${fillComponent === 2 ? Fill : ""}`}
-              icon={Ranking}
-              title={"Ranking"}
-            />
-          </div>
+          <Link to={'ranking'}>
+            <div onClick={() => IconStates(2)}>
+              <Navigation
+                width={`w-[204px] group ${
+                  textColor === 2 ? UseTextColor : "text-secondary-200"
+                } ${useOutline === 2 ? Outline : ""} `}
+                fill={` ${fillComponent === 2 ? Fill : ""}`}
+                icon={Ranking}
+                title={"Ranking"}
+              />
+            </div>
+          </Link>
 
-          <div onClick={() => IconStates(3)}>
-            <Navigation
-              width={`w-[145px] group ${
-                textColor === 3 ? UseTextColor : "text-secondary-200"
-              } ${useOutline === 3 ? Outline : ""} `}
-              fill={` ${fillComponent === 3 ? Fill : ""}`}
-              icon={Store}
-              title={"Loja"}
-            />
-          </div>
+          <Link to={'/store'}>
+            <div onClick={() => IconStates(3)}>
+              <Navigation
+                width={`w-[145px] group ${
+                  textColor === 3 ? UseTextColor : "text-secondary-200"
+                } ${useOutline === 3 ? Outline : ""} `}
+                fill={` ${fillComponent === 3 ? Fill : ""}`}
+                icon={Store}
+                title={"Loja"}
+              />
+            </div>
+          </Link>
         </nav>
         <div className="flex">
           {/* Confira o arquivo AvatarFull */}
 
-          <AvatarBasic name={"Ana Caroline"} />
+          <Link to={'/profile'}>
+            <AvatarBasic name={"Ana Caroline"} />
+          </Link>
 
           {/* <Settings/> */}
 

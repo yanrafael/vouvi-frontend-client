@@ -6,11 +6,11 @@ import Footer from "../../Footer/Footer";
 function Profile() {
   return (
     <>
-      <HeaderIntern></HeaderIntern>
+      <HeaderIntern/>
       <Top />
       <Mid />
       <Low friends={"15"} />
-      <Footer></Footer>
+      <Footer/>
     </>
   );
 }
