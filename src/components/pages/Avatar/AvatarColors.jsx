@@ -1,6 +1,6 @@
 import SecondaryButton from "../../Buttons/SecondaryButton"
 import { useState } from "react"
-
+import { Link } from "react-router-dom";
 function AvatarColors() {
 
     const Border = 'outline outline-[6px] outline-white'
@@ -35,7 +35,9 @@ function AvatarColors() {
                 <div style={{ backgroundColor: IconBorder === 4 ? Bg[4] : 'yellow' }} className={`rounded-full cursor-pointer w-14 h-14 transition-all duration-300 bg-yellow ${IconBorder === 4 ? Border : ''} `} onClick={() => IconStates(4)}></div>
                 <div style={{ backgroundColor: IconBorder === 5 ? Bg[5] : '#FF0084' }} className={`rounded-full cursor-pointer w-14 h-14 transition-all duration-300 bg-[#FF0084] ${IconBorder === 5 ? Border : ''} `} onClick={() => IconStates(5)}></div>
             </div>
-            <SecondaryButton color={'w-9/12 hover:bg-opacity-100 hover:text-primary-200 bg-white'} text={"Pronto!"} />
+            <Link className="w-full flex justify-center" to={'/profile'}>
+                <SecondaryButton color={'w-9/12 hover:bg-opacity-100 hover:text-primary-200 bg-white'} text={"Pronto!"} />
+            </Link>
         </div>
     )
 }
