@@ -13,13 +13,14 @@ function App() {
     <>
       <Routes>
         <Route Component={Home} path="/home" />
+        <Route Component={Home} path="/" />
+        <Route Component={Home} path="/*" />
         <Route Component={Login} path="/login" />
         <Route Component={CreateAccount} path="/create-account" />
         <Route Component={Store} path="/store" />
         <Route Component={About} path="/about" />
         <Route Component={Profile} path="/profile" />
         <Route Component={Learn} path="/learn" />
-        <Route Component={Home} path="/*" />
       </Routes>
     </>
   );
