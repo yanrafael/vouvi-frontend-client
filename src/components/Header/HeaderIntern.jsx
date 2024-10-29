@@ -1,13 +1,13 @@
 import LogoWhite from "./LogoWhite";
 import Navigation from "./Navigation";
-import AvatarBasic from "./AvatarBasic";
+// import AvatarBasic from "./AvatarBasic";
 // import AvatarFull from "./AvatarFull"
-// import Settings from './Settings'
-import { useEffect,useState } from "react";
+import Settings from './Settings'
+import { Children, useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber }) {
+function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber, children }) {
   // Borda ao clicar
   const Outline = "outline outline-[10px] outline-[rgba(0,127,255,0.15)]";
   const [useOutline, setUseOutline] = useState(false);
@@ -256,11 +256,11 @@ function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber }) {
         <div className="flex">
           {/* Confira o arquivo AvatarFull */}
 
-          <Link to={"/profile"}>
+          {/* <Link to={"/profile"}>
             <AvatarBasic name={"Ana Caroline"} />
-          </Link>
+          </Link> */}
 
-          {/* <Settings/> */}
+          {children}
 
           {/* <AvatarFull
                 nome={"Ana carolina"}
