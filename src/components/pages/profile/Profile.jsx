@@ -3,19 +3,33 @@ import Mid from "./Mid";
 import Low from "./Low";
 import HeaderIntern from "../../Header/HeaderIntern";
 import Footer from "../../Footer/Footer";
+import SettingsModal from "../../Modals/SettingsModal";
+import Settings from '../../Header/Settings'
+import InsigneModal from "../../Modals/InsigneModal"
+import FriendsModal from "../../Modals/FriendsModal";
 import { useState } from "react";
 function Profile() {
   const [darkMode, setDarkMode] = useState(
     document.body.classList.contains("dark")
   );
+  const [activeModal, setActiveModal] = useState(null); // "settings" ou "insigne"
 
+  const openModal = (modalType) => setActiveModal(modalType);
+  const closeModal = () => setActiveModal(null);
+  
   return (
     <>
-      <HeaderIntern iconActiveNumber={1} darkMode={darkMode} setDarkMode={setDarkMode}/>
+      
+      <HeaderIntern iconActiveNumber={''} darkMode={darkMode} setDarkMode={setDarkMode}>
+      <Settings openModal={() => openModal("settings")}/>
+      </HeaderIntern>
       <Top />
-      <Mid />
-      <Low friends={"15"} />
+      <Mid openModal={() => openModal("insigne")}/>
+      <Low openModal={() => openModal("friends")} friends={"15"} />
       <Footer/>
+       {activeModal === "settings" && (<SettingsModal closeModal={closeModal} />)}
+       {activeModal === "insigne" && (<InsigneModal closeModal={closeModal} />)}
+       {activeModal === "friends" && (<FriendsModal closeModal={closeModal} />)}
     </>
   );
 }

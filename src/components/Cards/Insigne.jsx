@@ -7,7 +7,7 @@ function Insigne({icon,title,text}) {
 
             <div className="ml-5 leading-[1] text-[#471650] dark:text-white">
                 <h1 className="text-[40px] font-medium">{title}</h1>
-                <p className="text-[24px] font-light">{text}</p>
+                <p className="text-[24px] ">{text}</p>
             </div>
         </div>
     )

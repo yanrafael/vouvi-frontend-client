@@ -5,7 +5,7 @@ import VouviLover from '../../../assets/images/vouvi-lover-md-icon.svg'
 import Newbie from '../../../assets/images/newbie-Insigne.svg'
 import Insigne from "../../Cards/Insigne"
 import { Icon } from '@iconify/react';
-function Mid() {
+function Mid({openModal}) {
     return (
         <section className="w-11/12 m-auto mt-20 flex justify-between">
             <div>
@@ -34,6 +34,10 @@ function Mid() {
                 <div className="bg-[rgba(124,32,190,0.50);] dark:bg-[#1e1e1e] rounded-[0px_24px_24px] p-7 flex flex-col h-[92%]">
                     <Insigne icon={VouviLover} title={"Vouvi lover"} text={"Seja Premium"}/>
                     <Insigne icon={Newbie} title={"Iniciante Financeiro"} text={"Faça sua primeira aula"}/>
+                    <div onClick={openModal} className='flex justify-center mt-auto mx-5 items-center text-[#471650] dark:text-white cursor-pointer'>
+                        <p className='font-medium text-[32px] mx-2'>Ver todos</p>
+                        <Icon icon='prime:sort-down-fill' width='35px'/>
+                    </div>
                 </div>
             </div>
         </section>
