@@ -8,30 +8,24 @@ function TertiaryQuestion() {
         <div className="flex items-center justify-center w-[100vw] h-[100vh]">
             <FormCard>
                 <Title
-                    text="Qual a sua renda mensal aproximada?" />
-                <div className="flex flex-wrap p-5 gap-6 rounded-lg mb-20">
+                    text="Você tem algum objetivo de longo prazo?" />
+                <div className="flex flex-wrap p-5 gap-6 rounded-lg">
                     <InfoButton
-                        text="Menos de R$ 1.000" />
+                        text="Casa ou Carro" />
                     <InfoButton
-                        text="Entre R$ 1.000 e R$ 3.000" />
+                        text="Aposentadoria" />
                     <InfoButton
-                        text="Entre R$ 3.000 e R$ 5.000" />
+                        text="Outros" />
                     <InfoButton
-                        text="Mais de R$ 5.000" />
+                        text="Não tenho" />
                 </div>
                 <div>
 
                     <div className=" w-[90%] m-auto mt-5 flex justify-between">
                         <SecondaryButton
-
                             text="Anterior" />
-                        <div className="flex justify-between w-[40%]">
-
-                            <SecondaryButton
-                                text="Pular" />
-                            <SecondaryButton
-                                text="Próximo" />
-                        </div>
+                        <SecondaryButton
+                            text="Próximo" />
                     </div>
                 </div>
             </FormCard>

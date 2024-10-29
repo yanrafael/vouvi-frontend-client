@@ -9,7 +9,7 @@ function SeptenaryQuestion() {
             <FormCard>
                 <Title
                     text="Você possui um fundo de emergência?" />
-                <div className="flex flex-wrap p-5 gap-6 rounded-lg mb-20">
+                <div className="flex flex-wrap p-5 gap-6 rounded-lg">
                     <InfoButton
                         text="Sim" />
                     <InfoButton

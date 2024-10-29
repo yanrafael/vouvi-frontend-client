@@ -9,7 +9,7 @@ function QuinaryQuestion() {
             <FormCard>
                 <Title
                     text="Quais tópicos você gostaria de aprender?" />
-                <div className="flex flex-wrap p-5 gap-6 rounded-lg mb-20">
+                <div className="flex flex-wrap p-5 gap-6 rounded-lg ">
                     <InfoButton
                         text="Financiamento Casa/Carro" />
                     <InfoButton

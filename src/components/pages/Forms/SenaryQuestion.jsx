@@ -9,7 +9,7 @@ function SenaryQuestion() {
             <FormCard>
                 <Title
                     text="Você tem algum tipo de poupança ou investimento?" />
-                <div className="flex flex-wrap p-5 gap-6 rounded-lg mb-20">
+                <div className="flex flex-wrap p-5 gap-6 rounded-lg ">
                     <InfoButton
                         text="Sim" />
                     <InfoButton

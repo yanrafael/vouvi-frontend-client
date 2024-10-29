@@ -9,7 +9,7 @@ function PrimaryQuestion() {
             <FormCard>
                 <Title
                     text="Quanto você conhece sobre finanças?" />
-                <div className="flex flex-wrap p-5 gap-6 rounded-lg mb-20">
+                <div className="flex flex-wrap p-5 gap-6 rounded-lg">
                     <InfoButton
                         text="Sou iniciante" />
                     <InfoButton

@@ -9,7 +9,7 @@ function QuartenaryQuestion() {
             <FormCard>
                 <Title
                     text="Você tem algum objetivo de longo prazo?" />
-                <div className="flex flex-wrap p-5 gap-6 rounded-lg mb-20">
+                <div className="flex flex-wrap p-5 gap-6 rounded-lg ">
                     <InfoButton
                         text="Casa ou Carro" />
                     <InfoButton
