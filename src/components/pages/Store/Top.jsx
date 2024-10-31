@@ -29,10 +29,10 @@ function Top() {
 
       <hr className="p-1 w-10/12 m-auto bg-[#F5F5F442] mt-20 rounded-md mb-14" />
 
-      <section className="m-auto w-11/12">
+      <section className={`m-auto w-11/12 `}>
         <div className="flex justify-between items-center mb-6">
           <div className="text-white text-base leading-[1] mr-20">
-            <h1 className="font-medium">Personalize!</h1>
+            <h1 className={`font-medium`}>Personalize!</h1>
             <p className="font-light">Gaste vcoins!</p>
           </div>
 

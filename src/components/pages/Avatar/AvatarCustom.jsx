@@ -22,72 +22,72 @@ function AvatarCustom(){
 
      // button color
      const [BtColor, BtNoColor] = useState(0)
-     const BtBg = 'bg-[#1F1F1F] text-white'
-     const TextColor = 'text-white'
+     const BtBg = 'bg-white dark:bg-[#1F1F1F] text-black dark:text-white'
+     const TextColor = 'text-black dark:text-white'
      const Hidden = 'hidden'
      const SetColor = (index) => {
          BtNoColor(index)
      }
 
     return(
-        <div className=" flex justify-around w-full 2xl:w-10/12">
+        <div className=" flex justify-evenly w-full 2xl:w-[90%] 2xl:gap-5 ">
             
                 <AvatarColors />
 
-                <div className="bg-[#151515] flex flex-col p-10 rounded-md w-7/12">
-                    <h1 className="text-lg text-white font-medium pb-10">Crie seu avatar!</h1>
+                <div className="bg-[#C9C9C8] dark:bg-[#151515] flex flex-col p-10 rounded-md w-[900px]">
+                    <h1 className="text-lg dark:text-white font-medium pb-10">Crie seu avatar!</h1>
                     <div className="flex">
-                        <button className={`${BtColor === 0 ? BtBg : 'bg-black text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(0)}>
-                            <Icon className={`${BtColor === 0 ? TextColor : 'text-[#8D8D8D]'} `} width='34' icon={'mingcute:eye-fill'} /> <p>Olhos</p>
+                        <button className={`${BtColor === 0 ? BtBg : 'bg-[#F5F5F466] dark:bg-black text-[#02020B9C] dark:text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(0)}>
+                            <Icon className={`${BtColor === 0 ? TextColor : ''} `} width='34' icon={'mingcute:eye-fill'} /> <p>Olhos</p>
                         </button>
-                        <button className={`${BtColor === 1 ? BtBg : 'bg-black text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(1)}>
-                            <Icon className={`${BtColor === 1 ? TextColor : 'text-[#8D8D8D]'} `} width='34' icon={'icon-park-outline:texture'} /> <p>Pelos</p>
+                        <button className={`${BtColor === 1 ? BtBg : 'bg-[#F5F5F466] dark:bg-black text-[#02020B9C] dark:text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(1)}>
+                            <Icon className={`${BtColor === 1 ? TextColor : ''} `} width='34' icon={'icon-park-outline:texture'} /> <p>Pelos</p>
                         </button>
-                        <button className={`${BtColor === 2 ? BtBg : 'bg-black text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(2)}>
-                            <Icon className={`${BtColor === 2 ? TextColor : 'text-[#8D8D8D]'} `} width='34' icon={'carbon:circle-dash'} /> <p>Coleiras</p>
+                        <button className={`${BtColor === 2 ? BtBg : 'bg-[#F5F5F466] dark:bg-black text-[#02020B9C] dark:text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(2)}>
+                            <Icon className={`${BtColor === 2 ? TextColor : ''} `} width='34' icon={'carbon:circle-dash'} /> <p>Coleiras</p>
                         </button>
-                        <button className={`${BtColor === 3 ? BtBg : 'bg-black text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(3)}>
-                            <Icon className={`${BtColor === 3 ? TextColor : 'text-[#8D8D8D]'} `} width='34' icon={'mdi:necklace'} /> <p>Pingentes</p>
+                        <button className={`${BtColor === 3 ? BtBg : 'bg-[#F5F5F466] dark:bg-black text-[#02020B9C] dark:text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(3)}>
+                            <Icon className={`${BtColor === 3 ? TextColor : ''} `} width='34' icon={'mdi:necklace'} /> <p>Pingentes</p>
                         </button>
-                        <button className={`${BtColor === 4 ? BtBg : 'bg-black text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-mediumfont-medium`} onClick={() => SetColor(4)}>
-                            <Icon className={`${BtColor === 4 ? TextColor : 'text-[#8D8D8D]'} `} width='34' icon={'mynaui:square-solid'} /> <p>Fundos</p>
+                        <button className={`${BtColor === 4 ? BtBg : 'bg-[#F5F5F466] dark:bg-black text-[#02020B9C] dark:text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(4)}>
+                            <Icon className={`${BtColor === 4 ? TextColor : ''} `} width='34' icon={'mynaui:square-solid'} /> <p>Fundos</p>
                         </button>
                     </div>
-                    <div className={`${BtColor !== 0 ? Hidden : 'inline'} bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-white'}>
+                    <div className={`${BtColor !== 0 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesBrown} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesDarkGreen} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesGray} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesLightBlue} alt="" />
                         </AvatarTrinkets>
                     </div>
-                    <div className={`${BtColor !== 1 ? Hidden : 'inline'} bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
+                    <div className={`${BtColor !== 1 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
                         <AvatarTrinkets color={'bg-white'}></AvatarTrinkets>
                         <AvatarTrinkets color={'bg-[#D5BAA5]'}></AvatarTrinkets>
                         <AvatarTrinkets color={'bg-[#090909]'}></AvatarTrinkets>
                         <AvatarTrinkets color={'bg-[#C44A07]'}></AvatarTrinkets>
                     </div>
-                    <div className={`${BtColor !== 2 ? Hidden : 'inline'} bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-white'}>
+                    <div className={`${BtColor !== 2 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceYale} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceNaples} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceLemon} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceVerdigris} alt="" />
                         </AvatarTrinkets>
                     </div>
-                    <div className={`${BtColor !== 3 ? Hidden : 'inline'} bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
+                    <div className={`${BtColor !== 3 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
                         <AvatarTrinkets color={'bg-white'}>
                             <img src={Pendant8Star} alt="" />
                         </AvatarTrinkets>
@@ -101,18 +101,18 @@ function AvatarCustom(){
                             <img src={PendantTiffany} alt="" />
                         </AvatarTrinkets>
                     </div>
-                    <div className={`${BtColor !== 4 ? Hidden : 'inline'} bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-white'}>
-                            <img className="w-fit" src={BgBeach} alt="" />
+                    <div className={`${BtColor !== 4 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                            <img className="h-full max-w-none" src={BgBeach} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
-                            <img src={BgForest} alt="" />
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                            <img className="h-full max-w-none" src={BgForest} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
-                            <img src={BgSpace} alt="" />
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                            <img className="h-full max-w-none" src={BgSpace} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
-                            <img src={BgRoom} alt="" />
+                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                            <img className="h-full max-w-none" src={BgRoom} alt="" />
                         </AvatarTrinkets>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import Friends from "../Cards/FriendCards";
-function FriendsModal({ closeModal }) {
+function FriendsModal({ closeModal,openModal }) {
   return (
     <section className="w-full fixed dark:bg-black/50 bg-white/50 backdrop-blur-[25px] z-20 left-0 top-0 h-[fill-available] flex justify-center items-center overflow-y-hidden ">
       <div className=" h-[750px] flex flex-col w-8/12 bg-white dark:bg-[#1B1B1B] p-6 rounded-md  shadow-black shadow-2xl">
@@ -10,7 +10,7 @@ function FriendsModal({ closeModal }) {
           </h1>
 
           <div className="flex gap-5 items-center">
-              <div className="flex text-[32px] px-2 items-center border-4 rounded-xl border-black dark:border-white cursor-pointer dark:text-white">
+              <div onClick={openModal} className="flex text-[32px] px-2 items-center border-4 rounded-xl border-black dark:border-white cursor-pointer dark:text-white">
                 <Icon icon="typcn:plus" />
                 <p className="mx-3 ">Adicionar amigo</p>
               </div>

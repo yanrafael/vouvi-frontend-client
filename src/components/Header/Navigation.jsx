@@ -11,7 +11,7 @@ function Navigation({ icon, title, width, fill }) {
             ></div>
             {icon}
             <p
-                className={`flex mx-2 text-[32px] font-medium duration-300 ease-in-out transition-all group-hover:text-[#003F7F] `}
+                className={`flex text-[#003F7F] dark:text-secondary-200 mx-2 text-[32px] font-medium duration-300 ease-in-out transition-all group-hover:text-[#003F7F] `}
             >
                 {title}
             </p>

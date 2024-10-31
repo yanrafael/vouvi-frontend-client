@@ -1,12 +1,12 @@
 import Friends from '../../Cards/FriendCards'
 import { Icon } from '@iconify/react';
-function Low({ friends, openModal }) {
+function Low({ friends, openModal, openModal2 }) {
     return (
         <section className="w-11/12 m-auto mt-20 dark:text-white text-[40px] font-medium">
             <div className="bg-[rgba(124,32,190,0.50);] dark:bg-[#1e1e1e] rounded-md p-5 flex flex-col">
                 <div className='flex justify-between text-[#471650] dark:text-white'>
                     <h1>Amigos: {friends}</h1>
-                    <div className='flex text-[32px] px-2 items-center border-4 rounded-xl border-[#471650] dark:border-white cursor-pointer'>
+                    <div onClick={openModal2} className='flex text-[32px] px-2 items-center border-4 rounded-xl border-[#471650] dark:border-white cursor-pointer'>
                         <Icon icon='typcn:plus' />
                         <p className='mx-3'>Adicionar amigo</p>
                     </div>
