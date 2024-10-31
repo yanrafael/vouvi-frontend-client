@@ -5,9 +5,8 @@ import { useState } from "react";
 function Avatar() {
   const [showCreate, setShowCreate] = useState(true);
 
-  const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark")
-  );
+  const darkMode = document.body.classList.contains("dark")
+
 
   const VouviWord = (
     <svg

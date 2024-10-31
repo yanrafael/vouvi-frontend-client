@@ -23,8 +23,8 @@ function AvatarColors() {
     </svg>
 
     return (
-        <div className="bg-[#151515] w-[520px] flex flex-col items-center py-10 rounded-md">
-            <div style={{ backgroundColor: Bg[IconBorder] }} className={`w-10/12 flex pt-16 rounded-md border-[10px] border-black transition-all duration-500`}>
+        <div className="bg-[#C9C9C8] dark:bg-[#151515] w-[520px] flex flex-col items-center py-10 rounded-md">
+            <div style={{ backgroundColor: Bg[IconBorder] }} className={`w-10/12 flex pt-16 rounded-md border-[10px] border-white dark:border-black transition-all duration-500`}>
                 {AvatarStyle}
             </div>
             <div className="flex w-10/12 justify-around py-6">

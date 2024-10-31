@@ -2,12 +2,14 @@ import LogoWhite from "./LogoWhite";
 import Navigation from "./Navigation";
 // import AvatarBasic from "./AvatarBasic";
 // import AvatarFull from "./AvatarFull"
-import Settings from './Settings'
-import { Children, useEffect,useState } from "react";
+import { Children, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber, children }) {
+function HeaderIntern({ iconActiveNumber, children }) {
+
+  const darkMode = document.body.classList.contains("dark")
+
   // Borda ao clicar
   const Outline = "outline outline-[10px] outline-[rgba(0,127,255,0.15)]";
   const [useOutline, setUseOutline] = useState(false);
@@ -45,6 +47,7 @@ function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber, children }) {
       setActiveIcon(iconId); // Ativa o ícone clicado
     }
   };
+
 
   const Learn = (
     <svg
@@ -195,6 +198,7 @@ function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber, children }) {
   useEffect(() => {
     IconStates(iconActiveNumber); // Define o iconState para 0 ao montar o componente
   }, []);
+  
 
   return (
     <>
