@@ -227,7 +227,7 @@ function HeaderIntern({ darkMode, setDarkMode, iconActiveNumber, children }) {
             </div>
           </Link>
 
-          <Link to={"ranking"}>
+          <Link to={"/ranking"}>
             <div onClick={() => IconStates(2)}>
               <Navigation
                 width={`w-[204px] group ${
