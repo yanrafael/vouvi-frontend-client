@@ -64,7 +64,7 @@ function Header({ darkMode, setDarkMode }) {
       <Link to={"/login"}>
         <SecondaryButton
           color={
-            "dark:hover:text-secondary-200 text-white dark:text-black dark:bg-white bg-black"
+            "dark:hover:text-secondary-200 text-white dark:text-black dark:bg-white bg-black hover:text-secondary-300"
           }
           text={"Entrar"}
         />

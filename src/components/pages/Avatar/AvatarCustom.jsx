@@ -30,11 +30,11 @@ function AvatarCustom(){
      }
 
     return(
-        <div className=" flex justify-around w-full 2xl:w-10/12">
+        <div className=" flex justify-evenly w-full 2xl:w-[90%] gap-5 ">
             
                 <AvatarColors />
 
-                <div className="bg-[#151515] flex flex-col p-10 rounded-md w-7/12">
+                <div className="bg-[#151515] flex flex-col p-10 rounded-md w-[900px]">
                     <h1 className="text-lg text-white font-medium pb-10">Crie seu avatar!</h1>
                     <div className="flex">
                         <button className={`${BtColor === 0 ? BtBg : 'bg-black text-[#8D8D8D]'} p-5 rounded-t-md h-14 flex items-center justify-evenly text-md font-medium`} onClick={() => SetColor(0)}>
@@ -103,16 +103,16 @@ function AvatarCustom(){
                     </div>
                     <div className={`${BtColor !== 4 ? Hidden : 'inline'} bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
                         <AvatarTrinkets color={'bg-white'}>
-                            <img className="w-fit" src={BgBeach} alt="" />
+                            <img className="h-full max-w-none" src={BgBeach} alt="" />
                         </AvatarTrinkets>
                         <AvatarTrinkets color={'bg-white'}>
-                            <img src={BgForest} alt="" />
+                            <img className="h-full max-w-none" src={BgForest} alt="" />
                         </AvatarTrinkets>
                         <AvatarTrinkets color={'bg-white'}>
-                            <img src={BgSpace} alt="" />
+                            <img className="h-full max-w-none" src={BgSpace} alt="" />
                         </AvatarTrinkets>
                         <AvatarTrinkets color={'bg-white'}>
-                            <img src={BgRoom} alt="" />
+                            <img className="h-full max-w-none" src={BgRoom} alt="" />
                         </AvatarTrinkets>
                     </div>
                 </div>

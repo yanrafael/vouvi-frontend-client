@@ -55,12 +55,12 @@ function Top() {
       </section>
 
       <h1
-        className={`flex text-2xl justify-center mt-40 mb-10 leading-[1.2] font-medium text-center ${TextGradient}`}
+        className={`flex text-2xl justify-center mt-40 mb-10 leading-[1.2] font-medium text-center ${TextGradient} `}
       >
         Educação Financeira
       </h1>
 
-      <section className="flex justify-center">
+      <section className="flex justify-center !scroll-smooth">
         <Cards
           img={FireIcon}
           title={"Zero dívidas!"}

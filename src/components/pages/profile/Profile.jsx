@@ -7,6 +7,7 @@ import SettingsModal from "../../Modals/SettingsModal";
 import Settings from '../../Header/Settings'
 import InsigneModal from "../../Modals/InsigneModal"
 import FriendsModal from "../../Modals/FriendsModal";
+import FriendsAddModal from '../../Modals/FriendAddModal'
 import { useState } from "react";
 function Profile() {
   const [darkMode, setDarkMode] = useState(
@@ -25,11 +26,12 @@ function Profile() {
       </HeaderIntern>
       <Top />
       <Mid openModal={() => openModal("insigne")}/>
-      <Low openModal={() => openModal("friends")} friends={"15"} />
+      <Low openModal={() => openModal("friends")} openModal2={() => openModal("friendsAdd")} friends={"15"} />
       <Footer/>
        {activeModal === "settings" && (<SettingsModal closeModal={closeModal} />)}
        {activeModal === "insigne" && (<InsigneModal closeModal={closeModal} />)}
-       {activeModal === "friends" && (<FriendsModal closeModal={closeModal} />)}
+       {activeModal === "friends" && (<FriendsModal openModal={() => openModal("friendsAdd")} closeModal={closeModal} />)}
+       {activeModal === "friendsAdd" && (<FriendsAddModal closeModal={closeModal} />)}
     </>
   );
 }

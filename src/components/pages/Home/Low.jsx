@@ -48,7 +48,7 @@ function Low() {
           </div>
           <SecondaryButton
             color={
-              " text-white hover:text-black bg-black dark:text-black dark:bg-white"
+              " text-white hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
             }
             text={"Enviar feedback"}
           />
