@@ -3,17 +3,24 @@ import PrimaryButton from "../../Buttons/PrimaryButton";
 import SecondaryButton from "../../Buttons/SecondaryButton";
 import Subscription from "../../Cards/SubscriptionCard";
 import FiveStars from "../../../assets/images/fivestars-icon.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Low() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
+    useEffect(() => {
+      AOS.init({ duration: 1200 });
+    });
+
   return (
     <>
       <section className="flex m-auto w-10/12 bg-slate-500 relative mt-[200px]">
         <div className="flex flex-col w-[60%]">
-          <div className="flex justify-between">
+          <div data-aos='zoom-in-up' className="flex justify-between">
             <FeedbackCard
               color={"bg-[#FA7ABC] text-[#A90057]"}
               text={"Manda a real!"}
@@ -24,7 +31,7 @@ function Low() {
               text={"Avalie-nos"}
             />
           </div>
-          <div className="flex justify-between mt-6">
+          <div data-aos='zoom-in-up' className="flex justify-between mt-6">
             <FeedbackCard
               color={"bg-[#84CE7A] text-[#0A5800]"}
               text={"Solta o verbo!"}
@@ -36,12 +43,12 @@ function Low() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-start ml-10 w-[40%]">
+        <div data-aos='fade-up' className="flex flex-col justify-center items-start ml-10 w-[40%]">
           <div className="flex flex-col">
-            <h1 className={`${TextGradient} text-2xl font-medium`}>
+            <h1 data-aos='fade-left' className={`${TextGradient} text-2xl font-medium`}>
               A Gente Cresce Com Seu Feedback
             </h1>
-            <p className={`${TextGradient} text-base mt-5 mb-16`}>
+            <p data-aos='zoom-in-up' className={`${TextGradient} text-base mt-5 mb-16`}>
               Você faz parte do Time.
               <br /> Queremos te ouvir!
             </p>
@@ -55,7 +62,7 @@ function Low() {
         </div>
       </section>
 
-      <section>
+      <section data-aos='fade-right'>
         <h1
           className={`${TextGradient} text-2xl text-center xl:leading-[1.2] mt-[160px] font-medium`}
         >
@@ -83,9 +90,9 @@ function Low() {
               "Ideal para quem está começando a aprender sobre finanças."
             }
           />
-          <Subscription
+          <Subscription 
             color={
-              "bg-primary-200 border-8 border-black outline outline-8 outline-primary-300"
+              "bg-primary-200 border-8 dark:border-black outline outline-8 outline-primary-300"
             }
             colortitle={"text-[#35005B]"}
             title={"Premium"}
