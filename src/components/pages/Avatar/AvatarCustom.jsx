@@ -29,10 +29,40 @@ function AvatarCustom(){
          BtNoColor(index)
      }
 
+     const [eyesColor, setEyesColor] = useState(null); // Estado para armazenar a cor dos olhos
+
+    // Função para atualizar o estado de eyesColor ao clicar
+    const ChangeEyes = (eyes) => {
+        setEyesColor(eyes); // Define EyesBrown como o valor do estado
+    };
+
+    const [pendantColor, setPendantColor] = useState(null);
+
+    const ChangePendant = (pendant) =>{
+        setPendantColor(pendant)
+    }
+
+    const [necklaceColor, setNecklaceColor] = useState(null);
+
+    const ChangeNecklace = (necklace) =>{
+        setNecklaceColor(necklace)
+    }
+
+    const [textureColor, setTextureColor] = useState();
+
+    const ChangeTexture = (texture) =>{
+        setTextureColor(texture)
+    }
+
+    const [backgroundColor, setBackgroundColor] = useState();
+
+    const ChangeBackground = (texture) =>{
+        setBackgroundColor(texture)
+    }
     return(
         <div className=" flex justify-evenly w-full 2xl:w-[90%] 2xl:gap-5 ">
             
-                <AvatarColors />
+                <AvatarColors Eyes={eyesColor} Texture={textureColor} Necklace={necklaceColor} Pendant={pendantColor} Background={backgroundColor} />
 
                 <div className="bg-[#C9C9C8] dark:bg-[#151515] flex flex-col p-10 rounded-md w-[900px]">
                     <h1 className="text-lg dark:text-white font-medium pb-10">Crie seu avatar!</h1>
@@ -54,64 +84,64 @@ function AvatarCustom(){
                         </button>
                     </div>
                     <div className={`${BtColor !== 0 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeEyes(EyesBrown)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesBrown} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeEyes(EyesDarkGreen)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesDarkGreen} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeEyes(EyesGray)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesGray} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeEyes(EyesLightBlue)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={EyesLightBlue} alt="" />
                         </AvatarTrinkets>
                     </div>
                     <div className={`${BtColor !== 1 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-white'}></AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#D5BAA5]'}></AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#090909]'}></AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#C44A07]'}></AvatarTrinkets>
+                        <AvatarTrinkets onClick={() => ChangeTexture('white')} color={'bg-white'}></AvatarTrinkets>
+                        <AvatarTrinkets onClick={() => ChangeTexture('#D5BAA5')} color={'bg-[#D5BAA5]'}></AvatarTrinkets>
+                        <AvatarTrinkets onClick={() => ChangeTexture('#090909')} color={'bg-[#090909]'}></AvatarTrinkets>
+                        <AvatarTrinkets onClick={() => ChangeTexture('#C44A07')} color={'bg-[#C44A07]'}></AvatarTrinkets>
                     </div>
                     <div className={`${BtColor !== 2 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeNecklace(NecklaceYale)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceYale} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeNecklace(NecklaceNaples)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceNaples} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeNecklace(NecklaceLemon)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceLemon} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeNecklace(NecklaceVerdigris)} color={'bg-[#B5B5B5] dark:bg-white'}>
                             <img src={NecklaceVerdigris} alt="" />
                         </AvatarTrinkets>
                     </div>
                     <div className={`${BtColor !== 3 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangePendant(Pendant8Star)} color={'bg-white'}>
                             <img src={Pendant8Star} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangePendant(PendantHearth)} color={'bg-white'}>
                             <img src={PendantHearth} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangePendant(PendantIndigo)} color={'bg-white'}>
                             <img src={PendantIndigo} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangePendant(PendantTiffany)} color={'bg-white'}>
                             <img src={PendantTiffany} alt="" />
                         </AvatarTrinkets>
                     </div>
                     <div className={`${BtColor !== 4 ? Hidden : 'inline'} bg-white dark:bg-[#1F1F1F] w-full h-full rounded-[0px_24px_24px_24px] p-5 flex `}>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeBackground(BgBeach)} >
                             <img className="h-full max-w-none" src={BgBeach} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeBackground(BgForest)}>
                             <img className="h-full max-w-none" src={BgForest} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeBackground(BgSpace)}>
                             <img className="h-full max-w-none" src={BgSpace} alt="" />
                         </AvatarTrinkets>
-                        <AvatarTrinkets color={'bg-[#B5B5B5] dark:bg-white'}>
+                        <AvatarTrinkets onClick={() => ChangeBackground(BgRoom)}>
                             <img className="h-full max-w-none" src={BgRoom} alt="" />
                         </AvatarTrinkets>
                     </div>
