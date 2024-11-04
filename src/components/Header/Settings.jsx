@@ -8,9 +8,9 @@ function AvatarBasic({openModal}) {
           Ajustes
         </h1>
       </div>
-      <div className="bg-black dark:bg-white rounded-full flex w-[3.5rem] h-[3.5rem] items-center justify-center">
+      <div className="bg-black dark:bg-white rounded-full flex w-[3.5rem] h-[3.5rem] items-center justify-center group">
           <Icon
-            className=" dark:text-black right-[1px] relative text-white"
+            className=" dark:text-black right-[1px] relative text-white group-hover:rotate-[180deg] group-hover:translate-x-[2px] transition-transform duration-[800ms]"
             icon="solar:settings-bold"
             width="3rem"
           />

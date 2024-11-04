@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-function Navigation({ icon, title, width, fill }) {
+function Navigation({ icon, title, width, fill, textColor }) {
 
 
     return (
@@ -11,7 +11,7 @@ function Navigation({ icon, title, width, fill }) {
             ></div>
             {icon}
             <p
-                className={`flex text-[#003F7F] dark:text-secondary-200 mx-2 text-[32px] font-medium duration-300 ease-in-out transition-all group-hover:text-[#003F7F] `}
+                className={`flex ${textColor} mx-2 text-[32px] font-medium duration-300 ease-in-out transition-all group-hover:text-[#003F7F] `}
             >
                 {title}
             </p>
@@ -24,6 +24,7 @@ Navigation.propTypes = {
     title: PropTypes.string,
     width: PropTypes.string,
     fill: PropTypes.string,
+    textColor: PropTypes.string,
 }
 
 export default Navigation;

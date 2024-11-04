@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 function HeaderIntern({ iconActiveNumber, children }) {
-
-  const darkMode = document.body.classList.contains("dark")
+  const darkMode = document.body.classList.contains("dark");
 
   // Borda ao clicar
   const Outline = "outline outline-[10px] outline-[rgba(0,127,255,0.15)]";
@@ -47,7 +46,6 @@ function HeaderIntern({ iconActiveNumber, children }) {
       setActiveIcon(iconId); // Ativa o ícone clicado
     }
   };
-
 
   const Learn = (
     <svg
@@ -198,7 +196,6 @@ function HeaderIntern({ iconActiveNumber, children }) {
   useEffect(() => {
     IconStates(iconActiveNumber); // Define o iconState para 0 ao montar o componente
   }, []);
-  
 
   return (
     <>
@@ -208,12 +205,13 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={"/learn"}>
             <div onClick={() => IconStates(0)}>
               <Navigation
-                width={`w-[224px] group ${
-                  textColor === 0 ? UseTextColor : "text-secondary-200"
-                } ${useOutline === 0 ? Outline : ""}`}
+                width={`w-[224px] group ${useOutline === 0 ? Outline : ""}`}
                 fill={` ${fillComponent === 0 ? Fill : ""}`}
                 icon={Learn}
                 title={"Aprender"}
+                textColor={`${
+                  textColor === 0 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                }`}
               />
             </div>
           </Link>
@@ -221,12 +219,13 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={""}>
             <div onClick={() => IconStates(1)}>
               <Navigation
-                width={`w-[204px] group ${
-                  textColor === 1 ? UseTextColor : "text-secondary-200"
-                } ${useOutline === 1 ? Outline : ""} `}
+                width={`w-[204px] group ${useOutline === 1 ? Outline : ""} `}
                 fill={` ${fillComponent === 1 ? Fill : ""}`}
                 icon={Planning}
                 title={"Planejar"}
+                textColor={`${
+                  textColor === 1 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                }`}
               />
             </div>
           </Link>
@@ -234,12 +233,13 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={"ranking"}>
             <div onClick={() => IconStates(2)}>
               <Navigation
-                width={`w-[204px] group ${
-                  textColor === 2 ? UseTextColor : "text-secondary-200"
-                } ${useOutline === 2 ? Outline : ""} `}
+                width={`w-[204px] group ${useOutline === 2 ? Outline : ""} `}
                 fill={` ${fillComponent === 2 ? Fill : ""}`}
                 icon={Ranking}
                 title={"Ranking"}
+                textColor={`${
+                  textColor === 2 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                }`}
               />
             </div>
           </Link>
@@ -247,12 +247,13 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={"/store"}>
             <div onClick={() => IconStates(3)}>
               <Navigation
-                width={`w-[145px] group ${
-                  textColor === 3 ? UseTextColor : "text-secondary-200"
-                } ${useOutline === 3 ? Outline : ""} `}
+                width={`w-[145px] group ${useOutline === 3 ? Outline : ""} `}
                 fill={` ${fillComponent === 3 ? Fill : ""}`}
                 icon={Store}
                 title={"Loja"}
+                textColor={`${
+                  textColor === 3 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                }`}
               />
             </div>
           </Link>

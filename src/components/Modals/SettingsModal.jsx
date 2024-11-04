@@ -32,7 +32,7 @@ function SettingsModal({closeModal}) {
               width="3rem"
             />
           </div>
-          <div className="bg-[rgba(141,141,141,0.30);] flex items-center justify-between p-4 rounded-md mt-5">
+          <div className="bg-[rgba(141,141,141,0.30);] dark:bg-black hover:bg-[#8D8D8DCC] hover:dark:bg-[#02020B66] transition-colors duration-300 flex items-center justify-between p-4 rounded-md mt-5 cursor-pointer">
             <div className="flex flex-col ">
               <h1 className="dark:text-white text-[32px] font-medium ">
                 Plano atual
@@ -48,7 +48,7 @@ function SettingsModal({closeModal}) {
               <p className="text-md text-primary-200 font-medium">Seja Premium</p>
             </div>
           </div>
-          <div className="bg-[rgba(141,141,141,0.30);] flex items-center justify-between p-4 rounded-md mt-5">
+          <div className="bg-[rgba(141,141,141,0.30);] dark:bg-black hover:bg-[#8D8D8DCC] hover:dark:bg-[#02020B66] transition-colors duration-300 flex items-center justify-between p-4 rounded-md mt-5">
             <div className="flex flex-col ">
               <h1 className="dark:text-white text-[32px] font-medium ">
                 Modo claro
@@ -68,7 +68,7 @@ function SettingsModal({closeModal}) {
               ></div>
             </div>
           </div>
-          <div className="bg-[#E3000033] flex items-center justify-between px-4 py-2 rounded-md mt-32 cursor-pointer">
+          <div className="bg-[#E3000033] hover:bg-[#E300001A] transition-colors duration-300 flex items-center justify-between px-4 py-2 rounded-md mt-32 cursor-pointer">
             <div className="flex flex-col ">
               <h1 className="dark:text-white text-[32px] font-medium ">
                 Sair da conta
