@@ -3,7 +3,6 @@ import Cards from "../../Cards/MarketingCards";
 import FireIcon from "../../../assets/images/fire-icon.svg";
 import GreenIcon from "../../../assets/images/graphicgreen-icon.svg";
 import HeartIcon from "../../../assets/images/heart-icon.svg";
-import BackgroundV from "../../../assets/videos/video-background.mp4";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -11,7 +10,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Top() {
+function Top({background}) {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
@@ -25,8 +24,8 @@ function Top() {
         {/* Background */}
         <div className="absolute top-0 w-full -z-10 h-screen overflow-hidden ">
           <video
-            className="min-h-full opacity-20 object-cover blur-md  "
-            src={BackgroundV}
+            className="min-h-full opacity-40 object-cover blur-md  "
+            src={background}
             autoPlay
             muted
             loop
