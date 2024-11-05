@@ -10,7 +10,7 @@ function SettingsModal({closeModal}) {
     setDarkMode((dm) => !dm);
   };
   return (
-    <section className="w-full fixed dark:bg-black/50 bg-white/50 backdrop-blur-[25px] z-20 left-0 top-0 h-[fill-available] flex justify-center items-center overflow-y-hidden ">
+    <section className="w-full fixed dark:bg-black/50 bg-white/50 backdrop-blur-[25px] z-20 left-0 top-0 h-full flex justify-center items-center overflow-y-hidden ">
         <div className=" flex flex-col w-8/12 bg-white dark:bg-[#1B1B1B] p-6 rounded-md h-fit shadow-black shadow-2xl">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">

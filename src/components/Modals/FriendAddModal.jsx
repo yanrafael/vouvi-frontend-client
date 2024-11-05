@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import Friends from "../Cards/FriendCards";
 function FriendsModal({ closeModal }) {
   return (
-    <section className="w-full fixed dark:bg-black/50 bg-white/50 backdrop-blur-[25px] z-20 left-0 top-0 h-[fill-available] flex justify-center items-center overflow-y-hidden ">
+    <section className="w-full fixed dark:bg-black/50 bg-white/50 backdrop-blur-[25px] z-20 left-0 top-0 h-full flex justify-center items-center overflow-y-hidden ">
       <div className=" h-[750px] flex flex-col w-8/12 bg-white dark:bg-[#1B1B1B] p-6 rounded-md  shadow-black shadow-2xl">
         <div className="flex justify-between items-center">
           <h1 className="dark:text-white text-[32px] font-medium  text-right">
