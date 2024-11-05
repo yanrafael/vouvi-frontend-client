@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import catIcon from "../../../assets/images/gato-planning.svg";
 
-function Top() {
+function Top({onClick, onClick2}) {
   const [balance, setBalance] = useState(0);
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
@@ -11,6 +11,16 @@ function Top() {
     return String(value.toFixed(2)).replace(".", ",");
   };
 
+  const [btnOn, setBtnOn] = useState(0);
+
+  const handleClick = (n) => {
+    setBtnOn(n);
+    if (n === 0) {
+      onClick(0);
+    } else if (n === 1) {
+      onClick2(1);
+    }
+  };
   return (
     <div>
       <section className="flex w-11/12 m-auto gap-2 mt-10 justify-center">
@@ -51,10 +61,10 @@ function Top() {
 
       <section className="w-11/12 m-auto mt-10 p-4 rounded-md flex justify-between items-center">
         <div className="flex gap-7">
-          <button className="text-base text-white bg-black p-4 rounded-md">
+          <button onClick={() => handleClick(0)} className={`${btnOn == 0 ? 'bg-black dark:bg-white dark:text-black' : 'bg-[#8D8D8D]'} text-base p-4 rounded-md`}>
             Planejar
           </button>
-          <button className="text-base text-white bg-[#8D8D8D] p-4 rounded-md">
+          <button onClick={() => handleClick(1)} className={`${btnOn == 1 ? 'bg-black' : 'bg-[#8D8D8D]'} text-base text-white p-4 rounded-md`}>
             Metas
           </button>
         </div>
