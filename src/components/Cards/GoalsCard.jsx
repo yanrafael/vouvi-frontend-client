@@ -30,7 +30,7 @@ function GoalsCard({ objective, actualValue, maxValue, date}) {
 
   useEffect(() => {
     const conclusive = () => {
-      if (objectiveDate < currentDate) {
+      if (objectiveDate < currentDate && progression < 100) {
         setIconBar(delayed);
         setBgColor(colors.delayed[0]);
         setTextColor(colors.delayed[1]);
