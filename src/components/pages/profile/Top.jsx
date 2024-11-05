@@ -14,7 +14,7 @@ function Top() {
                     <img src={Avatar} alt="" />
                 </div>
             </div>
-            <div className='flex flex-col justify-evenly font-medium ml-16 dark:text-white text-[#252525] w-6/12'>
+            <div className='flex flex-col justify-center gap-2 font-medium ml-16 dark:text-white text-[#252525] w-6/12'>
                 <h1 className='text-lg '>Ana carolina</h1>
                 <div className=' bg-blue-500 w-[70%] bg-[#014085] rounded-md px-6'>
                     <div className='flex justify-between text-[32px] font-semibold text-right'>
