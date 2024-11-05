@@ -31,6 +31,7 @@ function Top() {
             muted
             loop
           ></video>
+          <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t dark:from-black from-white to-transparent"></div>
         </div>
 
         <div className="flex flex-col justify-center text-center m-auto text-black dark:text-white mt-[200px]">
