@@ -61,10 +61,10 @@ function Top({onClick, onClick2}) {
 
       <section className="w-11/12 m-auto mt-10 p-4 rounded-md flex justify-between items-center">
         <div className="flex gap-7">
-          <button onClick={() => handleClick(0)} className={`${btnOn == 0 ? 'bg-black dark:bg-white dark:text-black' : 'bg-[#8D8D8D]'} text-base p-4 rounded-md`}>
+          <button onClick={() => handleClick(0)} className={`${btnOn == 0 ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-[#8D8D8D] text-white'} text-base p-4 rounded-md`}>
             Planejar
           </button>
-          <button onClick={() => handleClick(1)} className={`${btnOn == 1 ? 'bg-black' : 'bg-[#8D8D8D]'} text-base text-white p-4 rounded-md`}>
+          <button onClick={() => handleClick(1)} className={`${btnOn == 1 ? 'bg-black text-white dark:bg-white dark:text-black' : 'bg-[#8D8D8D] text-white'} text-base p-4 rounded-md`}>
             Metas
           </button>
         </div>
@@ -80,6 +80,7 @@ function Top({onClick, onClick2}) {
             </p>
           </div>
         </div>
+
       </section>
     </div>
   );
