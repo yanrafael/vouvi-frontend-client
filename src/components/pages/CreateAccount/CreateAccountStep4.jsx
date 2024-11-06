@@ -21,7 +21,7 @@ function CreateAccountStep4({
       <ProgressBar value={60} />
 
       {/* Área onde o usuário insere informações */}
-      <div className="flex flex-col gap-5 justify-around">
+      <div className="flex flex-col justify-around gap-5">
         <span className="grid">
           <Label htmlFor="email">E-mail:</Label>
           <Input
@@ -44,9 +44,9 @@ function CreateAccountStep4({
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <span className="flex items-center justify-between mt-2">
+          <span className="mt-2 flex items-center justify-between">
             <div>Intensidade da senha</div>
-            <div className="bg-green-200 w-14 h-5 rounded-[4px]" />
+            <div className="h-5 w-14 rounded-[4px] bg-green-200" />
           </span>
         </span>
 
@@ -58,15 +58,15 @@ function CreateAccountStep4({
             onChange={(e) => setConfirmPasword(e.target.value)}
             placeholder={"Confirme sua senha"}
           />
-          <span className="flex justify-center mt-1">
-            <p className="text-opacity-50 text-xs">
+          <span className="mt-1 flex justify-center">
+            <p className="text-xs text-opacity-50">
               Seu e-mail é usado quando você esquece a senha. Está seguro!
             </p>
           </span>
         </span>
       </div>
 
-      <p className="text-center text-[16px] my-3">
+      <p className="my-3 text-center text-[16px]">
         <span className="text-xs">
           Ao criar uma conta, você concorda com os
         </span>

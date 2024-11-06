@@ -5,7 +5,7 @@ import CreateAccountStep3 from "./CreateAccountStep3";
 import CreateAccountStep4 from "./CreateAccountStep4";
 import CreateAccountStep5 from "./CreateAccountStep5";
 
-import bgVideo from "/src/assets/videos/video-background.mp4";
+import bgVideo from "/src/assets/videos/video-background-dark.mp4";
 
 function CreateAccount() {
   const [step, setStep] = useState(1);
@@ -117,20 +117,20 @@ function CreateAccount() {
   });
 
   return (
-    <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5">
+    <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
-        className="absolute -z-10 opacity-40 left-0 top-0 w-full h-full object-cover"
+        className="absolute left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
         loop
         id="bg-video"
       ></video>
       <form
-        className="flex flex-col justify-around gap-4 bg-white bg-opacity-90 w-[600px] h-full rounded-sm p-10"
+        className="flex h-full w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
         action=""
       >
-        <h1 className="text-lg text-center font-bold">Criar uma conta</h1>
+        <h1 className="text-center text-lg font-bold">Criar uma conta</h1>
 
         {verifyStep()}
       </form>

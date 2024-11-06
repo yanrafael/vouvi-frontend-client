@@ -199,7 +199,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   return (
     <>
-      <header className="flex items-center justify-around w-full m-auto py-10 sticky backdrop-blur-sm top-0 left-0 z-10 bg-[rgba(2,2,11,0.05)] dark:bg-[rgba(2,2,11,0.80);]">
+      <header className="sticky left-0 top-0 z-10 m-auto flex w-full items-center justify-around bg-[rgba(2,2,11,0.05)] py-10 backdrop-blur-sm dark:bg-[rgba(2,2,11,0.80);]">
         <LogoWhite Name={VouviWord} width={"90px"} darkMode={darkMode} />
         <nav className="flex">
           <Link to={"/learn"}>
@@ -210,7 +210,9 @@ function HeaderIntern({ iconActiveNumber, children }) {
                 icon={Learn}
                 title={"Aprender"}
                 textColor={`${
-                  textColor === 0 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                  textColor === 0
+                    ? UseTextColor
+                    : "text-[#003F7F] dark:text-secondary-200"
                 }`}
               />
             </div>
@@ -224,7 +226,9 @@ function HeaderIntern({ iconActiveNumber, children }) {
                 icon={Planning}
                 title={"Planejar"}
                 textColor={`${
-                  textColor === 1 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                  textColor === 1
+                    ? UseTextColor
+                    : "text-[#003F7F] dark:text-secondary-200"
                 }`}
               />
             </div>
@@ -238,7 +242,9 @@ function HeaderIntern({ iconActiveNumber, children }) {
                 icon={Ranking}
                 title={"Ranking"}
                 textColor={`${
-                  textColor === 2 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                  textColor === 2
+                    ? UseTextColor
+                    : "text-[#003F7F] dark:text-secondary-200"
                 }`}
               />
             </div>
@@ -252,7 +258,9 @@ function HeaderIntern({ iconActiveNumber, children }) {
                 icon={Store}
                 title={"Loja"}
                 textColor={`${
-                  textColor === 3 ? UseTextColor : "text-[#003F7F] dark:text-secondary-200"
+                  textColor === 3
+                    ? UseTextColor
+                    : "text-[#003F7F] dark:text-secondary-200"
                 }`}
               />
             </div>
@@ -276,7 +284,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
             /> */}
         </div>
       </header>
-      <hr className="h-[1px] border-0  w-[100%] bg-[#252525] dark:bg-[#F5F5F442] left-0 " />
+      <hr className="left-0 h-[1px] w-[100%] border-0 bg-[#252525] dark:bg-[#F5F5F442]" />
     </>
   );
 }

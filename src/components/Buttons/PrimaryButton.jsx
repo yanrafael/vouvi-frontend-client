@@ -1,10 +1,10 @@
 function PrimaryButton({ text, color, onClick }) {
   return (
     <button
-        onClick={onClick}
-      className={`${color} text-white  bg-primary-200 relative flex justify-center m-auto items-center rounded-sm h-[70px] px-10 font-bold mt-8 transition-all duration-200 hover:bg-opacity-0 hover:outline hover:outline-[6px] hover:text-primary-200 `}
+      onClick={onClick}
+      className={`${color} relative m-auto mt-8 flex h-[70px] items-center justify-center rounded-sm bg-primary-200 px-10 font-bold text-white transition-all duration-200 hover:bg-opacity-0 hover:text-primary-200 hover:outline hover:outline-[6px]`}
     >
-      <p className="text-[36px] ">{text}</p>
+      <p className="text-[36px]">{text}</p>
     </button>
   );
 }

@@ -1,13 +1,17 @@
-function StoreCards({children,color}) {
-    return (
-        <div className="bg-black rounded-md p-5 flex flex-col items-center w-[290px] mx-3 mb-5 flex-none">
-            <div className={`${color} w-full h-[230px] rounded-sm flex items-center justify-center`}>
-                {children}
-            </div>
-            <button className={`text-[32px] w-full p-1 bg-yellow rounded-md mt-6 font-medium text-[#351D09] hover:bg-white transition-all duration-500`}>
-                Comprar
-            </button>
-        </div>
-    )
+function StoreCards({ children, color }) {
+  return (
+    <div className="mx-3 mb-5 flex w-[290px] flex-none flex-col items-center rounded-md bg-black p-5">
+      <div
+        className={`${color} flex h-[230px] w-full items-center justify-center rounded-sm`}
+      >
+        {children}
+      </div>
+      <button
+        className={`mt-6 w-full rounded-md bg-yellow p-1 text-[32px] font-medium text-[#351D09] transition-all duration-500 hover:bg-white`}
+      >
+        Comprar
+      </button>
+    </div>
+  );
 }
-export default StoreCards
+export default StoreCards;

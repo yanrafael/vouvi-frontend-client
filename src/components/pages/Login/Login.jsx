@@ -11,26 +11,26 @@ function Form() {
   });
 
   return (
-    <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5 ">
+    <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
-        className="absolute -z-10 opacity-40 left-0 top-0 w-full h-full object-cover"
+        className="absolute left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
         loop
         id="bg-video"
       ></video>
       <form
-        className="flex flex-col justify-around gap-4 bg-white bg-opacity-90 w-[600px] h-full rounded-sm p-10"
+        className="flex h-full w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
         action=""
       >
-        <h1 className="text-lg text-center font-bold">Bem vindo de volta</h1>
+        <h1 className="text-center text-lg font-bold">Bem vindo de volta</h1>
 
         <label className="text-base" htmlFor="email">
           E-mail:
         </label>
         <input
-          className="bg-black bg-opacity-15 p-1 w-full border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:outline-none text-base transition-all"
+          className="w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base transition-all hover:border-b-primary-200 focus:outline-none"
           type="email"
           name="email"
           id="email"
@@ -44,7 +44,7 @@ function Form() {
         <KeepConected />
 
         <input
-          className="w-full bg-primary-200 hover:bg-secondary-200 text-white hover:text-secondary-300 transition-all hover:cursor-pointer py-4 rounded-md text-base font-bold"
+          className="w-full rounded-md bg-primary-200 py-4 text-base font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300"
           type="submit"
           value="Entrar"
         />
@@ -58,21 +58,21 @@ function Form() {
           </Link>
         </div>
 
-        <div className="w-full my-5 flex flex-row justify-center items-center gap-5">
-          <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>
+        <div className="my-5 flex w-full flex-row items-center justify-center gap-5">
+          <span className="h-2 w-[40%] rounded-xl bg-[#BBB]"></span>
           OU
-          <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>
+          <span className="h-2 w-[40%] rounded-xl bg-[#BBB]"></span>
         </div>
 
-        <div className="flex flex-row justify-center items-center gap-3">
-          <span className="border-4 p-1 bg-white border-secondary-200 rounded-full">
-            <Icon icon={"flat-color-icons:google"}  width={"60px"}/>
+        <div className="flex flex-row items-center justify-center gap-3">
+          <span className="rounded-full border-4 border-secondary-200 bg-white p-1">
+            <Icon icon={"flat-color-icons:google"} width={"60px"} />
           </span>
-          <span className="border-4 p-1 bg-white border-secondary-200 rounded-full" data-icon="akar-icons:home">
+          <span className="rounded-full border-4 border-secondary-200 bg-white p-1">
             <Icon icon={"ic:baseline-facebook"} width={"60px"} />
           </span>
-          <span className="border-4 p-1 bg-white border-secondary-200 rounded-full">
-            <Icon icon={"ic:baseline-apple"}  width={"60px"} />
+          <span className="rounded-full border-4 border-secondary-200 bg-white p-1">
+            <Icon icon={"ic:baseline-apple"} width={"60px"} />
           </span>
         </div>
       </form>

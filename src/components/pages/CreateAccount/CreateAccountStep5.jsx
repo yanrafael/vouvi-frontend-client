@@ -23,7 +23,7 @@ function CreateAccountStep5() {
     <>
       <ProgressBar value={80} />
 
-      <h2 className="text-lg text-center">
+      <h2 className="text-center text-lg">
         Agora é só
         <br />
         confirmar o seu e-mail
@@ -33,31 +33,31 @@ function CreateAccountStep5() {
       <div>
         <div
           id="input-container"
-          className="flex justify-center mt-16 mb-0 items-center gap-4"
+          className="mb-0 mt-16 flex items-center justify-center gap-4"
         >
           <input
-            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
+            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
+            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
+            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="w-28 h-32 text-lg text-center border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 font-bold cursor-pointer transition-all outline-none"
+            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
@@ -65,7 +65,7 @@ function CreateAccountStep5() {
           />
         </div>
       </div>
-      <p className="text-center mt-0 p-0">
+      <p className="mt-0 p-0 text-center">
         Enviamos um código de 4 digitos no seu email
       </p>
 
