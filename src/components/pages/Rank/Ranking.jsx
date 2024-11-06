@@ -34,11 +34,11 @@ const Ranking = () => {
   ];
 
   return (
-    <div className="flex flex-col bg-gray-800 p-5 text-white min-h-screen">
-      <div className="flex justify-between items-center mb-6">
+    <div className="bg-gray-800 flex min-h-screen flex-col p-5 text-white">
+      <div className="mb-6 flex items-center justify-between">
         <div>
           <h2 className="text-4xl font-extrabold">Os Especialistas!</h2>
-          <h3 className="text-xs font-light text-gray-400">
+          <h3 className="text-gray-400 text-xs font-light">
             Ranking de Vcoins
           </h3>
         </div>
@@ -46,7 +46,7 @@ const Ranking = () => {
           <select
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
-            className="w-full p-2 border-2 border-purple-500 rounded-lg bg-[#1a001a] text-[#7c20be] focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="border-purple-500 focus:ring-purple-500 w-full rounded-lg border-2 bg-[#1a001a] p-2 text-[#7c20be] focus:outline-none focus:ring-2"
           >
             {options.map((option) => (
               <option
@@ -61,13 +61,13 @@ const Ranking = () => {
         </div>
       </div>
 
-      <div className="flex flex-row-reverse justify-center items-stretch gap-6 flex-grow">
-        <div className="w-1/3 flex flex-col">
-          <div className="p-4 rounded-lg h-full bg-[#1f1f1f]">
+      <div className="flex flex-grow flex-row-reverse items-stretch justify-center gap-6">
+        <div className="flex w-1/3 flex-col">
+          <div className="h-full rounded-lg bg-[#1f1f1f] p-4">
             <h2 className="text-4xl mb-2 text-left font-extrabold">
               Ricos da Vouvi
             </h2>
-            <h3 className="text-xs text-left font-light text-gray-400">
+            <h3 className="text-gray-400 text-left text-xs font-light">
               Ranking Atualizado
             </h3>
 
@@ -75,12 +75,16 @@ const Ranking = () => {
               {ricos.map((user, index) => (
                 <React.Fragment key={index}>
                   <div
-                    className={`flex justify-between items-center p-4 rounded-lg ${
+                    className={`flex items-center justify-between rounded-lg p-4 ${
                       user.name === "Você" ? "font-bold" : ""
                     }`}
                     style={{
                       backgroundColor:
-                        index >= 1 ? "#3D3D3DCC" : user.name === "Você" ? "#002952" : "",
+                        index >= 1
+                          ? "#3D3D3DCC"
+                          : user.name === "Você"
+                            ? "#002952"
+                            : "",
                       border: "1px solid #3d3d3d",
                       marginBottom: "8px",
                     }}
@@ -90,19 +94,19 @@ const Ranking = () => {
                         <img
                           src="/images/coroa.png"
                           alt="Coroa"
-                          className="w-8 h-8 mr-2"
+                          className="mr-2 h-8 w-8"
                         />
                       ) : user.name === "Chesp" ? (
                         <img
                           src="/images/prata.png"
                           alt="Troféu de Prata"
-                          className="w-8 h-8 mr-2"
+                          className="mr-2 h-8 w-8"
                         />
                       ) : user.name === "Elon" ? (
                         <img
                           src="/images/bronze.png"
                           alt="Troféu de Bronze"
-                          className="w-8 h-8 mr-2"
+                          className="mr-2 h-8 w-8"
                         />
                       ) : user.name === "Você" ? (
                         <div
@@ -125,7 +129,9 @@ const Ranking = () => {
                           </span>
                         </div>
                       ) : (
-                        <span style={{ marginRight: "10px" }}>{`${index + 1}º`}</span>
+                        <span
+                          style={{ marginRight: "10px" }}
+                        >{`${index + 1}º`}</span>
                       )}
                       <span
                         className="text-left"
@@ -135,31 +141,31 @@ const Ranking = () => {
                             user.name === "Você"
                               ? "#007FFF"
                               : user.name === "Roberto"
-                              ? "#FFD700"
-                              : user.name === "Chesp"
-                              ? "#C0C0C0"
-                              : user.name === "Elon"
-                              ? "#CD7F32"
-                              : "",
+                                ? "#FFD700"
+                                : user.name === "Chesp"
+                                  ? "#C0C0C0"
+                                  : user.name === "Elon"
+                                    ? "#CD7F32"
+                                    : "",
                         }}
                       >
                         {user.name}
                       </span>
                     </div>
                     <span
-                      className="text-sm border-b border-gray-400 inline-block"
+                      className="border-gray-400 inline-block border-b text-sm"
                       style={{
                         padding: "0 5px",
                         color:
                           user.name === "Você"
                             ? "#007FFF"
                             : user.name === "Roberto"
-                            ? "#FFD700"
-                            : user.name === "Chesp"
-                            ? "#C0C0C0"
-                            : user.name === "Elon"
-                            ? "#CD7F32"
-                            : "",
+                              ? "#FFD700"
+                              : user.name === "Chesp"
+                                ? "#C0C0C0"
+                                : user.name === "Elon"
+                                  ? "#CD7F32"
+                                  : "",
                       }}
                     >
                       {user.vc}
@@ -169,7 +175,7 @@ const Ranking = () => {
                   {user.name === "Você" &&
                     ricos[index + 1]?.name === "Roberto" && (
                       <hr
-                        className="my-2 mx-auto"
+                        className="mx-auto my-2"
                         style={{ width: "50%", borderTop: "2px solid #3d3d3d" }}
                       />
                     )}
@@ -179,46 +185,46 @@ const Ranking = () => {
           </div>
         </div>
 
-        <div className="w-1/2 flex flex-col">
-          <div className="p-4 rounded-lg h-full bg-[#1f1f1f]">
-            <div className="bg-gray-600 rounded p-2 mb-4">
-              <div className="flex justify-center items-center mb-4 gap-4">
-                <div className="flex-1 flex flex-col items-center">
+        <div className="flex w-1/2 flex-col">
+          <div className="h-full rounded-lg bg-[#1f1f1f] p-4">
+            <div className="bg-gray-600 mb-4 rounded p-2">
+              <div className="mb-4 flex items-center justify-center gap-4">
+                <div className="flex flex-1 flex-col items-center">
                   <img
                     src="/images/prata.png"
                     alt="Troféu de Prata"
-                    className="w-16 h-16"
+                    className="h-16 w-16"
                   />
                   <p className="text-center">Izzy</p>
-                  <p className="text-sm border-b border-gray-400 inline-block text-center">
+                  <p className="border-gray-400 inline-block border-b text-center text-sm">
                     12,020 XP
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col items-center transform scale-110">
+                <div className="flex flex-1 scale-110 transform flex-col items-center">
                   <img
                     src="/images/coroa.png"
                     alt="Coroa"
-                    className="w-20 h-20"
+                    className="h-20 w-20"
                   />
                   <p className="text-center">Você</p>
                   <p
-                    className="text-sm border-b inline-block text-center"
+                    className="inline-block border-b text-center text-sm"
                     style={{ color: "#b1b1b1" }}
                   >
                     13,657 XP
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col items-center">
+                <div className="flex flex-1 flex-col items-center">
                   <img
                     src="/images/bronze.png"
                     alt="Troféu de Bronze"
-                    className="w-16 h-16"
+                    className="h-16 w-16"
                   />
                   <p className="text-center">Kim</p>
                   <p
-                    className="text-sm border-b inline-block text-center"
+                    className="inline-block border-b text-center text-sm"
                     style={{ color: "#b1b1b1" }}
                   >
                     10,018 XP
@@ -228,38 +234,35 @@ const Ranking = () => {
             </div>
 
             <div
-  className="flex-grow overflow-y-auto"
-  style={{ maxHeight: "500px" }}
->
-  <div className="grid grid-cols-1 gap-4">
-    {users.map((user, index) => (
-      <div
-        key={index}
-        className="flex justify-between items-center p-4 rounded-lg"
-        style={{
-          backgroundColor: "#3D3D3DCC",
-          border: "1px solid #b1b1b1",
-        }}
-      >
-        <div className="flex items-center">
-          <span
-            className="mr-2 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white"
-          >
-            {`${index + 4}º`}
-          </span>
-          <span className="text-left">{user.name}</span>
-        </div>
-        <span
-          className="text-sm border-b inline-block"
-          style={{ color: "#b1b1b1" }}
-        >
-          {user.xp}
-        </span>
-      </div>
-    ))}
-  </div>
-</div>
-
+              className="flex-grow overflow-y-auto"
+              style={{ maxHeight: "500px" }}
+            >
+              <div className="grid grid-cols-1 gap-4">
+                {users.map((user, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-between rounded-lg p-4"
+                    style={{
+                      backgroundColor: "#3D3D3DCC",
+                      border: "1px solid #b1b1b1",
+                    }}
+                  >
+                    <div className="flex items-center">
+                      <span className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white">
+                        {`${index + 4}º`}
+                      </span>
+                      <span className="text-left">{user.name}</span>
+                    </div>
+                    <span
+                      className="inline-block border-b text-sm"
+                      style={{ color: "#b1b1b1" }}
+                    >
+                      {user.xp}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-4 text-center font-bold">
               <span style={{ color: "red" }}>▼ Zona de Rebaixamento ▼</span>
@@ -272,4 +275,3 @@ const Ranking = () => {
 };
 
 export default Ranking;
-

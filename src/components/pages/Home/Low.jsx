@@ -12,15 +12,15 @@ function Low() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-    useEffect(() => {
-      AOS.init({ duration: 1200 });
-    });
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  });
 
   return (
     <>
-      <section className="flex m-auto w-10/12 bg-slate-500 relative mt-[200px]">
-        <div className="flex flex-col w-[60%]">
-          <div data-aos='zoom-in-up' className="flex justify-between">
+      <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12">
+        <div className="flex w-[60%] flex-col">
+          <div data-aos="zoom-in-up" className="flex justify-between">
             <FeedbackCard
               color={"bg-[#FA7ABC] text-[#A90057]"}
               text={"Manda a real!"}
@@ -31,7 +31,7 @@ function Low() {
               text={"Avalie-nos"}
             />
           </div>
-          <div data-aos='zoom-in-up' className="flex justify-between mt-6">
+          <div data-aos="zoom-in-up" className="mt-6 flex justify-between">
             <FeedbackCard
               color={"bg-[#84CE7A] text-[#0A5800]"}
               text={"Solta o verbo!"}
@@ -43,12 +43,21 @@ function Low() {
           </div>
         </div>
 
-        <div data-aos='fade-up' className="flex flex-col justify-center items-start ml-10 w-[40%]">
+        <div
+          data-aos="fade-up"
+          className="ml-10 flex w-[40%] flex-col items-start justify-center"
+        >
           <div className="flex flex-col">
-            <h1 data-aos='fade-left' className={`${TextGradient} text-2xl font-medium`}>
+            <h1
+              data-aos="fade-left"
+              className={`${TextGradient} text-2xl font-medium`}
+            >
               A Gente Cresce Com Seu Feedback
             </h1>
-            <p data-aos='zoom-in-up' className={`${TextGradient} text-base mt-5 mb-16`}>
+            <p
+              data-aos="zoom-in-up"
+              className={`${TextGradient} mb-16 mt-5 text-base`}
+            >
               Você faz parte do Time.
               <br /> Queremos te ouvir!
             </p>
@@ -62,14 +71,14 @@ function Low() {
         </div>
       </section>
 
-      <section data-aos='fade-right'>
+      <section data-aos="fade-right">
         <h1
-          className={`${TextGradient} text-2xl text-center xl:leading-[1.2] mt-[160px] font-medium`}
+          className={`${TextGradient} mt-[160px] text-center text-2xl font-medium xl:leading-[1.2]`}
         >
           Escolha o plano e vire o jogo
         </h1>
         <p
-          className={`${TextGradient} text-base text-center m-auto mb-20 w-4/6`}
+          className={`${TextGradient} m-auto mb-20 w-4/6 text-center text-base`}
         >
           Do básico ao premium, tem um plano certinho para sua caminhada
           financeira. Bora começar e subir de nível!
@@ -90,7 +99,7 @@ function Low() {
               "Ideal para quem está começando a aprender sobre finanças."
             }
           />
-          <Subscription 
+          <Subscription
             color={
               "bg-primary-200 border-8 dark:border-black outline outline-8 outline-primary-300"
             }
@@ -128,14 +137,14 @@ function Low() {
         </div>
       </section>
 
-      <section className="w-8/12 m-auto ">
+      <section className="m-auto w-8/12">
         <p
-          className={`${TextGradient} text-base text-center mt-[200px] font-light mb-16`}
+          className={`${TextGradient} mb-16 mt-[200px] text-center text-base font-light`}
         >
           Venha com a gente e faça valer cada centavo. <br />
           <strong className="font-bold">
             Junte-se à
-            <strong className="text-primary-200 dark:bg-black ">Vouvi</strong> e
+            <strong className="text-primary-200 dark:bg-black">Vouvi</strong> e
             transforme sua vida financeira!
           </strong>
         </p>

@@ -19,7 +19,7 @@ function CreateAccountStep3({
       <ProgressBar value={40} />
 
       {/* Área onde o usuário insere informações */}
-      <div className="flex flex-col gap-5 justify-around">
+      <div className="flex flex-col justify-around gap-5">
         <span className="grid">
           <Label htmlFor="username">Nome de usuário:</Label>
           <Input
@@ -29,9 +29,9 @@ function CreateAccountStep3({
             onChange={(e) => setUsername(e.target.value)}
             maxLength={30}
           />
-          <span className="flex justify-between mt-2">
+          <span className="mt-2 flex justify-between">
             <p>Disponibilidade</p>
-            <div className="bg-green-200 w-20 rounded-[4px]"></div>
+            <div className="w-20 rounded-[4px] bg-green-200"></div>
           </span>
         </span>
 
@@ -60,7 +60,7 @@ function CreateAccountStep3({
         </span>
       </div>
 
-      <p className="text-center text-[16px] my-3">
+      <p className="my-3 text-center text-[16px]">
         Seu nome de usuário ficará visível para todos
       </p>
 

@@ -1,28 +1,31 @@
 import { Icon } from "@iconify/react";
 import Friends from "../Cards/FriendCards";
-function FriendsModal({ closeModal,openModal }) {
+function FriendsModal({ closeModal, openModal }) {
   return (
-    <section className="w-full fixed dark:bg-black/50 bg-white/50 backdrop-blur-[25px] z-20 left-0 top-0 h-full flex justify-center items-center overflow-y-hidden ">
-      <div className=" h-[750px] flex flex-col w-8/12 bg-white dark:bg-[#1B1B1B] p-6 rounded-md  shadow-black shadow-2xl">
-        <div className="flex justify-between items-center">
-          <h1 className="dark:text-white text-[32px] font-medium  text-right">
+    <section className="fixed left-0 top-0 z-20 flex h-full w-full items-center justify-center overflow-y-hidden bg-white/50 backdrop-blur-[25px] dark:bg-black/50">
+      <div className="flex h-[750px] w-8/12 flex-col rounded-md bg-white p-6 shadow-2xl shadow-black dark:bg-[#1B1B1B]">
+        <div className="flex items-center justify-between">
+          <h1 className="text-right text-[32px] font-medium dark:text-white">
             Amigos:
           </h1>
 
-          <div className="flex gap-5 items-center">
-              <div onClick={openModal} className="flex text-[32px] px-2 items-center border-4 rounded-xl border-black dark:border-white cursor-pointer dark:text-white">
-                <Icon icon="typcn:plus" />
-                <p className="mx-3 ">Adicionar amigo</p>
-              </div>
-              <Icon
-                onClick={closeModal}
-                className=" text-black dark:text-white right-[1px] relative opacity-35 cursor-pointer"
-                icon="carbon:close-filled"
-                width="3rem"
-              />
+          <div className="flex items-center gap-5">
+            <div
+              onClick={openModal}
+              className="flex cursor-pointer items-center rounded-xl border-4 border-black px-2 text-[32px] dark:border-white dark:text-white"
+            >
+              <Icon icon="typcn:plus" />
+              <p className="mx-3">Adicionar amigo</p>
+            </div>
+            <Icon
+              onClick={closeModal}
+              className="relative right-[1px] cursor-pointer text-black opacity-35 dark:text-white"
+              icon="carbon:close-filled"
+              width="3rem"
+            />
           </div>
         </div>
-        <div className=" flex flex-col overflow-y-scroll">
+        <div className="flex flex-col overflow-y-scroll">
           <Friends
             icon={"red"}
             name={"Wesley rocha"}

@@ -18,11 +18,11 @@ function Input({
 
   return (
     <input
-      className={`bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 ${
+      className={`h-fit w-full border-b-4 bg-black bg-opacity-15 p-1 ${
         isReadOnly === true
           ? "border-b-black"
           : "border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200"
-      } focus:outline-none outline-primary-200 transition-all text-base`}
+      } text-base outline-primary-200 transition-all focus:outline-none`}
       type={type}
       max={max || ""}
       min={min || ""}

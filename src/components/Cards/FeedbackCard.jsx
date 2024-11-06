@@ -1,9 +1,11 @@
-function Feedback({text,color,img}) {
-    return (
-        <div className={`${color} flex-col text-lg flex items-center text-center justify-center m-auto mr-2.5 mx-2.5 w-6/12 h-[18vw] rounded-3xl font-medium`}>
-            <p>{text}</p>
-            <img src={img} alt="" />
-        </div>
-    )
+function Feedback({ text, color, img }) {
+  return (
+    <div
+      className={`${color} m-auto mx-2.5 mr-2.5 flex h-[18vw] w-6/12 flex-col items-center justify-center rounded-3xl text-center text-lg font-medium`}
+    >
+      <p>{text}</p>
+      <img src={img} alt="" />
+    </div>
+  );
 }
-export default Feedback
+export default Feedback;
