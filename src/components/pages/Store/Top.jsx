@@ -24,7 +24,7 @@ function Top() {
             <PrimaryButton text={"Assinar agora!"} />
           </div>
         </div>
-        <img src={CatBanner} alt="" />
+        <img src={CatBanner} alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul." title="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul." />
       </section>
 
       <hr className="m-auto mb-14 mt-20 w-10/12 rounded-md bg-[#F5F5F442] p-1" />
