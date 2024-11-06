@@ -19,8 +19,8 @@ function Low() {
 
   return (
     <>
-      <section className="flex m-auto w-10/12 bg-slate-500 relative mt-[200px]">
-        <div className="flex flex-col w-[60%]">
+      <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12">
+        <div className="flex w-[60%] flex-col">
           <div data-aos="zoom-in-up" className="flex justify-between">
             <FeedbackCard
               color={"bg-[#FA7ABC] text-[#A90057]"}
@@ -32,7 +32,7 @@ function Low() {
               text={"Avalie-nos"}
             />
           </div>
-          <div data-aos="zoom-in-up" className="flex justify-between mt-6">
+          <div data-aos="zoom-in-up" className="mt-6 flex justify-between">
             <FeedbackCard
               color={"bg-[#84CE7A] text-[#0A5800]"}
               text={"Solta o verbo!"}
@@ -46,7 +46,7 @@ function Low() {
 
         <div
           data-aos="fade-up"
-          className="flex flex-col justify-center items-start ml-10 w-[40%]"
+          className="ml-10 flex w-[40%] flex-col items-start justify-center"
         >
           <div className="flex flex-col">
             <h1
@@ -57,7 +57,7 @@ function Low() {
             </h1>
             <p
               data-aos="zoom-in-up"
-              className={`${TextGradient} text-base mt-5 mb-16`}
+              className={`${TextGradient} mb-16 mt-5 text-base`}
             >
               Você faz parte do Time.
               <br /> Queremos te ouvir!
@@ -74,12 +74,12 @@ function Low() {
 
       <section data-aos="fade-right">
         <h1
-          className={`${TextGradient} text-2xl text-center xl:leading-[1.2] mt-[160px] font-medium`}
+          className={`${TextGradient} mt-[160px] text-center text-2xl font-medium xl:leading-[1.2]`}
         >
           Escolha o plano e vire o jogo
         </h1>
         <p
-          className={`${TextGradient} text-base text-center m-auto mb-20 w-4/6`}
+          className={`${TextGradient} m-auto mb-20 w-4/6 text-center text-base`}
         >
           Do básico ao premium, tem um plano certinho para sua caminhada
           financeira. Bora começar e subir de nível!
@@ -121,7 +121,7 @@ function Low() {
           >
             <img
               src={subscriptionHover}
-              className="absolute opacity-30 pointer-events-none scale-[2] -top-64 -ml-64 group-hover:translate-x-[550px] group-hover:translate-y-[650px] transition-transform duration-1000 "
+              className="pointer-events-none absolute -top-64 -ml-64 scale-[2] opacity-30 transition-transform duration-1000 group-hover:translate-x-[550px] group-hover:translate-y-[650px]"
             />
           </Subscription>
           <Subscription
@@ -139,20 +139,18 @@ function Low() {
             texthover={
               "Para profissionais e empresários que buscam otimizar finanças."
             }
-          >
-            
-          </Subscription>
+          ></Subscription>
         </div>
       </section>
 
-      <section className="w-8/12 m-auto ">
+      <section className="m-auto w-8/12">
         <p
-          className={`${TextGradient} text-base text-center mt-[200px] font-light mb-16`}
+          className={`${TextGradient} mb-16 mt-[200px] text-center text-base font-light`}
         >
           Venha com a gente e faça valer cada centavo. <br />
           <strong className="font-bold">
             Junte-se à
-            <strong className="text-primary-200 dark:bg-black ">Vouvi</strong> e
+            <strong className="text-primary-200 dark:bg-black">Vouvi</strong> e
             transforme sua vida financeira!
           </strong>
         </p>
