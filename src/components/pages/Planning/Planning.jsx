@@ -1,11 +1,13 @@
-import Top from "./Top";
+import { useState } from "react";
+
 import HeaderIntern from "../../Header/HeaderIntern";
 import AvatarFull from "../../Header/AvatarFull";
-import { useState } from "react";
+
+import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
-function Planning() {
 
+function Planning() {
   const [darkMode, setDarkMode] = useState(
     document.body.classList.contains("dark")
   );
@@ -31,4 +33,5 @@ function Planning() {
     </>
   );
 }
+
 export default Planning;
