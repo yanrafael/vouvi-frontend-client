@@ -37,16 +37,16 @@ function Mid() {
           Inteligência artificial? Aqui é para organizar sua vida!
         </p>
 
-        <div className="flex flex-col">
-          <div className="flex m-auto relative items-center">
-            <div data-aos="fade-right" className="flex relative top-[40px]">
+        <div className="flex flex-col" aria-label="ola">
+          <div className="flex m-auto relative items-center" aria-label="o">
+            <div data-aos="fade-right" aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados."  className="flex relative top-[40px]" title="ícone">
               <AiCards
                 icon={<Icon icon="solar:database-bold" height={108} />}
                 text={"Acompanhamento de Dados"}
               />
-              <img className="relative top-16 " src={LineTopLeft} alt="" />
+              <img className="relative top-16 " src={LineTopLeft} alt="icone de planejamento, um calendario" />
             </div>
-            <div data-aos="fade-left" className="flex justify-center relative left-[100px] top-[40px]">
+            <div aria-label="ícone de planejamento, um calendario " data-aos="fade-left" className="flex justify-center relative left-[100px] top-[40px]">
               <img className="w-[300px]" src={LineTopRight} alt="" />
               <AiCardsReverse
                 icon={<Icon icon="solar:calendar-bold" height={108} />}
@@ -61,17 +61,19 @@ function Mid() {
           </div>
 
           <div className="flex m-auto relative items-center">
-            <div data-aos="fade-right" className="flex relative bottom-[45px] right-[0px]">
+            <div aria-label="ícone de relogio" data-aos="fade-right" className="flex relative bottom-[45px] right-[0px]">
               <AiCards
-                icon={<Icon icon="lets-icons:time-atack" height={108} />}
+                icon={<Icon icon="lets-icons:time-atack" height={108} 
+                
+                />}
                 text={"Dicas em Tempo Real"}
               />
-              <img className="w-[300px]" src={LineDownLeft} alt="" />
+              <img className="w-[300px]" src={LineDownLeft} alt="ícone de relogio" />
             </div>
-            <div data-aos="fade-left" className="flex justify-center relative left-[60px] bottom-[60px] items-end">
+            <div aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados." data-aos="fade-left" className="flex justify-center relative left-[60px] bottom-[60px] items-end">
               <img src={LineDownRight} alt="" />
               <AiCardsReverse
-                icon={<Icon icon="solar:round-graph-bold" height={108} />}
+                icon={<Icon icon="solar:round-graph-bold" height={108}/>}
                 text={"Gráficos inteligentes"}
               />
             </div>
@@ -91,8 +93,8 @@ function Mid() {
         </p>
 
         <div className="w-11/12 flex justify-evenly items-center m-auto bg-[#D9D9D9] rounded-md relative mt-[100px]">
-          <img className="w-[58%]" src={Rewards} alt="" />
-          <div className="bg-[#01438A] w-[38%] rounded-md h-[29vw] flex items-center">
+          <img className="w-[58%]" src={Rewards} alt="Fundo azul com várias letras 'XP' em diferentes tamanhos e opacidades espalhadas. No centro, há uma forma amarela brilhante semelhante a uma estrela ou um brilho." aria-label="Fundo azul com várias letras 'XP' em diferentes tamanhos e opacidades espalhadas. No centro, há uma forma amarela brilhante semelhante a uma estrela ou um brilho."/>
+          <div className="bg-[#01438A] w-[38%] rounded-md h-[29vw] flex items-center" >
             <p data-aos='fade-left' className={`${TextGradient} text-xl ml-10`}>
               Missões e Recompensas
             </p>

@@ -66,13 +66,13 @@ function Form() {
 
         <div className="flex flex-row justify-center items-center gap-3">
           <span className="border-4 p-1 bg-white border-secondary-200 rounded-full">
-            <Icon icon={"flat-color-icons:google"} width={"60px"} />
+            <Icon icon={"flat-color-icons:google"}  width={"60px"}/>
           </span>
-          <span className="border-4 p-1 bg-white border-secondary-200 rounded-full">
+          <span className="border-4 p-1 bg-white border-secondary-200 rounded-full" data-icon="akar-icons:home">
             <Icon icon={"ic:baseline-facebook"} width={"60px"} />
           </span>
           <span className="border-4 p-1 bg-white border-secondary-200 rounded-full">
-            <Icon icon={"ic:baseline-apple"} width={"60px"} />
+            <Icon icon={"ic:baseline-apple"}  width={"60px"} />
           </span>
         </div>
       </form>
