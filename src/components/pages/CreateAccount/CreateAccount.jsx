@@ -120,7 +120,7 @@ function CreateAccount() {
     <div className="flex justify-center items-center sm:h-[850px] md:h-[750px] m-5">
       <video
         src={bgVideo}
-        className="absolute -z-10 opacity-40"
+        className="absolute -z-10 opacity-40 left-0 top-0 w-full h-full object-cover"
         autoPlay
         muted
         loop
