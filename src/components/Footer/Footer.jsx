@@ -39,7 +39,7 @@ function Footer({ darkMode }) {
 
   return (
     <footer className="w-12/12 m-auto mt-60 flex items-center justify-around bg-primary-200 p-12">
-      <LogoWhite darkMode={darkMode} Name={VouviWord} width={"90"} />
+      <LogoWhite darkMode={darkMode} Name={VouviWord} width={"60"} />
       <p className="text-center text-[24px] font-light text-white">
         © 2024 Vouvi. Todos os direitos reservados.
       </p>
