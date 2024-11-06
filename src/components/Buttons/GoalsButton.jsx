@@ -1,7 +1,7 @@
 function GoalsButton({ text, color }) {
   return (
     <div
-      className={`${color} text-base p-2 rounded-2xl flex items-center font-light cursor-pointer `}
+      className={`${color} flex cursor-pointer items-center rounded-2xl p-2 text-base font-light`}
     >
       <p className="mx-2 whitespace-nowrap">{text}</p>
     </div>

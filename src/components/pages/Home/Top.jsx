@@ -16,9 +16,9 @@ function Top() {
     <>
       <section className="flex flex-col">
         {/* Background */}
-        <div className="absolute top-0 w-full -z-10 h-screen overflow-hidden ">
+        <div className="absolute top-0 -z-10 h-screen w-full overflow-hidden">
           <video
-            className="min-h-full opacity-20 object-cover blur-md  "
+            className="min-h-full object-cover opacity-20 blur-md"
             src={BackgroundV}
             autoPlay
             muted
@@ -26,26 +26,26 @@ function Top() {
           ></video>
         </div>
 
-        <div className="flex flex-col justify-center text-center m-auto text-black dark:text-white mt-[200px]">
+        <div className="m-auto mt-[200px] flex flex-col justify-center text-center text-black dark:text-white">
           <h1 className="text-[90px] font-normal leading-[0.85]">
-            <strong className=" text-secondary-200 font-medium drop-shadow-[0px_0px_50px_#007FFF] ">
+            <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
             </strong>{" "}
             suas{" "}
-            <strong className="text-primary-200 font-medium">finanças</strong>
+            <strong className="font-medium text-primary-200">finanças</strong>
             <br />
             em uma{" "}
-            <strong className="text-primary-200 font-medium">aventura</strong>
+            <strong className="font-medium text-primary-200">aventura</strong>
           </h1>
-          <p className="text-[36px] mt-7">Aprenda a fazer essa grana durar!</p>
+          <p className="mt-7 text-[36px]">Aprenda a fazer essa grana durar!</p>
         </div>
 
         <Link to={"/create-account"}>
           <PrimaryButton text={"Começar agora"} />
         </Link>
 
-        <div className="m-auto flex flex-col justify-center items-center mt-[150px]">
-          <p className="dark:text-white text-[36px]">Saiba mais</p>
+        <div className="m-auto mt-[150px] flex flex-col items-center justify-center">
+          <p className="text-[36px] dark:text-white">Saiba mais</p>
           <Icon
             className="relative bottom-6 text-black dark:text-white"
             icon="ep:arrow-down-bold"
@@ -55,7 +55,7 @@ function Top() {
       </section>
 
       <h1
-        className={`flex text-2xl justify-center mt-40 mb-10 leading-[1.2] font-medium text-center ${TextGradient} `}
+        className={`mb-10 mt-40 flex justify-center text-center text-2xl font-medium leading-[1.2] ${TextGradient} `}
       >
         Educação Financeira
       </h1>

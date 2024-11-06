@@ -21,43 +21,43 @@ function Top({ onClick, onClick2 }) {
 
   return (
     <div>
-      <section className="flex w-full m-auto gap-2 mt-10 justify-center">
-        <div className=" py-4 px-4 w-2/12 bg-[#DDDDDD] dark:bg-black dark:text-white leading-[1.1] rounded-md flex flex-col justify-center whitespace-nowrap">
+      <section className="m-auto mt-10 flex w-full justify-center gap-2">
+        <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] px-4 py-4 leading-[1.1] dark:bg-black dark:text-white">
           <p className="text-[36px] font-light">Saldo</p>
           <h1 className="text-[36px] font-medium">R${convertFloat(balance)}</h1>
         </div>
 
-        <div className="leading-[1.1] text-[32px] flex flex-col gap-2">
-          <div className="bg-[#84CE7A99] dark:bg-[rgba(11,85,5,0.50);] flex items-center text-[#14A900] font-medium py-3 px-4 gap-1 rounded-md">
+        <div className="flex flex-col gap-2 text-[32px] leading-[1.1]">
+          <div className="flex items-center gap-1 rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] dark:bg-[rgba(11,85,5,0.50);]">
             <Icon icon="icon-park-solid:up-one" width="25px" />
             <h1 className="">R${convertFloat(income)}</h1>
           </div>
-          <div className=" flex items-center bg-[#A9000066] text-[#E30000] font-medium py-3 px-4 gap-1 rounded-md">
+          <div className="flex items-center gap-1 rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000]">
             <Icon icon="icon-park-solid:down-one" width="25px" />
             <h1 className="">R${convertFloat(expense)}</h1>
           </div>
         </div>
 
-        <div className="bg-[#DDDDDD] dark:bg-[#1B1B1B] flex flex-col p-2 rounded-md w-5/12">
-          <p className="dark:text-white text-base p-2 font-light">Missões</p>
-          <div className="bg-white text-black overflow-hidden p-2 text-[32px] rounded-md whitespace-nowrap">
+        <div className="flex w-5/12 flex-col rounded-md bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B]">
+          <p className="p-2 text-base font-light dark:text-white">Missões</p>
+          <div className="overflow-hidden whitespace-nowrap rounded-md bg-white p-2 text-[32px] text-black">
             <p>Anote três pequenas economias que você fez hoje</p>
           </div>
         </div>
 
-        <div className=" leading-[1.1] text-[32px] flex flex-col gap-2 whitespace-nowrap">
-          <div className="bg-[#FFB51533] flex items-center text-[#FFB515] font-medium py-3 px-4 gap-1 rounded-md">
+        <div className="flex flex-col gap-2 whitespace-nowrap text-[32px] leading-[1.1]">
+          <div className="flex items-center gap-1 rounded-md bg-[#FFB51533] px-4 py-3 font-medium text-[#FFB515]">
             <Icon icon="solar:notes-bold" className="" width="25px" />
             <h1 className="">Anotações livres</h1>
           </div>
-          <div className=" flex items-center bg-[#FF48A733] text-[#FF48A7] font-medium py-3 px-4 gap-1 rounded-md">
+          <div className="flex items-center gap-1 rounded-md bg-[#FF48A733] px-4 py-3 font-medium text-[#FF48A7]">
             <Icon icon="iconoir:wallet-solid" width="25px" />
             <h1 className="">Orçamento</h1>
           </div>
         </div>
       </section>
 
-      <section className="w-full m-auto mt-10 p-4 rounded-md flex justify-between items-center">
+      <section className="m-auto mt-10 flex w-full items-center justify-between rounded-md p-4">
         <div className="flex gap-7">
           <button
             onClick={() => handleClick(0)}
@@ -65,7 +65,7 @@ function Top({ onClick, onClick2 }) {
               btnOn == 0
                 ? "bg-black text-white dark:bg-white dark:text-black"
                 : "bg-[#8D8D8D] text-white"
-            } text-base p-4 rounded-md`}
+            } rounded-md p-4 text-base`}
           >
             Planejar
           </button>
@@ -75,19 +75,19 @@ function Top({ onClick, onClick2 }) {
               btnOn == 1
                 ? "bg-black text-white dark:bg-white dark:text-black"
                 : "bg-[#8D8D8D] text-white"
-            } text-base p-4 rounded-md`}
+            } rounded-md p-4 text-base`}
           >
             Metas
           </button>
         </div>
 
         <div className="flex gap-7">
-          <div className="flex items-center h-20 justify-center gap-6 border-8 text-[#8D8D8D] px-6 rounded-md">
+          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-8 px-6 text-[#8D8D8D]">
             <img className="w-10" src={catIcon} alt="pequeno gato cinza" />
             <p className="text-base">Dicas do Fin</p>
           </div>
-          <div className="flex items-center h-20 justify-center gap-6 border-8 text-[#8D8D8D] px-6 rounded-md">
-            <p className="flex flex-row gap-4 justify-center items-center text-base text-nowrap">
+          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-8 px-6 text-[#8D8D8D]">
+            <p className="flex flex-row items-center justify-center gap-4 text-nowrap text-base">
               01 Out - 10 Out | <Icon icon={"bi:calendar-fill"} width={40} />
             </p>
           </div>

@@ -19,7 +19,7 @@ function PasswordInput({
 
   return (
     <>
-      <div className="flex flex-row relative items-center bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 hover:border-b-primary-200 text-base focus-within:outline-none transition-all outline-primary-200">
+      <div className="relative flex h-fit w-full flex-row items-center border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-all focus-within:outline-none hover:border-b-primary-200">
         <input
           className="bg-white bg-opacity-0 focus:outline-none"
           type="password"
@@ -32,7 +32,7 @@ function PasswordInput({
           required
         />
         <div
-          className="hover:cursor-pointer absolute right-5"
+          className="absolute right-5 hover:cursor-pointer"
           onClick={showPassword}
         >
           <Icon icon={icon} />

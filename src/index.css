@@ -38,6 +38,6 @@
 
 @layer components {
   .login-link {
-    @apply underline text-md hover:text-primary-300;
+    @apply text-md underline hover:text-primary-300;
   }
 }

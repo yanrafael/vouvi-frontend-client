@@ -9,10 +9,10 @@ function Graphics() {
   };
 
   return (
-    <div className="mt-5 w-11/12 m-auto">
+    <div className="m-auto mt-5 w-11/12">
       <div className="flex justify-between">
-        <div className="bg-[#868686] bg-opacity-20 rounded-md pb-10">
-          <h3 className="font-bold text-lg m-8">
+        <div className="rounded-md bg-[#868686] bg-opacity-20 pb-10">
+          <h3 className="m-8 text-lg font-bold">
             Veja seus investimentos decolando
           </h3>
           <LineChart
@@ -29,9 +29,9 @@ function Graphics() {
           />
         </div>
 
-        <div className="bg-[#868686] bg-opacity-20 rounded-md w-fit pb-10">
-          <h3 className="font-bold text-lg m-8">Distribuição de gastos</h3>
-          <div className="w-full relative">
+        <div className="w-fit rounded-md bg-[#868686] bg-opacity-20 pb-10">
+          <h3 className="m-8 text-lg font-bold">Distribuição de gastos</h3>
+          <div className="relative w-full">
             <PieChart
               series={[
                 {
@@ -58,24 +58,24 @@ function Graphics() {
               width={700}
               height={300}
             />
-            <span className="absolute top-10 right-32 text-base text-right font-bold">
+            <span className="absolute right-32 top-10 text-right text-base font-bold">
               R${convert(expenses)}
             </span>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#888] bg-opacity-20 w-full p-3 m-auto mt-8 rounded-md">
-        <h3 className="font-bold text-base m-8">
+      <div className="m-auto mt-8 w-full rounded-md bg-[#888] bg-opacity-20 p-3">
+        <h3 className="m-8 text-base font-bold">
           Acompanhe seus gastos e ganhos
         </h3>
         <div className="flex gap-10">
-          <span className="flex gap-2 items-center">
-            <span className="rounded-full bg-[#b5179e] w-3 h-3"></span>
+          <span className="flex items-center gap-2">
+            <span className="h-3 w-3 rounded-full bg-[#b5179e]"></span>
             <p>Ganhos</p>
           </span>
-          <span className="flex gap-2 items-center">
-            <span className="rounded-full bg-[#480ca8] w-3 h-3"></span>
+          <span className="flex items-center gap-2">
+            <span className="h-3 w-3 rounded-full bg-[#480ca8]"></span>
             <span className=""></span>
             <p>Gastos</p>
           </span>

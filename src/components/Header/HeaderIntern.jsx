@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 function HeaderIntern({ iconActiveNumber, children }) {
-
-  const darkMode = document.body.classList.contains("dark")
+  const darkMode = document.body.classList.contains("dark");
 
   // Borda ao clicar
   const Outline = "outline outline-[10px] outline-[rgba(0,127,255,0.15)]";
@@ -47,7 +46,6 @@ function HeaderIntern({ iconActiveNumber, children }) {
       setActiveIcon(iconId); // Ativa o ícone clicado
     }
   };
-
 
   const Learn = (
     <svg
@@ -198,11 +196,10 @@ function HeaderIntern({ iconActiveNumber, children }) {
   useEffect(() => {
     IconStates(iconActiveNumber); // Define o iconState para 0 ao montar o componente
   }, []);
-  
 
   return (
     <>
-      <header className="flex items-center justify-around w-full m-auto py-10 sticky backdrop-blur-sm top-0 left-0 z-10 bg-[rgba(2,2,11,0.05)] dark:bg-[rgba(2,2,11,0.80);]">
+      <header className="sticky left-0 top-0 z-10 m-auto flex w-full items-center justify-around bg-[rgba(2,2,11,0.05)] py-10 backdrop-blur-sm dark:bg-[rgba(2,2,11,0.80);]">
         <LogoWhite Name={VouviWord} width={"90px"} darkMode={darkMode} />
         <nav className="flex">
           <Link to={"/learn"}>
@@ -275,7 +272,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
             /> */}
         </div>
       </header>
-      <hr className="h-[1px] border-0  w-[100%] bg-[#252525] dark:bg-[#F5F5F442] left-0 " />
+      <hr className="left-0 h-[1px] w-[100%] border-0 bg-[#252525] dark:bg-[#F5F5F442]" />
     </>
   );
 }

@@ -41,7 +41,7 @@ function Header({ darkMode, setDarkMode }) {
   );
 
   return (
-    <header className="flex justify-between items-center w-[88%] m-auto relative py-10 ">
+    <header className="relative m-auto flex w-[88%] items-center justify-between py-10">
       <LogoWhite
         Name={VouviWord}
         width={"111"}

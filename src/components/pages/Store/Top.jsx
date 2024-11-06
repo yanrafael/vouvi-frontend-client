@@ -13,25 +13,25 @@ function Top() {
 
   return (
     <>
-      <section className="w-11/12 m-auto flex justify-between bg-primary-100 outline outline-[26px] outline-[#7C20BE33] rounded-md px-10 pt-10 mt-24">
-        <div className="text-primary-200 w-3/6 mt-5 ml-5">
+      <section className="m-auto mt-24 flex w-11/12 justify-between rounded-md bg-primary-100 px-10 pt-10 outline outline-[26px] outline-[#7C20BE33]">
+        <div className="ml-5 mt-5 w-3/6 text-primary-200">
           <h1 className="text-xl font-bold">Seja Premium</h1>
-          <p className="text-lg font-light mt-6">
+          <p className="mt-6 text-lg font-light">
             Energia infinita, ferramentas avançadas, e relatórios em PDF, para
             toda a família.
           </p>
-          <div className="w-fit mt-14 relative pb-10">
+          <div className="relative mt-14 w-fit pb-10">
             <PrimaryButton text={"Assinar agora!"} />
           </div>
         </div>
         <img src={CatBanner} alt="" />
       </section>
 
-      <hr className="p-1 w-10/12 m-auto bg-[#F5F5F442] mt-20 rounded-md mb-14" />
+      <hr className="m-auto mb-14 mt-20 w-10/12 rounded-md bg-[#F5F5F442] p-1" />
 
-      <section className={`m-auto w-11/12 `}>
-        <div className="flex justify-between items-center mb-6">
-          <div className="text-white text-base leading-[1] mr-20">
+      <section className={`m-auto w-11/12`}>
+        <div className="mb-6 flex items-center justify-between">
+          <div className="mr-20 text-base leading-[1] text-white">
             <h1 className={`font-medium`}>Personalize!</h1>
             <p className="font-light">Gaste vcoins!</p>
           </div>

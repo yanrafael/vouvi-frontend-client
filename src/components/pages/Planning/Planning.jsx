@@ -10,7 +10,7 @@ import Transactions from "./Transactions";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark")
+    document.body.classList.contains("dark"),
   );
 
   const [activeContent, setActiveContent] = useState("graphics");
@@ -28,7 +28,7 @@ function Planning() {
         <AvatarFull name={"olaaa"} xp={"2000"} vcoins={"2000"} />
       </HeaderIntern>
 
-      <main className="w-11/12 m-auto">
+      <main className="m-auto w-11/12">
         <Top onClick={handleClickGraphics} onClick2={handleClickGoals} />
 
         {activeContent === "graphics" ? <Graphics /> : <Goals />}

@@ -1,21 +1,21 @@
 import { Icon } from "@iconify/react";
-function AvatarBasic({openModal}) {
+function AvatarBasic({ openModal }) {
   return (
     <>
-    <div onClick={openModal} className="flex items-center cursor-pointer">
-      <div className="flex flex-col mr-3 leading-[1.1]">
-        <h1 className="dark:text-[#8D8D8D] text-[32px] font-medium  text-right">
-          Ajustes
-        </h1>
-      </div>
-      <div className="bg-black dark:bg-white rounded-full flex w-[3.5rem] h-[3.5rem] items-center justify-center">
+      <div onClick={openModal} className="flex cursor-pointer items-center">
+        <div className="mr-3 flex flex-col leading-[1.1]">
+          <h1 className="text-right text-[32px] font-medium dark:text-[#8D8D8D]">
+            Ajustes
+          </h1>
+        </div>
+        <div className="flex h-[3.5rem] w-[3.5rem] items-center justify-center rounded-full bg-black dark:bg-white">
           <Icon
-            className=" dark:text-black right-[1px] relative text-white"
+            className="relative right-[1px] text-white dark:text-black"
             icon="solar:settings-bold"
             width="3rem"
           />
+        </div>
       </div>
-    </div>
     </>
   );
 }

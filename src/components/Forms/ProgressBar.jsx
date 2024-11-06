@@ -4,7 +4,7 @@ function ProgressBar({ value = 0, max = 100 }) {
   return (
     <>
       <progress
-        className="rounded-[5px] mb-3 w-full h-4"
+        className="mb-3 h-4 w-full rounded-[5px]"
         max={max}
         value={value}
       ></progress>

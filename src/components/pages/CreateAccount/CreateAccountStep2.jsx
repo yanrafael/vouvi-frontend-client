@@ -24,7 +24,7 @@ function CreateAccountStep2({
       <ProgressBar value={20} />
 
       {/* Área onde o usuário insere informações */}
-      <div className="flex flex-col gap-5 justify-around">
+      <div className="flex flex-col justify-around gap-5">
         <div className="grid grid-cols-3 gap-4">
           <span className="grid">
             <Label htmlFor="day-of-birth">Dia:</Label>
@@ -87,7 +87,7 @@ function CreateAccountStep2({
           <span className="grid">
             <Label htmlFor="gender">Gênero:</Label>
             <select
-              className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none outline-primary-200 transition-all text-base"
+              className="h-fit w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-all hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none"
               name="gender"
               id="gender"
               value={gender}
@@ -107,7 +107,7 @@ function CreateAccountStep2({
           <span className="grid">
             <Label htmlFor="pronoum">Pronome</Label>
             <select
-              className="bg-black bg-opacity-15 p-1 w-full h-fit border-b-4 border-b-secondary-200 hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none outline-primary-200 transition-all text-base"
+              className="h-fit w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-all hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none"
               name="pronoum"
               id="pronoum"
               value={pronoum}
@@ -124,7 +124,7 @@ function CreateAccountStep2({
         </div>
       </div>
 
-      <p className="text-center text-[16px] my-3">
+      <p className="my-3 text-center text-[16px]">
         Os outros usuários não verão sua idade
       </p>
 

@@ -7,11 +7,11 @@ import { useState } from "react";
 
 function Home() {
   const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark")
+    document.body.classList.contains("dark"),
   );
 
   return (
-    <main className=" overflow-x-hidden">
+    <main className="overflow-x-hidden">
       <HeaderWhite darkMode={darkMode} setDarkMode={setDarkMode} />
       <Top />
       <Mid />
