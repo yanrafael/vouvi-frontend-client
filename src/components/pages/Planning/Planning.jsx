@@ -6,6 +6,7 @@ import AvatarFull from "../../Header/AvatarFull";
 import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
+import Transactions from "./Transactions";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -27,9 +28,13 @@ function Planning() {
         <AvatarFull name={"olaaa"} xp={"2000"} vcoins={"2000"} />
       </HeaderIntern>
 
-      <Top onClick={handleClickGraphics} onClick2={handleClickGoals} />
+      <main className="w-11/12 m-auto">
+        <Top onClick={handleClickGraphics} onClick2={handleClickGoals} />
 
-      {activeContent === "graphics" ? <Graphics /> : <Goals />}
+        {activeContent === "graphics" ? <Graphics /> : <Goals />}
+
+        <Transactions />
+      </main>
     </>
   );
 }
