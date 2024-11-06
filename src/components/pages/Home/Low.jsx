@@ -32,11 +32,7 @@ function Low() {
               text={"Avalie-nos"}
             />
           </div>
-<<<<<<< HEAD
           <div data-aos="zoom-in-up" className="mt-6 flex justify-between">
-=======
-          <div className="mt-6 flex justify-between">
->>>>>>> planning
             <FeedbackCard
               color={"bg-[#84CE7A] text-[#0A5800]"}
               text={"Solta o verbo!"}
@@ -47,15 +43,10 @@ function Low() {
             />
           </div>
         </div>
-
-<<<<<<< HEAD
         <div
           data-aos="fade-up"
           className="ml-10 flex w-[40%] flex-col items-start justify-center"
         >
-=======
-        <div className="ml-10 flex w-[40%] flex-col items-start justify-center">
->>>>>>> planning
           <div className="flex flex-col">
             <h1
               data-aos="fade-left"
@@ -63,14 +54,10 @@ function Low() {
             >
               A Gente Cresce Com Seu Feedback
             </h1>
-<<<<<<< HEAD
             <p
               data-aos="zoom-in-up"
               className={`${TextGradient} mb-16 mt-5 text-base`}
             >
-=======
-            <p className={`${TextGradient} mb-16 mt-5 text-base`}>
->>>>>>> planning
               Você faz parte do Time.
               <br /> Queremos te ouvir!
             </p>

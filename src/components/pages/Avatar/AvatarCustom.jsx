@@ -132,7 +132,6 @@ function AvatarCustom() {
         <div
           className={`${BtColor !== 0 ? Hidden : "inline"} flex h-full w-full rounded-[0px_24px_24px_24px] bg-white p-5 dark:bg-[#1F1F1F]`}
         >
-<<<<<<< HEAD
           <AvatarTrinkets
             onClick={() => ChangeEyes(EyesBrown)}
             color={"bg-[#B5B5B5] dark:bg-white"}
@@ -155,25 +154,12 @@ function AvatarCustom() {
             onClick={() => ChangeEyes(EyesLightBlue)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-=======
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img src={EyesBrown} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img src={EyesDarkGreen} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img src={EyesGray} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
->>>>>>> planning
             <img src={EyesLightBlue} alt="" />
           </AvatarTrinkets>
         </div>
         <div
           className={`${BtColor !== 1 ? Hidden : "inline"} flex h-full w-full rounded-[0px_24px_24px_24px] bg-white p-5 dark:bg-[#1F1F1F]`}
         >
-<<<<<<< HEAD
           <AvatarTrinkets
             onClick={() => ChangeTexture("white")}
             color={"bg-white"}
@@ -190,17 +176,10 @@ function AvatarCustom() {
             onClick={() => ChangeTexture("#C44A07")}
             color={"bg-[#C44A07]"}
           ></AvatarTrinkets>
-=======
-          <AvatarTrinkets color={"bg-white"}></AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#D5BAA5]"}></AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#090909]"}></AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#C44A07]"}></AvatarTrinkets>
->>>>>>> planning
         </div>
         <div
           className={`${BtColor !== 2 ? Hidden : "inline"} flex h-full w-full rounded-[0px_24px_24px_24px] bg-white p-5 dark:bg-[#1F1F1F]`}
         >
-<<<<<<< HEAD
           <AvatarTrinkets
             onClick={() => ChangeNecklace(NecklaceYale)}
             color={"bg-[#B5B5B5] dark:bg-white"}
@@ -223,25 +202,12 @@ function AvatarCustom() {
             onClick={() => ChangeNecklace(NecklaceVerdigris)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-=======
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img src={NecklaceYale} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img src={NecklaceNaples} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img src={NecklaceLemon} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
->>>>>>> planning
             <img src={NecklaceVerdigris} alt="" />
           </AvatarTrinkets>
         </div>
         <div
           className={`${BtColor !== 3 ? Hidden : "inline"} flex h-full w-full rounded-[0px_24px_24px_24px] bg-white p-5 dark:bg-[#1F1F1F]`}
         >
-<<<<<<< HEAD
           <AvatarTrinkets
             onClick={() => ChangePendant(Pendant8Star)}
             color={"bg-white"}
@@ -264,25 +230,12 @@ function AvatarCustom() {
             onClick={() => ChangePendant(PendantTiffany)}
             color={"bg-white"}
           >
-=======
-          <AvatarTrinkets color={"bg-white"}>
-            <img src={Pendant8Star} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-white"}>
-            <img src={PendantHearth} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-white"}>
-            <img src={PendantIndigo} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-white"}>
->>>>>>> planning
             <img src={PendantTiffany} alt="" />
           </AvatarTrinkets>
         </div>
         <div
           className={`${BtColor !== 4 ? Hidden : "inline"} flex h-full w-full rounded-[0px_24px_24px_24px] bg-white p-5 dark:bg-[#1F1F1F]`}
         >
-<<<<<<< HEAD
           <AvatarTrinkets onClick={() => ChangeBackground(BgBeach)}>
             <img className="h-full max-w-none" src={BgBeach} alt="" />
           </AvatarTrinkets>
@@ -293,18 +246,6 @@ function AvatarCustom() {
             <img className="h-full max-w-none" src={BgSpace} alt="" />
           </AvatarTrinkets>
           <AvatarTrinkets onClick={() => ChangeBackground(BgRoom)}>
-=======
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img className="h-full max-w-none" src={BgBeach} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img className="h-full max-w-none" src={BgForest} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
-            <img className="h-full max-w-none" src={BgSpace} alt="" />
-          </AvatarTrinkets>
-          <AvatarTrinkets color={"bg-[#B5B5B5] dark:bg-white"}>
->>>>>>> planning
             <img className="h-full max-w-none" src={BgRoom} alt="" />
           </AvatarTrinkets>
         </div>
