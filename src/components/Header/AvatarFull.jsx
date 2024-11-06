@@ -1,5 +1,6 @@
 import Avatar from "../../assets/images/avatar-sm-icon.svg";
 import Vicon from "../../assets/images/vcoins-icon.svg";
+
 import { Link } from "react-router-dom";
 function AvatarFull({ name, xp, vcoins }) {
   return (

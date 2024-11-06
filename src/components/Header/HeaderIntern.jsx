@@ -218,7 +218,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
             </div>
           </Link>
 
-          <Link to={""}>
+          <Link to={"/planning"}>
             <div onClick={() => IconStates(1)}>
               <Navigation
                 width={`w-[204px] group ${useOutline === 1 ? Outline : ""} `}
@@ -234,7 +234,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
             </div>
           </Link>
 
-          <Link to={"ranking"}>
+          <Link to={"/ranking"}>
             <div onClick={() => IconStates(2)}>
               <Navigation
                 width={`w-[204px] group ${useOutline === 2 ? Outline : ""} `}
