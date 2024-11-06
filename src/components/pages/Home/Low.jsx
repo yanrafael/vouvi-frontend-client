@@ -6,6 +6,9 @@ import FiveStars from "../../../assets/images/fivestars-icon.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import subscriptionHover from "../../../assets/images/subscription-hover.svg";
+import subscriptionStar from "../../../assets/images/subscription-star.svg";
+import subscriptionStar2 from "../../../assets/images/subscription-star2.svg";
+import subscriptionStar3 from "../../../assets/images/subscription-star3.svg";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -43,7 +46,6 @@ function Low() {
             />
           </div>
         </div>
-
         <div
           data-aos="fade-up"
           className="ml-10 flex w-[40%] flex-col items-start justify-center"
@@ -133,13 +135,24 @@ function Low() {
             text1={"Todos os benefícios do Plano Premium."}
             text2={"Acesso para até 4 pessoas."}
             text3={`Suporte com o fin.`}
+            bold={'z-10'}
             colorbutton={
               "bg-[#6B4B08] hover:outline-[#6B4B08] hover:text-[#6B4B08] "
             }
             texthover={
               "Para profissionais e empresários que buscam otimizar finanças."
             }
-          ></Subscription>
+          >
+              <div className="absolute -z-10 ml-0 mt-10 opacity-0 group-hover:opacity-60 ">
+                <img src={subscriptionStar} alt="" />
+              </div>
+              <div className="absolute -z-10 ml-0 mt-[380px] rotate-45 opacity-0 group-hover:opacity-60 transition-opacity duration-300">
+                <img src={subscriptionStar2} alt="" />
+              </div>
+              <div className="absolute -z-20 ml-52 mt-[150px] opacity-0 group-hover:opacity-60 transition-opacity duration-300">
+                <img src={subscriptionStar3} alt="" />
+              </div>
+          </Subscription>
         </div>
       </section>
 

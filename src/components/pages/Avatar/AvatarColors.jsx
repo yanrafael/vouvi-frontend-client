@@ -1,6 +1,7 @@
 import SecondaryButton from "../../Buttons/SecondaryButton";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+
 function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
   const Border = "outline outline-[6px] outline-white";
   const [IconBorder, NoBorder] = useState(0);
@@ -24,7 +25,6 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
   };
 
   const fillColor = Texture || IconColor || "#007fff";
-
   const AvatarStyle = (
     <svg
       width="308"
