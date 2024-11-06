@@ -21,7 +21,7 @@ function Top({ onClick, onClick2 }) {
 
   return (
     <div>
-      <section className="flex w-11/12 m-auto gap-2 mt-10 justify-center">
+      <section className="flex w-full m-auto gap-2 mt-10 justify-center">
         <div className=" py-4 px-4 w-2/12 bg-[#DDDDDD] dark:bg-black dark:text-white leading-[1.1] rounded-md flex flex-col justify-center whitespace-nowrap">
           <p className="text-[36px] font-light">Saldo</p>
           <h1 className="text-[36px] font-medium">R${convertFloat(balance)}</h1>
@@ -57,7 +57,7 @@ function Top({ onClick, onClick2 }) {
         </div>
       </section>
 
-      <section className="w-11/12 m-auto mt-10 p-4 rounded-md flex justify-between items-center">
+      <section className="w-full m-auto mt-10 p-4 rounded-md flex justify-between items-center">
         <div className="flex gap-7">
           <button
             onClick={() => handleClick(0)}
