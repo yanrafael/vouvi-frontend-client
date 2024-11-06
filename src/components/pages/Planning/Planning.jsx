@@ -2,11 +2,11 @@ import { useState } from "react";
 
 import HeaderIntern from "../../Header/HeaderIntern";
 import AvatarFull from "../../Header/AvatarFull";
+import Footer from "../../Footer/Footer";
 
 import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
-import Transactions from "./Transactions";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -32,9 +32,9 @@ function Planning() {
         <Top onClick={handleClickGraphics} onClick2={handleClickGoals} />
 
         {activeContent === "graphics" ? <Graphics /> : <Goals />}
-
-        <Transactions />
       </main>
+
+      <Footer />
     </>
   );
 }

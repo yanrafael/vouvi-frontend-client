@@ -20,8 +20,8 @@ function Top({ onClick, onClick2 }) {
   };
 
   return (
-    <div>
-      <section className="m-auto mt-10 flex w-full justify-center gap-2">
+    <div className="w-full">
+      <section className="mt-10 flex w-full justify-between gap-2">
         <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] px-4 py-4 leading-[1.1] dark:bg-black dark:text-white">
           <p className="text-[36px] font-light">Saldo</p>
           <h1 className="text-[36px] font-medium">R${convertFloat(balance)}</h1>
@@ -57,8 +57,8 @@ function Top({ onClick, onClick2 }) {
         </div>
       </section>
 
-      <section className="m-auto mt-10 flex w-full items-center justify-between rounded-md p-4">
-        <div className="flex gap-7">
+      <section className="mt-10 flex w-full items-center justify-between rounded-md p-4">
+        <div className="flex justify-between gap-7">
           <button
             onClick={() => handleClick(0)}
             className={`${
@@ -81,7 +81,7 @@ function Top({ onClick, onClick2 }) {
           </button>
         </div>
 
-        <div className="flex gap-7">
+        <div className="flex justify-between gap-7">
           <div className="flex h-20 items-center justify-center gap-6 rounded-md border-8 px-6 text-[#8D8D8D]">
             <img className="w-10" src={catIcon} alt="pequeno gato cinza" />
             <p className="text-base">Dicas do Fin</p>

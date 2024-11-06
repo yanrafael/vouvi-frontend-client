@@ -1,15 +1,13 @@
-import { ChartsLegend, LineChart, PieChart } from "@mui/x-charts";
+import { LineChart, PieChart } from "@mui/x-charts";
 import { useState } from "react";
+import Transactions from "./Transactions";
+import convertFloat from "../../../utils/convertFloat";
 
 function Graphics() {
-  const [expenses, setExpenses] = useState(2587);
-
-  const convert = (value = 0.0) => {
-    return String(value.toFixed(2)).replace(".", ",");
-  };
+  const [expenses] = useState(2587);
 
   return (
-    <div className="m-auto mt-5 w-11/12">
+    <div className="mt-5">
       <div className="flex justify-between">
         <div className="rounded-md bg-[#868686] bg-opacity-20 pb-10">
           <h3 className="m-8 text-lg font-bold">
@@ -59,7 +57,7 @@ function Graphics() {
               height={300}
             />
             <span className="absolute right-32 top-10 text-right text-base font-bold">
-              R${convert(expenses)}
+              R${convertFloat(expenses)}
             </span>
           </div>
         </div>
@@ -105,6 +103,8 @@ function Graphics() {
           grid={{ horizontal: true }}
         />
       </div>
+
+      <Transactions />
     </div>
   );
 }
