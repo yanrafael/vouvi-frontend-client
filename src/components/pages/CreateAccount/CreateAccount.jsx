@@ -5,7 +5,7 @@ import CreateAccountStep3 from "./CreateAccountStep3";
 import CreateAccountStep4 from "./CreateAccountStep4";
 import CreateAccountStep5 from "./CreateAccountStep5";
 
-import bgVideo from "/src/assets/videos/video-background.mp4";
+import bgVideo from "/src/assets/videos/video-background-dark.mp4";
 
 function CreateAccount() {
   const [step, setStep] = useState(1);
