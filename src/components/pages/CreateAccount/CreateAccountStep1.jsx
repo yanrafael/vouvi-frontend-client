@@ -19,7 +19,7 @@ function CreateAccountStep1({
       <ProgressBar value={0} />
 
       {/* Área onde o usuário insere informações */}
-      <div className="flex flex-col gap-5 justify-around">
+      <div className="flex flex-col justify-around gap-5">
         <div className="grid grid-cols-2 gap-4">
           <span className="grid">
             <Label htmlFor="country">País:</Label>
@@ -61,7 +61,7 @@ function CreateAccountStep1({
         </div>
       </div>
 
-      <p className="text-center text-[16px] my-3">
+      <p className="my-3 text-center text-[16px]">
         O seu local de residência é só para a gente confirmar sua identidade
         quando você entrar em contato. Ninguém mais vai ver isso, tá? Aqui na
         Vouvi, sua privacidade é prioridade!
@@ -70,20 +70,20 @@ function CreateAccountStep1({
       {/* Botão de enviar/próximo */}
       <NextButton setStep={setStep} text={"Próximo"} />
 
-      <div className="w-full my-5 flex flex-row justify-center items-center gap-5">
-        <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>
+      <div className="my-5 flex w-full flex-row items-center justify-center gap-5">
+        <span className="h-2 w-[40%] rounded-xl bg-[#BBB]"></span>
         OU
-        <span className="bg-[#BBB] h-2 w-[40%] rounded-xl"></span>
+        <span className="h-2 w-[40%] rounded-xl bg-[#BBB]"></span>
       </div>
 
-      <div className="flex flex-row justify-center items-center gap-3">
-        <span className="cursor-pointer border-4 p-1 bg-white border-secondary-200 rounded-full">
+      <div className="flex flex-row items-center justify-center gap-3">
+        <span className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
           <Icon icon={"flat-color-icons:google"} width={"60px"} />
         </span>
-        <span className="cursor-pointer border-4 p-1 bg-white border-secondary-200 rounded-full">
+        <span className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
           <Icon icon={"ic:baseline-facebook"} width={"60px"} />
         </span>
-        <span className="cursor-pointer border-4 p-1 bg-white border-secondary-200 rounded-full">
+        <span className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
           <Icon icon={"ic:baseline-apple"} width={"60px"} />
         </span>
       </div>

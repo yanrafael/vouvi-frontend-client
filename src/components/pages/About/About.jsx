@@ -6,7 +6,7 @@ import { useState } from "react";
 
 function About() {
   const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark")
+    document.body.classList.contains("dark"),
   );
   return (
     <>

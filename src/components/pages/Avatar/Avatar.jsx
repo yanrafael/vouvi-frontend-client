@@ -5,8 +5,7 @@ import { useState } from "react";
 function Avatar() {
   const [showCreate, setShowCreate] = useState(true);
 
-  const darkMode = document.body.classList.contains("dark")
-
+  const darkMode = document.body.classList.contains("dark");
 
   const VouviWord = (
     <svg
@@ -44,7 +43,7 @@ function Avatar() {
   );
 
   return (
-    <section className="flex flex-col items-center mt-12">
+    <section className="mt-12 flex flex-col items-center">
       <div className="mb-16">
         <LogoWhite darkMode={darkMode} Name={VouviWord} width={"80"} />
       </div>

@@ -1,5 +1,9 @@
 function Label({ children, htmlFor = "" }) {
-    return <label className="text-base w-fit" htmlFor={htmlFor}>{children}</label>;
+  return (
+    <label className="w-fit text-base" htmlFor={htmlFor}>
+      {children}
+    </label>
+  );
 }
 
-export default Label
+export default Label;
