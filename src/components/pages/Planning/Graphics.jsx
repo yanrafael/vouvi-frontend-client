@@ -53,11 +53,11 @@ function Graphics() {
                 legend: {
                   direction: "column",
                   position: { vertical: "middle", horizontal: "right" },
-                  labelStyle: { fontSize: 12 },
+                  // labelStyle: { fontSize: 12 },
                   padding: { right: 9 * (window.innerWidth / 100) },
                 },
               }}
-              height={300}
+              height={350}
             />
             <span className="absolute right-24 top-0 text-left text-md font-bold">
               R${convertFloat(expenses)}
@@ -70,7 +70,7 @@ function Graphics() {
         <h3 className="m-8 text-base font-bold">
           Acompanhe seus gastos e ganhos
         </h3>
-        <div className="flex gap-10">
+        <div className="ml-16 flex gap-10 text-md">
           <span className="flex items-center gap-2">
             <span className="h-3 w-3 rounded-full bg-[#b5179e]"></span>
             <p>Ganhos</p>
@@ -90,18 +90,16 @@ function Graphics() {
           }}
           series={[
             {
-              curve: "linear",
               data: [0, 1000, 1200, 500, 2200, 3300, 2700, 3000, 2000],
               color: "#480ca8",
             },
             {
-              curve: "linear",
               data: [1800, 2800, 1500, null, 3800, 1300, 500, 1900, 3900],
               color: "#b5179e",
               connectNulls: true,
             },
           ]}
-          height={400}
+          height={500}
           grid={{ horizontal: true }}
         />
       </div>
