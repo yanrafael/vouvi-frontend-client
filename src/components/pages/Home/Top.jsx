@@ -1,5 +1,4 @@
 import PrimaryButton from "../../Buttons/PrimaryButton";
-import Arrow from "../../../assets/images/arrow-down.svg";
 import Cards from "../../Cards/MarketingCards";
 import FireIcon from "../../../assets/images/fire-icon.svg";
 import GreenIcon from "../../../assets/images/graphicgreen-icon.svg";
@@ -7,10 +6,18 @@ import HeartIcon from "../../../assets/images/heart-icon.svg";
 import BackgroundV from "../../../assets/videos/video-background.mp4";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Top() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
+
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+  });
 
   return (
     <>
@@ -44,7 +51,9 @@ function Top() {
           <PrimaryButton text={"Começar agora"} />
         </Link>
 
-        <div className="m-auto flex flex-col justify-center items-center mt-[150px]">
+        <div
+          className="m-auto flex flex-col justify-center items-center mt-[150px]"
+        >
           <p className="dark:text-white text-[36px]">Saiba mais</p>
           <Icon
             className="relative bottom-6 text-black dark:text-white"
@@ -56,11 +65,15 @@ function Top() {
 
       <h1
         className={`flex text-2xl justify-center mt-40 mb-10 leading-[1.2] font-medium text-center ${TextGradient} `}
+        data-aos="fade-up"
       >
         Educação Financeira
       </h1>
 
-      <section className="flex justify-center !scroll-smooth">
+      <section
+        className="flex justify-center !scroll-smooth"
+        data-aos="fade-up"
+      >
         <Cards
           img={FireIcon}
           title={"Zero dívidas!"}
