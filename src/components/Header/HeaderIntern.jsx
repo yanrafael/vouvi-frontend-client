@@ -280,7 +280,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
             /> */}
         </div>
       </header>
-      <hr className="left-0 h-[1px] w-[100%] border-0 bg-[#252525] dark:bg-[#F5F5F442]" />
+      <hr className="left-0 h-[1px] w-[100%] border-0 dark:bg-[#F5F5F442]" />
     </>
   );
 }

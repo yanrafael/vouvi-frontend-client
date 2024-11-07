@@ -24,17 +24,17 @@ function Top({ onClick, onClick2 }) {
       <section className="mt-10 flex w-full justify-between gap-2">
         <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] dark:bg-[#1B1B1B] px-4 py-4 leading-[1.1] dark:text-white">
           <p className="text-[36px] font-light">Saldo</p>
-          <h1 className="text-[36px] font-medium">R${convertFloat(balance)}</h1>
+          <h1 className="text-[36px] font-medium">R$ 5000,00</h1>
         </div>
 
         <div className="flex flex-col gap-2 text-[32px] leading-[1.1]">
           <div className="flex items-center gap-1 rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] dark:bg-[rgba(11,85,5,0.50);]">
             <Icon icon="icon-park-solid:up-one" width="25px" />
-            <h1 className="">R${convertFloat(income)}</h1>
+            <h1 className="">R$ 2500,00</h1>
           </div>
           <div className="flex items-center gap-1 rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000]">
             <Icon icon="icon-park-solid:down-one" width="25px" />
-            <h1 className="">R${convertFloat(expense)}</h1>
+            <h1 className="">R$ 6021,00</h1>
           </div>
         </div>
 

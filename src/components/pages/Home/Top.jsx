@@ -18,6 +18,8 @@ function Top({ background }) {
     AOS.init({ duration: 1200 });
   });
 
+  
+
   return (
     <>
       <section className="flex flex-col">
