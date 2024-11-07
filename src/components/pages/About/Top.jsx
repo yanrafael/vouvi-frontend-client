@@ -40,7 +40,7 @@ function Top() {
             </p>
           </div>
           <div className="relative bottom-40 left-10 flex h-fit w-[690px] flex-col rounded-md bg-secondary-200/20 p-8 text-white dark:bg-[#0029524D]">
-            <h1 className="darktext-secondary-200 text-xl font-medium text-[#002952]">
+            <h1 className="darktext-secondary-200 text-xl font-medium text-[#002952] dark:text-secondary-200">
               Visão
             </h1>
             <p className="mt-5 text-[40px] font-light text-black dark:text-white">
