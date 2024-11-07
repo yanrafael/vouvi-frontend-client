@@ -100,7 +100,6 @@ function Mid() {
             </div>
             <div
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
-              title="ícone de diagrama preto"
               title="ícone de grafíco"
               data-aos="fade-left"
               className="relative bottom-[60px] left-[60px] flex items-end justify-center"
