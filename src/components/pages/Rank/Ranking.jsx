@@ -9,9 +9,6 @@ import Footer from '../../Footer/Footer.jsx'
 const Ranking = () => {
   const [selectedOption, setSelectedOption] = useState("Especialista");
 
-  const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark")
-  );
 
   const options = [
     { label: "Dedicado", xp: "500 XP" },
@@ -94,7 +91,7 @@ const Ranking = () => {
       </div>
       <div className="mt-10"></div>
       <div className="flex justify-center">
-        <div className=" bg-[#DFDFDE] dark:bg-[#1F1F1F] w-3/5 mr-5 rounded-lg p-10 max-h-1/5" >
+          <div className=" bg-[#DFDFDE] dark:bg-[#1F1F1F] w-3/5 mr-5 rounded-lg p-10">
           <div className=" flex justify-evenly">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
@@ -107,9 +104,9 @@ const Ranking = () => {
             ))}
           </div>
           <div className="mt-10"></div>
-          <div className="overflow-y-auto h-1/4 .scrollbar-thin scrollbar-webkit ">
+          <div className="overflow-y-auto h-[551px] pr-3">
             {ranking.slice(3, ranking.length).map((ranking, index) => (
-              <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp} />
+              <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp}/>
             ))}
           </div>
           <div className="mt-10"></div>
@@ -118,7 +115,7 @@ const Ranking = () => {
           </div>
         </div>
         <div className="  bg-primary-200 dark:bg-[#1F1F1F] w-1/4 rounded-lg p-5 flex flex-col items-center">
-          <div className="w-full">
+          <div>
             <p className="text-teste text-base font-bold text-white">Ricos da Vouvi</p>
             <p className="text-teste mb-3 text-white text-md font-light">Ranking de Vcoins</p>
           </div>
@@ -127,7 +124,7 @@ const Ranking = () => {
               ? <CardLateral posicao={index + 1} vc={lateral.vc} nome="Usuario" />
               : <></>
           ))}
-          <div className="flex w-full border-2 rounded-md m-4 border-card"></div>
+          <div className="flex  border-2 rounded-md m-4 border-card"></div>
           {lateral.map((lateral, index) => (
             <CardLateral posicao={index + 1} vc={lateral.vc} nome={lateral.nome} />
           ))}

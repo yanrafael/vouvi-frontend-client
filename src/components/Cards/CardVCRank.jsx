@@ -2,6 +2,9 @@ import React from "react";
 import primeiro from '../../../images/coroaclaro.png'
 import segundo from '../../../images/prata.png'
 import terceiro from '../../../images/bronzeclaro.png'
+import Darkprimeiro from '../../../images/coroa.png'
+import Darksegundo from '../../../images/prata.png'
+import Darkterceiro from '../../../images/bronze.png'
 
 
 const CardLateral = (props) =>{
@@ -20,12 +23,12 @@ const CardLateral = (props) =>{
                     <div className="underline text-secondary-200 text-md font-light mr-2">{props.vc} VC</div>
                 </div>
                 :props.posicao<4
-                ?<div className="flex justify-between text-segundo bg-white p-1 mb-2 rounded-md mr-2 w-full items-center">
+                ?<div className="flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-md mr-2 w-full items-center">
                     <div className="flex items-center">
                         {
-                            props.posicao===1?<img src={primeiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste"/>:
-                            props.posicao===2?<img src={segundo} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste"/>:
-                            <img src={terceiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste"/>
+                            props.posicao===1?<img src={document.body.classList.value === "dark"?Darkprimeiro :primeiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste"/>:
+                            props.posicao===2?<img src={document.body.classList.value === "dark"?Darksegundo :segundo} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste"/>:
+                            <img src={document.body.classList.value === "dark"?Darkterceiro :terceiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste"/>
                         }
                         
                         {
