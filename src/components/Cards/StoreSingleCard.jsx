@@ -15,9 +15,9 @@ function StoreSingleCard({
       <div className="flex h-[490px] w-[560px] flex-none rounded-md bg-[#C4C4C47D]">
         {children}
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col relative">
         <h1 className="text-base font-semibold text-white">{title} </h1>
-        <div className="mt-10 flex flex-wrap justify-center overflow-y-scroll">
+        <div className="mt-10 flex flex-wrap justify-center overflow-y-scroll ">
           <StoreCard color={color1}>
             <img className="rounded-sm" src={img1} alt="" />
           </StoreCard>
@@ -28,6 +28,7 @@ function StoreSingleCard({
             <img className="rounded-sm" src={img3} alt="" />
           </StoreCard>
         </div>
+        <div className="to-transparent absolute right-0 bottom-0 h-10 w-full bg-gradient-to-t from-[#FFFFFF] dark:from-[#1F1F1F]"></div>
       </div>
     </section>
   );

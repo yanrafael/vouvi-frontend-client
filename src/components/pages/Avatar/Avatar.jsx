@@ -39,12 +39,7 @@ function Avatar() {
   );
 
   return (
-    <section className="mt-12 flex flex-col items-center">
-      <div className="mb-16">
-        <LogoWhite darkMode={darkMode} Name={VouviWord} width={"80"} />
-      </div>
-
-      {/* Condicional para renderizar os componentes */}
+    <section className=" flex flex-col justify-center items-center h-screen">
       {showCreate ? (
         <CreateAvatar onClick={() => setShowCreate(!showCreate)} />
       ) : (

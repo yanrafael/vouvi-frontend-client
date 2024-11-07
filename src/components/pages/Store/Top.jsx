@@ -118,7 +118,7 @@ function Top() {
             </StoreButton>
           </div>
         </div>
-        <div className="to-transparent absolute right-0 bottom-5 h-20 w-20 bg-gradient-to-l from-[#FFFFFF] dark:from-[#1B1B1B]"></div>
+        <div className="to-transparent absolute right-0 bottom-5 h-20 w-32 bg-gradient-to-l from-[#FFFFFF] dark:from-[#000000]"></div>
       </section>
     </>
   );

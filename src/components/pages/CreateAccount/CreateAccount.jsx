@@ -120,7 +120,7 @@ function CreateAccount() {
     <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
-        className="absolute left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
+        className="fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
         loop
