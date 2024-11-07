@@ -24,13 +24,13 @@ function Top({ background }) {
         {/* Background */}
         <div className="absolute top-0 -z-10 h-screen w-full overflow-hidden">
           <video
-            className="min-h-full object-cover opacity-40 blur-md"
+            className="min-h-full object-cover opacity-[0.25] blur-[2px] dark:blur-0"
             src={background}
             autoPlay
             muted
             loop
           ></video>
-          <div className="to-transparent absolute bottom-0 h-32 w-full bg-gradient-to-t from-white dark:from-black"></div>
+          <div className="to-transparent absolute bottom-0 h-32 w-full bg-gradient-to-t from-[#ffffff] dark:from-black"></div>
         </div>
 
         <div className="m-auto mt-[200px] flex flex-col justify-center text-center text-black dark:text-white">
@@ -54,7 +54,7 @@ function Top({ background }) {
         <div className="m-auto mt-[150px] flex flex-col items-center justify-center">
           <p className="text-[36px] dark:text-white">Saiba mais</p>
           <Icon
-            className="relative bottom-6 text-black dark:text-white"
+            className="relative text-black dark:text-white animate-bounce"
             icon="ep:arrow-down-bold"
             width="7rem"
           />

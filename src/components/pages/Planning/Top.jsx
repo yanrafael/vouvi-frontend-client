@@ -22,7 +22,7 @@ function Top({ onClick, onClick2 }) {
   return (
     <div className="w-full">
       <section className="mt-10 flex w-full justify-between gap-2">
-        <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] px-4 py-4 leading-[1.1] dark:bg-black dark:text-white">
+        <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] dark:bg-[#1B1B1B] px-4 py-4 leading-[1.1] dark:text-white">
           <p className="text-[36px] font-light">Saldo</p>
           <h1 className="text-[36px] font-medium">R${convertFloat(balance)}</h1>
         </div>

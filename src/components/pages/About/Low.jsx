@@ -18,7 +18,8 @@ function Low() {
             envolvente.
           </p>
         </div>
-        <img src={Cat} alt="" />
+        <img src={Cat} aria-label="Gato fin"
+        alt="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos. " title="O gato Fin,  mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos. " />
       </section>
 
       <section className="m-auto mt-40 flex w-11/12 justify-around">
