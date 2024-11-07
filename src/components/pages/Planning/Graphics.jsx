@@ -9,7 +9,7 @@ function Graphics() {
   return (
     <div className="mt-5">
       <div className="flex justify-between">
-        <div className="rounded-md bg-[#868686] bg-opacity-20 pb-10">
+        <div className="w-7/12 rounded-md bg-[#868686] bg-opacity-20 pb-10">
           <h3 className="m-8 text-lg font-bold">
             Veja seus investimentos decolando
           </h3>
@@ -22,14 +22,13 @@ function Graphics() {
                 color: "#480ca8",
               },
             ]}
-            width={800}
             height={300}
           />
         </div>
 
-        <div className="w-fit rounded-md bg-[#868686] bg-opacity-20 pb-10">
+        <div className="w-2/5 rounded-md bg-[#868686] bg-opacity-20 pb-10">
           <h3 className="m-8 text-lg font-bold">Distribuição de gastos</h3>
-          <div className="relative w-full">
+          <div className="relative mt-20 w-full">
             <PieChart
               series={[
                 {
@@ -41,22 +40,26 @@ function Graphics() {
                     { id: 4, value: 12, label: "Saúde", color: "#f72585" },
                     { id: 5, value: 40, label: "Carro", color: "#8d8d8d" },
                   ],
-                  innerRadius: 0,
-                  outerRadius: 150,
+                  outerRadius: 9 * (window.innerWidth / 100),
                 },
               ]}
-              margin={{ top: 0, right: 280, bottom: 0, left: 0 }}
+              margin={{
+                top: 0,
+                right: 270 - 2 * (window.innerWidth / 100),
+                bottom: 0,
+                left: 0,
+              }}
               slotProps={{
                 legend: {
                   direction: "column",
                   position: { vertical: "middle", horizontal: "right" },
-                  padding: 100,
+                  labelStyle: { fontSize: 12 },
+                  padding: { right: 9 * (window.innerWidth / 100) },
                 },
               }}
-              width={700}
               height={300}
             />
-            <span className="absolute right-32 top-10 text-right text-base font-bold">
+            <span className="absolute right-24 top-0 text-left text-md font-bold">
               R${convertFloat(expenses)}
             </span>
           </div>
