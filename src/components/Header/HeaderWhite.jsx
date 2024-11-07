@@ -37,7 +37,7 @@ function Header({ darkMode, setDarkMode }) {
     </svg>
   );
 
-  const Sun = ['tabler:sun-filled', 'tabler:sun'];
+  const Sun = ['tabler:sun-filled', 'mynaui:moon-solid'];
 
   return (
     <header className="relative m-auto flex w-[88%] items-center justify-between py-10">
@@ -53,7 +53,7 @@ function Header({ darkMode, setDarkMode }) {
           <Icon
             className="text-white dark:text-black"
             width={"3rem"}
-            icon={"tabler:sun-filled"}
+            icon={darkMode ? Sun[0] : Sun[1]}
           />
         </div>
       </button>
