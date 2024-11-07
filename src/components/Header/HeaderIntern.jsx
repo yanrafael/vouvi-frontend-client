@@ -195,7 +195,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   return (
     <>
-      <header className="sticky left-0 top-0 z-10 m-auto flex w-full items-center justify-around bg-[rgba(2,2,11,0.05)] py-10 backdrop-blur-sm dark:bg-[rgba(2,2,11,0.80);]">
+      <header className="sticky left-0 top-0 z-10 m-auto flex w-full items-center justify-around bg-[rgba(2,2,11,0.15)] py-10 backdrop-blur-[13px] dark:bg-[rgba(2,2,11,0.80);]">
         <LogoWhite Name={VouviWord} height={"66"} darkMode={darkMode} />
         <nav className="flex">
           <Link to={"/learn"}>
