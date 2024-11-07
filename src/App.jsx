@@ -9,10 +9,12 @@ import Avatar from "./components/pages/Avatar/Avatar";
 import Ranking from "./components/pages/Rank/Ranking";
 import UserReturn from "./components/pages/UserReturn/UserReturn";
 import Planning from "./components/pages/Planning/Planning";
+import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route Component={Home} path="/home" />
         <Route Component={Home} path="/" />
