@@ -11,9 +11,9 @@ function Goals() {
   };
 
   return (
-    <section className="m-auto mt-5 flex w-12/12 justify-between gap-5">
-      <div className="flex w-full flex-col gap-4">
-        <div className="flex gap-4 flex-wrap">
+    <section className="w-12/12 m-auto mt-5 flex justify-between gap-5">
+      <div className="flex w-full flex-col gap-4 overflow-x-hidden">
+        <div className="flex flex-nowrap gap-4 overflow-x-scroll ">
           <div onClick={() => activeButton(0)}>
             <GoalsButton
               color={`hover:bg-[#87878733] hover:text-black hover:dark:text-white transition-colors duration-300 ${
@@ -65,7 +65,6 @@ function Goals() {
             />
           </div>
         </div>
-
         <div className="flex h-[1000px] flex-col gap-4 overflow-y-scroll">
           <GoalsCard
             actualValue={20}
@@ -95,11 +94,12 @@ function Goals() {
       </div>
 
       <div className="flex flex-col gap-4">
+      <div className="absolute -ml-[180px] h-20 w-40 bg-gradient-to-l dark:from-[#000000] from-[#FFFFFF] pointer-events-none"></div>
         <div className="flex h-14 items-center">
           <input
             type="text"
             placeholder="Histórico"
-            className="h-14 rounded-l-[14px] bg-[#86868633] px-5 text-base font-medium outline-none placeholder:text-black dark:placeholder:text-[#878787] dark:bg-[#1B1B1B] dark:text-[#878787]"
+            className="h-14 rounded-l-[14px] bg-[#86868633] px-5 text-base font-medium outline-none placeholder:text-black dark:bg-[#1B1B1B] dark:text-[#878787] dark:placeholder:text-[#878787]"
           />
           <div className="flex h-14 cursor-pointer items-center rounded-r-[14px] bg-black p-2 dark:bg-[#878787]">
             <Icon
