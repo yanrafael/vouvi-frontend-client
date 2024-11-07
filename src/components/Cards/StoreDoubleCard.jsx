@@ -21,7 +21,8 @@ function StoreDoubleCard({
   img10,
 }) {
   return (
-    <section className="flex flex-col rounded-md bg-[#1F1F1F] p-10">
+    <section className="flex flex-col rounded-md bg-[#1F1F1F] p-10 relative">
+      <div className="to-transparent absolute right-10 mt-10 h-[90%] w-32 bg-gradient-to-l dark:from-[#FFFFFF] from-[#1F1F1F]"></div>
       <div className="mb-5 flex justify-between text-base text-white">
         <div className="flex items-center font-medium">
           <Icon icon={`${icon1}`} />
