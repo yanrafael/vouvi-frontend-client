@@ -56,7 +56,7 @@ function GoalsCard({ objective, actualValue, maxValue, date }) {
   }, [progression, currentDate, objectiveDate]);
 
   return (
-    <div className="flex flex-col rounded-md bg-[#86868633] px-14 py-8 dark:bg-[#1B1B1B]">
+    <div className="flex flex-col rounded-md bg-[#86868633]  px-14 py-8 dark:bg-[#1B1B1B]">
       <p className="text-base text-[#878787]">{objective}</p>
       <div className="mt-4 flex items-center gap-5">
         <div className={`${bgColor} h-fit w-fit flex-none rounded-full p-4`}>

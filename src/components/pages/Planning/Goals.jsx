@@ -99,7 +99,7 @@ function Goals() {
           <input
             type="text"
             placeholder="Histórico"
-            className="h-14 rounded-l-[14px] bg-[#86868633] px-5 text-base font-medium outline-none placeholder:text-black dark:bg-[#1B1B1B] dark:text-[#878787]"
+            className="h-14 rounded-l-[14px] bg-[#86868633] px-5 text-base font-medium outline-none placeholder:text-black dark:placeholder:text-[#878787] dark:bg-[#1B1B1B] dark:text-[#878787]"
           />
           <div className="flex h-14 cursor-pointer items-center rounded-r-[14px] bg-black p-2 dark:bg-[#878787]">
             <Icon
@@ -109,7 +109,7 @@ function Goals() {
           </div>
         </div>
 
-        <div className="relative flex h-[1000px] flex-col gap-5 overflow-y-scroll rounded-md bg-[#86868633] px-8 py-8 dark:bg-[#1B1B1B]">
+        <div className="relative flex h-[1000px] flex-col gap-5 overflow-hidden rounded-md bg-[#86868633] px-8 py-8 dark:bg-[#1B1B1B]">
           <div className="flex h-[1000px] w-full flex-col gap-4 overflow-y-scroll">
             <GoalsHistory />
             <GoalsHistory />
@@ -128,7 +128,7 @@ function Goals() {
             <GoalsHistory />
             <GoalsHistory />
 
-            <div className="to-transparent absolute bottom-8 h-32 w-full bg-gradient-to-t from-[#868686] dark:from-[#1B1B1B]"></div>
+            <div className="to-transparent absolute bottom-8 h-32 w-full bg-gradient-to-t from-[#E7E7E7] dark:from-[#1B1B1B]"></div>
           </div>
         </div>
       </div>
