@@ -33,8 +33,8 @@ function Top() {
 
       <hr className="m-auto mb-14 mt-20 w-10/12 rounded-md bg-black p-1 dark:bg-[#F5F5F442]" />
 
-      <section className={`m-auto w-11/12`}>
-        <div className="mb-6 flex items-center justify-between overflow-x-scroll overflow-hidden gap-4">
+      <section className={`m-auto w-11/12 relative`}>
+        <div className="mb-6 flex items-center justify-between gap-4 overflow-hidden overflow-x-scroll">
           <div className="mr-20 text-base leading-[1] text-black dark:text-white">
             <h1 className={`font-medium`}>Personalize!</h1>
             <p className="font-light">Gaste vcoins!</p>
@@ -44,8 +44,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 0
-                  ? "border-4 border-secondary-200 dark:border-0 bg-white text-secondary-200 dark:text-black"
-                  : "bg-secondary-200 dark:bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Todos"}
             >
@@ -57,8 +57,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 1
-                  ? "border-4 border-secondary-200 dark:border-0 bg-white text-secondary-200 dark:text-black"
-                  : "bg-secondary-200 dark:bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Olhos"}
             >
@@ -70,8 +70,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 2
-                  ? "border-4 border-secondary-200 dark:border-0 bg-white text-secondary-200 dark:text-black"
-                  : "bg-secondary-200 dark:bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Pelos"}
             >
@@ -83,8 +83,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 3
-                  ? "border-4 border-secondary-200 dark:border-0 bg-white text-secondary-200 dark:text-black"
-                  : "bg-secondary-200 dark:bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Coleiras"}
             >
@@ -96,8 +96,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 4
-                  ? "border-4 border-secondary-200 dark:border-0 bg-white text-secondary-200 dark:text-black"
-                  : "bg-secondary-200 dark:bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Pingente"}
             >
@@ -109,8 +109,8 @@ function Top() {
             <StoreButton
               color={`${
                 btnColor === 5
-                  ? "border-4 border-secondary-200 dark:border-0 bg-white text-secondary-200 dark:text-black"
-                  : "bg-secondary-200 dark:bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }`}
               text={"Fundos"}
             >
@@ -118,6 +118,7 @@ function Top() {
             </StoreButton>
           </div>
         </div>
+        <div className="to-transparent absolute right-0 bottom-5 h-20 w-20 bg-gradient-to-l from-[#FFFFFF] dark:from-[#1B1B1B]"></div>
       </section>
     </>
   );

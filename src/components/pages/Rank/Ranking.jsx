@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import HeaderIntern from "../../Header/HeaderIntern";
 import Card from "../../Cards/cardXPRank.jsx";
 import CardLateral from "../../Cards/CardVCRank.jsx";
-import Colocacao from '../../Cards/cardRicoRank.jsx'
-import Footer from '../../Footer/Footer.jsx'
-
-
+import Colocacao from "../../Cards/cardRicoRank.jsx";
+import Footer from "../../Footer/Footer.jsx";
+import AvatarFull from "../../Header/AvatarFull";
 const Ranking = () => {
   const [selectedOption, setSelectedOption] = useState("Especialista");
-
 
   const options = [
     { label: "Dedicado", xp: "500 XP" },
@@ -18,69 +16,76 @@ const Ranking = () => {
   ];
 
   const ranking = [
-    { nome: 'Você', xp: 13.657 },
-    { nome: 'Izzy', xp: 12.102 },
-    { nome: 'Kim', xp: 10.018 },
-    { nome: 'Rich', xp: 9.657 },
-    { nome: 'Michael', xp: 9.102 },
-    { nome: 'Roberto', xp: 9.018 },
-    { nome: 'Chris', xp: 9.013 },
-    { nome: 'Chesp', xp: 8.755 },
-    { nome: 'Billie', xp: 8.124 },
-    { nome: 'Naye', xp: 7.802 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 },
-    { nome: 'User', xp: 5.614 }
-  ]
+    { nome: "Você", xp: 13.657 },
+    { nome: "Izzy", xp: 12.102 },
+    { nome: "Kim", xp: 10.018 },
+    { nome: "Rich", xp: 9.657 },
+    { nome: "Michael", xp: 9.102 },
+    { nome: "Roberto", xp: 9.018 },
+    { nome: "Chris", xp: 9.013 },
+    { nome: "Chesp", xp: 8.755 },
+    { nome: "Billie", xp: 8.124 },
+    { nome: "Naye", xp: 7.802 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+    { nome: "User", xp: 5.614 },
+  ];
 
   const lateral = [
-    { nome: 'Roberto', vc: 8.511 },
-    { nome: 'Chesp', vc: 7.012 },
-    { nome: 'Elon', vc: 6.944 },
-    { nome: 'Michael', vc: 5614 },
-    { nome: 'Rich', vc: 5614 },
-    { nome: 'Naye', vc: 5614 },
-    { nome: 'Luna', vc: 5614 },
-    { nome: 'Banner', vc: 5614 },
-    { nome: 'Vilagran', vc: 5614 },
-    { nome: 'Luke', vc: 5614 },
-    { nome: 'Vader', vc: 5614 },
-    { nome: 'Você', vc: 938 },
-    { nome: 'Herobri', vc: 5614 },
-    { nome: 'Joel', vc: 5614 },
-    { nome: 'Cleiton', vc: 5614 }
-  ]
-
+    { nome: "Roberto", vc: 8.511 },
+    { nome: "Chesp", vc: 7.012 },
+    { nome: "Elon", vc: 6.944 },
+    { nome: "Michael", vc: 5614 },
+    { nome: "Rich", vc: 5614 },
+    { nome: "Naye", vc: 5614 },
+    { nome: "Luna", vc: 5614 },
+    { nome: "Banner", vc: 5614 },
+    { nome: "Vilagran", vc: 5614 },
+    { nome: "Luke", vc: 5614 },
+    { nome: "Vader", vc: 5614 },
+    { nome: "Você", vc: 938 },
+    { nome: "Herobri", vc: 5614 },
+    { nome: "Joel", vc: 5614 },
+    { nome: "Cleiton", vc: 5614 },
+  ];
 
   return (
     <>
-      <HeaderIntern iconActiveNumber={2} />
+      <HeaderIntern iconActiveNumber={2}>
+        <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} />
+      </HeaderIntern>
 
-      <div className="mt-10 flex flex-row justify-center items-center">
-        <div className="flex flex-col w-3/5 mr-5">
-          <h2 className="text-primary-200 dark:text-white font-bold text-xl">Os Especialistas!</h2>
-          <p className="text-primary-200 dark:text-white font-light text-base">Ranking atualizado</p>
+      <div className="mt-10 flex flex-row items-center justify-center">
+        <div className="mr-5 flex w-3/5 flex-col">
+          <h2 className="text-xl font-bold text-primary-200 dark:text-white">
+            Os Especialistas!
+          </h2>
+          <p className="text-base font-light text-primary-200 dark:text-white">
+            Ranking atualizado
+          </p>
         </div>
-        <div className="flex flex-col  w-1/4">
-          <p className="text-[#471650] dark:text-white font-light text-md">Mostrando ranking</p>
+        <div className="flex w-1/4 flex-col">
+          <p className="text-md font-light text-[#471650] dark:text-white">
+            Mostrando ranking
+          </p>
           <div className="relative w-80">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="w-full p-2 border-2 border-[#471650] dark:border-primary-200 rounded-lg bg-[#7C20BE1A] text-[#471650] dark:text-primary-200 text-md font-light focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="focus:ring-purple-500 w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 dark:border-primary-200 dark:text-primary-200"
             >
               {options.map((option) => (
                 <option
                   key={option.label}
                   value={option.label}
-                  className="dark:bg-[#1a001a] dark:text-white bg-white text-[#1a001a]"
+                  className="bg-white text-[#1a001a] dark:bg-[#1a001a] dark:text-white"
                 >
                   {option.label} {option.xp}
                 </option>
@@ -91,8 +96,8 @@ const Ranking = () => {
       </div>
       <div className="mt-10"></div>
       <div className="flex justify-center">
-          <div className=" bg-[#DFDFDE] dark:bg-[#1F1F1F] w-3/5 mr-5 rounded-lg p-10">
-          <div className=" flex justify-evenly">
+        <div className="mr-5 w-3/5 rounded-lg bg-[#DFDFDE] p-10 dark:bg-[#1F1F1F]">
+          <div className="flex justify-evenly">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
             ))}
@@ -104,35 +109,50 @@ const Ranking = () => {
             ))}
           </div>
           <div className="mt-10"></div>
-          <div className="overflow-y-auto h-[551px] pr-3">
+          <div className="h-[551px] overflow-y-auto pr-3">
             {ranking.slice(3, ranking.length).map((ranking, index) => (
-              <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp}/>
+              <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp} />
             ))}
           </div>
           <div className="mt-10"></div>
-          <div className="mt-4 text-center font-bold h-12 flex items-center justify-center text-md">
-            <span className="bg-white dark:bg-[#1F1F1F] flex items-center h-12 rounded-sm cursor-pointer" style={{ color: "red" }}>▼ Zona de Rebaixamento ▼</span>
+          <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold">
+            <span
+              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F]"
+              style={{ color: "red" }}
+            >
+              ▼ Zona de Rebaixamento ▼
+            </span>
           </div>
         </div>
-        <div className="  bg-primary-200 dark:bg-[#1F1F1F] w-1/4 rounded-lg p-5 flex flex-col items-center">
+        <div className="flex w-1/4 flex-col items-center rounded-lg bg-primary-200 p-5 dark:bg-[#1F1F1F]">
           <div>
-            <p className="text-teste text-base font-bold text-white">Ricos da Vouvi</p>
-            <p className="text-teste mb-3 text-white text-md font-light">Ranking de Vcoins</p>
+            <p className="text-teste text-base font-bold text-white">
+              Ricos da Vouvi
+            </p>
+            <p className="text-teste mb-3 text-md font-light text-white">
+              Ranking de Vcoins
+            </p>
           </div>
+          {lateral.map((lateral, index) =>
+            lateral.nome === "Você" ? (
+              <CardLateral posicao={index + 1} vc={lateral.vc} nome="Usuario" />
+            ) : (
+              <></>
+            ),
+          )}
+          <div className="border-card m-4 flex rounded-md border-2"></div>
           {lateral.map((lateral, index) => (
-            lateral.nome === 'Você'
-              ? <CardLateral posicao={index + 1} vc={lateral.vc} nome="Usuario" />
-              : <></>
-          ))}
-          <div className="flex  border-2 rounded-md m-4 border-card"></div>
-          {lateral.map((lateral, index) => (
-            <CardLateral posicao={index + 1} vc={lateral.vc} nome={lateral.nome} />
+            <CardLateral
+              posicao={index + 1}
+              vc={lateral.vc}
+              nome={lateral.nome}
+            />
           ))}
         </div>
       </div>
       <Footer />
     </>
-  )
+  );
 };
 
 export default Ranking;
