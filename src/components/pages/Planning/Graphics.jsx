@@ -98,7 +98,6 @@ function Graphics() {
               connectNulls: true,
             },
           ]}
-          width={1500}
           height={400}
           grid={{ horizontal: true }}
         />
