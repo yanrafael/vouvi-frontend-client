@@ -74,11 +74,11 @@ function Mid({ openModal }) {
           </div>
         </div>
       </div>
-      <div className="ml-5">
-        <div className="flex w-[240px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white">
+      <div className="ml-5 group">
+        <div className="flex w-[240px] group-hover:text-white dark:group-hover:bg-[#282828] group-hover:bg-primary-200 transition-colors duration-500 justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white">
           Conquistas
         </div>
-        <div className="flex h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 dark:bg-[#1e1e1e]">
+        <div className="flex dark:group-hover:bg-[#282828] group-hover:bg-primary-200 transition-colors duration-500 da h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 dark:bg-[#1e1e1e]">
           <Insigne
             icon={VouviLover}
             title={"Vouvi lover"}
@@ -91,10 +91,10 @@ function Mid({ openModal }) {
           />
           <div
             onClick={openModal}
-            className="mx-5 mt-auto flex cursor-pointer items-center justify-center text-[#471650] dark:text-white"
+            className="flex items-center justify-center mt-auto duration-500 mx-5 cursor-pointer w-auto text-[#471650] dark:text-white group-hover:text-white"
           >
             <p className="mx-2 text-[32px] font-medium">Ver todos</p>
-            <Icon icon="prime:sort-down-fill" width="35px" />
+            <Icon icon="prime:sort-down-fill" width="35px" className=" group-[1]:"/>
           </div>
         </div>
       </div>
