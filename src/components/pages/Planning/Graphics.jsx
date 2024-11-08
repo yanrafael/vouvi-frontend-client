@@ -7,10 +7,10 @@ function Graphics() {
   const [expenses] = useState(2587);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 dark:text-white">
       <div className="flex justify-between">
         <div className="w-7/12 rounded-md bg-[#868686] bg-opacity-20 pb-10">
-          <h3 className="m-8 text-lg font-bold">
+          <h3 className="m-8 text-lg font-bold dark:text-white">
             Veja seus investimentos decolando
           </h3>
           <LineChart
@@ -22,13 +22,16 @@ function Graphics() {
                 color: "#480ca8",
               },
             ]}
+            colors={["dark"]}
             height={300}
           />
         </div>
 
         <div className="w-2/5 rounded-md bg-[#868686] bg-opacity-20 pb-10">
-          <h3 className="m-8 text-lg font-bold">Distribuição de gastos</h3>
-          <div className="relative mt-20 w-full">
+          <h3 className="m-8 text-lg font-bold dark:text-white">
+            Distribuição de gastos
+          </h3>
+          <div className="relative mt-20 w-full dark:text-white">
             <PieChart
               series={[
                 {
@@ -53,7 +56,7 @@ function Graphics() {
                 legend: {
                   direction: "column",
                   position: { vertical: "middle", horizontal: "right" },
-                  // labelStyle: { fontSize: 12 },
+                  labelStyle: { color: "white" },
                   padding: { right: 9 * (window.innerWidth / 100) },
                 },
               }}
