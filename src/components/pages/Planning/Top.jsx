@@ -41,7 +41,7 @@ function Top({ onClick, onClick2 }) {
         <div className="flex w-5/12 flex-col rounded-md bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B]">
           <p className="p-2 text-base font-light dark:text-white">Missões</p>
           <div className="overflow-hidden whitespace-nowrap rounded-md bg-white p-2 text-[32px] text-black">
-            <p>Anote três pequenas economias que você fez hoje</p>
+            <p className="relative slide-track animate-scroll left-[800px]">Anote três pequenas economias que você fez hoje</p>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ function Top({ onClick, onClick2 }) {
             className={`${
               btnOn == 0
                 ? "bg-black text-white dark:bg-white dark:text-black"
-                : "bg-[#8D8D8D] text-white"
+                : "bg-[#8D8D8D] text-white hover:bg-[#282828] transition-colors duration-500"
             } rounded-md p-4 text-base`}
           >
             Planejar
@@ -74,19 +74,19 @@ function Top({ onClick, onClick2 }) {
             className={`${
               btnOn == 1
                 ? "bg-black text-white dark:bg-white dark:text-black"
-                : "bg-[#8D8D8D] text-white"
+                : "bg-[#8D8D8D] text-white hover:bg-[#282828] transition-colors duration-500"
             } rounded-md p-4 text-base`}
           >
             Metas
           </button>
         </div>
 
-        <div className="flex justify-between gap-7">
-          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-8 px-6 text-[#8D8D8D]">
+        <div className="flex justify-between gap-7 text-[#8D8D8D] dark:text-white ">
+          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 hover:text-secondary-200 transition-colors duration-500 hover:border-secondary-200">
             <img className="w-10" src={catIcon} alt="pequeno gato cinza" />
             <p className="text-base">Dicas do Fin</p>
           </div>
-          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-8 px-6 text-[#8D8D8D]">
+          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-[#8D8D8D] border-4 px-6 hover:text-secondary-200 transition-colors duration-500 hover:border-secondary-200">
             <p className="flex flex-row items-center justify-center gap-4 text-nowrap text-base">
               01 Out - 10 Out | <Icon icon={"bi:calendar-fill"} width={40} />
             </p>

@@ -56,8 +56,8 @@ function Transactions() {
   const performance = 88;
 
   return (
-    <div className="mt-10 flex w-full justify-between dark:text-white">
-      <div className="w-7/12 rounded-md bg-[#888] bg-opacity-20 p-6">
+    <div className="mt-10 flex w-full justify-between dark:text-white ">
+      <div className="w-7/12 rounded-md bg-[#888] dark:bg-[#1B1B1B] bg-opacity-20 p-6">
         <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-bold text-white dark:bg-secondary-300">
           Transações diárias
         </h3>
@@ -78,7 +78,7 @@ function Transactions() {
         </ul>
       </div>
 
-      <div className="relative flex w-2/5 flex-col items-center rounded-md bg-[#888] bg-opacity-20 p-6">
+      <div className="relative flex w-2/5 flex-col items-center rounded-md bg-[#888] dark:bg-[#1B1B1B] bg-opacity-20 p-6">
         <h3>Desempenho Financeiro</h3>
         <PieChart
           series={[
