@@ -25,7 +25,7 @@ function Low() {
       <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12">
         <div className="flex w-[60%] flex-col">
           <div data-aos="zoom-in-up" className="flex justify-between">
-            <FeedbackCard
+            <FeedbackCard 
               color={"bg-[#FA7ABC] text-[#A90057]"}
               text={"Manda a real!"}
             />
@@ -35,7 +35,7 @@ function Low() {
               text={"Avalie-nos"}
             />
           </div>
-          <div data-aos="zoom-in-up" className="mt-6 flex justify-between">
+          <div data-aos="zoom-in-up" className="mt-6 flex justify-between" >
             <FeedbackCard
               color={"bg-[#84CE7A] text-[#0A5800]"}
               text={"Solta o verbo!"}

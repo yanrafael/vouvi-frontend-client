@@ -40,18 +40,17 @@ function Mid() {
         <div
           className="flex flex-col"
           aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados."
-          title="A imagem mostra um ícone de banco de dados."
         >
           <div className="relative m-auto flex items-center">
             <div
+              title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
-              aria-label=""
               className="relative top-[40px] flex"
-              title=""
             >
               <AiCards
                 icon={<Icon icon="solar:database-bold" height={108} />}
                 text={"Acompanhamento de Dados"}
+              
               />
 
               <img
@@ -101,7 +100,6 @@ function Mid() {
             <div
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
               title="ícone de diagrama preto"
-              title="ícone de grafíco"
               data-aos="fade-left"
               className="relative bottom-[60px] left-[60px] flex items-end justify-center"
             >

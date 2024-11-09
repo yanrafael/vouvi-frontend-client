@@ -73,19 +73,19 @@ function Top({ background }) {
         data-aos="fade-up"
       >
         <Cards
-          img={FireIcon}
+          img={FireIcon} area-label="ícone de Ícone quadrado com cantos arredondados em tom de laranja claro, com uma chama estilizada em laranja mais escuro no centro, representando fogo"
           title={"Zero dívidas!"}
           text={"Aprenda a se livrar das despesas e manter sua conta no azul."}
           color="text-[#FFB515] bg-[radial-gradient(105.89%_105.89%_at_50%_105.89%,rgba(255,184,104,0.26)_0%,rgba(2,2,11,0.00)_100%);] dark:bg-[radial-gradient(105.89%_105.89%_at_50%_105.89%,rgba(253,163,61,0.26)_0%,rgba(2,2,11,0.26)_100%)]"
         />
         <Cards
-          img={GreenIcon}
+          img={GreenIcon} area-label="Ícone quadrado verde com bordas arredondadas. Dentro do ícone, há uma seta verde apontando para cima, que começa no canto inferior esquerdo e curva-se para cima até o canto superior direito. Este ícone é geralmente usado para representar crescimento, progresso ou aumento de valor, como em contextos financeiros ou estatísticos."
           title={"Grana que cresce!"}
           text={"Saber investir é fazer seu dinheiro trabalhar por você."}
           color="text-[#14A900] bg-[radial-gradient(104.28%_104.28%_at_50.1%_104.28%,rgba(20,169,0,0.26)_0%,rgba(8,67,0,0.00)_100%)]"
         />
         <Cards
-          img={HeartIcon}
+          img={HeartIcon}  area-label="Ícone quadrado rosa com bordas arredondadas. Dentro do ícone, há uma coração no centro,  Este ícone é geralmente usado para representar amor, progresso ou sentimentos"
           title={"Realize sonhos!"}
           text={"Com planejamento, seu sonho tá logo ali na esquina."}
           color="text-[#FF0084] bg-[linear-gradient(0deg,rgba(255,0,132,0.26)_-8.57%,rgba(255,0,132,0.00)_100%)]"
