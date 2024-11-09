@@ -27,7 +27,9 @@ function Mid() {
           data-aos="fade-up"
           className={`text-center lg:text-[90px] text-[72px] font-medium leading-[1.2] ${TextGradient}`}
         >
-          Planejamento inteligente
+          Planejamento
+          <br />
+          inteligente
         </h1>
 
         <p
@@ -46,16 +48,16 @@ function Mid() {
             <div
               data-aos="fade-right"
               aria-label=""
-              className="relative top-[20px] lg:top-[40px] 2xl:right-3 flex"
+              className="relative lg:top-[40px] 2xl:right-3 flex"
               title=""
             >
               <AiCards
-                icon={<Icon icon="solar:database-bold" className="text-[65px] lg:text-[85px] xl:text-[108px]" />}
+                icon={<Icon icon="solar:database-bold" className="text-[85px] xl:text-[108px]" />}
                 text={"Acompanhamento de Dados"}
               />
 
               <img
-                className="relative top-14 lg:top-[70px] xl:top-20 w-[60px] lg:w-[80px] xl:w-[100px] lg:right-2 xl:right-0"
+                className="relative top-[70px] 2xl:top-20 w-[80px] 2xl:w-[100px] right-2 2xl:right-0 hidden lg:flex"
                 src={LineTopLeft}
                 alt="icone de planejamento, um calendario"
               />
@@ -64,12 +66,12 @@ function Mid() {
               aria-label="ícone de planejamento. um calendario"
               title="ícone de calendario"
               data-aos="fade-left"
-              className="relative left-[40px] xl:left-[60px] 2xl:left-[100px] top-[40px] flex justify-center"
+              className="relative lg:left-[40px] xl:left-[60px] 2xl:left-[100px] lg:top-[40px] flex justify-center"
             >
-              <img className="w-[180px] lg:w-[240px] xl:w-[300px]" src={LineTopRight} alt="" />
+              <img className="lg:w-[240px] 2xl:w-[300px] hidden lg:flex" src={LineTopRight} alt="" />
               <AiCardsReverse
-                icon={<Icon icon="solar:calendar-bold" className="text-[65px] lg:text-[85px] xl:text-[108px]" />}
-                text={"Planejamento personalizável"}
+                icon={<Icon icon="solar:calendar-bold" className="text-[85px] xl:text-[108px]" />}
+                text={`Planejamento personalizável`}
               />
             </div>
           </div>
@@ -77,23 +79,23 @@ function Mid() {
             data-aos="zoom-in-up"
             className="flex items-center justify-center"
           >
-            <img src={AiIcon} alt="" className="w-[80px] lg:w-[145px] 2xl:w-[182px]" />
-            <p className="absolute text-[36px] lg:text-[72px] 2xl:text-2xl text-[#8D8D8D]">IA</p>
+            <img src={AiIcon} alt="" className="w-[145px] 2xl:w-[182px]" />
+            <p className="absolute text-[72px] 2xl:text-2xl text-[#8D8D8D]">IA</p>
           </div>
 
-          <div className="relative m-auto flex top-1 lg:top-3 items-center">
+          <div className="relative justify-between lg:m-auto flex lg:top-3 items-center">
             <div
               aria-label="ícone de relogio"
               title="ícone de relogio preto"
               data-aos="fade-right"
-              className="relative bottom-[45px] right-[0px] flex"
+              className="relative lg:bottom-[45px] flex"
             >
               <AiCards
-                icon={<Icon icon="lets-icons:time-atack" className="text-[65px] lg:text-[85px] xl:text-[108px]" />}
+                icon={<Icon icon="lets-icons:time-atack" className="text-[85px] xl:text-[108px]" />}
                 text={"Dicas em Tempo Real"}
               />
               <img
-                className="w-[180px] lg:w-[240px] 2xl:w-[300px] top-3 lg:top-0 relative"
+                className="w-[240px] 2xl:w-[300px] -top-2 relative hidden lg:flex"
                 src={LineDownLeft}
                 alt="ícone de relogio"
               />
@@ -102,11 +104,11 @@ function Mid() {
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
               title="ícone de grafíco"
               data-aos="fade-left"
-              className="relative bottom-[30px] lg:bottom-[60px] left-[20px] lg:left-[35px] 2xl:left-[60px] flex items-end justify-center"
+              className="relative lg:bottom-[60px] lg:left-[35px] 2xl:left-[60px] flex items-end justify-center"
             >
-              <img src={LineDownRight} alt="" className="w-[140px] lg:w-[180px] 2xl:w-[224px]" />
+              <img src={LineDownRight} alt="" className="w-[180px] 2xl:w-[224px] hidden lg:flex" />
               <AiCardsReverse
-                icon={<Icon icon="solar:round-graph-bold" className="text-[65px] lg:text-[85px] xl:text-[108px]" />}
+                icon={<Icon icon="solar:round-graph-bold" className="text-[85px] xl:text-[108px]" />}
                 text={"Gráficos inteligentes"}
               />
             </div>
@@ -121,9 +123,7 @@ function Mid() {
         >
           Domine o jogo, domine o dinheiro!
         </h1>
-        <p data-aos="fade-right" className={`${TextGradient} text-sm lg:text-base`}>
-          Economize de verdade com cada missão completa.
-        </p>
+        <p data-aos="fade-right" className={`${TextGradient} text-sm lg:text-base`}></p>
 
         <div className="relative m-auto mt-[50px] lg:mt-[100px] flex w-11/12 items-center justify-evenly rounded-md bg-[#D9D9D9]">
           <img
