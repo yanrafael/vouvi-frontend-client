@@ -36,7 +36,7 @@ function Top({ background }) {
         </div>
 
         <div className="m-auto mt-[200px] flex flex-col justify-center text-center text-black dark:text-white">
-          <h1 className="text-[90px] font-normal leading-[0.85]">
+          <h1 className="lg:text-[90px] text-[72px] font-normal leading-[0.85]">
             <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
             </strong>{" "}
@@ -46,7 +46,7 @@ function Top({ background }) {
             em uma{" "}
             <strong className="font-medium text-primary-200">aventura</strong>
           </h1>
-          <p className="mt-7 text-[36px]">Aprenda a fazer essa grana durar!</p>
+          <p className="mt-7 lg:text-[36px] text-[28px]">Aprenda a fazer essa grana durar!</p>
         </div>
 
         <Link to={"/create-account"}>
@@ -64,14 +64,14 @@ function Top({ background }) {
       </section>
 
       <h1
-        className={`mb-10 mt-40 flex justify-center text-center text-2xl font-medium leading-[1.2] ${TextGradient} `}
+        className={`mb-10 mt-40 flex justify-center text-center lg:text-2xl text-[72px] font-medium leading-[1.2] ${TextGradient} `}
         data-aos="fade-up"
       >
         Educação Financeira
       </h1>
 
       <section
-        className="flex justify-center !scroll-smooth"
+        className="flex justify-center !scroll-smooth flex-wrap lg:flex-nowrap gap-20 lg:gap-0"
         data-aos="fade-up"
       >
         <Cards

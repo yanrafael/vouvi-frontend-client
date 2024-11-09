@@ -4,7 +4,7 @@ function Cards({ title, text, img, color, gradient }) {
       style={{
         background: gradient,
       }}
-      className={`relative ${color} mx-5 flex w-[26%] flex-col items-center rounded-md py-14 text-center`}
+      className={`relative ${color} mx-5 flex lg:w-[26%] w-11/12 flex-col items-center rounded-md py-14 text-center`}
     >
       <img className="h-[140px] w-[140px]" src={img} alt="" />
       <h2 className="text-lg font-semibold">{title}</h2>
