@@ -40,7 +40,7 @@ function Mid() {
         </p>
 
         <div
-          className="flex flex-col"
+          className="flex flex-col mt-20 p-10 lg:p-0 lg:mt-0"
           aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados."
           title="A imagem mostra um ícone de banco de dados."
         >
@@ -70,20 +70,20 @@ function Mid() {
             >
               <img className="lg:w-[240px] 2xl:w-[300px] hidden lg:flex" src={LineTopRight} alt="" />
               <AiCardsReverse
-                icon={<Icon icon="solar:calendar-bold" className="text-[85px] xl:text-[108px]" />}
+                icon={<Icon icon="fluent:calendar-ltr-16-filled" className="text-[100px] xl:text-[120px]" />}
                 text={`Planejamento personalizável`}
               />
             </div>
           </div>
           <div
             data-aos="zoom-in-up"
-            className="flex items-center justify-center"
+            className="lg:flex items-center justify-center hidden"
           >
             <img src={AiIcon} alt="" className="w-[145px] 2xl:w-[182px]" />
             <p className="absolute text-[72px] 2xl:text-2xl text-[#8D8D8D]">IA</p>
           </div>
 
-          <div className="relative justify-between lg:m-auto flex lg:top-3 items-center">
+          <div className="relative justify-between lg:m-auto flex lg:top-3">
             <div
               aria-label="ícone de relogio"
               title="ícone de relogio preto"
@@ -106,9 +106,9 @@ function Mid() {
               data-aos="fade-left"
               className="relative lg:bottom-[60px] lg:left-[35px] 2xl:left-[60px] flex items-end justify-center"
             >
-              <img src={LineDownRight} alt="" className="w-[180px] 2xl:w-[224px] hidden lg:flex" />
+              <img src={LineDownRight} alt="" className="w-[180px] 2xl:w-[224px] hidden lg:flex lg:left-[15px] relative" />
               <AiCardsReverse
-                icon={<Icon icon="solar:round-graph-bold" className="text-[85px] xl:text-[108px]" />}
+                icon={<Icon icon="solar:round-graph-bold" className="text-[100px] xl:text-[120px]" />}
                 text={"Gráficos inteligentes"}
               />
             </div>
