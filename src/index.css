@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+
+  .slide-track {
+    @apply flex;
+    animation: scroll 7s linear infinite;
+  }
+
+  @keyframes scroll {
+    100% { transform: translateX(-1500px); }
+  }
+}
+
 @layer base {
   @font-face {
     font-family: Outfit;

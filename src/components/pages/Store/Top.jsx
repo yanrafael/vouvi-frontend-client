@@ -24,14 +24,18 @@ function Top() {
             <PrimaryButton text={"Assinar agora!"} />
           </div>
         </div>
-        <img src={CatBanner} alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul." title="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul." />
+        <img
+          src={CatBanner}
+          alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
+          title="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
+        />
       </section>
 
-      <hr className="m-auto mb-14 mt-20 w-10/12 rounded-md bg-[#F5F5F442] p-1" />
+      <hr className="m-auto mb-14 mt-20 w-10/12 rounded-md bg-black p-1 dark:bg-[#F5F5F442]" />
 
-      <section className={`m-auto w-11/12`}>
-        <div className="mb-6 flex items-center justify-between">
-          <div className="mr-20 text-base leading-[1] text-white">
+      <section className={`m-auto w-11/12 relative`}>
+        <div className="mb-6 flex items-center justify-between gap-4 overflow-hidden overflow-x-scroll">
+          <div className="mr-20 text-base leading-[1] text-black dark:text-white">
             <h1 className={`font-medium`}>Personalize!</h1>
             <p className="font-light">Gaste vcoins!</p>
           </div>
@@ -40,8 +44,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 0
-                  ? "bg-white text-black"
-                  : "bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Todos"}
             >
@@ -53,8 +57,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 1
-                  ? "bg-white text-black"
-                  : "bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Olhos"}
             >
@@ -66,8 +70,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 2
-                  ? "bg-white text-black"
-                  : "bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Pelos"}
             >
@@ -79,8 +83,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 3
-                  ? "bg-white text-black"
-                  : "bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Coleiras"}
             >
@@ -92,8 +96,8 @@ function Top() {
             <StoreButton
               color={
                 btnColor === 4
-                  ? "bg-white text-black"
-                  : "bg-[#1F1F1F] text-white"
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }
               text={"Pingente"}
             >
@@ -103,13 +107,18 @@ function Top() {
 
           <div onClick={() => activeButton(5)}>
             <StoreButton
-              color={`${btnColor === 5 ? "bg-white text-[#02020b]" : ""}`}
+              color={`${
+                btnColor === 5
+                  ? "bg-black text-white dark:bg-white dark:text-black"
+                  : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
+              }`}
               text={"Fundos"}
             >
               <Icon icon={"mynaui:square-solid"} />
             </StoreButton>
           </div>
         </div>
+        <div className="to-transparent absolute right-0 bottom-5 h-20 w-32 bg-gradient-to-l from-[#FFFFFF] dark:from-[#000000]"></div>
       </section>
     </>
   );

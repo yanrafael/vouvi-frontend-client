@@ -1,12 +1,10 @@
 function AiCards({ icon, text }) {
   return (
-    <div className="relative left-5 flex flex-wrap">
+    <div className="relative flex justify-end items-center lg:flex-row-reverse">
       <div className="float-left rounded-lg bg-[rgba(141,141,141,0.30)]">
         {icon}
       </div>
-      <div>
-        <p className="ml-5 w-2/4 text-base font-bold text-[#8D8D8D]">{text}</p>
-      </div>
+        <p className=" ml-5 lg:ml-0 lg:mr-5 w-[150px] lg:w-2/4 xl:text-base text-[24px] lg:text-right font-bold text-[#8D8D8D] leading-[1]">{text}</p>
     </div>
   );
 }

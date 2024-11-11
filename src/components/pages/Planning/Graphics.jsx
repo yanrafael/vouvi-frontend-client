@@ -7,10 +7,10 @@ function Graphics() {
   const [expenses] = useState(2587);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 dark:text-white">
       <div className="flex justify-between">
-        <div className="rounded-md bg-[#868686] bg-opacity-20 pb-10">
-          <h3 className="m-8 text-lg font-bold">
+        <div className="w-7/12 rounded-md bg-[#868686] dark:bg-[#1B1B1B] bg-opacity-20 pb-10">
+          <h3 className="m-8 text-lg font-bold dark:text-white">
             Veja seus investimentos decolando
           </h3>
           <LineChart
@@ -22,14 +22,16 @@ function Graphics() {
                 color: "#480ca8",
               },
             ]}
-            width={800}
+            colors={["dark"]}
             height={300}
           />
         </div>
 
-        <div className="w-fit rounded-md bg-[#868686] bg-opacity-20 pb-10">
-          <h3 className="m-8 text-lg font-bold">Distribuição de gastos</h3>
-          <div className="relative w-full">
+        <div className="w-2/5 rounded-md bg-[#868686] dark:bg-[#1B1B1B] bg-opacity-20 pb-10">
+          <h3 className="m-8 text-lg font-bold dark:text-white">
+            Distribuição de gastos
+          </h3>
+          <div className="relative mt-20 w-full dark:text-white">
             <PieChart
               series={[
                 {
@@ -41,33 +43,37 @@ function Graphics() {
                     { id: 4, value: 12, label: "Saúde", color: "#f72585" },
                     { id: 5, value: 40, label: "Carro", color: "#8d8d8d" },
                   ],
-                  innerRadius: 0,
-                  outerRadius: 150,
+                  outerRadius: 9 * (window.innerWidth / 100),
                 },
               ]}
-              margin={{ top: 0, right: 280, bottom: 0, left: 0 }}
+              margin={{
+                top: 0,
+                right: 270 - 2 * (window.innerWidth / 100),
+                bottom: 0,
+                left: 0,
+              }}
               slotProps={{
                 legend: {
                   direction: "column",
                   position: { vertical: "middle", horizontal: "right" },
-                  padding: 100,
+                  labelStyle: { color: "white" },
+                  padding: { right: 9 * (window.innerWidth / 100) },
                 },
               }}
-              width={700}
-              height={300}
+              height={350}
             />
-            <span className="absolute right-32 top-10 text-right text-base font-bold">
+            <span className="absolute right-24 top-0 text-left text-md font-bold">
               R${convertFloat(expenses)}
             </span>
           </div>
         </div>
       </div>
 
-      <div className="m-auto mt-8 w-full rounded-md bg-[#888] bg-opacity-20 p-3">
+      <div className="m-auto mt-8 w-full rounded-md bg-[#888] dark:bg-[#1B1B1B] bg-opacity-20 p-3">
         <h3 className="m-8 text-base font-bold">
           Acompanhe seus gastos e ganhos
         </h3>
-        <div className="flex gap-10">
+        <div className="ml-16 flex gap-10 text-md">
           <span className="flex items-center gap-2">
             <span className="h-3 w-3 rounded-full bg-[#b5179e]"></span>
             <p>Ganhos</p>
@@ -87,19 +93,16 @@ function Graphics() {
           }}
           series={[
             {
-              curve: "linear",
               data: [0, 1000, 1200, 500, 2200, 3300, 2700, 3000, 2000],
               color: "#480ca8",
             },
             {
-              curve: "linear",
               data: [1800, 2800, 1500, null, 3800, 1300, 500, 1900, 3900],
               color: "#b5179e",
               connectNulls: true,
             },
           ]}
-          width={1500}
-          height={400}
+          height={500}
           grid={{ horizontal: true }}
         />
       </div>

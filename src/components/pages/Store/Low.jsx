@@ -49,6 +49,7 @@ function Mid() {
         color1={"bg-yellow"}
         color2={"bg-[#E28A93]"}
         color3={"bg-[#8D8D8D]"}
+        color4={"bg-[#E3D3F3]"}
       >
         <img src={WhiteCat} alt="" />
       </StoreSingleCard>
@@ -78,6 +79,7 @@ function Mid() {
         img1={BgOrangeCity}
         img2={BgDarkCity}
         img3={BgDesert}
+        color4={'bg-[#E3D3F3]'}
       >
         <div
           style={{

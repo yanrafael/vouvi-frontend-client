@@ -9,7 +9,7 @@ function Navigation({ icon, title, width, fill, textColor }) {
       ></div>
       {icon}
       <p
-        className={`flex ${textColor} mx-2 text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-[#003F7F]`}
+        className={`flex ${textColor} mx-2 text-[32px] font-bold transition-all duration-300 ease-in-out group-hover:text-[#003F7F]`}
       >
         {title}
       </p>

@@ -43,7 +43,7 @@ const dailyTransactions = [
 
 function DailyTransaction({ description, value, type, date }) {
   return (
-    <li className="mb-2 flex justify-around rounded-md bg-white p-3 text-md">
+    <li className="mb-2 flex justify-around rounded-md bg-white p-3 text-md dark:bg-secondary-300">
       <span className="w-1/4 p-4">{description}</span>
       <span className="w-1/4 p-4">R$ {convertFloat(value)}</span>
       <span className="w-1/4 p-4 text-center">{type}</span>
@@ -56,9 +56,9 @@ function Transactions() {
   const performance = 88;
 
   return (
-    <div className="mt-10 flex w-full justify-between">
-      <div className="w-7/12 rounded-md bg-[#888] bg-opacity-20 p-6">
-        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-bold text-white">
+    <div className="mt-10 flex w-full justify-between dark:text-white ">
+      <div className="w-7/12 rounded-md bg-[#888] dark:bg-[#1B1B1B] bg-opacity-20 p-6">
+        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-bold text-white dark:bg-secondary-300">
           Transações diárias
         </h3>
 
@@ -78,7 +78,7 @@ function Transactions() {
         </ul>
       </div>
 
-      <div className="relative flex w-2/5 flex-col items-center rounded-md bg-[#888] bg-opacity-20 p-6">
+      <div className="relative flex w-2/5 flex-col items-center rounded-md bg-[#888] dark:bg-[#1B1B1B] bg-opacity-20 p-6">
         <h3>Desempenho Financeiro</h3>
         <PieChart
           series={[
@@ -95,6 +95,7 @@ function Transactions() {
               cornerRadius: 35,
               startAngle: -90,
               endAngle: 90,
+              paddingAngle: 3,
             },
           ]}
           margin={{ top: 150, right: 0, bottom: 0, left: 0 }}
@@ -104,7 +105,7 @@ function Transactions() {
 
         <span className="absolute top-1/2 text-xl">{performance}%</span>
 
-        <button className="w-4/6 rounded-md border-4 border-black py-3 text-md">
+        <button className="w-4/6 rounded-md border-4 border-black py-3 text-md dark:border-white">
           Saiba Mais
         </button>
       </div>
