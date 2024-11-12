@@ -77,11 +77,11 @@ const Ranking = () => {
           <p className="text-md font-light text-[#471650] dark:text-white">
             Mostrando ranking
           </p>
-          <div className="relative w-80">
+          <div className="relative w-fit p-1">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="focus:ring-purple-500 w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 dark:border-primary-200 dark:text-primary-200"
+              className="focus:ring-purple-500 w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 dark:border-primary-200 dark:text-primary-200 md:text-sm md:mt-10"
             >
               {options.map((option) => (
                 <option
@@ -99,7 +99,7 @@ const Ranking = () => {
       <div className="mt-10"></div>
       <div className="flex justify-center">
         <div className="mr-5 w-3/5 rounded-lg bg-[#DFDFDE] p-10 dark:bg-[#1F1F1F]">
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly gap-10">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
             ))}
