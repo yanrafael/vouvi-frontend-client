@@ -22,7 +22,7 @@ const Colocacao = (props) =>{
         <div className="flex items-end md:gap-6">
             <div className="flex items-center flex-col md:gap-6">
                 <div className="relative left-12 top-9 md:w-14">
-                    <span className="mr-2 flex items-center justify-center w-12 h-12 rounded-full bg-black text-white text-base font-medium">
+                    <span className="mr-2 flex items-center justify-center w-12 h-12 rounded-full bg-black text-white font-medium "> 
                         {props.posicao}°
                     </span>
                 </div>

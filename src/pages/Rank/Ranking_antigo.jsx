@@ -13,7 +13,7 @@ const Ranking = () => {
   const users = [
     { name: "Rich", xp: "13,657 XP" },
     { name: "Michael", xp: "12,102 XP" },
-    { name: "marcos", xp: "10,018 XP" },
+    { name: "marcos", xp:  "10,018 XP" },
     { name: "Chris", xp: "9,013 XP" },
     { name: "Chesp", xp: "8,755 XP" },
     { name: "Billie", xp: "8,124 XP" },
