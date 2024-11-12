@@ -6,19 +6,17 @@ import LineTopRight from "../../assets/images/line-top-right.svg";
 import LineDownLeft from "../../assets/images/line-down-left.svg";
 import LineDownRight from "../../assets/images/line-down-right.svg";
 import Rewards from "../../assets/images/missionsandrewards.png";
-
 import { Icon } from "@iconify/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
 function Mid() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-  useEffect(() => {
-    AOS.init({ duration: 1200 });
-  });
+    useEffect(() => {
+      AOS.init({ duration: 1200 });
+    });
 
   return (
     <>
@@ -160,18 +158,18 @@ function Mid() {
           className={`${TextGradient} text-sm lg:text-base`}
         ></p>
 
-        <div className="relative m-auto mt-[50px] flex w-11/12 items-center justify-evenly rounded-md bg-[#D9D9D9] lg:mt-[100px]">
+        <div className="relative flex-wrap lg:flex-nowrap p-6 lg:p-0 m-auto mt-[50px] flex w-11/12 items-center justify-evenly rounded-md bg-[#D9D9D9] lg:mt-[100px]">
           <img
-            className="w-[40%] lg:w-[58%]"
+            className="w-[100%] lg:w-[58%]"
             src={Rewards}
             alt="Fundo azul com várias letras 'XP' em diferentes tamanhos e opacidades espalhadas. No centro, há uma forma amarela brilhante semelhante a uma estrela ou um brilho."
             aria-label="Fundo azul com várias letras 'XP' em diferentes tamanhos e opacidades espalhadas. No centro, há uma forma amarela brilhante semelhante a uma estrela ou um brilho."
             title="ícone chamado Vcon, representando dinheiro da vouvi"
           />
-          <div className="flex h-[20vw] w-[50%] items-center rounded-md bg-[#01438A] lg:h-[29vw] lg:w-[38%]">
+          <div className="flex h-[20vw] lg:h-[29vw] w-[100%] lg:w-[38%] items-center lg:justify-normal justify-center rounded-md bg-[#01438A]">
             <p
               data-aos="fade-left"
-              className={`${TextGradient} ml-5 text-lg lg:ml-10 lg:text-xl`}
+              className={`bg-clip-text text-[transparent] bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] ml-5 text-lg lg:ml-10 lg:text-[50px] xl:text-xl`}
             >
               Missões e Recompensas
             </p>

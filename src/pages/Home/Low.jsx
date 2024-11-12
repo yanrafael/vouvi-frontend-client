@@ -8,7 +8,6 @@ import subscriptionHover from "../../assets/images/subscription-hover.svg";
 import subscriptionStar from "../../assets/images/subscription-star.svg";
 import subscriptionStar2 from "../../assets/images/subscription-star2.svg";
 import subscriptionStar3 from "../../assets/images/subscription-star3.svg";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -19,9 +18,9 @@ function Low() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-  useEffect(() => {
-    AOS.init({ duration: 1200 });
-  });
+    useEffect(() => {
+      AOS.init({ duration: 1200 });
+    });
 
   return (
     <>
