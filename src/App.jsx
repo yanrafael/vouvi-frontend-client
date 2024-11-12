@@ -1,14 +1,14 @@
-import Home from "./components/pages/Home/Home";
-import Login from "./components/pages/Login/Login";
-import CreateAccount from "./components/pages/CreateAccount/CreateAccount";
-import Store from "./components/pages/Store/Store";
-import About from "./components/pages/About/About";
-import Profile from "./components/pages/profile/Profile";
-import Learn from "./components/pages/Learn/Learn";
-import Avatar from "./components/pages/Avatar/Avatar";
-import Ranking from "./components/pages/Rank/Ranking";
-import UserReturn from "./components/pages/UserReturn/UserReturn";
-import Planning from "./components/pages/Planning/Planning";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import CreateAccount from "./pages/CreateAccount/CreateAccount";
+import Store from "./pages/Store/Store";
+import About from "./pages/About/About";
+import Profile from "./pages/Profile/Profile";
+import Learn from "./pages/Learn/Learn";
+import Avatar from "./pages/Avatar/Avatar";
+import Ranking from "./pages/Rank/Ranking";
+import UserReturn from "./pages/UserReturn/UserReturn";
+import Planning from "./pages/Planning/Planning";
 import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
 function App() {
