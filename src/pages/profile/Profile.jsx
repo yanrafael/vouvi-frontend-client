@@ -1,14 +1,18 @@
 import Top from "./Top";
 import Mid from "./Mid";
 import Low from "./Low";
-import HeaderIntern from "../../Header/HeaderIntern";
-import Footer from "../../Footer/Footer";
-import SettingsModal from "../../Modals/SettingsModal";
+
+import HeaderIntern from "../../components/Header/HeaderIntern";
+import Footer from "../../components/Footer/Footer";
 import Settings from "../../Header/Settings";
-import InsigneModal from "../../Modals/InsigneModal";
-import FriendsModal from "../../Modals/FriendsModal";
-import FriendsAddModal from "../../Modals/FriendAddModal";
+
+import SettingsModal from "../../components/Modals/SettingsModal";
+import InsigneModal from "../../components/Modals/InsigneModal";
+import FriendsModal from "../../components/Modals/FriendsModal";
+import FriendsAddModal from "../../components/Modals/FriendAddModal";
+
 import { useState } from "react";
+
 function Profile() {
   const [darkMode, setDarkMode] = useState(
     document.body.classList.contains("dark"),

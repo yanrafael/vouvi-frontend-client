@@ -1,10 +1,14 @@
-import Quest from "../../Cards/Quest";
-import Rewards from "../../Cards/Rewards";
-import VcoinIcon from "../../../assets/images/vcoin-reward-icon.svg";
-import VouviLover from "../../../assets/images/vouvi-lover-md-icon.svg";
-import Newbie from "../../../assets/images/newbie-Insigne.svg";
-import Insigne from "../../Cards/Insigne";
+// Import components
+import Quest from "../../components/Cards/Quest";
+import Rewards from "../../components/Cards/Rewards";
+import Insigne from "../../components/Cards/Insigne";
+
+// Import Assets
+import VcoinIcon from "../../assets/images/vcoin-reward-icon.svg";
+import VouviLover from "../../assets/images/vouvi-lover-md-icon.svg";
+import Newbie from "../../assets/images/newbie-Insigne.svg";
 import { Icon } from "@iconify/react";
+
 function Mid({ openModal }) {
   return (
     <section className="m-auto mt-20 flex w-11/12 justify-between">
@@ -74,11 +78,11 @@ function Mid({ openModal }) {
           </div>
         </div>
       </div>
-      <div className="ml-5 group">
-        <div className="flex w-[240px] group-hover:text-white dark:group-hover:bg-[#282828] group-hover:bg-primary-200 transition-colors duration-500 justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white">
+      <div className="group ml-5">
+        <div className="flex w-[240px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] transition-colors duration-500 group-hover:bg-primary-200 group-hover:text-white dark:bg-[#1e1e1e] dark:text-white dark:group-hover:bg-[#282828]">
           Conquistas
         </div>
-        <div className="flex dark:group-hover:bg-[#282828] group-hover:bg-primary-200 transition-colors duration-500 da h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 dark:bg-[#1e1e1e]">
+        <div className="da flex h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 transition-colors duration-500 group-hover:bg-primary-200 dark:bg-[#1e1e1e] dark:group-hover:bg-[#282828]">
           <Insigne
             icon={VouviLover}
             title={"Vouvi lover"}
@@ -91,10 +95,14 @@ function Mid({ openModal }) {
           />
           <div
             onClick={openModal}
-            className="flex items-center justify-center mt-auto duration-500 mx-5 cursor-pointer w-auto text-[#471650] dark:text-white group-hover:text-white"
+            className="mx-5 mt-auto flex w-auto cursor-pointer items-center justify-center text-[#471650] duration-500 group-hover:text-white dark:text-white"
           >
             <p className="mx-2 text-[32px] font-medium">Ver todos</p>
-            <Icon icon="prime:sort-down-fill" width="35px" className=" group-[1]:"/>
+            <Icon
+              icon="prime:sort-down-fill"
+              width="35px"
+              className="group-[1]:"
+            />
           </div>
         </div>
       </div>

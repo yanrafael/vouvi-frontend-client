@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+
+// Import components
 import CreateAccountStep1 from "./CreateAccountStep1";
 import CreateAccountStep2 from "./CreateAccountStep2";
 import CreateAccountStep3 from "./CreateAccountStep3";

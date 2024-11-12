@@ -1,6 +1,10 @@
-import CatBanner from "../../../assets/images/cat-banner-store.svg";
-import PrimaryButton from "../../Buttons/PrimaryButton";
-import StoreButton from "../../Buttons/StoreButton";
+// Import assets
+import CatBanner from "../../assets/images/cat-banner-store.svg";
+
+// Import components
+import PrimaryButton from "../../components/Buttons/PrimaryButton";
+import StoreButton from "../../components/Buttons/StoreButton";
+
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 
@@ -33,7 +37,7 @@ function Top() {
 
       <hr className="m-auto mb-14 mt-20 w-10/12 rounded-md bg-black p-1 dark:bg-[#F5F5F442]" />
 
-      <section className={`m-auto w-11/12 relative`}>
+      <section className={`relative m-auto w-11/12`}>
         <div className="mb-6 flex items-center justify-between gap-4 overflow-hidden overflow-x-scroll">
           <div className="mr-20 text-base leading-[1] text-black dark:text-white">
             <h1 className={`font-medium`}>Personalize!</h1>
@@ -118,7 +122,7 @@ function Top() {
             </StoreButton>
           </div>
         </div>
-        <div className="to-transparent absolute right-0 bottom-5 h-20 w-32 bg-gradient-to-l from-[#FFFFFF] dark:from-[#000000]"></div>
+        <div className="to-transparent absolute bottom-5 right-0 h-20 w-32 bg-gradient-to-l from-[#FFFFFF] dark:from-[#000000]"></div>
       </section>
     </>
   );

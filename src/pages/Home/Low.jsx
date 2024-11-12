@@ -1,14 +1,17 @@
-import FeedbackCard from "../../Cards/FeedbackCard";
-import PrimaryButton from "../../Buttons/PrimaryButton";
-import SecondaryButton from "../../Buttons/SecondaryButton";
-import Subscription from "../../Cards/SubscriptionCard";
-import FiveStars from "../../../assets/images/fivestars-icon.svg";
+import FeedbackCard from "../../components/Cards/FeedbackCard";
+import PrimaryButton from "../../components/Buttons/PrimaryButton";
+import SecondaryButton from "../../components/Buttons/SecondaryButton";
+import Subscription from "../../components/Cards/SubscriptionCard";
+
+import FiveStars from "../../assets/images/fivestars-icon.svg";
+import subscriptionHover from "../../assets/images/subscription-hover.svg";
+import subscriptionStar from "../../assets/images/subscription-star.svg";
+import subscriptionStar2 from "../../assets/images/subscription-star2.svg";
+import subscriptionStar3 from "../../assets/images/subscription-star3.svg";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import subscriptionHover from "../../../assets/images/subscription-hover.svg";
-import subscriptionStar from "../../../assets/images/subscription-star.svg";
-import subscriptionStar2 from "../../../assets/images/subscription-star2.svg";
-import subscriptionStar3 from "../../../assets/images/subscription-star3.svg";
+
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -25,7 +28,7 @@ function Low() {
       <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12">
         <div className="flex w-[60%] flex-col">
           <div data-aos="zoom-in-up" className="flex justify-between">
-            <FeedbackCard 
+            <FeedbackCard
               color={"bg-[#FA7ABC] text-[#A90057]"}
               text={"Manda a real!"}
             />
@@ -35,7 +38,7 @@ function Low() {
               text={"Avalie-nos"}
             />
           </div>
-          <div data-aos="zoom-in-up" className="mt-6 flex justify-between" >
+          <div data-aos="zoom-in-up" className="mt-6 flex justify-between">
             <FeedbackCard
               color={"bg-[#84CE7A] text-[#0A5800]"}
               text={"Solta o verbo!"}

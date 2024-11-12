@@ -1,4 +1,4 @@
-import SecondaryButton from "../../Buttons/SecondaryButton";
+import SecondaryButton from "../../components/Buttons/SecondaryButton";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

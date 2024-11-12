@@ -1,10 +1,11 @@
+import Input from "../../components/Forms/Input";
+import PasswordInput from "../../componetns/Forms/PasswordInput";
+import Label from "../../components/Forms/Label";
+import NextButton from "../../components/Forms/NextButton";
+import PreviousButton from "../../components/Forms/PreviousButton";
+import ProgressBar from "../../components/Forms/ProgressBar";
+
 import PropTypes from "prop-types";
-import Input from "../../Forms/Input";
-import PasswordInput from "../../Forms/PasswordInput";
-import Label from "../../Forms/Label";
-import NextButton from "../../Forms/NextButton";
-import PreviousButton from "../../Forms/PreviousButton";
-import ProgressBar from "../../Forms/ProgressBar";
 import { useState } from "react";
 
 function CreateAccountStep4({

@@ -1,12 +1,16 @@
-import Avatar from "../../../assets/images/avatar.svg";
-import ProfileTags from "../../Cards/ProfileTags";
-import CoinCard from "../../Cards/CoinCard";
+// Import Assets
+import Avatar from "../../assets/images/avatar.svg";
 import Vicon from "../../../assets/images/vcoins-icon.svg";
-import purpleBg from "../../../assets/images/purple-bg.svg";
-import VouviLover from "../../../assets/images/vouvi-lover-md-icon.svg";
+import purpleBg from "../../assets/images/purple-bg.svg";
+import VouviLover from "../../assets/images/vouvi-lover-md-icon.svg";
+
+// Import Components
+import ProfileTags from "../../components/Cards/ProfileTags";
+import CoinCard from "../../components/Cards/CoinCard";
 
 function Top() {
   const progressionbar = 19;
+
   return (
     <section className="m-auto mt-14 flex w-[90%] border-b-2 border-[#252525] pb-16 dark:border-[#F5F5F442]">
       <div className="flex flex-none">

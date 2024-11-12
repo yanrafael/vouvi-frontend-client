@@ -1,5 +1,6 @@
-import ProgressBar from "../../Forms/ProgressBar";
-import SubmitButton from "../../Forms/SubmitButton";
+import ProgressBar from "../../components/Forms/ProgressBar";
+import SubmitButton from "../../components/Forms/SubmitButton";
+
 import { Link } from "react-router-dom";
 
 function CreateAccountStep5() {

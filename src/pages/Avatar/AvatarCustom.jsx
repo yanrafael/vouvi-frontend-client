@@ -1,23 +1,28 @@
+// Import Components
 import AvatarColors from "./AvatarColors";
-import AvatarTrinkets from "../../Cards/AvatarTrinkets";
-import EyesLightBlue from "../../../assets/images/eyes-light-blue.svg";
-import EyesGray from "../../../assets/images/eyes-gray.svg";
-import EyesBrown from "../../../assets/images/eyes-brown.svg";
-import EyesDarkGreen from "../../../assets/images/eyes-dark-green.svg";
-import NecklaceLemon from "../../../assets/images/necklace-lemon-chiffon.svg";
-import NecklaceNaples from "../../../assets/images/necklace-naples-yellow.svg";
-import NecklaceVerdigris from "../../../assets/images/necklace-verdigris.svg";
-import NecklaceYale from "../../../assets/images/necklace-yale-blue.svg";
-import Pendant8Star from "../../../assets/images/pendant-8-star.svg";
-import PendantHearth from "../../../assets/images/pendant-hearth.svg";
-import PendantIndigo from "../../../assets/images/pendant-indigo-v.svg";
-import PendantTiffany from "../../../assets/images/pendant-tiffany-star.svg";
-import BgBeach from "../../../assets/images/background-beach.svg";
-import BgForest from "../../../assets/images/background-forest.svg";
-import BgSpace from "../../../assets/images/background-space.svg";
-import BgRoom from "../../../assets/images/background-room.svg";
+import AvatarTrinkets from "../../components/Cards/AvatarTrinkets";
+
+// Import Assets
+import EyesLightBlue from "../../assets/images/eyes-light-blue.svg";
+import EyesGray from "../../assets/images/eyes-gray.svg";
+import EyesBrown from "../../assets/images/eyes-brown.svg";
+import EyesDarkGreen from "../../assets/images/eyes-dark-green.svg";
+import NecklaceLemon from "../../assets/images/necklace-lemon-chiffon.svg";
+import NecklaceNaples from "../../assets/images/necklace-naples-yellow.svg";
+import NecklaceVerdigris from "../../assets/images/necklace-verdigris.svg";
+import NecklaceYale from "../../assets/images/necklace-yale-blue.svg";
+import Pendant8Star from "../../assets/images/pendant-8-star.svg";
+import PendantHearth from "../../assets/images/pendant-hearth.svg";
+import PendantIndigo from "../../assets/images/pendant-indigo-v.svg";
+import PendantTiffany from "../../assets/images/pendant-tiffany-star.svg";
+import BgBeach from "../../assets/images/background-beach.svg";
+import BgForest from "../../assets/images/background-forest.svg";
+import BgSpace from "../../assets/images/background-space.svg";
+import BgRoom from "../../assets/images/background-room.svg";
+
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+
 function AvatarCustom() {
   // button color
   const [BtColor, BtNoColor] = useState(0);

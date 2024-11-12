@@ -1,5 +1,9 @@
-import Avatar from "../../../assets/images/avatar.svg";
+// Import Assets
+import Avatar from "../../assets/images/avatar.svg";
+
+// Import Components
 import PrimaryButton from "../../Buttons/PrimaryButton";
+
 function CreateAvatar({ onClick }) {
   return (
     <section className="flex w-[600px] flex-col items-center rounded-md bg-[#C9C9C8] py-10 dark:bg-[#151515]">

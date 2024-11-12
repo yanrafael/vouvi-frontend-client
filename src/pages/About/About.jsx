@@ -1,7 +1,7 @@
 import Top from "./Top";
 import Low from "./Low";
-import HeaderWhite from "../../Header/HeaderWhite";
-import Footer from "../../Footer/Footer";
+import HeaderWhite from "../../components/Header/HeaderWhite";
+import Footer from "../../components/Footer/Footer";
 import { useState } from "react";
 
 function About() {

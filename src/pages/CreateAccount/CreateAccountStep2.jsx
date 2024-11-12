@@ -1,8 +1,10 @@
-import ProgressBar from "../../Forms/ProgressBar";
-import Label from "../../Forms/Label";
-import Input from "../../Forms/Input";
-import PreviousButton from "../../Forms/PreviousButton";
-import NextButton from "../../Forms/NextButton";
+import ProgressBar from "../../components/Forms/ProgressBar";
+import Label from "../../components/Forms/Label";
+import Input from "../../components/Forms/Input";
+import PreviousButton from "../../components/Forms/PreviousButton";
+import NextButton from "../../components/Forms/NextButton";
+
+import PropTypes from "prop-types";
 
 function CreateAccountStep2({
   setStep,
@@ -136,5 +138,17 @@ function CreateAccountStep2({
     </>
   );
 }
+
+CreateAccountStep2.propTypes = {
+  setStep: PropTypes.func,
+  day: PropTypes.number,
+  setDay: PropTypes.func,
+  month: PropTypes.number,
+  setMonth: PropTypes.func,
+  year: PropTypes.number,
+  setYear: PropTypes.func,
+  age: PropTypes.number,
+  setAge: PropTypes,
+};
 
 export default CreateAccountStep2;

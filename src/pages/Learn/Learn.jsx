@@ -1,4 +1,4 @@
-import Header from "../../Header/HeaderIntern";
+import Header from "../../components/Header/HeaderIntern";
 
 function GameHome() {
   return (

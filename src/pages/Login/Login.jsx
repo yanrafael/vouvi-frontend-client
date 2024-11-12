@@ -1,9 +1,10 @@
+import PasswordInput from "../../components/Forms/PasswordInput";
+import KeepConected from "../../components/Forms/Radio";
+import bgVideo from "../../assets/videos/video-background-dark.mp4";
+
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
-import PasswordInput from "../../Forms/PasswordInput";
-import KeepConected from "../../Forms/Radio";
-import bgVideo from "/src/assets/videos/video-background-dark.mp4";
-import { useEffect } from "react";
 
 function Form() {
   useEffect(() => {

@@ -1,6 +1,8 @@
-import Cat from "../../../assets/images/cat2-about-us.svg";
-import PrimaryButton from "../../Buttons/PrimaryButton";
+import Cat from "../../assets/images/cat2-about-us.svg";
+import PrimaryButton from "../../components/Buttons/PrimaryButton";
+
 import { Link } from "react-router-dom";
+
 function Low() {
   return (
     <>
@@ -19,8 +21,12 @@ function Low() {
             envolvente.
           </p>
         </div>
-        <img src={Cat} aria-label="Gato fin"
-        alt="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos. " title="O gato Fin,  mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos. " />
+        <img
+          src={Cat}
+          aria-label="Gato fin"
+          alt="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos. "
+          title="O gato Fin,  mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos. "
+        />
       </section>
 
       <section className="m-auto mt-40 flex w-11/12 justify-around">
@@ -33,7 +39,9 @@ function Low() {
           </p>
         </div>
         <div className="w-5/12 rounded-[72px] bg-secondary-200/20 p-20 pb-40 leading-[1] text-white dark:bg-[#0029524D]">
-          <h1 className="text-xl font-medium text-[#002952] dark:text-secondary-200">Impacto Social</h1>
+          <h1 className="text-xl font-medium text-[#002952] dark:text-secondary-200">
+            Impacto Social
+          </h1>
           <p className="mt-28 text-[40px] font-light text-black dark:text-white">
             Estamos comprometidos em impactar positivamente a vida das pessoas.
             Oferecemos educação financeira para comunidades de baixa renda,
@@ -52,7 +60,7 @@ function Low() {
             Junte-se à nós e transforme sua vida financeira.
           </strong>
         </p>
-        <Link to='/login'>
+        <Link to="/login">
           <PrimaryButton text={"Começar agora!"} />
         </Link>
       </section>

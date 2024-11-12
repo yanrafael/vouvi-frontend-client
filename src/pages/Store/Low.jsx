@@ -1,27 +1,31 @@
-import WhiteCat from "../../../assets/images/cat-white.svg";
-import EyesGreen from "../../../assets/images/eyes-green.svg";
-import EyesRed from "../../../assets/images/eyes-red.svg";
-import EyesBlue from "../../../assets/images/eyes-blue.svg";
-import EyesBlack from "../../../assets/images/eyes-black.svg";
-import EyesPink from "../../../assets/images/eyes-pink.svg";
-import EyesYellow from "../../../assets/images/eyes-yellow.svg";
-import NecklaceRed from "../../../assets/images/necklace-red.svg";
-import NecklaceViolet from "../../../assets/images/necklace-violet.svg";
-import NecklaceGreen from "../../../assets/images/necklace-green.svg";
-import NecklaceBrown from "../../../assets/images/necklace-brown.svg";
-import NecklaceGray from "../../../assets/images/necklace-gray.svg";
-import NecklaceFrelet from "../../../assets/images/necklace-frelet.svg";
-import BgOrangeCity from "../../../assets/images/background-orange-city.svg";
-import BgDarkCity from "../../../assets/images/background-dark-city.svg";
-import BgDesert from "../../../assets/images/background-desert.svg";
-import BgDayCity from "../../../assets/images/background-day-city.svg";
-import PendantGreen from "../../../assets/images/pendant-green.svg";
-import PendantYYPurple from "../../../assets/images/yy-purple.svg";
-import PendantYYBlack from "../../../assets/images/yy-black.svg";
-import Sun from "../../../assets/images/sun.svg";
-import Thunder from "../../../assets/images/thunder.svg";
-import StoreSingleCard from "../../Cards/StoreSingleCard";
-import StoreDoubleCard from "../../Cards/StoreDoubleCard";
+// Import Assets
+import WhiteCat from "../../assets/images/cat-white.svg";
+import EyesGreen from "../../assets/images/eyes-green.svg";
+import EyesRed from "../../assets/images/eyes-red.svg";
+import EyesBlue from "../../assets/images/eyes-blue.svg";
+import EyesBlack from "../../assets/images/eyes-black.svg";
+import EyesPink from "../../assets/images/eyes-pink.svg";
+import EyesYellow from "../../assets/images/eyes-yellow.svg";
+import NecklaceRed from "../../assets/images/necklace-red.svg";
+import NecklaceViolet from "../../assets/images/necklace-violet.svg";
+import NecklaceGreen from "../../assets/images/necklace-green.svg";
+import NecklaceBrown from "../../assets/images/necklace-brown.svg";
+import NecklaceGray from "../../assets/images/necklace-gray.svg";
+import NecklaceFrelet from "../../assets/images/necklace-frelet.svg";
+import BgOrangeCity from "../../assets/images/background-orange-city.svg";
+import BgDarkCity from "../../assets/images/background-dark-city.svg";
+import BgDesert from "../../assets/images/background-desert.svg";
+import BgDayCity from "../../assets/images/background-day-city.svg";
+import PendantGreen from "../../assets/images/pendant-green.svg";
+import PendantYYPurple from "../../assets/images/yy-purple.svg";
+import PendantYYBlack from "../../assets/images/yy-black.svg";
+import Sun from "../../assets/images/sun.svg";
+import Thunder from "../../assets/images/thunder.svg";
+
+// Import components
+import StoreSingleCard from "../../components/Cards/StoreSingleCard";
+import StoreDoubleCard from "../../components/Cards/StoreDoubleCard";
+
 function Mid() {
   return (
     <section className="m-auto w-11/12">
@@ -79,7 +83,7 @@ function Mid() {
         img1={BgOrangeCity}
         img2={BgDarkCity}
         img3={BgDesert}
-        color4={'bg-[#E3D3F3]'}
+        color4={"bg-[#E3D3F3]"}
       >
         <div
           style={{

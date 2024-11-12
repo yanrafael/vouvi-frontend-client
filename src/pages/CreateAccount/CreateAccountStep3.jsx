@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
-import Input from "../../Forms/Input";
-import Label from "../../Forms/Label";
-import NextButton from "../../Forms/NextButton";
-import PreviousButton from "../../Forms/PreviousButton";
-import ProgressBar from "../../Forms/ProgressBar";
+
+import Input from "../../components/Forms/Input";
+import Label from "../../components/Forms/Label";
+import NextButton from "../../components/Forms/NextButton";
+import PreviousButton from "../../components/Forms/PreviousButton";
+import ProgressBar from "../../components/Forms/ProgressBar";
 
 function CreateAccountStep3({
   setStep,

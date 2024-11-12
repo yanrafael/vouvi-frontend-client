@@ -1,7 +1,8 @@
+import Transactions from "./Transactions";
+import convertFloat from "../../utils/convertFloat";
+
 import { LineChart, PieChart } from "@mui/x-charts";
 import { useState } from "react";
-import Transactions from "./Transactions";
-import convertFloat from "../../../utils/convertFloat";
 
 function Graphics() {
   const [expenses] = useState(2587);
@@ -9,7 +10,7 @@ function Graphics() {
   return (
     <div className="mt-5 dark:text-white">
       <div className="flex justify-between">
-        <div className="w-7/12 rounded-md bg-[#868686] dark:bg-[#1B1B1B] bg-opacity-20 pb-10">
+        <div className="w-7/12 rounded-md bg-[#868686] bg-opacity-20 pb-10 dark:bg-[#1B1B1B]">
           <h3 className="m-8 text-lg font-bold dark:text-white">
             Veja seus investimentos decolando
           </h3>
@@ -27,7 +28,7 @@ function Graphics() {
           />
         </div>
 
-        <div className="w-2/5 rounded-md bg-[#868686] dark:bg-[#1B1B1B] bg-opacity-20 pb-10">
+        <div className="w-2/5 rounded-md bg-[#868686] bg-opacity-20 pb-10 dark:bg-[#1B1B1B]">
           <h3 className="m-8 text-lg font-bold dark:text-white">
             Distribuição de gastos
           </h3>
@@ -69,7 +70,7 @@ function Graphics() {
         </div>
       </div>
 
-      <div className="m-auto mt-8 w-full rounded-md bg-[#888] dark:bg-[#1B1B1B] bg-opacity-20 p-3">
+      <div className="m-auto mt-8 w-full rounded-md bg-[#888] bg-opacity-20 p-3 dark:bg-[#1B1B1B]">
         <h3 className="m-8 text-base font-bold">
           Acompanhe seus gastos e ganhos
         </h3>

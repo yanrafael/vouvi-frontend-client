@@ -1,4 +1,4 @@
-import Friends from "../../Cards/FriendCards";
+import Friends from "../../components/Cards/FriendCards";
 import { Icon } from "@iconify/react";
 function Low({ friends, openModal, openModal2 }) {
   return (
@@ -37,17 +37,17 @@ function Low({ friends, openModal, openModal2 }) {
             vcoin={"5.000"}
           />
         </div>
-        <div className="mx-5 mt-3 flex items-center justify-end text-[#471650] dark:text-white group-hover:text-white">
+        <div className="mx-5 mt-3 flex items-center justify-end text-[#471650] group-hover:text-white dark:text-white">
           <p
             onClick={openModal}
-            className="text-[32px] cursor-pointer font-medium transition-colors duration-500"
+            className="cursor-pointer text-[32px] font-medium transition-colors duration-500"
           >
             Ver todos
           </p>
           <Icon
             onClick={openModal}
             icon="prime:sort-down-fill"
-            className="transition-colors cursor-pointer duration-500"
+            className="cursor-pointer transition-colors duration-500"
           />
         </div>
       </div>

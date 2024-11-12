@@ -1,5 +1,5 @@
 import CreateAvatar from "./CreateAvatar";
-import LogoWhite from "../../Header/LogoWhite";
+// import LogoWhite from "../../Header/LogoWhite";
 import AvatarCustom from "./AvatarCustom";
 import { useState } from "react";
 function Avatar() {
@@ -39,7 +39,7 @@ function Avatar() {
   );
 
   return (
-    <section className=" flex flex-col justify-center items-center h-screen">
+    <section className="flex h-screen flex-col items-center justify-center">
       {showCreate ? (
         <CreateAvatar onClick={() => setShowCreate(!showCreate)} />
       ) : (

@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
-import ProgressBar from "../../Forms/ProgressBar";
-import Label from "../../Forms/Label";
-import Input from "../../Forms/Input";
-import NextButton from "../../Forms/NextButton";
+
+import ProgressBar from "../../components/Forms/ProgressBar";
+import Label from "../../components/Forms/Label";
+import Input from "../../components/Forms/Input";
+import NextButton from "../../components/Forms/NextButton";
 
 function CreateAccountStep1({
   setStep,

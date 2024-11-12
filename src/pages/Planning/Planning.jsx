@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import HeaderIntern from "../../Header/HeaderIntern";
-import AvatarFull from "../../Header/AvatarFull";
-import Footer from "../../Footer/Footer";
+import HeaderIntern from "../../components/Header/HeaderIntern";
+import AvatarFull from "../../components/Header/AvatarFull";
+import Footer from "../../components/Footer/Footer";
 
 import Top from "./Top";
 import Graphics from "./Graphics";

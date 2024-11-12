@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import HeaderIntern from "../../Header/HeaderIntern";
-import Card from "../../Cards/cardXPRank.jsx";
-import CardLateral from "../../Cards/CardVCRank.jsx";
-import Colocacao from "../../Cards/cardRicoRank.jsx";
-import Footer from "../../Footer/Footer.jsx";
-import AvatarFull from "../../Header/AvatarFull";
+import HeaderIntern from "../../components/Header/HeaderIntern";
+import Card from "../../components/Cards/cardXPRank.jsx";
+import CardLateral from "../../components/Cards/CardVCRank.jsx";
+import Colocacao from "../../components/Cards/cardRicoRank.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import AvatarFull from "../../components/Header/AvatarFull";
+
+import { useState } from "react";
+
 const Ranking = () => {
   const [selectedOption, setSelectedOption] = useState("Especialista");
 

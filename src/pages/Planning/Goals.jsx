@@ -1,8 +1,10 @@
-import GoalsButton from "../../Buttons/GoalsButton";
-import { useState } from "react";
-import GoalsCard from "../../Cards/GoalsCard";
+import GoalsButton from "../../components/Buttons/GoalsButton";
+import GoalsCard from "../../componets/Cards/GoalsCard";
+import GoalsHistory from "../../componets/Cards/GoalsHistory";
+
 import { Icon } from "@iconify/react";
-import GoalsHistory from "../../Cards/GoalsHistory";
+import { useState } from "react";
+
 function Goals() {
   const [btnColor, setBtnColor] = useState([0]); // Estado inicial como array vazio
 
@@ -13,7 +15,7 @@ function Goals() {
   return (
     <section className="w-12/12 m-auto mt-5 flex justify-between gap-5">
       <div className="flex w-full flex-col gap-4 overflow-x-hidden">
-        <div className="flex flex-nowrap gap-4 overflow-x-scroll ">
+        <div className="flex flex-nowrap gap-4 overflow-x-scroll">
           <div onClick={() => activeButton(0)}>
             <GoalsButton
               color={`hover:bg-[#87878733] hover:text-black hover:dark:text-white transition-colors duration-300 ${
@@ -94,7 +96,7 @@ function Goals() {
       </div>
 
       <div className="flex flex-col gap-4">
-      <div className="absolute -ml-[180px] h-20 w-40 bg-gradient-to-l dark:from-[#000000] from-[#FFFFFF] pointer-events-none"></div>
+        <div className="pointer-events-none absolute -ml-[180px] h-20 w-40 bg-gradient-to-l from-[#FFFFFF] dark:from-[#000000]"></div>
         <div className="flex h-14 items-center">
           <input
             type="text"

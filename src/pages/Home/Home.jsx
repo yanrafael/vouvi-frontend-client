@@ -1,10 +1,12 @@
-import HeaderWhite from "../../Header/HeaderWhite";
-import Footer from "../../Footer/Footer";
+import HeaderWhite from "../../components/Header/HeaderWhite";
+import Footer from "../../components/Footer/Footer";
 import Top from "./Top";
 import Mid from "./Mid";
 import Low from "./Low";
-import backgroundV from "../../../assets/videos/video-background.mp4";
-import backgroundVdark from "../../../assets/videos/video-background-dark.mp4";
+
+import backgroundV from "../../assets/videos/video-background.mp4";
+import backgroundVdark from "../../assets/videos/video-background-dark.mp4";
+
 import { useState } from "react";
 
 function Home() {
