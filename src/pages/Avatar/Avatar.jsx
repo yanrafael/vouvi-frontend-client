@@ -1,7 +1,9 @@
 import CreateAvatar from "./CreateAvatar";
 // import LogoWhite from "../../Header/LogoWhite";
 import AvatarCustom from "./AvatarCustom";
+
 import { useState } from "react";
+
 function Avatar() {
   const [showCreate, setShowCreate] = useState(true);
 

@@ -1,5 +1,5 @@
 import Input from "../../components/Forms/Input";
-import PasswordInput from "../../componetns/Forms/PasswordInput";
+import PasswordInput from "../../components/Forms/PasswordInput";
 import Label from "../../components/Forms/Label";
 import NextButton from "../../components/Forms/NextButton";
 import PreviousButton from "../../components/Forms/PreviousButton";

@@ -2,7 +2,7 @@
 import Avatar from "../../assets/images/avatar.svg";
 
 // Import Components
-import PrimaryButton from "../../Buttons/PrimaryButton";
+import PrimaryButton from "../../components/Buttons/PrimaryButton";
 
 function CreateAvatar({ onClick }) {
   return (

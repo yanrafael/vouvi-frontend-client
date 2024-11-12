@@ -1,6 +1,6 @@
 // Import Assets
 import Avatar from "../../assets/images/avatar.svg";
-import Vicon from "../../../assets/images/vcoins-icon.svg";
+import Vicon from "../../assets/images/vcoins-icon.svg";
 import purpleBg from "../../assets/images/purple-bg.svg";
 import VouviLover from "../../assets/images/vouvi-lover-md-icon.svg";
 

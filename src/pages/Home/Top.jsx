@@ -1,5 +1,5 @@
 import PrimaryButton from "../../components/Buttons/PrimaryButton";
-import Cards from "../Cards/MarketingCards";
+import Cards from "../../components/Cards/MarketingCards";
 import FireIcon from "../../assets/images/fire-icon.svg";
 import GreenIcon from "../../assets/images/graphicgreen-icon.svg";
 import HeartIcon from "../../assets/images/heart-icon.svg";

@@ -1,5 +1,6 @@
-import Cat from "../../../assets/images/cat-about-us.svg";
-import Target from "../../../assets/images/target-about-us.svg";
+import Cat from "../../assets/images/cat-about-us.svg";
+import Target from "../../assets/images/target-about-us.svg";
+
 function Top() {
   return (
     <>
@@ -8,11 +9,19 @@ function Top() {
           Aprenda a <br /> dominar suas <br /> finanças de <br /> forma
           divertida!
         </h1>
-        <img src={Cat} alt="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos."  title="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos."/>
+        <img
+          src={Cat}
+          alt="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos."
+          title="O gato Fin, mascote da plataforma de cor cinca e olhos com heterocromia, uma condição visual causada por uma variação na quantidade de melanina nos olhos."
+        />
       </section>
       <section className="m-auto mt-52 flex w-11/12 flex-col rounded-[72px] bg-secondary-200/10 p-20 leading-[1] dark:bg-[#0029524D]">
         <div className="m-auto flex">
-          <img src={Target} alt="Um dardo roxo e azul atingindo uma moeda amarela com um símbolo de dólar branco no centro. Ao redor da moeda, há três alvos roxos com pontos azuis no centro, representando a ideia de atingir metas financeiras ou de negócios com precisão." title="Um dardo roxo e azul atingindo uma moeda amarela com um símbolo de dólar branco no centro. Ao redor da moeda, há três alvos roxos com pontos azuis no centro, representando a ideia de atingir metas financeiras ou de negócios com precisão."/> 
+          <img
+            src={Target}
+            alt="Um dardo roxo e azul atingindo uma moeda amarela com um símbolo de dólar branco no centro. Ao redor da moeda, há três alvos roxos com pontos azuis no centro, representando a ideia de atingir metas financeiras ou de negócios com precisão."
+            title="Um dardo roxo e azul atingindo uma moeda amarela com um símbolo de dólar branco no centro. Ao redor da moeda, há três alvos roxos com pontos azuis no centro, representando a ideia de atingir metas financeiras ou de negócios com precisão."
+          />
           <div className="relative mx-20 flex h-fit w-[40rem] flex-col rounded-md bg-secondary-200/20 p-8 text-white dark:bg-[#0029524D]">
             <h1 className="text-xl font-medium text-[#002952] dark:text-secondary-200">
               Missão

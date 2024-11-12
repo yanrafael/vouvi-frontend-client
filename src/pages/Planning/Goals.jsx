@@ -1,6 +1,6 @@
 import GoalsButton from "../../components/Buttons/GoalsButton";
-import GoalsCard from "../../componets/Cards/GoalsCard";
-import GoalsHistory from "../../componets/Cards/GoalsHistory";
+import GoalsCard from "../../components/Cards/GoalsCard";
+import GoalsHistory from "../../components/Cards/GoalsHistory";
 
 import { Icon } from "@iconify/react";
 import { useState } from "react";

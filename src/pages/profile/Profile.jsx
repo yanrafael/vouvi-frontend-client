@@ -4,7 +4,7 @@ import Low from "./Low";
 
 import HeaderIntern from "../../components/Header/HeaderIntern";
 import Footer from "../../components/Footer/Footer";
-import Settings from "../../Header/Settings";
+import Settings from "../../components/Header/Settings";
 
 import SettingsModal from "../../components/Modals/SettingsModal";
 import InsigneModal from "../../components/Modals/InsigneModal";
