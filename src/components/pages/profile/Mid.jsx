@@ -9,7 +9,7 @@ function Mid({ openModal }) {
   return (
     <section className="m-auto mt-20 flex w-11/12 justify-between">
       <div>
-        <div className="flex w-[200px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white">
+        <div className="flex w-[200px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white" >
           Missões
         </div>
         <div className="flex flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 dark:bg-[#1e1e1e]">

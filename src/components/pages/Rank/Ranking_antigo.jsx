@@ -91,18 +91,21 @@ const Ranking = () => {
                           src="/images/coroa.png"
                           alt="Coroa"
                           className="w-8 h-8 mr-2"
+                          title="Coroa"
                         />
                       ) : user.name === "Chesp" ? (
                         <img
                           src="/images/prata.png"
                           alt="Troféu de Prata"
                           className="w-8 h-8 mr-2"
+                          title="Chesp"
                         />
                       ) : user.name === "Elon" ? (
                         <img
                           src="/images/bronze.png"
                           alt="Troféu de Bronze"
                           className="w-8 h-8 mr-2"
+                          title="Troféu de bronze"
                         />
                       ) : user.name === "Você" ? (
                         <div

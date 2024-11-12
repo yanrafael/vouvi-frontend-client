@@ -27,7 +27,7 @@ function Top() {
         <img
           src={CatBanner}
           alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
-          title="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
+          title="gato Fin, Uma ilustração em estilo cartoon de um gato preto "
         />
       </section>
 
@@ -42,6 +42,7 @@ function Top() {
 
           <div onClick={() => setBtnColor(0)}>
             <StoreButton
+            title="opções de acessórios"
               color={
                 btnColor === 0
                   ? "bg-black text-white dark:bg-white dark:text-black"
@@ -49,7 +50,7 @@ function Top() {
               }
               text={"Todos"}
             >
-              <Icon icon={"solar:star-shine-bold"} />
+              <Icon icon={"solar:star-shine-bold"} title="opções de acessórios"/>
             </StoreButton>
           </div>
 
@@ -113,6 +114,7 @@ function Top() {
                   : "bg-[#8D8D8D] dark:bg-[#1F1F1F] text-white"
               }`}
               text={"Fundos"}
+              title="opções de fundo"
             >
               <Icon icon={"mynaui:square-solid"} />
             </StoreButton>

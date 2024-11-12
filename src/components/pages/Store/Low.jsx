@@ -77,6 +77,7 @@ function Mid() {
       <StoreSingleCard
         title={"Customize com pelagem única, seu avatar merece! "}
         img1={BgOrangeCity}
+        area-label="cidade laranja, opção de fundo"
         img2={BgDarkCity}
         img3={BgDesert}
         color4={'bg-[#E3D3F3]'}
@@ -89,7 +90,7 @@ function Mid() {
           }}
           className="flex w-full"
         >
-          <img src={WhiteCat} alt="" />
+          <img src={WhiteCat} alt="fin, gato em sua versão com pelagem branca" />
         </div>
       </StoreSingleCard>
     </section>
