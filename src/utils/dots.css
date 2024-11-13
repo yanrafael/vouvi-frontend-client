@@ -1,0 +1,11 @@
+.slick-dots li button:before {
+  color: #007FFF; /* Cor dos dots inativos */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFB120; /* Cor dos dots ativos */
+}
+
+.slick-prev:before, .slick-next:before{
+  font-size: 30px; /* Tamanho das setas */
+}
