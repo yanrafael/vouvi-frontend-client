@@ -41,7 +41,7 @@ const Ranking = () => {
   ];
 
   const lateral = [
-    { nome: "yan", vc: 8.511 },
+    { nome: "Ricardo", vc: 8.511 },
     { nome: "Davi", vc: 7.012 },
     { nome: "Elon", vc: 6.944 },
     { nome: "Michael", vc: 5614 },
