@@ -20,6 +20,7 @@ function Low() {
 
     useEffect(() => {
       AOS.init({ duration: 1200 });
+      AOS.init({once: true});
     });
 
   return (
@@ -61,7 +62,7 @@ function Low() {
             </h1>
             <p
               data-aos="zoom-in-up"
-              className={`${TextGradient} mb-5 lg:mb-16 mt-5 text-base lg:w-[400px]`}
+              className={`${TextGradient} mb-5 lg:mb-16 mt-5 text-[24px] md:text-[28px] lg:text-[36px] leading-[1] lg:w-[400px]`}
             >
               Você faz parte do Time.
               Queremos te ouvir!
@@ -78,12 +79,12 @@ function Low() {
 
       <section data-aos="fade-right">
         <h1
-          className={`${TextGradient} mt-[160px] text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium xl:leading-[1.2] leading-[1]`}
+          className={`${TextGradient} mt-[160px] text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium xl:leading-[1.2] leading-[1.1]`}
         >
           Escolha o plano e vire o jogo
         </h1>
         <p
-          className={`${TextGradient} m-auto mb-20 w-4/6 text-center text-base`}
+          className={`${TextGradient} m-auto mb-20 w-5/6 lg:w-4/6 text-center text-[24px] md:text-[28px] lg:text-[36px] leading-[1]`}
         >
           Do básico ao premium, tem um plano certinho para sua caminhada
           financeira. Bora começar e subir de nível!

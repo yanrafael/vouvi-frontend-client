@@ -16,6 +16,7 @@ function Mid() {
 
     useEffect(() => {
       AOS.init({ duration: 1200 });
+      AOS.init({once: true});
     });
 
   return (
@@ -31,7 +32,7 @@ function Mid() {
 
         <p
           data-aos="fade-up"
-          className={`text-center text-[18px] lg:text-[28px] ${TextGradient} relative top-3`}
+          className={`text-center text-[24px] md:text-[28px] lg:text-[36px] ${TextGradient} relative top-3`}
         >
           Inteligência artificial? Aqui é para organizar sua vida!
         </p>
@@ -44,15 +45,14 @@ function Mid() {
             <div
               title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
-              className="relative top-[40px] flex"
-              aria-label=""
               className="relative flex lg:top-[40px] 2xl:right-3"
+              aria-label=""
             >
               <AiCards
                 icon={
                   <Icon
                     icon="solar:database-bold"
-                    className="text-[85px] xl:text-[108px]"
+                    className="text-[65px] sm:text-[85px] xl:text-[108px]"
                   />
                 }
                 text={"Acompanhamento de Dados"}
@@ -79,7 +79,7 @@ function Mid() {
                 icon={
                   <Icon
                     icon="fluent:calendar-ltr-16-filled"
-                    className="text-[100px] xl:text-[120px]"
+                    className="text-[80px] sm:text-[100px] xl:text-[120px]"
                   />
                 }
                 text={`Planejamento personalizável`}
@@ -107,7 +107,7 @@ function Mid() {
                 icon={
                   <Icon
                     icon="lets-icons:time-atack"
-                    className="text-[85px] xl:text-[108px]"
+                    className="text-[65px] sm:text-[85px] xl:text-[108px]"
                   />
                 }
                 text={"Dicas em Tempo Real"}
@@ -133,7 +133,7 @@ function Mid() {
                 icon={
                   <Icon
                     icon="solar:round-graph-bold"
-                    className="text-[100px] xl:text-[120px]"
+                    className="text-[80px] sm:text-[100px] xl:text-[120px]"
                   />
                 }
                 text={"Gráficos inteligentes"}
