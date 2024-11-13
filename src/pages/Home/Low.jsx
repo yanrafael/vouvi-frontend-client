@@ -8,7 +8,6 @@ import subscriptionHover from "../../assets/images/subscription-hover.svg";
 import subscriptionStar from "../../assets/images/subscription-star.svg";
 import subscriptionStar2 from "../../assets/images/subscription-star2.svg";
 import subscriptionStar3 from "../../assets/images/subscription-star3.svg";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -19,14 +18,15 @@ function Low() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-  useEffect(() => {
-    AOS.init({ duration: 1200 });
-  });
+    useEffect(() => {
+      AOS.init({ duration: 1200 });
+      AOS.init({once: true});
+    });
 
   return (
     <>
-      <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12">
-        <div className="flex w-[60%] flex-col">
+      <section className="bg-slate-500 relative m-auto mt-[200px] flex lg:flex-row flex-col-reverse items-center w-10/12">
+        <div className="flex w-full lg:w-[60%] flex-col">
           <div data-aos="zoom-in-up" className="flex justify-between">
             <FeedbackCard
               color={"bg-[#FA7ABC] text-[#A90057]"}
@@ -51,21 +51,21 @@ function Low() {
         </div>
         <div
           data-aos="fade-up"
-          className="ml-10 flex w-[40%] flex-col items-start justify-center"
+          className="lg:ml-10 flex w-full text-center lg:text-left lg:w-[40%] flex-col lg:items-start items-center mb-5 justify-center"
         >
           <div className="flex flex-col">
             <h1
               data-aos="fade-left"
-              className={`${TextGradient} text-2xl font-medium`}
+              className={`${TextGradient} text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] leading-[1] font-medium`}
             >
               A Gente Cresce Com Seu Feedback
             </h1>
             <p
               data-aos="zoom-in-up"
-              className={`${TextGradient} mb-16 mt-5 text-base`}
+              className={`${TextGradient} mb-5 lg:mb-16 mt-5 text-[24px] md:text-[28px] lg:text-[36px] leading-[1] lg:w-[400px]`}
             >
               Você faz parte do Time.
-              <br /> Queremos te ouvir!
+              Queremos te ouvir!
             </p>
           </div>
           <SecondaryButton
@@ -79,12 +79,12 @@ function Low() {
 
       <section data-aos="fade-right">
         <h1
-          className={`${TextGradient} mt-[160px] text-center text-2xl font-medium xl:leading-[1.2]`}
+          className={`${TextGradient} mt-[160px] text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium xl:leading-[1.2] leading-[1.1]`}
         >
           Escolha o plano e vire o jogo
         </h1>
         <p
-          className={`${TextGradient} m-auto mb-20 w-4/6 text-center text-base`}
+          className={`${TextGradient} m-auto mb-20 w-5/6 lg:w-4/6 text-center text-[24px] md:text-[28px] lg:text-[36px] leading-[1]`}
         >
           Do básico ao premium, tem um plano certinho para sua caminhada
           financeira. Bora começar e subir de nível!

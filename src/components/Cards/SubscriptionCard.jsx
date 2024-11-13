@@ -43,7 +43,7 @@ function Subscription({
       <div className="pointer-events-none mx-10 flex justify-center leading-[1.3] opacity-0 transition-all duration-700 group-hover:pointer-events-auto group-hover:-translate-y-72 group-hover:opacity-100">
         <p className="absolute text-center text-[32px]">{texthover}</p>
         <SecondaryButton
-          color={`absolute mt-[200px] hover:bg-opacity-100 hover:bg-white ${colorbutton}`}
+          color={`absolute mt-[200px] hover:bg-opacity-100 hover:bg-white text-nowrap ${colorbutton}`}
           text={"Assinar Agora!"}
         />
       </div>
