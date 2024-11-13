@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function UserReturn() {
   return (
-    <section className="fixed left-0 top-0 z-20 flex h-full w-full items-center justify-center overflow-y-hidden shadow-2xl backdrop-blur-[25px] dark:bg-black/50">
+    <section className="fixed left-0 top-0 z-20 flex h-full w-full items-center justify-center overflow-y-hidden shadow-2xl backdrop-blur-[25px] dark:bg-black/50 md:w-22 md:mt-0">
       <div className="flex h-[600px] w-8/12 flex-col items-center justify-center rounded-md bg-white p-6 shadow-2xl dark:bg-[#1B1B1B] dark:shadow-black">
         <p className="text-[40px] text-black dark:text-[#FFFFFF]">
           Você voltou, sentimos sua falta!
