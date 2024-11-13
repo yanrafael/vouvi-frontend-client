@@ -24,8 +24,8 @@ function Low() {
 
   return (
     <>
-      <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12">
-        <div className="flex w-[60%] flex-col">
+      <section className="bg-slate-500 relative m-auto mt-[200px] flex lg:flex-row flex-col-reverse items-center w-10/12">
+        <div className="flex w-full lg:w-[60%] flex-col">
           <div data-aos="zoom-in-up" className="flex justify-between">
             <FeedbackCard
               color={"bg-[#FA7ABC] text-[#A90057]"}
@@ -50,21 +50,21 @@ function Low() {
         </div>
         <div
           data-aos="fade-up"
-          className="ml-10 flex w-[40%] flex-col items-start justify-center"
+          className="lg:ml-10 flex w-full text-center lg:text-left lg:w-[40%] flex-col lg:items-start items-center mb-5 justify-center"
         >
           <div className="flex flex-col">
             <h1
               data-aos="fade-left"
-              className={`${TextGradient} text-2xl font-medium`}
+              className={`${TextGradient} text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] leading-[1] font-medium`}
             >
               A Gente Cresce Com Seu Feedback
             </h1>
             <p
               data-aos="zoom-in-up"
-              className={`${TextGradient} mb-16 mt-5 text-base`}
+              className={`${TextGradient} mb-5 lg:mb-16 mt-5 text-base lg:w-[400px]`}
             >
               Você faz parte do Time.
-              <br /> Queremos te ouvir!
+              Queremos te ouvir!
             </p>
           </div>
           <SecondaryButton
@@ -78,7 +78,7 @@ function Low() {
 
       <section data-aos="fade-right">
         <h1
-          className={`${TextGradient} mt-[160px] text-center text-2xl font-medium xl:leading-[1.2]`}
+          className={`${TextGradient} mt-[160px] text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium xl:leading-[1.2] leading-[1]`}
         >
           Escolha o plano e vire o jogo
         </h1>

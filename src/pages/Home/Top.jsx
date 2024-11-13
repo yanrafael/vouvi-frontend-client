@@ -35,7 +35,7 @@ function Top({ background }) {
         </div>
 
         <div className="m-auto mt-[200px] flex flex-col justify-center text-center text-black dark:text-white">
-          <h1 className="text-[72px] font-normal leading-[0.85] lg:text-[90px]">
+          <h1 className="text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-normal leading-[0.85]">
             <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
             </strong>{" "}
@@ -45,7 +45,7 @@ function Top({ background }) {
             em uma{" "}
             <strong className="font-medium text-primary-200">aventura</strong>
           </h1>
-          <p className="mt-7 text-[28px] lg:text-[36px]">
+          <p className="mt-7 text-sm sm:text-[24px] md:text-[28px] lg:text-[36px]">
             Aprenda a fazer essa grana durar!
           </p>
         </div>
@@ -55,7 +55,7 @@ function Top({ background }) {
         </Link>
 
         <div className="m-auto mt-[150px] flex flex-col items-center justify-center">
-          <p className="text-[36px] dark:text-white">Saiba mais</p>
+          <p className="text-[25px] sm:text-[36px] dark:text-white">Saiba mais</p>
           <Icon
             className="relative animate-bounce text-black dark:text-white"
             icon="ep:arrow-down-bold"
@@ -65,7 +65,7 @@ function Top({ background }) {
       </section>
 
       <h1
-        className={`mb-10 mt-40 flex justify-center text-center text-[72px] font-medium leading-[1.2] lg:text-2xl ${TextGradient} `}
+        className={`mb-10 mt-40 flex justify-center text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium leading-[1.2] ${TextGradient} `}
         data-aos="fade-up"
       >
         Educação Financeira

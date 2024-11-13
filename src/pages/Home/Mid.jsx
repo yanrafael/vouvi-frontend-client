@@ -23,10 +23,9 @@ function Mid() {
       <section className="mt-72 flex flex-col items-center">
         <h1
           data-aos="fade-up"
-          className={`text-center text-[72px] font-medium leading-[1.2] lg:text-[90px] ${TextGradient}`}
+          className={`text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium leading-[1.2] ${TextGradient}`}
         >
           Planejamento
-          <br />
           inteligente
         </h1>
 
@@ -48,7 +47,6 @@ function Mid() {
               className="relative top-[40px] flex"
               aria-label=""
               className="relative flex lg:top-[40px] 2xl:right-3"
-              title=""
             >
               <AiCards
                 icon={
@@ -123,7 +121,6 @@ function Mid() {
             <div
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
               title="ícone de diagrama preto"
-              title="ícone de grafíco"
               data-aos="fade-left"
               className="relative flex items-end justify-center lg:bottom-[60px] lg:left-[35px] 2xl:left-[60px]"
             >
@@ -149,7 +146,7 @@ function Mid() {
       <section className="mt-52 flex flex-col items-center">
         <h1
           data-aos="fade-right"
-          className={`${TextGradient} text-center text-xl font-medium lg:text-2xl xl:leading-[1.2]`}
+          className={`${TextGradient} text-center font-medium text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2] leading-[1]`}
         >
           Domine o jogo, domine o dinheiro!
         </h1>
