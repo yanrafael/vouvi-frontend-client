@@ -47,10 +47,8 @@ function Mid() {
             <div
               title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
-              className="relative top-[40px] flex"
-              aria-label=""
-              className="relative flex lg:top-[40px] 2xl:right-3"
-              title=""
+              className="relative top-[40px] flex lg:top-[40px] 2xl:right-3"
+              aria-label="A imagem mostra um ícone de um banco de dados"
             >
               <AiCards
                 icon={
@@ -124,7 +122,6 @@ function Mid() {
             </div>
             <div
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
-              title="ícone de diagrama preto"
               title="ícone de grafíco"
               data-aos="fade-left"
               className="relative flex items-end justify-center lg:bottom-[60px] lg:left-[35px] 2xl:left-[60px]"
