@@ -21,7 +21,7 @@ function Mid() {
 
   return (
     <>
-      <section className="mt-72 flex flex-col items-center">
+      <section className="mt-32 lg:mt-72 flex flex-col items-center">
         <h1
           data-aos="fade-up"
           className={`text-center text-[36px] font-medium leading-[1.2] sm:text-[50px] md:text-[72px] lg:text-[90px] ${TextGradient}`}
@@ -40,11 +40,11 @@ function Mid() {
           className="mt-20 flex flex-col p-10 lg:mt-0 lg:p-0"
           aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados."
         >
-          <div className="relative bottom-3 m-auto flex items-center lg:bottom-0">
+          <div className="relative bottom-3 m-auto flex flex-col sm:flex-row items-start sm:items-center lg:bottom-0">
             <div
               title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
-              className="relative top-[40px] flex lg:top-[40px] 2xl:right-3"
+              className="relative flex lg:top-[40px] 2xl:right-3"
               aria-label="A imagem mostra um ícone de um banco de dados"
             >
               <AiCards
@@ -95,7 +95,7 @@ function Mid() {
             </p>
           </div>
 
-          <div className="relative flex justify-between lg:top-3 lg:m-auto">
+          <div className="relative flex flex-col sm:flex-row items-start sm:items-stretch justify-between lg:top-3 lg:m-auto">
             <div
               aria-label="ícone de relogio"
               title="ícone de relogio preto"
