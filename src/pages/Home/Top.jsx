@@ -15,10 +15,10 @@ function Top({ background }) {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-    useEffect(() => {
-      AOS.init({ duration: 1200 });
-      AOS.init({once: true});
-    });
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+    AOS.init({ once: true });
+  });
 
   return (
     <>
@@ -36,7 +36,7 @@ function Top({ background }) {
         </div>
 
         <div className="m-auto mt-[200px] flex flex-col justify-center text-center text-black dark:text-white">
-          <h1 className="text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-normal leading-[0.85]">
+          <h1 className="text-[36px] font-normal leading-[0.85] sm:text-[50px] md:text-[60px] lg:text-[90px]">
             <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
             </strong>{" "}
@@ -46,7 +46,7 @@ function Top({ background }) {
             em uma{" "}
             <strong className="font-medium text-primary-200">aventura</strong>
           </h1>
-          <p className="md:mt-7 mt-2 text-[24px] md:text-[28px] lg:text-[36px]">
+          <p className="mt-2 text-[24px] md:mt-7 md:text-[28px] lg:text-[36px]">
             Aprenda a fazer essa grana durar!
           </p>
         </div>
@@ -56,16 +56,18 @@ function Top({ background }) {
         </Link>
 
         <div className="m-auto mt-[150px] flex flex-col items-center justify-center">
-          <p className="text-[30px] sm:text-[36px] dark:text-white">Saiba mais</p>
+          <p className="text-[30px] sm:text-[36px] dark:text-white">
+            Saiba mais
+          </p>
           <Icon
-            className="relative animate-bounce text-black dark:text-white text-[5rem] sm:text-[7rem]"
+            className="relative animate-bounce text-[5rem] text-black sm:text-[7rem] dark:text-white"
             icon="ep:arrow-down-bold"
           />
         </div>
       </section>
 
       <h1
-        className={`mb-10 mt-40 flex justify-center text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium leading-[1.2] ${TextGradient} `}
+        className={`mb-10 mt-40 flex justify-center text-center text-[36px] font-medium leading-[1.2] sm:text-[50px] md:text-[60px] lg:text-[90px] ${TextGradient} `}
         data-aos="fade-up"
       >
         Educação Financeira
