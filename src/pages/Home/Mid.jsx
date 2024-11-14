@@ -166,7 +166,7 @@ function Mid() {
           <div className="flex h-[20vw] lg:h-[29vw] w-[100%] lg:w-[38%] items-center lg:justify-normal justify-center rounded-md bg-[#01438A]">
             <p
               data-aos="fade-left"
-              className={`bg-clip-text text-[transparent] bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] ml-5 text-lg lg:ml-10 lg:text-[50px] xl:text-xl`}
+              className={`bg-clip-text text-[transparent] bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] ml-5 text-base sm:text-lg lg:ml-10 lg:text-[50px] xl:text-xl`}
             >
               Missões e Recompensas
             </p>

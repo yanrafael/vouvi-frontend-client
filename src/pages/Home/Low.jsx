@@ -53,7 +53,6 @@ const PrevArrow = ({ className, style, onClick }) => {
 };
 
 function Low() {
-  const [isDarkMode, setIsDarkMode] = useState(false); // Você pode passar este estado como prop para seus arrows.
 
   const settings = {
     dots: true,
@@ -62,8 +61,8 @@ function Low() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    nextArrow: <NextArrow isDarkMode={isDarkMode} />,
-    prevArrow: <PrevArrow isDarkMode={isDarkMode} />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1280, // Ativar o slider apenas abaixo de 1200px
