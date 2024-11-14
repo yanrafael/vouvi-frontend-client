@@ -22,8 +22,8 @@ const Ranking = () => {
     { nome: "Izzy", xp: 12.102 },
     { nome: "Kim", xp: 10.018 },
     { nome: "Rich", xp: 9.657 },
-    { nome: "Michael", xp: 9.102 },
-    { nome: "Roberto", xp: 9.018 },
+    { nome: "Mich", xp: 9.102 },
+    { nome: "mark", xp: 9.018 },
     { nome: "Chris", xp: 9.013 },
     { nome: "Chesp", xp: 8.755 },
     { nome: "Billie", xp: 8.124 },
@@ -41,8 +41,8 @@ const Ranking = () => {
   ];
 
   const lateral = [
-    { nome: "Roberto", vc: 8.511 },
-    { nome: "Chesp", vc: 7.012 },
+    { nome: "yan", vc: 8.511 },
+    { nome: "Davi", vc: 7.012 },
     { nome: "Elon", vc: 6.944 },
     { nome: "Michael", vc: 5614 },
     { nome: "Rich", vc: 5614 },
@@ -56,6 +56,7 @@ const Ranking = () => {
     { nome: "Herobri", vc: 5614 },
     { nome: "Joel", vc: 5614 },
     { nome: "Cleiton", vc: 5614 },
+
   ];
 
   return (
@@ -74,14 +75,14 @@ const Ranking = () => {
           </p>
         </div>
         <div className="flex w-1/4 flex-col">
-          <p className="text-md font-light text-[#471650] dark:text-white">
+          <p className="text-md font-light text-[#471650] dark:text-white md:text-md">
             Mostrando ranking
           </p>
-          <div className="relative w-80">
+          <div className="relative w-fit p-1">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="focus:ring-purple-500 w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 dark:border-primary-200 dark:text-primary-200"
+              className="focus:ring-purple-500 w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 dark:border-primary-200 dark:text-primary-200 md:text-sm md:mt-10"
             >
               {options.map((option) => (
                 <option
@@ -99,7 +100,7 @@ const Ranking = () => {
       <div className="mt-10"></div>
       <div className="flex justify-center">
         <div className="mr-5 w-3/5 rounded-lg bg-[#DFDFDE] p-10 dark:bg-[#1F1F1F]">
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly gap-10 ">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
             ))}
@@ -126,12 +127,12 @@ const Ranking = () => {
             </span>
           </div>
         </div>
-        <div className="flex w-1/4 flex-col items-center rounded-lg bg-primary-200 p-5 dark:bg-[#1F1F1F]">
+        <div className="flex w-1/4 flex-col items-center rounded-lg bg-primary-200 p-5 dark:bg-[#1F1F1F] md:w-46">
           <div>
-            <p className="text-teste text-base font-bold text-white">
+            <p className="text-teste text-base font-bold text-white md:text-[18px]">
               Ricos da Vouvi
             </p>
-            <p className="text-teste mb-3 text-md font-light text-white">
+            <p className="text-teste mb-3 text-md font-light text-white md:text-[18px]">
               Ranking de Vcoins
             </p>
           </div>
@@ -142,7 +143,7 @@ const Ranking = () => {
               <></>
             ),
           )}
-          <div className="border-card m-4 flex rounded-md border-2"></div>
+          <div className="border-card m-4 flex rounded-md border-2 md:w-16"></div>
           {lateral.map((lateral, index) => (
             <CardLateral
               posicao={index + 1}

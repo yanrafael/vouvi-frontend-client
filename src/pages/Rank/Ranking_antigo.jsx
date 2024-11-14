@@ -13,7 +13,7 @@ const Ranking = () => {
   const users = [
     { name: "Rich", xp: "13,657 XP" },
     { name: "Michael", xp: "12,102 XP" },
-    { name: "Roberto", xp: "10,018 XP" },
+    { name: "marcos", xp:  "10,018 XP" },
     { name: "Chris", xp: "9,013 XP" },
     { name: "Chesp", xp: "8,755 XP" },
     { name: "Billie", xp: "8,124 XP" },
@@ -34,7 +34,7 @@ const Ranking = () => {
   ];
 
   return (
-    <div className="flex flex-col bg-gray-800 p-5 text-white min-h-screen">
+    <div className="flex flex-col bg-gray-800 p-5 text-white min-h-screen ">
       <div className="flex justify-between items-center mb-6">
         <div>
           <h2 className="text-4xl font-extrabold">Os Especialistas!</h2>
@@ -63,7 +63,7 @@ const Ranking = () => {
 
       <div className="flex flex-row-reverse justify-center items-stretch gap-6 flex-grow">
         <div className="w-1/3 flex flex-col">
-          <div className="p-4 rounded-lg h-full bg-[#1f1f1f]">
+          <div className="p-4 rounded-lg h-full bg-[#1f1f1f] ">
             <h2 className="text-4xl mb-2 text-left font-extrabold">
               Ricos da Vouvi
             </h2>
@@ -120,8 +120,9 @@ const Ranking = () => {
                         >
                           <span
                             style={{
-                              color: "#002952",
+                              color: "#002952 md:w-20",
                               fontWeight: "bold",
+                    
                             }}
                           >
                             12
@@ -185,8 +186,8 @@ const Ranking = () => {
         <div className="w-1/2 flex flex-col">
           <div className="p-4 rounded-lg h-full bg-[#1f1f1f]">
             <div className="bg-gray-600 rounded p-2 mb-4">
-              <div className="flex justify-center items-center mb-4 gap-4">
-                <div className="flex-1 flex flex-col items-center">
+              <div className="flex justify-center items-center mb-4 gap-4 md:text-[2px]">
+                <div className="flex-1 flex flex-col items-center ">
                   <img
                     src="/images/prata.png"
                     alt="Troféu de Prata"
@@ -198,7 +199,7 @@ const Ranking = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col items-center transform scale-110">
+                <div className="flex-1 flex flex-col items-center transform scale-110 ">
                   <img
                     src="/images/coroa.png"
                     alt="Coroa"
@@ -213,7 +214,7 @@ const Ranking = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex flex-col items-center">
+                <div className="flex-1 flex flex-col items-center ">
                   <img
                     src="/images/bronze.png"
                     alt="Troféu de Bronze"
@@ -234,7 +235,7 @@ const Ranking = () => {
   className="flex-grow overflow-y-auto"
   style={{ maxHeight: "500px" }}
 >
-  <div className="grid grid-cols-1 gap-4">
+  <div className="grid grid-cols-1 gap-4 ">
     {users.map((user, index) => (
       <div
         key={index}
@@ -244,7 +245,7 @@ const Ranking = () => {
           border: "1px solid #b1b1b1",
         }}
       >
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <span
             className="mr-2 flex items-center justify-center w-8 h-8 rounded-full bg-black text-white"
           >
@@ -264,7 +265,7 @@ const Ranking = () => {
 </div>
 
 
-            <div className="mt-4 text-center font-bold">
+            <div className="mt-4 text-center font-bold md:w-20 md;">
               <span style={{ color: "red" }}>▼ Zona de Rebaixamento ▼</span>
             </div>
           </div>
