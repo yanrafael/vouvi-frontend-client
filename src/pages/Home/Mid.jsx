@@ -14,20 +14,19 @@ function Mid() {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-    useEffect(() => {
-      AOS.init({ duration: 1200 });
-      AOS.init({once: true});
-    });
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+    AOS.init({ once: true });
+  });
 
   return (
     <>
-      <section className="mt-72 flex flex-col items-center">
+      <section className="mt-32 lg:mt-72 flex flex-col items-center">
         <h1
           data-aos="fade-up"
-          className={`text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium leading-[1.2] ${TextGradient}`}
+          className={`text-center text-[36px] font-medium leading-[1.2] sm:text-[50px] md:text-[72px] lg:text-[90px] ${TextGradient}`}
         >
-          Planejamento
-          inteligente
+          Planejamento inteligente
         </h1>
 
         <p
@@ -41,12 +40,12 @@ function Mid() {
           className="mt-20 flex flex-col p-10 lg:mt-0 lg:p-0"
           aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados."
         >
-          <div className="relative bottom-3 m-auto flex items-center lg:bottom-0">
+          <div className="relative bottom-3 m-auto flex flex-col sm:flex-row items-start sm:items-center lg:bottom-0">
             <div
               title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
               className="relative flex lg:top-[40px] 2xl:right-3"
-              aria-label=""
+              aria-label="A imagem mostra um ícone de um banco de dados"
             >
               <AiCards
                 icon={
@@ -96,7 +95,7 @@ function Mid() {
             </p>
           </div>
 
-          <div className="relative flex justify-between lg:top-3 lg:m-auto">
+          <div className="relative flex flex-col sm:flex-row items-start sm:items-stretch justify-between lg:top-3 lg:m-auto">
             <div
               aria-label="ícone de relogio"
               title="ícone de relogio preto"
@@ -146,7 +145,7 @@ function Mid() {
       <section className="mt-52 flex flex-col items-center">
         <h1
           data-aos="fade-right"
-          className={`${TextGradient} text-center font-medium text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2] leading-[1]`}
+          className={`${TextGradient} text-center text-[36px] font-medium leading-[1] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2]`}
         >
           Domine o jogo, domine o dinheiro!
         </h1>
@@ -155,7 +154,7 @@ function Mid() {
           className={`${TextGradient} text-sm lg:text-base`}
         ></p>
 
-        <div className="relative flex-wrap lg:flex-nowrap p-6 lg:p-0 m-auto mt-[50px] flex w-11/12 items-center justify-evenly rounded-md bg-[#D9D9D9] lg:mt-[100px]">
+        <div className="relative m-auto mt-[50px] flex w-11/12 flex-wrap items-center justify-evenly rounded-md bg-[#D9D9D9] p-6 lg:mt-[100px] lg:flex-nowrap lg:p-0">
           <img
             className="w-[100%] lg:w-[58%]"
             src={Rewards}
@@ -163,10 +162,10 @@ function Mid() {
             aria-label="Fundo azul com várias letras 'XP' em diferentes tamanhos e opacidades espalhadas. No centro, há uma forma amarela brilhante semelhante a uma estrela ou um brilho."
             title="ícone chamado Vcon, representando dinheiro da vouvi"
           />
-          <div className="flex h-[20vw] lg:h-[29vw] w-[100%] lg:w-[38%] items-center lg:justify-normal justify-center rounded-md bg-[#01438A]">
+          <div className="flex h-[20vw] w-[100%] items-center justify-center rounded-md bg-[#01438A] lg:h-[29vw] lg:w-[38%] lg:justify-normal">
             <p
               data-aos="fade-left"
-              className={`bg-clip-text text-[transparent] bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] ml-5 text-lg lg:ml-10 lg:text-[50px] xl:text-xl`}
+              className={`ml-5 bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text text-base text-[transparent] sm:text-lg lg:ml-10 lg:text-[50px] xl:text-xl`}
             >
               Missões e Recompensas
             </p>
