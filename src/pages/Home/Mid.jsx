@@ -1,9 +1,5 @@
 import AiCards from "../../components/Cards/AiCards";
 import AiCardsReverse from "../../components/Cards/AiCardsReverse";
-import LineTopLeft from "../../assets/images/line-top-left.svg";
-import LineTopRight from "../../assets/images/line-top-right.svg";
-import LineDownLeft from "../../assets/images/line-down-left.svg";
-import LineDownRight from "../../assets/images/line-down-right.svg";
 import Rewards from "../../assets/images/missionsandrewards.png";
 import { Icon } from "@iconify/react";
 import AOS from "aos";

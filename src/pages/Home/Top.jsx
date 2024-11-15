@@ -35,7 +35,7 @@ function Top({ background }) {
           <div className="to-transparent absolute bottom-0 h-32 w-full bg-gradient-to-t from-[#ffffff] dark:from-black"></div>
         </div>
 
-        <div className="m-auto mt-[200px] mb-32 xs:mb-0 flex flex-col justify-center text-center text-black dark:text-white">
+        <div className="m-auto mt-[200px] mb-32 sm:mb-0 flex flex-col justify-center text-center text-black dark:text-white">
           <h1 className="text-[40px] font-normal leading-[0.85] sm:text-[50px] md:text-[60px] lg:text-[90px]">
             <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
