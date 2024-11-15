@@ -143,7 +143,7 @@ const Ranking = () => {
               <></>
             ),
           )}
-          <div className="border-card m-4 flex rounded-md border-2 md:w-16"></div>
+          <div className="border-card m-4 flex rounded-md border-2 md:w-40 "></div>
           {lateral.map((lateral, index) => (
             <CardLateral
               posicao={index + 1}

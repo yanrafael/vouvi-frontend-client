@@ -18,17 +18,17 @@ const CardLateral = (props) =>{
                 ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 p-1 rounded-md mr-2 w-full items-center">
                     <div className="flex items-center">
                         <span className="mr-2 flex items-center justify-center w-14 h-14 bg-secondary-200 rounded-full text-md text-[#002952] text-cardVoce ">{props.posicao}°</span>
-                        <div className="text-md font-medium md:text-[20px]">Você</div>
+                        <div className="text-md font-medium md:text-[20px] md:w-18">Você</div>
                     </div>
-                    <div className="underline text-secondary-200 text-[17px] font-light mr-2  ">{props.vc} VC</div>
+                    <div className="underline text-secondary-200 font-light mr-2 md:w-18 md:h-8 md:text-[16px] mt-3">{props.vc} VC</div>
                 </div>
                 :props.posicao<4
                 ?<div className="flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-md mr-2 w-full items-center ">
                     <div className="flex items-center ">
                         {
-                            props.posicao===1?<img src={document.body.classList.value === "dark"?Darkprimeiro :primeiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste "/>:
-                            props.posicao===2?<img src={document.body.classList.value === "dark"?Darksegundo :segundo} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste md:text-[19px]"/>:
-                            <img src={document.body.classList.value === "dark"?Darkterceiro :terceiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste "/>
+                            props.posicao===1?<img src={document.body.classList.value === "dark"?Darkprimeiro :primeiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste md:w-12 md:h-12"/>:
+                            props.posicao===2?<img src={document.body.classList.value === "dark"?Darksegundo :segundo} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste md:text-[19px] md:w-12 md:h-12"/>:
+                            <img src={document.body.classList.value === "dark"?Darkterceiro :terceiro} alt="" className="mr-2 flex items-center justify-center w-14 h-14 rounded-full bg-black text-teste  md:w-12 md:h-12"/>
                         }
                         
                         {
