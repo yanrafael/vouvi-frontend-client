@@ -25,10 +25,12 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
   };
 
   const fillColor = Texture || IconColor || "#007fff";
+
   const AvatarStyle = (
     <svg
-      width="308"
-      height="346"
+      className="w-[308px] h-[346px]"
+      width=""
+      height=""
       viewBox="0 0 308 346"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -8,8 +8,7 @@ import { useState } from "react";
 function Header({ darkMode, setDarkMode }) {
   const VouviWord = (
     <svg
-      width=""
-      height="41"
+      className="h-5 xs:h-7 sm:h-8 lg:h-10"
       viewBox="0 0 1343 317"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -43,16 +42,15 @@ function Header({ darkMode, setDarkMode }) {
     <header className="relative m-auto flex w-[88%] items-center justify-between py-10">
       <LogoWhite Name={VouviWord} height={"66"} darkMode={darkMode} />
       <button
-        className="ml-auto mr-5"
+        className="ml-auto mr-2 sm:mr-5"
         onClick={() => {
           document.body.classList.toggle("dark");
           setDarkMode((dm) => !dm);
         }}
       >
-        <div className="w-[4.5rem] h-[4.5rem] flex justify-center items-center bg-black dark:bg-white rounded-full">
+        <div className="w-[2.5rem] h-[2.5rem] xs:w-[3rem] xs:h-[3rem] sm:w-[3.5rem] sm:h-[3.5rem] lg:w-[4.5rem] lg:h-[4.5rem] flex justify-center items-center bg-black dark:bg-white rounded-full">
           <Icon
-            className="text-white dark:text-black"
-            width={"3rem"}
+            className="text-white dark:text-black text-[1.5rem] xs:text-[2rem] sm:text-[2.5rem] lg:text-[3rem]" 
             icon={darkMode ? Sun[0] : Sun[1]}
           />
         </div>
