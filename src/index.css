@@ -21,10 +21,10 @@
     }
   }
   .animate-pulse-color {
-    animation: pulseColor 3s linear infinite;
+    animation: pulseColor 5s linear infinite;
   }
   .animate-pulse-line {
-    animation: pulseLine 3s linear infinite;
+    animation: pulseLine 5s linear infinite;
   }
 
   @keyframes colorChange1 {
@@ -64,19 +64,19 @@
   }
 
   .animate-color-1 {
-    animation: colorChange1 3s infinite;
+    animation: colorChange1 5s infinite;
   }
 
   .animate-color-2 {
-    animation: colorChange2 3s infinite;
+    animation: colorChange2 5s infinite;
   }
 
   .animate-color-3 {
-    animation: colorChange3 3s infinite;
+    animation: colorChange3 5s infinite;
   }
 
   .animate-color-4 {
-    animation: colorChange4 3s infinite;
+    animation: colorChange4 5s infinite;
   }
 
 
@@ -117,19 +117,19 @@
   }
 
   .animate-bg-color-1 {
-    animation: bgColorChange1 3s infinite;
+    animation: bgColorChange1 5s infinite;
   }
 
   .animate-bg-color-2 {
-    animation: bgColorChange2 3s infinite;
+    animation: bgColorChange2 5s infinite;
   }
 
   .animate-bg-color-3 {
-    animation: bgColorChange3 3s infinite;
+    animation: bgColorChange3 5s infinite;
   }
 
   .animate-bg-color-4 {
-    animation: bgColorChange4 3s infinite;
+    animation: bgColorChange4 5s infinite;
   }
 
 
