@@ -129,8 +129,8 @@ function Mid() {
                     className="text-[85px] xl:text-[108px]"
                   />
                 }
-                animateBgColor={'1'}
-                animateColor={'1'}
+                animateBgColor={'animate-bg-color-1'}
+                animateColor={'animate-color-1'}
                 text={"Acompanhamento de Dados"}
               />
 
@@ -150,8 +150,8 @@ function Mid() {
                     className="text-[100px] xl:text-[120px]"
                   />
                 }
-                animateBgColor={'2'}
-                animateColor={'2'}
+                animateBgColor={'animate-bg-color-2'}
+                animateColor={'animate-color-2'}
                 text={`Planejamento personalizável`}
               />
             </div>
@@ -180,8 +180,8 @@ function Mid() {
                     className="text-[85px] xl:text-[108px]"
                   />
                 }
-                animateBgColor={'3'}
-                animateColor={'3'}
+                animateBgColor={'animate-bg-color-3'}
+                animateColor={'animate-color-3'}
                 text={"Dicas em Tempo Real"}
               />
               {LineDownLeft}
@@ -200,8 +200,8 @@ function Mid() {
                     className="text-[100px] xl:text-[120px]"
                   />
                 }
-                animateBgColor={'4'}
-                animateColor={'4'}
+                animateBgColor={'animate-bg-color-4'}
+                animateColor={'animate-color-4'}
                 text={"Gráficos inteligentes"}
               />
             </div>
