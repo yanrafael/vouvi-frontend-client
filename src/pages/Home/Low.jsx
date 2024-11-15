@@ -94,6 +94,12 @@ function Low() {
   return (
     <>
       <section className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12 flex-col-reverse items-center lg:flex-row">
+      <SecondaryButton
+            color={
+              " text-white lg:hidden block mt-10 sm:block hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
+            }
+            text={"Enviar feedback"}
+          />
         <div className="flex w-full flex-col lg:w-[60%]">
           <div data-aos="zoom-in-up" className="flex justify-between">
             <FeedbackCard
@@ -137,7 +143,7 @@ function Low() {
           </div>
           <SecondaryButton
             color={
-              " text-white hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
+              " text-white hidden lg:block hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
             }
             text={"Enviar feedback"}
           />
@@ -228,9 +234,9 @@ function Low() {
         </div>
       </section>
 
-      <section className="m-auto w-8/12">
+      <section className="m-auto lg:w-8/12">
         <p
-          className={`${TextGradient} mb-16 mt-[200px] text-center text-base font-light`}
+          className={`${TextGradient} mb-16 mt-28 md:mt-[200px] text-center text-[24px] md:text-[28px] lg:text-base font-light`}
         >
           Venha com a gente e faça valer cada centavo. <br />
           <strong className="font-bold">

@@ -37,10 +37,10 @@ function Mid() {
         </p>
 
         <div
-          className="mt-20 flex flex-col p-10 lg:mt-0 lg:p-0"
+          className="mt-20 flex flex-col xs:left-[9%] sm:left-0 relative sm:items-stretch p-10 lg:mt-0 lg:p-0"
           aria-label="A imagem mostra um ícone de banco de dados. O ícone é composto por três cilindros pretos empilhados horizontalmente, representando discos de armazenamento de dados, sobre um fundo cinza claro. Este ícone é frequentemente usado para representar bancos de dados em contextos de tecnologia da informação e desenvolvimento de software, sendo relevante para identificar sistemas de gerenciamento de dados."
         >
-          <div className="relative bottom-3 m-auto flex flex-col sm:flex-row items-start sm:items-center lg:bottom-0">
+          <div className="relative bottom-3 gap-5 sm:gap-0 m-auto flex flex-col sm:flex-row items-start sm:items-center lg:bottom-0">
             <div
               title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
@@ -51,7 +51,7 @@ function Mid() {
                 icon={
                   <Icon
                     icon="solar:database-bold"
-                    className="text-[65px] sm:text-[85px] xl:text-[108px]"
+                    className="text-[85px] xl:text-[108px]"
                   />
                 }
                 text={"Acompanhamento de Dados"}
@@ -78,7 +78,7 @@ function Mid() {
                 icon={
                   <Icon
                     icon="fluent:calendar-ltr-16-filled"
-                    className="text-[80px] sm:text-[100px] xl:text-[120px]"
+                    className="text-[100px] xl:text-[120px]"
                   />
                 }
                 text={`Planejamento personalizável`}
@@ -95,18 +95,19 @@ function Mid() {
             </p>
           </div>
 
-          <div className="relative flex flex-col sm:flex-row items-start sm:items-stretch justify-between lg:top-3 lg:m-auto">
+          <div className="relative flex gap-5 sm:gap-0 flex-col sm:flex-row items-start sm:items-stretch justify-between lg:top-3 lg:m-auto">
             <div
               aria-label="ícone de relogio"
               title="ícone de relogio preto"
               data-aos="fade-right"
-              className="relative flex lg:bottom-[45px]"
+              className="relative
+              flex lg:bottom-[45px]"
             >
               <AiCards
                 icon={
                   <Icon
                     icon="lets-icons:time-atack"
-                    className="text-[65px] sm:text-[85px] xl:text-[108px]"
+                    className="text-[85px] xl:text-[108px]"
                   />
                 }
                 text={"Dicas em Tempo Real"}
@@ -121,7 +122,7 @@ function Mid() {
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
               title="ícone de diagrama preto"
               data-aos="fade-left"
-              className="relative flex items-end justify-center lg:bottom-[60px] lg:left-[35px] 2xl:left-[60px]"
+              className="relative flex justify-center lg:bottom-[60px] lg:left-[35px] 2xl:left-[60px]"
             >
               <img
                 src={LineDownRight}
@@ -132,7 +133,7 @@ function Mid() {
                 icon={
                   <Icon
                     icon="solar:round-graph-bold"
-                    className="text-[80px] sm:text-[100px] xl:text-[120px]"
+                    className="text-[100px] xl:text-[120px]"
                   />
                 }
                 text={"Gráficos inteligentes"}
@@ -142,10 +143,10 @@ function Mid() {
         </div>
       </section>
 
-      <section className="mt-52 flex flex-col items-center">
+      <section className="mt-32 lg:mt-52 flex flex-col items-center">
         <h1
           data-aos="fade-right"
-          className={`${TextGradient} text-center text-[36px] font-medium leading-[1] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2]`}
+          className={`${TextGradient} w-10/12 xs:w-full text-center text-[36px] font-medium leading-[1] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2]`}
         >
           Domine o jogo, domine o dinheiro!
         </h1>
