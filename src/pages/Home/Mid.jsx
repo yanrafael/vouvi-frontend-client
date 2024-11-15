@@ -1,5 +1,9 @@
 import AiCards from "../../components/Cards/AiCards";
 import AiCardsReverse from "../../components/Cards/AiCardsReverse";
+import LineTopLeft from "../../assets/images/line-top-left.svg";
+import LineTopRight from "../../assets/images/line-top-right.svg";
+import LineDownLeft from "../../assets/images/line-down-left.svg";
+import LineDownRight from "../../assets/images/line-down-right.svg";
 import Rewards from "../../assets/images/missionsandrewards.png";
 import { Icon } from "@iconify/react";
 import AOS from "aos";
@@ -115,7 +119,7 @@ function Mid() {
             <div
               title="A imagem mostra um ícone de banco de dados."
               data-aos="fade-right"
-              className="relative flex lg:top-[40px] 2xl:right-3"
+              className="relative flex lg:top-[40px] 2xl:right-3 animate-color-1"
               aria-label="A imagem mostra um ícone de um banco de dados"
             >
               <AiCards
@@ -125,6 +129,8 @@ function Mid() {
                     className="text-[85px] xl:text-[108px]"
                   />
                 }
+                animateBgColor={'1'}
+                animateColor={'1'}
                 text={"Acompanhamento de Dados"}
               />
 
@@ -134,7 +140,7 @@ function Mid() {
               aria-label="ícone de planejamento. um calendario"
               title="ícone de calendario"
               data-aos="fade-left"
-              className="relative flex lg:left-[40px] lg:top-[30px] xl:left-[60px] 2xl:left-[100px]"
+              className="relative flex lg:left-[40px] lg:top-[30px] xl:left-[60px] 2xl:left-[100px] animate-color-2"
             >
               {LineTopRight}
               <AiCardsReverse
@@ -144,6 +150,8 @@ function Mid() {
                     className="text-[100px] xl:text-[120px]"
                   />
                 }
+                animateBgColor={'2'}
+                animateColor={'2'}
                 text={`Planejamento personalizável`}
               />
             </div>
@@ -163,7 +171,7 @@ function Mid() {
               aria-label="ícone de relogio"
               title="ícone de relogio preto"
               data-aos="fade-right"
-              className="relative flex lg:bottom-[40px]"
+              className="relative flex lg:bottom-[40px] animate-color-3"
             >
               <AiCards
                 icon={
@@ -172,6 +180,8 @@ function Mid() {
                     className="text-[85px] xl:text-[108px]"
                   />
                 }
+                animateBgColor={'3'}
+                animateColor={'3'}
                 text={"Dicas em Tempo Real"}
               />
               {LineDownLeft}
@@ -180,7 +190,7 @@ function Mid() {
               aria-label="A imagem mostra um logo e texto. O logo consiste em um círculo preto com três linhas curvas brancas dentro, parecendo um gráfico ou diagrama estilizado."
               title="ícone de diagrama preto"
               data-aos="fade-left"
-              className="relative flex justify-end lg:bottom-[60px] lg:left-[35px] lg:top-5 2xl:left-[60px]"
+              className="relative flex justify-end lg:bottom-[60px] lg:left-[35px] lg:top-5 2xl:left-[60px] animate-color-4"
             >
               {LineDownRight}
               <AiCardsReverse
@@ -190,6 +200,8 @@ function Mid() {
                     className="text-[100px] xl:text-[120px]"
                   />
                 }
+                animateBgColor={'4'}
+                animateColor={'4'}
                 text={"Gráficos inteligentes"}
               />
             </div>

@@ -27,6 +27,114 @@
     animation: pulseLine 3s linear infinite;
   }
 
+  @keyframes colorChange1 {
+    0%, 100% {
+      color: #8D8D8D;
+    }
+    50% {
+      color: #14A900;
+    }
+  }
+
+  @keyframes colorChange2 {
+    0%, 100% {
+      color: #8D8D8D;
+    }
+    50% {
+      color: #A90057;
+    }
+  }
+
+  @keyframes colorChange3 {
+    0%, 100% {
+      color: #8D8D8D;
+    }
+    50% {
+      color: #DD7600;
+    }
+  }
+
+  @keyframes colorChange4 {
+    0%, 100% {
+      color: #8D8D8D;
+    }
+    50% {
+      color: #7C20BE;
+    }
+  }
+
+  .animate-color-1 {
+    animation: colorChange1 3s infinite;
+  }
+
+  .animate-color-2 {
+    animation: colorChange2 3s infinite;
+  }
+
+  .animate-color-3 {
+    animation: colorChange3 3s infinite;
+  }
+
+  .animate-color-4 {
+    animation: colorChange4 3s infinite;
+  }
+
+
+  @keyframes bgColorChange1 {
+    0%, 100% {
+      background-color: #8D8D8D80; /* Cor inicial (cinza com 50% de opacidade) */
+    }
+    50% {
+      background-color: #14A90080; /* Cor intermediária (verde com 50% de opacidade) */
+    }
+  }
+
+  @keyframes bgColorChange2 {
+    0%, 100% {
+      background-color: #8D8D8D80; /* Cor inicial (cinza com 50% de opacidade) */
+    }
+    50% {
+      background-color: #A9005780; /* Cor intermediária (rosa com 50% de opacidade) */
+    }
+  }
+
+  @keyframes bgColorChange3 {
+    0%, 100% {
+      background-color: #8D8D8D80; /* Cor inicial (cinza com 50% de opacidade) */
+    }
+    50% {
+      background-color: #DD760080; /* Cor intermediária (laranja com 50% de opacidade) */
+    }
+  }
+
+  @keyframes bgColorChange4 {
+    0%, 100% {
+      background-color: #8D8D8D80; /* Cor inicial (cinza com 50% de opacidade) */
+    }
+    50% {
+      background-color: #7C20BE80; /* Cor intermediária (roxo com 50% de opacidade) */
+    }
+  }
+
+  .animate-bg-color-1 {
+    animation: bgColorChange1 3s infinite;
+  }
+
+  .animate-bg-color-2 {
+    animation: bgColorChange2 3s infinite;
+  }
+
+  .animate-bg-color-3 {
+    animation: bgColorChange3 3s infinite;
+  }
+
+  .animate-bg-color-4 {
+    animation: bgColorChange4 3s infinite;
+  }
+
+
+
+
   .slide-track {
     @apply flex;
     animation: scroll 7s linear infinite;
