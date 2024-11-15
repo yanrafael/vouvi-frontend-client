@@ -136,7 +136,7 @@ function Low() {
             </h1>
             <p
               data-aos="zoom-in-up"
-              className={`${TextGradient} mb-5 mt-5 text-[24px] leading-[1] md:text-[28px] lg:mb-16 lg:w-[400px] lg:text-[36px]`}
+              className={`${TextGradient} mb-5 mt-5 text-[16px] leading-[1] sm:text-[28px] lg:mb-16 lg:w-[400px] lg:text-[36px]`}
             >
               Você faz parte do Time. Queremos te ouvir!
             </p>
@@ -157,7 +157,7 @@ function Low() {
           Escolha o plano e vire o jogo
         </h1>
         <p
-          className={`${TextGradient} m-auto mb-10 w-5/6 text-center text-[24px] leading-[1] md:text-[28px] lg:mb-20 lg:w-4/6 lg:text-[36px]`}
+          className={`${TextGradient} m-auto mb-10 w-5/6 text-center text-[16px] leading-[1] sm:text-[28px] lg:mb-20 lg:w-4/6 lg:text-[36px]`}
         >
           Do básico ao premium, tem um plano certinho para sua caminhada
           financeira. Bora começar e subir de nível!
@@ -220,13 +220,13 @@ function Low() {
                 "Para profissionais e empresários que buscam otimizar finanças."
               }
             >
-              <div className="pointer-events-none absolute z-10 ml-0 mt-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:group-hover:opacity-60">
+              <div className="w-40 xs:w-full pointer-events-none absolute z-10 ml-0 mt-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:group-hover:opacity-60">
                 <img src={subscriptionStar} alt="" />
               </div>
-              <div className="pointer-events-none absolute z-10 ml-0 mt-[380px] rotate-45 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:group-hover:opacity-60">
+              <div className="w-40 xs:w-fit pointer-events-none absolute z-10 ml-0 mt-[380px] rotate-45 opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:group-hover:opacity-60">
                 <img src={subscriptionStar2} alt="" />
               </div>
-              <div className="pointer-events-none absolute z-20 ml-52 mt-[150px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:group-hover:opacity-60">
+              <div className="w-40 xs:w-full pointer-events-none absolute z-20 ml-32 xs:ml-52 mt-[150px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:group-hover:opacity-60">
                 <img src={subscriptionStar3} alt="" />
               </div>
             </Subscription>

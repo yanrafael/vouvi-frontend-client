@@ -3,6 +3,29 @@
 @tailwind utilities;
 
 @layer utilities {
+  @keyframes pulseColor {
+    0%, 100% {
+      color: #8D8D8D;
+    }
+    50% {
+      color: theme('textColor.secondary.200');
+      stroke: theme('colors.secondary.200');
+    }
+  }
+  @keyframes pulseLine {
+    0%, 100% {
+      fill: #8D8D8D;
+    }
+    50% {
+      fill: theme('colors.secondary.200');
+    }
+  }
+  .animate-pulse-color {
+    animation: pulseColor 3s linear infinite;
+  }
+  .animate-pulse-line {
+    animation: pulseLine 3s linear infinite;
+  }
 
   .slide-track {
     @apply flex;
@@ -10,7 +33,9 @@
   }
 
   @keyframes scroll {
-    100% { transform: translateX(-1500px); }
+    100% {
+      transform: translateX(-1500px);
+    }
   }
 }
 
