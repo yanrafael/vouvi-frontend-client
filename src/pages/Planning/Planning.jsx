@@ -4,9 +4,16 @@ import HeaderIntern from "../../components/Header/HeaderIntern";
 import AvatarFull from "../../components/Header/AvatarFull";
 import Footer from "../../components/Footer/Footer";
 
+// Modals
+import showModal from "../../utils/showModal";
+import NewIncome from "../../components/Modals/NewIncome";
+import NewExpense from "../../components/Modals/NewExpense";
+import NotesModal from "../../components/Modals/NotesModal";
+
 import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
+import Note from "../../components/Modals/Note";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -20,6 +27,11 @@ function Planning() {
 
   return (
     <>
+      <NewIncome />
+      <NewExpense />
+      <NotesModal />
+      <Note />
+      <button onClick={() => showModal("note-modal")}>click</button>
       <HeaderIntern
         iconActiveNumber={1}
         darkMode={darkMode}
