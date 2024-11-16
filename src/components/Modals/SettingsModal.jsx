@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+
 function SettingsModal({ closeModal }) {
   const [ballAnimation, noBallAnimation] = useState(true);
   const BA = "translate-x-14";
@@ -9,6 +10,7 @@ function SettingsModal({ closeModal }) {
     document.body.classList.toggle("dark");
     setDarkMode((dm) => !dm);
   };
+
   return (
     <section className="fixed left-0 top-0 z-20 flex h-full w-full items-center justify-center overflow-y-hidden bg-white/50 backdrop-blur-[25px] dark:bg-black/50">
       <div className="flex h-fit w-8/12 flex-col rounded-md bg-white p-6 shadow-2xl shadow-black dark:bg-[#1B1B1B]">
@@ -86,4 +88,5 @@ function SettingsModal({ closeModal }) {
     </section>
   );
 }
+
 export default SettingsModal;

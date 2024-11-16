@@ -15,10 +15,10 @@ function Top({ background }) {
   const TextGradient =
     "text-[transparent] bg-[linear-gradient(90deg,#02020B_0%,#3D3D3D_100%);] dark:bg-[linear-gradient(90deg,#F5F5F4_12.77%,#8F8F8E_86.51%)] bg-clip-text";
 
-    useEffect(() => {
-      AOS.init({ duration: 1200 });
-      AOS.init({once: true});
-    });
+  useEffect(() => {
+    AOS.init({ duration: 1200 });
+    AOS.init({ once: true });
+  });
 
   return (
     <>
@@ -35,19 +35,20 @@ function Top({ background }) {
           <div className="to-transparent absolute bottom-0 h-32 w-full bg-gradient-to-t from-[#ffffff] dark:from-black"></div>
         </div>
 
-        <div className="m-auto mt-[200px] flex flex-col justify-center text-center text-black dark:text-white">
-          <h1 className="text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-normal leading-[0.85]">
+        <div className="m-auto mt-[200px] mb-32 sm:mb-0 flex flex-col justify-center text-center text-black dark:text-white">
+          <h1 className="text-[40px] font-normal leading-[0.85] sm:text-[50px] md:text-[60px] lg:text-[90px]">
             <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
             </strong>{" "}
             suas{" "}
-            <strong className="font-medium text-primary-200">finanças</strong>
-            <br />
-            em uma{" "}
+            <strong className="font-medium text-primary-200"> <br className="xs:hidden block"/> finanças </strong>
+            <br className="hidden xs:block" />
+            em 
+            <br className="xs:hidden block"/> uma{" "}
             <strong className="font-medium text-primary-200">aventura</strong>
           </h1>
-          <p className="md:mt-7 mt-2 text-[24px] md:text-[28px] lg:text-[36px]">
-            Aprenda a fazer essa grana durar!
+          <p className="mt-2 text-[16px] md:mt-7 md:text-[28px] lg:text-[36px] leading-[1]">
+            Aprenda a fazer essa <br className="xs:hidden block"/> grana durar!
           </p>
         </div>
 
@@ -55,24 +56,26 @@ function Top({ background }) {
           <PrimaryButton text={"Começar agora"} />
         </Link>
 
-        <div className="m-auto mt-[150px] flex flex-col items-center justify-center">
-          <p className="text-[30px] sm:text-[36px] dark:text-white">Saiba mais</p>
+        <div className="m-auto mt-5 xs:mt-[150px] flex flex-col items-center justify-center">
+          <p className="text-[30px] sm:text-[36px] dark:text-white">
+            Saiba mais
+          </p>
           <Icon
-            className="relative animate-bounce text-black dark:text-white text-[5rem] sm:text-[7rem]"
+            className="relative animate-bounce text-[5rem] text-black sm:text-[7rem] dark:text-white"
             icon="ep:arrow-down-bold"
           />
         </div>
       </section>
 
       <h1
-        className={`mb-10 mt-40 flex justify-center text-center text-[36px] sm:text-[50px] md:text-[72px] lg:text-[90px] font-medium leading-[1.2] ${TextGradient} `}
+        className={`mb-10 mt-40 flex justify-center text-center text-[36px] font-medium leading-[1.2] sm:text-[50px] md:text-[60px] lg:text-[90px] ${TextGradient} `}
         data-aos="fade-up"
       >
         Educação Financeira
       </h1>
 
       <section
-        className="flex flex-wrap justify-center gap-20 !scroll-smooth lg:flex-nowrap lg:gap-0"
+        className="flex flex-wrap justify-center gap-4 !scroll-smooth lg:flex-nowrap lg:gap-0"
         data-aos="fade-up"
       >
         <Cards
@@ -93,7 +96,7 @@ function Top({ background }) {
           img={HeartIcon}
           area-label="Ícone quadrado rosa com bordas arredondadas. Dentro do ícone, há uma coração no centro,  Este ícone é geralmente usado para representar amor, progresso ou sentimentos"
           title={"Realize sonhos!"}
-          text={"Com planejamento, seu sonho tá logo ali na esquina."}
+          text={`Com planejamento, seu sonho tá logo ali na esquina.`}
           color="text-[#FF0084] bg-[linear-gradient(0deg,rgba(255,0,132,0.26)_-8.57%,rgba(255,0,132,0.00)_100%)]"
         />
       </section>

@@ -2,6 +2,7 @@ function LogoWhite({ Name, width, height, darkMode }) {
   return (
     <div className="flex items-center text-[50px] font-semibold">
       <svg
+        className="h-8 xs:h-10 sm:h-12 lg:h-16"
         width={width}
         height={height}
         viewBox="0 0 1145 1098"

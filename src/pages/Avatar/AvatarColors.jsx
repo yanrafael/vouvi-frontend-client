@@ -25,6 +25,7 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
   };
 
   const fillColor = Texture || IconColor || "#007fff";
+
   const AvatarStyle = (
     <svg
       className="lg:w-308 md:w-[74%] h-auto"
