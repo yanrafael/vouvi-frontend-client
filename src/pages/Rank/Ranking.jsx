@@ -73,7 +73,7 @@ const Ranking = () => {
           </p>
         </div>
         <div className="md:flex hidden w-1/5 flex-col  relative md:-top-14">
-          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3 lg:mt-1 md:m-1">
+          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3  md:m-1 lg:mt-5">
             Mostrando Ranking
           </p>
           <div className="relative w-fit  ">
