@@ -33,15 +33,15 @@ const Colocacao = (props) =>{
                     :<img src={document.body.classList.value === "dark"?Darkterceiro :terceiro} alt="" className="lg:w-[8vw] md:w-[10vw]  w-[13vw] mr-6 -mt-10 md:m-4 " ></img>}
 
                 {props.posicao===1
-                    ?<><p className={`${textp}lg:text-base font-medium text-primary-200 dark:text-[#FF9F07]  mr-5 lg:text-[38px] md:text-[24px]`}>{props.nome}</p>
-                       <p className={`${textp}underline text-base font-normal text-primary-200 dark:text-[#FF9F07] lg:text-[38px] md:text-[24px] md:mr-auto text-[13px]  lg:mr-0 mr-5`}>{props.xp} XP</p></>
+                    ?<><p className={`${textp}lg:text-base font-medium text-primary-200 dark:text-[#FF9F07]  mr-5`}>{props.nome}</p>
+                       <p className={`${textp}underline lg:text-base font-normal text-primary-200 dark:text-[#FF9F07]  md:mr-auto lg:mr-0 mr-5 md:text-[24px] text-[16px] text-nowrap`}>{props.xp} XP</p></>
 
                     :props.posicao===2
-                    ?<><p className={`${texts}lg:text-base font-medium text-primary-200 dark:text-white lg:text-[38px] md:text-[24px] mr-5 `}>{props.nome}</p>
-                       <p className={`${texts}underline text-base font-normal text-primary-200 dark:text-white lg:text-[38px]  md:text-[24px] md:mr-auto text-[13px] lg:mr-0 mr-5`}>{props.xp} XP</p></>
+                    ?<><p className={`${texts}lg:text-base font-medium text-primary-200 dark:text-white mr-5 `}>{props.nome}</p>
+                       <p className={`${texts}underline lg:text-base font-normal text-primary-200 dark:text-white md:mr-auto  lg:mr-0 mr-5 md:text-[24px] text-[16px] text-nowrap`}>{props.xp} XP</p></>
 
-                    :<><p className={`${textt} lg:text-base font-medium text-primary-200 dark:text-[#C86B00] lg:text-[38px] md:text-[24px] mr-5`}>{props.nome}</p>
-                       <p className={`${textt} lg:underline text-base font-normal text-primary-200 dark:text-[#C86B00] lg:text-[38px] md:text-[24px] md:md:mr-auto text-[13px] lg:mr-0 mr-5`}>{props.xp} XP</p></>
+                    :<><p className={`${textt} lg:text-base font-medium text-primary-200 dark:text-[#C86B00]  mr-5 md:text-[24px] text-[16px] text-nowrap`}>{props.nome}</p>
+                       <p className={`${textt} lg:text-baseunderline  font-normal text-primary-200 dark:text-[#C86B00]   md:mr-auto  lg:mr-0 mr-5 md:text-[24px] text-[14px] text-nowrap ` }>{props.xp} XP</p></>
                 }  
             </div>
         </div>

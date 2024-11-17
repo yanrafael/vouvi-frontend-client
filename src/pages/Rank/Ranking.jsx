@@ -97,8 +97,8 @@ const Ranking = () => {
       </div>
       <div className="mt-10 w-10"></div>
       <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-1 ">
-        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ">
-          <div className="flex justify-evenly  md:text-nowrap m-9 ">
+        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ml-3 ">
+          <div className="flex justify-evenly  md:text-nowrap m-9  ">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
             ))}
@@ -118,7 +118,7 @@ const Ranking = () => {
           <div className="mt-10"></div>
           <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold">
             <span
-              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F]  md:-mt-9  -mt-5"
+              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F]  md:-mt-9  -mt-5 lg:mt-80"
               style={{ color: "red" }}
             >
               ▼ Zona de Rebaixamento ▼
@@ -126,15 +126,15 @@ const Ranking = () => {
           </div>
         </div>
         
-        { <div className="top-9 flex lg:w-1/5 flex-col md:relative md:hidden m-auto">
-          <p className="text-nowrap lg:text-md font-light text-[#471650] md:ml-2 md:text-[19px] dark:text-white ml-9 text-[18px]">
+        { <div className="top-9 flex lg:w-1/5 flex-col md:relative md:hidden m-7 ">
+          <p className="text-nowrap lg:text-md font-light text-[#471650] md:ml-2 md:text-[19px] dark:text-white ml-3 text-[18px]">
             Mostrando Ranking
           </p>
           <div className="relative w-fit p-1">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:w-full dark:border-primary-200 dark:text-primary-200 mr-16 ml-6"
+              className="focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:w-full dark:border-primary-200 dark:text-primary-200 mr-4"
             >
               {options.map((option) => (
                 <option
@@ -148,7 +148,7 @@ const Ranking = () => {
             </select>
           </div>
         </div> }
-        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 md:-mt-9 mr-90 w-[320px] ml-4 lg:-mt-8">
+        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 md:-mt-9 mr-90 w-[320px] ml-4 lg:-mt-8  -mt-5">
           <div>
             <p className=" text-base font-bold text-white md:text-[30px] lg:text-md text-[18px] ml-5">
               Ricos da Vouvi
@@ -164,7 +164,7 @@ const Ranking = () => {
               <></>
             ),
           )}
-          <div className="lg:border-card m-auto my-4 flex rounded-md border-2 md:w-52  w-64 -mt- md:m-10"></div>
+          <div className="lg:border-card m-auto my-4 flex rounded-md border-2 md:w-52  w-64 -mt- md:m-10 lg:w-80 lg:ml-4 "></div>
           {lateral.map((lateral, index) => (
             <CardLateral
               posicao={index + 1}

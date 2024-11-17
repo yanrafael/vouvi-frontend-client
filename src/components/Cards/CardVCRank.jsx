@@ -15,7 +15,7 @@ const CardLateral = (props) =>{
     return(
         <>
             {props.nome === 'Usuario'
-                ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 p-1 rounded-md mr-2 items-center md:w-[270px] w-72 ml-2 ">
+                ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 p-1 rounded-md mr-2 items-center md:w-[270px] w-72 ml-2 lg:w-[350px]">
                     <div className="flex items-center ">
                         <span className="lg:mr-2 flex items-center justify-center lg:w-14 lg:h-14 bg-secondary-200 rounded-full text-md text-[#002952] text-cardVoce md:w-10 md:h-10 h- w-9 ml-2">{props.posicao}°</span>
                         <div className=" lg:text-md font-medium md:text-[19px] md:w-1 text-[20px] ml-2">Você</div>
