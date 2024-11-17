@@ -68,7 +68,7 @@ const Ranking = () => {
           <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white text-[40px] ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-6 lg:mr-96 lg:-mt-28 md:p-1 mt-11 ">
             Os Especialistas!
           </h2>
-          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-6">
+          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-6 mr-16">
             Ranking atualizado
           </p>
         </div>
@@ -95,7 +95,7 @@ const Ranking = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 w-10 hidden lg::block"></div>
+      <div className="mt-10 w-10 md:hidden lg::block"></div>
       <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-1 ">
         <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ml-3 md:-mt-12 ">
           <div className="flex justify-evenly  md:text-nowrap m-9  ">
