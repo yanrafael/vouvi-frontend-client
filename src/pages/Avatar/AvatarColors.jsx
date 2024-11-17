@@ -28,7 +28,7 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
 
   const AvatarStyle = (
     <svg
-      className="lg:w-308 md:w-[74%] h-auto"
+      className="lg:w-308 md:w-[74%] h-auto w-[100%] pr-7 pt-7 md:p-0"
       width="308"
       height="346"
       viewBox="0 0 308 346"
@@ -47,6 +47,9 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
 
   return (
     <div className="flex relative lg:w-[520px] flex-col items-center lg:rounded-md bg-[#C9C9C8] lg:py-10 dark:bg-[#151515] md:w-[182px] md:py-5 md:rounded-tl-md md:rounded-bl-md">
+      <h1 className="text-[24px] font-semibold dark:text-white mt-10 mb-5 md:hidden">
+        Crie seu avatar!
+      </h1>
       <div
         style={{
           backgroundImage: `url(${Background})`, // caminho para a imagem
@@ -55,52 +58,52 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
           backgroundRepeat: "no-repeat", // impede a repetição da imagem
           backgroundColor: Bg[IconBorder], // cor de fundo como fallback
         }}
-        className={`flex w-10/12 lg:h-auto rounded-md lg:border-[10px] border-white lg:pt-16 transition-all duration-500 dark:border-black  md:h-[160px] md:border-[6px] md:pt-8`}
+        className={`flex relative md:w-10/12 lg:h-auto rounded-md lg:border-[10px] border-white lg:pt-16 transition-all duration-500 dark:border-black md:h-[160px] border-[6px] md:pt-8 w-[130px] h-[140px]`}
       >
         {AvatarStyle}
-        <div className="absolute ml-[31.75rem] mt-20 w-[140px] lg:ml-[25.25%] lg:mt-20 lg:w-[140px] md:w-12 md:ml-[24.9%] md:mt-7">
+        <div className="absolute lg:ml-[31.75%] lg:mt-[19.5%] lg:w-[140px] md:w-12 md:ml-[31.95%] md:mt-7 w-[40px] ml-[34.5%] mt-[43%]">
           <img width="140px" src={Eyes} alt="" />
         </div>
-        <div className="absolute ml-[31.75rem] w-[140px] lg:ml-[26.2%] lg:mt-[183px] lg:w-[130px] md:w-12 md:ml-[24.9%] md:mt-[66px]">
+        <div className="absolute lg:ml-[33%] lg:mt-[183px] lg:w-[130px] md:w-12 md:ml-[31.95%] md:mt-[66px] w-[45px] ml-[32.5%] mt-[71.5%]">
           <img width="140px" src={Necklace} alt="" />
         </div>
-        <div className="absolute ml-[31.75rem] w-[140px] lg:ml-[35.1%] lg:mt-[195px] lg:w-[140px] md:w-3.5 md:ml-[33.7%] md:mt-[70px]">
+        <div className="absolute lg:ml-[44.5%] lg:mt-[195px] lg:w-[140px] md:w-3.5 md:ml-[44%] md:mt-[70px] w-[15px] ml-[44.5%] mt-[75%]">
           <img width="40px" src={Pendant} alt="" />
         </div>
       </div>
-      <div className="flex w-10/12 justify-around py-6">
+      <div className="flex md:w-10/12 justify-around md:py-6 py-6 w-[230px]">
         <div
           style={{ backgroundColor: IconBorder === 0 ? Bg[0] : "#007fff" }}
-          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 cursor-pointer rounded-full bg-secondary-200 transition-all duration-300 ${IconBorder === 0 ? Border : ""} `}
+          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 w-6 h-6 cursor-pointer rounded-full bg-secondary-200 transition-all duration-300 ${IconBorder === 0 ? Border : ""} `}
           onClick={() => IconStates(0)}
         ></div>
         <div
           style={{ backgroundColor: IconBorder === 1 ? Bg[1] : "#FF2D2D" }}
-          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 cursor-pointer rounded-full bg-[#FF2D2D] transition-all duration-300 ${IconBorder === 1 ? Border : ""} `}
+          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 w-6 h-6 cursor-pointer rounded-full bg-[#FF2D2D] transition-all duration-300 ${IconBorder === 1 ? Border : ""} `}
           onClick={() => IconStates(1)}
         ></div>
         <div
           style={{ backgroundColor: IconBorder === 2 ? Bg[2] : "#37FF2D" }}
-          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 cursor-pointer rounded-full bg-[#37FF2D] transition-all duration-300 ${IconBorder === 2 ? Border : ""} `}
+          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 w-6 h-6 cursor-pointer rounded-full bg-[#37FF2D] transition-all duration-300 ${IconBorder === 2 ? Border : ""} `}
           onClick={() => IconStates(2)}
         ></div>
         <div
           style={{ backgroundColor: IconBorder === 3 ? Bg[3] : "#7C20BE" }}
-          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 cursor-pointer rounded-full bg-primary-200 transition-all duration-300 ${IconBorder === 3 ? Border : ""} `}
+          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 w-6 h-6 cursor-pointer rounded-full bg-primary-200 transition-all duration-300 ${IconBorder === 3 ? Border : ""} `}
           onClick={() => IconStates(3)}
         ></div>
         <div
           style={{ backgroundColor: IconBorder === 4 ? Bg[4] : "yellow" }}
-          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 cursor-pointer rounded-full bg-yellow transition-all duration-300 ${IconBorder === 4 ? Border : ""} `}
+          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 w-6 h-6 cursor-pointer rounded-full bg-yellow transition-all duration-300 ${IconBorder === 4 ? Border : ""} `}
           onClick={() => IconStates(4)}
         ></div>
         <div
           style={{ backgroundColor: IconBorder === 5 ? Bg[5] : "#FF0084" }}
-          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 cursor-pointer rounded-full bg-[#FF0084] transition-all duration-300 ${IconBorder === 5 ? Border : ""} `}
+          className={`lg:h-14 lg:w-14 md:h-5 md:w-5 w-6 h-6 cursor-pointer rounded-full bg-[#FF0084] transition-all duration-300 ${IconBorder === 5 ? Border : ""} `}
           onClick={() => IconStates(5)}
         ></div>
       </div>
-      <Link className="flex w-full justify-center" to={"/profile"}>
+      <Link className="hidden md:flex md:justify-center w-full" to={"/profile"}>
         <SecondaryButton
           color={"w-9/12 lg:h-[75px] md:h-[125%] lg:text-[32px] md:text-sm hover:bg-opacity-100 hover:text-primary-200 bg-white"}
           text={"Pronto!"}
