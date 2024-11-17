@@ -68,19 +68,19 @@ const Ranking = () => {
           <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white text-[40px] ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-1 lg:mr-96 lg:-mt-28 md:p-1  ">
             Os Especialistas!
           </h2>
-          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] lg:mr-[990px] text-[24px] lg:text-nowrap lg:-mt-1 mr-24 md:-m-6">
+          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 mr-24 md:-m-6 lg:-ml-16">
             Ranking atualizado
           </p>
         </div>
         <div className="md:flex top-9 hidden w-1/5 flex-col">
-          <p className="lg:text-md font-light text-[#471650] md:text-[29px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3 lg:  md:m-3">
+          <p className="lg:text-md font-light text-[#471650] md:text-[29px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3 lg:  md:m-3 lg:mt-11">
             Mostrando Ranking
           </p>
           <div className="relative w-fit  ">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[499px]  md:m-2"
+              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[499px]  md:m-2 lg:mt-1"
             >
               {options.map((option) => (
                 <option
