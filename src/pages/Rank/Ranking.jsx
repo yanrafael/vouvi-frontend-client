@@ -63,24 +63,24 @@ const Ranking = () => {
       <HeaderIntern iconActiveNumber={2}>
         <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} />
       </HeaderIntern>
-      <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:-m-">
-        <div className="lg:w-3/5 top-8 mr-5  flex-col md:mx-30 md:relative">
-          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white text-[40px] ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-1 lg:mr-96 lg:-mt-28 md:p-1  ">
+      <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:w-30 text-nowrap">
+        <div className="lg:w-3/5 top-8 mr-5  flex-col md:mx-30 ">
+          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white text-[40px] ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-6 lg:mr-96 lg:-mt-28 md:p-1 mt-11 ">
             Os Especialistas!
           </h2>
-          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 mr-24 md:-m-6 lg:-ml-16">
+          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-6">
             Ranking atualizado
           </p>
         </div>
-        <div className="md:flex top-9 hidden w-1/5 flex-col">
-          <p className="lg:text-md font-light text-[#471650] md:text-[29px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3 lg:  md:m-3 lg:mt-11">
+        <div className="md:flex hidden w-1/5 flex-col  relative md:-top-14">
+          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3 lg:mt-1 md:m-1">
             Mostrando Ranking
           </p>
           <div className="relative w-fit  ">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[499px]  md:m-2 lg:mt-1"
+              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[490px]  md:m-2 lg:mt-1  mt-11 "
             >
               {options.map((option) => (
                 <option
@@ -95,9 +95,9 @@ const Ranking = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 w-10"></div>
+      <div className="mt-10 w-10 hidden lg::block"></div>
       <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-1 ">
-        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ml-3 ">
+        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ml-3 md:-mt-12 ">
           <div className="flex justify-evenly  md:text-nowrap m-9  ">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
@@ -148,7 +148,7 @@ const Ranking = () => {
             </select>
           </div>
         </div> }
-        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 md:-mt-9 mr-90 w-[320px] ml-4 lg:-mt-8  -mt-5">
+        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[320px] ml-4 lg:-mt-8  -mt-5 md:-mt-12">
           <div>
             <p className=" text-base font-bold text-white md:text-[30px] lg:text-md text-[18px] ml-5">
               Ricos da Vouvi

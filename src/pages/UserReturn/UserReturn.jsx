@@ -3,31 +3,23 @@ import PropTypes from "prop-types";
 
 function UserReturn() {
   return (
-    <section className="lg:fixed left-0 top-0 z-20 flex h-full lg:w-full items-center justify-center overflow-y-hidden lg:shadow-2xl backdrop-blur-[25px] dark:bg-black/50 md:h-auto md:mt-50 ">
-      <div className="flex h-[600px] w-8/12 flex-col items-center justify-center rounded-md bg-white p-6 shadow-2xl dark:bg-[#1B1B1B] dark:shadow-black">
-        <p className="text-[40px] text-black dark:text-[#FFFFFF] font-semibold md:text-[30px]">
+    <section className="md:mt-50 left-0 top-0 z-20 flex h-full lg:items-center justify-center overflow-y-hidden backdrop-blur-[25px] md:h-auto lg:fixed lg:w-full lg:shadow-2xl dark:bg-black/50 mr-7">
+      <div className="flex w-96 flex-col items-center justify-center rounded-md bg-white p-6 shadow-2xl md:h-[600px] md:w-[600px] lg:w-8/12 dark:bg-[#1B1B1B] dark:shadow-black ">
+        <p className="text-nowrap text-[20px] font-semibold text-black dark:text-[#FFFFFF] md:text-[25px]">
           Você voltou, sentimos sua falta!
         </p>{" "}
         <p className="text-[20px]">O que deseja fazer?</p>
-        <div className="flex h-[400px] w-11/12 items-center justify-around rounded-md p-8  md:items-center ">
+        <div className="flex h-[400px] items-center justify-around gap-4 rounded-md p-8 md:w-11/12 md:items-center lg:gap-0">
           <Box
             icon={
-              <Icon
-                className="text-primary-200"
-                icon="solar:home-2-bold"
-                width="130px"
-              />
+              <Icon className="text-primary-200" icon="solar:home-2-bold" />
             }
             cor={true}
             texto="Voltar a última atividade"
           />
           <Box
             icon={
-              <Icon
-                className="text-secondary-200"
-                icon="solar:graph-up-bold"
-                width="130px"
-              />
+              <Icon className="text-secondary-200" icon="solar:graph-up-bold" />
             }
             cor={false}
             texto="Atualizar as suas finanças"
@@ -41,10 +33,12 @@ function UserReturn() {
 function Box({ icon, cor, texto }) {
   return (
     <div
-      className={`${cor ? "hover:bg-primary-200" : "hover:bg-secondary-200"} hover:rounded-md hover:border-8 hover:bg-opacity-30 ${cor ? "hover:border-[#7C20BE]" : "hover:border-secondary-200"} lg:flex lg:h-[250px] lg:w-4/12 flex-col items-center justify-center rounded-md bg-secondary-200/20 p-4 text-black shadow-black dark:bg-black dark:text-white  md:text-center flex md:h-[200px] md:w-5/12`}
+      className={`${cor ? "hover:bg-primary-200" : "hover:bg-secondary-200"} hover:rounded-md hover:border-8 hover:bg-opacity-30 ${cor ? "hover:border-[#7C20BE]" : "hover:border-secondary-200"} flex w-36 flex-col items-center justify-center rounded-md bg-secondary-200/20 p-4 text-center text-[90px] text-black shadow-black md:h-[200px] md:w-48 md:text-center md:text-[140px] lg:flex lg:h-[250px] lg:w-4/12 lg:text-[150px] dark:bg-black dark:text-white `}
     >
       {icon}
-      <p className="text-[20px] font-bold md:text-[16px]">{texto}</p>
+      <p className="text-[16px] font-bold md:text-[16px] lg:text-[20px]">
+        {texto}
+      </p>
     </div>
   );
 }
