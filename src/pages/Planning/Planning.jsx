@@ -35,7 +35,7 @@ function Planning() {
       <Note />
       <BudgetModal />
       <BudgetDetails />
-      <button onClick={() => showModal("budget-modal")}>click</button>
+      <button onClick={() => showModal("budget-details")}>click</button>
       <HeaderIntern
         iconActiveNumber={1}
         darkMode={darkMode}
