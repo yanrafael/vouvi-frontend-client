@@ -66,7 +66,7 @@ function AvatarCustom() {
     setBackgroundColor(texture);
   };
   return (
-    <div className="flex flex-col md:flex-row lg:w-full lg:justify-evenly 2xl:w-[90%] 2xl:gap-5 md:justify-center md:max-w-[90%] w-full h-full md:h-auto">
+    <div className="f flex h-full w-full flex-col md:h-auto md:max-w-[90%] md:flex-row md:justify-center lg:w-full 2xl:w-[90%] 2xl:justify-evenly 2xl:gap-5">
       <AvatarColors
         Eyes={eyesColor}
         Texture={textureColor}
@@ -75,69 +75,69 @@ function AvatarCustom() {
         Background={backgroundColor}
       />
 
-      <div className="flex lg:w-[900px] flex-col lg:rounded-md bg-[#C9C9C8] lg:p-10 dark:bg-[#151515] md:w-[510px] md:rounded-tr-md md:rounded-br-md md:p-5">
-        <h1 className="hidden md:flex w-full lg:pb-10 lg:text-lg font-medium dark:text-white md:text-md md:pb-5">
+      <div className="flex flex-col bg-[#C9C9C8] md:w-[510px] md:rounded-br-md md:rounded-tr-md md:p-5 lg:w-[550px] lg:rounded-r-md xl:w-7/12 2xl:w-[900px] 2xl:rounded-md 2xl:p-10 dark:bg-[#151515]">
+        <h1 className="hidden w-full font-medium md:flex md:pb-5 md:text-md lg:pb-10 lg:text-lg dark:text-white">
           Crie seu avatar!
         </h1>
-        <div className="flex md:w-auto md:justify-start justify-center">
+        <div className="flex justify-center md:w-auto md:justify-start">
           <button
-            className={`${BtColor === 0 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} flex h-10 lg:h-14 items-center justify-evenly md:rounded-t-md rounded-t-[10px] lg:p-5 lg:text-md font-medium md:text-sm md:p-[2.40%] md:h-10 p-3`}
+            className={`${BtColor === 0 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} flex h-10 items-center justify-evenly rounded-t-[10px] p-3 font-medium md:h-10 md:rounded-t-md md:p-[2.40%] md:text-sm lg:h-10 lg:p-5 lg:text-[20px] xl:h-12 xl:p-5 xl:text-[24px] 2xl:h-14 2xl:p-5 2xl:text-md`}
             onClick={() => SetColor(0)}
           >
             <Icon
-              className={`${BtColor === 0 ? TextColor : ""} w-8 md:w-5 lg:w-10`}
+              className={`${BtColor === 0 ? TextColor : ""} w-8 md:w-5 lg:w-14 xl:w-8 2xl:w-10`}
               width="34"
               icon={"mingcute:eye-fill"}
             />{" "}
-            <p className="hidden md:flex">Olhos</p>
+            <p className="hidden md:flex lg:hidden xl:flex">Olhos</p>
           </button>
           <button
-            className={`${BtColor === 1 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} flex h-10 lg:h-14 items-center justify-evenly md:rounded-t-md rounded-t-[10px] lg:p-5 lg:text-md font-medium md:text-sm md:p-[2.40%] md:h-10 md:ml-0 ml-[4px] p-3`}
+            className={`${BtColor === 1 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} ml-[4px] flex h-10 items-center justify-evenly rounded-t-[10px] p-3 font-medium md:ml-0 md:h-10 md:rounded-t-md md:p-[2.40%] md:text-sm lg:h-10 lg:p-5 lg:text-[20px] xl:h-12 xl:p-5 xl:text-[24px] 2xl:h-14 2xl:p-5 2xl:text-md`}
             onClick={() => SetColor(1)}
           >
             <Icon
-              className={`${BtColor === 1 ? TextColor : ""} w-8 md:w-5 lg:w-10`}
+              className={`${BtColor === 1 ? TextColor : ""} w-8 md:w-5 lg:w-14 xl:w-8 2xl:w-10`}
               width="34"
               icon={"icon-park-outline:texture"}
             />{" "}
-            <p className="hidden md:flex">Pelos</p>
+            <p className="hidden md:flex lg:hidden xl:flex">Pelos</p>
           </button>
           <button
-            className={`${BtColor === 2 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} flex h-10 lg:h-14 items-center justify-evenly md:rounded-t-md rounded-t-[10px] lg:p-5 lg:text-md font-medium md:text-sm md:p-[2.40%] md:h-10 md:ml-0 ml-[4px] p-3`}
+            className={`${BtColor === 2 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} ml-[4px] flex h-10 items-center justify-evenly rounded-t-[10px] p-3 font-medium md:ml-0 md:h-10 md:rounded-t-md md:p-[2.40%] md:text-sm lg:h-10 lg:p-5 lg:text-[20px] xl:h-12 xl:p-5 xl:text-[24px] 2xl:h-14 2xl:p-5 2xl:text-md`}
             onClick={() => SetColor(2)}
           >
             <Icon
-              className={`${BtColor === 2 ? TextColor : ""} w-8 md:w-5 lg:w-10`}
+              className={`${BtColor === 2 ? TextColor : ""} w-8 md:w-5 lg:w-14 xl:w-8 2xl:w-10`}
               width="34"
               icon={"carbon:circle-dash"}
             />{" "}
-            <p className="hidden md:flex">Coleiras</p>
+            <p className="hidden md:flex lg:hidden xl:flex">Coleiras</p>
           </button>
           <button
-            className={`${BtColor === 3 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} flex h-10 lg:h-14 items-center justify-evenly md:rounded-t-md rounded-t-[10px] lg:p-5 lg:text-md font-medium md:text-sm md:p-[2.40%] md:h-10 md:ml-0 ml-[4px] p-3`}
+            className={`${BtColor === 3 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} ml-[4px] flex h-10 items-center justify-evenly rounded-t-[10px] p-3 font-medium md:ml-0 md:h-10 md:rounded-t-md md:p-[2.40%] md:text-sm lg:h-10 lg:p-5 lg:text-[20px] xl:h-12 xl:p-5 xl:text-[24px] 2xl:h-14 2xl:p-5 2xl:text-md`}
             onClick={() => SetColor(3)}
           >
             <Icon
-              className={`${BtColor === 3 ? TextColor : ""} w-8 md:w-5 lg:w-10`}
+              className={`${BtColor === 3 ? TextColor : ""} w-8 md:w-5 lg:w-14 xl:w-8 2xl:w-10`}
               width="34"
               icon={"mdi:necklace"}
             />{" "}
-            <p className="hidden md:flex">Pingentes</p>
+            <p className="hidden md:flex lg:hidden xl:flex">Pingentes</p>
           </button>
           <button
-            className={`${BtColor === 4 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} flex h-10 lg:h-14 items-center justify-evenly md:rounded-t-md rounded-t-[10px] lg:p-5 lg:text-md font-medium md:text-sm md:p-[2.35%] md:ml-0 ml-[4px] md:h-10 p-3`}
+            className={`${BtColor === 4 ? BtBg : "bg-[#F5F5F466] text-[#02020B9C] dark:bg-black dark:text-[#8D8D8D]"} ml-[4px] flex h-10 items-center justify-evenly rounded-t-[10px] p-3 font-medium md:ml-0 md:h-10 md:rounded-t-md md:p-[2.35%] md:text-sm lg:h-10 lg:p-5 lg:text-[20px] xl:h-12 xl:p-5 xl:text-[24px] 2xl:h-14 2xl:p-5 2xl:text-md`}
             onClick={() => SetColor(4)}
           >
             <Icon
-              className={`${BtColor === 4 ? TextColor : ""} w-8 md:w-5 lg:w-10`}
+              className={`${BtColor === 4 ? TextColor : ""} w-8 md:w-5 lg:w-14 xl:w-8 2xl:w-10`}
               width="34"
               icon={"mynaui:square-solid"}
             />{" "}
-            <p className="hidden md:flex">Fundos</p>
+            <p className="hidden md:flex lg:hidden xl:flex">Fundos</p>
           </button>
         </div>
         <div
-          className={`${BtColor !== 0 ? Hidden : "inline"} flex md:w-full lg:h-full rounded-[0px_0px_24px_24px] bg-white md:p-5 pt-3 pl-0.5 dark:bg-[#1F1F1F] md:h-[170px] md:mb-0 h-[225px] w-[295px] m-auto`}
+          className={`${BtColor !== 0 ? Hidden : "inline"} m-auto flex flex-wrap h-[225px] w-[295px] rounded-[0px_0px_24px_24px] bg-white pl-0.5 pt-3 md:mb-0 md:h-[170px] md:w-full md:p-5 lg:h-full dark:bg-[#1F1F1F]`}
         >
           <AvatarTrinkets
             onClick={() => ChangeEyes(EyesBrown)}
@@ -165,7 +165,7 @@ function AvatarCustom() {
           </AvatarTrinkets>
         </div>
         <div
-          className={`${BtColor !== 1 ? Hidden : "inline"} flex md:h-full md:w-full rounded-[0px_0px_24px_24px] bg-white p-5 md:p-5 pt-3 pl-0.5 dark:bg-[#1F1F1F] h-[225px] w-[295px] m-auto`}
+          className={`${BtColor !== 1 ? Hidden : "inline"} m-auto flex h-[225px] w-[295px] flex-wrap rounded-[0px_0px_24px_24px] bg-white p-5 pl-0.5 pt-3 md:h-full md:w-full md:p-5 dark:bg-[#1F1F1F]`}
         >
           <AvatarTrinkets
             onClick={() => ChangeTexture("white")}
@@ -185,7 +185,7 @@ function AvatarCustom() {
           ></AvatarTrinkets>
         </div>
         <div
-          className={`${BtColor !== 2 ? Hidden : "inline"} flex md:h-full md:w-full rounded-[0px_0px_24px_24px] bg-white p-5 md:p-5 pt-3 pl-0.5 dark:bg-[#1F1F1F] h-[225px] w-[295px] m-auto`}
+          className={`${BtColor !== 2 ? Hidden : "inline"} m-auto flex h-[225px] w-[295px] flex-wrap rounded-[0px_0px_24px_24px] bg-white p-5 pl-0.5 pt-3 md:h-full md:w-full md:p-5 dark:bg-[#1F1F1F]`}
         >
           <AvatarTrinkets
             onClick={() => ChangeNecklace(NecklaceYale)}
@@ -213,7 +213,7 @@ function AvatarCustom() {
           </AvatarTrinkets>
         </div>
         <div
-          className={`${BtColor !== 3 ? Hidden : "inline"} flex md:h-full md:w-full rounded-[0px_0px_24px_24px] bg-white p-5 md:p-5 pt-3 pl-0.5 dark:bg-[#1F1F1F] h-[225px] w-[295px] m-auto`}
+          className={`${BtColor !== 3 ? Hidden : "inline"} m-auto flex h-[225px] w-[295px] flex-wrap rounded-[0px_0px_24px_24px] bg-white p-5 pl-0.5 pt-3 md:h-full md:w-full md:p-5 dark:bg-[#1F1F1F]`}
         >
           <AvatarTrinkets
             onClick={() => ChangePendant(Pendant8Star)}
@@ -241,7 +241,7 @@ function AvatarCustom() {
           </AvatarTrinkets>
         </div>
         <div
-          className={`${BtColor !== 4 ? Hidden : "inline"} flex md:h-full md:w-full rounded-[0px_0px_24px_24px] bg-white p-5 md:p-5 pt-3 pl-0.5 dark:bg-[#1F1F1F] h-[225px] w-[295px] m-auto`}
+          className={`${BtColor !== 4 ? Hidden : "inline"} m-auto flex h-[225px] w-[295px] flex-wrap rounded-[0px_0px_24px_24px] bg-white p-5 pl-0.5 pt-3 md:h-full md:w-full md:p-5 dark:bg-[#1F1F1F]`}
         >
           <AvatarTrinkets onClick={() => ChangeBackground(BgBeach)}>
             <img className="h-full max-w-none" src={BgBeach} alt="" />
@@ -256,20 +256,24 @@ function AvatarCustom() {
             <img className="h-full max-w-none" src={BgRoom} alt="" />
           </AvatarTrinkets>
         </div>
-        <div className="md:absolute relative flex flex-row justify-between m-auto w-[296px] py-7">
-        <Link className="md:hidden flex w-full" to={"/profile"}>
-          <SecondaryButton
-            color={"w-12/12 hover:bg-opacity-100 hover:text-primary-200 bg-white"}
-            text={"Pronto!"}
-          />
-        </Link>
-        <Link className="md:hidden flex w-full" to={"/profile"}>
-          <SecondaryButton
-            color={"w-[160px] hover:bg-opacity-100 hover:text-primary-200 bg-white"}
-            text={"Salvar Estilo"}
-          />
-        </Link>
-      </div>
+        <div className="relative m-auto flex w-[296px] flex-row justify-between py-7 md:absolute">
+          <Link className="flex w-full md:hidden" to={"/profile"}>
+            <SecondaryButton
+              color={
+                "w-12/12 hover:bg-opacity-100 hover:text-primary-200 bg-white"
+              }
+              text={"Pronto!"}
+            />
+          </Link>
+          <Link className="flex w-full md:hidden" to={"/profile"}>
+            <SecondaryButton
+              color={
+                "w-[160px] hover:bg-opacity-100 hover:text-primary-200 bg-white"
+              }
+              text={"Salvar Estilo"}
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );

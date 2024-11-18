@@ -146,7 +146,7 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
   );
 
   return (
-    <div className="relative flex flex-col items-center bg-[#C9C9C8] md:w-[182px] md:rounded-bl-md md:rounded-tl-md md:py-5 lg:w-[520px] lg:rounded-md lg:py-10 dark:bg-[#151515]">
+    <div className="relative flex flex-none flex-col items-center bg-[#C9C9C8] md:w-[182px] md:rounded-bl-md md:rounded-tl-md md:py-5 lg:w-[520px] lg:rounded-l-md 2xl:rounded-md lg:py-10 dark:bg-[#151515]">
       <h1 className="mb-5 mt-10 text-[24px] font-semibold md:hidden dark:text-white">
         Crie seu avatar!
       </h1>
