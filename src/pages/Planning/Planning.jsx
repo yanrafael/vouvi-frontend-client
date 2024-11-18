@@ -15,6 +15,7 @@ import Graphics from "./Graphics";
 import Goals from "./Goals";
 import Note from "../../components/Modals/Note";
 import BudgetModal from "../../components/Modals/BudgetModal";
+import BudgetDetails from "../../components/Modals/BudgetDetails";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -33,6 +34,7 @@ function Planning() {
       <NotesModal />
       <Note />
       <BudgetModal />
+      <BudgetDetails />
       <button onClick={() => showModal("budget-modal")}>click</button>
       <HeaderIntern
         iconActiveNumber={1}
