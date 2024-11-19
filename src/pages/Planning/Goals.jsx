@@ -96,7 +96,6 @@ function Goals() {
       </div>
 
       <div className="flex flex-col gap-4">
-        <div className="pointer-events-none absolute -ml-[180px] h-20 w-40 bg-gradient-to-l from-[#FFFFFF] dark:from-[#000000]"></div>
         <div className="flex h-14 items-center">
           <input
             type="text"
