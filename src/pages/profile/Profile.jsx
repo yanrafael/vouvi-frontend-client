@@ -50,6 +50,7 @@ function Profile() {
       {activeModal === "friendsAdd" && (
         <FriendsAddModal closeModal={closeModal} />
       )}
+      
     </>
   );
 }

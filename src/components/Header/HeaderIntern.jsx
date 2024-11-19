@@ -12,11 +12,11 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
 
   // Borda ao clicar
-  const Outline = "outline xl:outline-[8px] 2xl:outline-[10px] outline-[rgba(0,127,255,0.15)]";
+  const Outline = "outline lg:outline-[7px] xl:outline-[8px] 2xl:outline-[10px] outline-[rgba(0,127,255,0.15)]";
   const [useOutline, setUseOutline] = useState(false);
 
   // Preenchimento ao clicar
-  const Fill = "-z-10 w-[inherit] xl:h-[43px] 2xl:h-[54px] ml-0 mt-0 ";
+  const Fill = "-z-10 w-[inherit] lg:h-[38px] xl:h-[43px] 2xl:h-[54px] ml-0 mt-0 ";
   const [fillComponent, setAnimationFill] = useState(false);
 
   // Controle de cor do texto ao clicar
