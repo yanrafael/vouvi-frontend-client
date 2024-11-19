@@ -65,10 +65,10 @@ const Ranking = () => {
       </HeaderIntern>
       <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:w-30 text-nowrap">
         <div className="lg:w-3/5 top-8 mr-5  flex-col md:mx-30 ">
-          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white text-[40px] ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-6 lg:mr-96 lg:-mt-28 md:p-1 mt-11 ">
+          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white  ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-6 lg:mr-96 lg:-mt-28 md:p-1 mt-11 text-[30px]">
             Os Especialistas!
           </h2>
-          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-6 mr-16">
+          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-6 mr-20">
             Ranking atualizado
           </p>
         </div>
@@ -118,7 +118,7 @@ const Ranking = () => {
           <div className="mt-10"></div>
           <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold">
             <span
-              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F]  md:-mt-9  -mt-5 lg:mt-80"
+              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F]  md:-mt-9  -mt-2 lg:mt-80 text-[16px] lg:text-[40px]"
               style={{ color: "red" }}
             >
               ▼ Zona de Rebaixamento ▼
@@ -127,14 +127,14 @@ const Ranking = () => {
         </div>
         
         { <div className="top-9 flex lg:w-1/5 flex-col md:relative md:hidden m-7 ">
-          <p className="text-nowrap lg:text-md font-light text-[#471650] md:ml-2 md:text-[19px] dark:text-white ml-3 text-[18px]">
+          <p className="text-nowrap lg:text-md font-light text-[#471650] md:ml-2 md:text-[19px] dark:text-white ml-3 text-[18px] ">
             Mostrando Ranking
           </p>
           <div className="relative w-fit p-1">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:w-full dark:border-primary-200 dark:text-primary-200 mr-4"
+              className="focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:w-full dark:border-primary-200 dark:text-primary-200 mr-4 text-[16px] w-72"
             >
               {options.map((option) => (
                 <option
@@ -150,10 +150,10 @@ const Ranking = () => {
         </div> }
         <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[320px] ml-4 lg:-mt-8  -mt-5 md:-mt-12">
           <div>
-            <p className=" text-base font-bold text-white md:text-[30px] lg:text-md text-[18px] ml-5">
+            <p className=" lg:text-md font-bold text-white md:text-[30px] text-[18px] ml-5 mt-4">
               Ricos da Vouvi
             </p>
-            <p className="mb-3 mr-px text-md font-light text-white md:text-[20px] lg:text-md pt-4 mt-0 text[16px] ml-5">
+            <p className="mb-3 mr-px lg:text-md font-light text-white md:text-[20px]  pt-4 mt-0 text[16px] ml-5 text-[18px]">
               Ranking de Vcoins
             </p>
           </div>
@@ -164,7 +164,7 @@ const Ranking = () => {
               <></>
             ),
           )}
-          <div className="lg:border-card m-auto my-4 flex rounded-md border-2 md:w-52  w-64 -mt- md:m-10 lg:w-80 lg:ml-4 "></div>
+          <div className="lg:border-card m-auto my-4 lg:flex rounded-md border-2 md:w-60  w-64 md:m-4 lg:w-80 lg:ml-4 hidden md:block md:mr-1"></div>
           {lateral.map((lateral, index) => (
             <CardLateral
               posicao={index + 1}

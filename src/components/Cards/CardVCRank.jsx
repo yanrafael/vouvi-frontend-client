@@ -15,7 +15,7 @@ const CardLateral = (props) =>{
     return(
         <>
             {props.nome === 'Usuario'
-                ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 p-1 rounded-md mr-2 items-center md:w-[270px] w-72 ml-2 lg:w-[350px]">
+                ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 p-1 rounded-md mr-2 items-center md:w-[270px] w-72 ml-4 lg:w-[350px] m-3 md:mr-0 md:ml-2 md:m-0">
                     <div className="flex items-center ">
                         <span className="lg:mr-2 flex items-center justify-center lg:w-14 lg:h-14 bg-secondary-200 rounded-full text-md text-[#002952] text-cardVoce md:w-10 md:h-10 h- w-9 ml-2">{props.posicao}°</span>
                         <div className=" lg:text-md font-medium md:text-[19px] md:w-1 text-[20px] ml-2">Você</div>
@@ -32,15 +32,15 @@ const CardLateral = (props) =>{
                         }
                         
                         {
-                            props.posicao===1?<div className={`${textp} lg:text-md font-medium md:text-[23px]`}>{props.nome}</div>:
-                            props.posicao===2?<div className={`${texts} md:text-[23px] lg:font-medium `}>{props.nome}</div>:
-                            <div className={`${textt} md:text-[23px] lg:font-medium `}>{props.nome}</div>
+                            props.posicao===1?<div className={`${textp} lg:text-md font-medium md:text-[23px] text-[20px]`}>{props.nome}</div>:
+                            props.posicao===2?<div className={`${texts} md:text-[23px] lg:font-medium text-[20px]`}>{props.nome}</div>:
+                            <div className={`${textt} md:text-[23px] lg:font-medium text-[20px]`}>{props.nome}</div>
                         }
                     </div>
                     {
-                        props.posicao===1?<div className={`${textp}underline lg:text-md font-medium mr-2 md:text-[22px] `}>{props.vc}VC</div>:
-                        props.posicao===2?<div className={`${texts} underline lg:text-md font-light mr-2 md:text-[22px]`}>{props.vc}VC</div>:
-                        <div className={`${textt}underline lg:text-md font-light mr-2 md:text-[22px] `}>{props.vc}VC</div>
+                        props.posicao===1?<div className={`${textp}underline lg:text-md font-medium mr-2 md:text-[22px] text-[16px]`}>{props.vc}VC</div>:
+                        props.posicao===2?<div className={`${texts} underline lg:text-md font-light mr-2 md:text-[22px] text-[16px]`}>{props.vc}VC</div>:
+                        <div className={`${textt}underline lg:text-md font-light mr-2 md:text-[22px] text-[16px] `}>{props.vc}VC</div>
                     }
 
                 </div>
