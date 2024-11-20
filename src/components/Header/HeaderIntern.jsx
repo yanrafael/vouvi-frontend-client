@@ -188,7 +188,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   return (
     <>
-      <header className="sticky left-0 top-0 z-10 m-auto flex w-full items-center justify-around bg-[rgba(2,2,11,0.15)] lg:py-7 xl:py-8 2xl:py-10 backdrop-blur-[13px] dark:bg-[rgba(2,2,11,0.80);]">
+      <header className="hidden sticky left-0 top-0 z-10 m-auto lg:flex w-full items-center justify-around bg-[rgba(2,2,11,0.15)] lg:py-7 xl:py-8 2xl:py-10 backdrop-blur-[13px] dark:bg-[rgba(2,2,11,0.80);]">
         <LogoWhite Name={VouviWord} width2={`lg:h-[45px] xl:h-[53px] 2xl:h-[66px]`} darkMode={darkMode} />
         <nav className="flex">
           <Link to={"/learn"}>

@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
-function AvatarBasic({ openModal }) {
+function AvatarBasic({ openModal, textColor, width }) {
   return (
     <>
-      <div onClick={openModal} className="flex cursor-pointer items-center">
+      <div onClick={openModal} className={`flex cursor-pointer items-center ${width}`}>
         <div className="mr-3 flex flex-col leading-[1.1]">
-          <h1 className="text-right text-[32px] font-medium dark:text-[#8D8D8D]">
+          <h1 className={`text-right text-[32px] font-medium dark:text-[#8D8D8D] ${textColor}`}>
             Ajustes
           </h1>
         </div>

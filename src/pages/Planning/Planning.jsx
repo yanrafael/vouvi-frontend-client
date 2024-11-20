@@ -35,8 +35,8 @@ function Planning() {
         {activeContent === "graphics" ? <Graphics /> : <Goals />}
       </main>
 
-      <HeaderMobile/>
       <Footer />
+      <HeaderMobile iconId={1}/>
     </>
   );
 }
