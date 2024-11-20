@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 import AvatarBasic from "./AvatarBasic";
 import Settings from "./Settings";
+import SettingsModal from "../Modals/SettingsModal";
 
 function HeaderMobile({ iconId }) {
   // Borda ao clicar
@@ -131,62 +132,72 @@ function HeaderMobile({ iconId }) {
     StateChange(iconId); // Define o iconState para 0 ao montar o componente
   }, []);
 
+  const [activeModal, setActiveModal] = useState(null);
+
+  const openModal = (modalType) => setActiveModal(modalType);
+  const closeModal = () => setActiveModal(null);
+
   return (
-    <header className="sticky bottom-0 left-0 z-10 m-auto flex h-24 w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:hidden dark:bg-[rgba(2,2,11,0.80);]">
-      <nav className="flex w-full justify-around">
-        <Link to={"/learn"}>
-          <div onClick={() => StateChange(0)}>
-            <Navigation
-              width={`w- group ${useOutline === 0 ? Outline : ""}`}
-              icon={Learn}
-              textColor={"hidden"}
-            />
-          </div>
-        </Link>
-
-        <Link to={"/planning"}>
-          <div onClick={() => StateChange(1)}>
-            <Navigation
-              width={` group ${useOutline === 1 ? Outline : ""} `}
-              icon={Planning}
-              textColor={"hidden"}
-            />
-          </div>
-        </Link>
-
-        <Link to={"/profile"}>
-          <div onClick={() => StateChange(4)}>
-            {iconId === 4 ? (
-              <Settings textColor={`hidden `}/>
-            ) : (
-              <AvatarBasic
-                width={` group `}
+    <>
+      {activeModal === "settings" && <SettingsModal closeModal={closeModal} />}
+      <header className="sticky bottom-0 left-0 z-10 m-auto flex h-24 w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:hidden dark:bg-[rgba(2,2,11,0.80);]">
+        <nav className="flex w-full justify-around">
+          <Link to={"/learn"}>
+            <div onClick={() => StateChange(0)}>
+              <Navigation
+                width={`w- group ${useOutline === 0 ? Outline : ""}`}
+                icon={Learn}
+                textColor={"hidden"}
               />
-            )}
-          </div>
-        </Link>
+            </div>
+          </Link>
 
-        <Link to={"/ranking"}>
-          <div onClick={() => StateChange(2)}>
-            <Navigation
-              width={` group ${useOutline === 2 ? Outline : ""} `}
-              icon={Ranking}
-              textColor={"hidden"}
-            />
-          </div>
-        </Link>
+          <Link to={"/planning"}>
+            <div onClick={() => StateChange(1)}>
+              <Navigation
+                width={` group ${useOutline === 1 ? Outline : ""} `}
+                icon={Planning}
+                textColor={"hidden"}
+              />
+            </div>
+          </Link>
 
-        <Link to={"/store"}>
-          <div onClick={() => StateChange(3)}>
-            <Navigation
-              width={`group ${useOutline === 3 ? Outline : ""} `}
-              icon={Store}
-              textColor={"hidden"}
-            />
-          </div>
-        </Link>
-      </nav>
-    </header>
+          <Link to={"/profile"}>
+            <div onClick={() => StateChange(4)}>
+              {iconId === 4 ? (
+                <Settings
+                  openModal={() => openModal("settings")}
+                  width={` ${useOutline === 4 ? Outline : ""}`}
+                  textColor={`hidden `}
+                />
+              ) : (
+                <AvatarBasic width={` group `} />
+              )}
+            </div>
+          </Link>
+
+          <Link to={"/ranking"}>
+            <div onClick={() => StateChange(2)}>
+              <Navigation
+                width={` group ${useOutline === 2 ? Outline : ""} `}
+                icon={Ranking}
+                textColor={"hidden"}
+              />
+            </div>
+          </Link>
+
+          <Link to={"/store"}>
+            <div onClick={() => StateChange(3)}>
+              <Navigation
+                width={`group ${useOutline === 3 ? Outline : ""} `}
+                icon={Store}
+                textColor={"hidden"}
+              />
+            </div>
+          </Link>
+        </nav>
+      </header>
+    </>
   );
 }
 export default HeaderMobile;
