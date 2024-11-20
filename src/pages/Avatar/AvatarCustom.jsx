@@ -260,7 +260,7 @@ function AvatarCustom() {
           <Link className="flex w-full md:hidden" to={"/profile"}>
             <SecondaryButton
               color={
-                "w-12/12 hover:bg-opacity-100 hover:text-primary-200 bg-white"
+                "w-12/12 text-sm sm:text-sm hover:bg-opacity-100 hover:text-primary-200 bg-white"
               }
               text={"Pronto!"}
             />
@@ -268,7 +268,7 @@ function AvatarCustom() {
           <Link className="flex w-full md:hidden" to={"/profile"}>
             <SecondaryButton
               color={
-                "w-[160px] hover:bg-opacity-100 hover:text-primary-200 bg-white"
+                "w-[160px] sm:w-[150px] sm:text-sm text-sm hover:bg-opacity-100 hover:text-primary-200 bg-white"
               }
               text={"Salvar Estilo"}
             />
