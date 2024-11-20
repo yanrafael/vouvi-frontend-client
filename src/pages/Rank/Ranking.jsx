@@ -4,6 +4,7 @@ import CardLateral from "../../components/Cards/CardVCRank.jsx";
 import Colocacao from "../../components/Cards/cardRicoRank.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 import AvatarFull from "../../components/Header/AvatarFull";
+import HeaderMobile from "../../components/Header/HeaderMobile.jsx";
 
 import { useState } from "react";
 
@@ -175,6 +176,7 @@ const Ranking = () => {
         </div>
       </div>
       <Footer />
+      <HeaderMobile iconId={2}/>
     </>
   );
 };
