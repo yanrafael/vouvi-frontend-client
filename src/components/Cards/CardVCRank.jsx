@@ -23,11 +23,11 @@ const CardLateral = (props) =>{
                     <div className="lg:text-md underline text-secondary-200 font-light mr-2 mt-3 md:w-18 md:h-8 md:text-[18px] text-[19px]  ">{props.vc} VC</div>
                 </div>
                 :props.posicao<4
-                ?<div className="lg:w-full flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-md mr-2m  items-center md:w-[270px] md:h-20 h-14 w-[300px] ml-2 " >
+                ?<div className="lg:w-full flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-md mr-2m  items-center md:w-[270px] md:h-[65px] h-14 w-[300px] ml-2 " >
                     <div className="flex items-center">
                         {
                             props.posicao===1?<img src={document.body.classList.value === "dark"?Darkprimeiro :primeiro} alt="" className="mr-2 flex items-center justify-center lg:w-14 lg:h-14 rounded-full bg-black text-teste md:w-12  md:h-12 w-8 h-8"/>:
-                            props.posicao===2?<img src={document.body.classList.value === "dark"?Darksegundo :segundo} alt="" className="mr-2 flex items-center justify-center lg:w-12 lg:h-14 rounded-full bg-black text-teste md:text-[19px] md:w-12 md:h-12 w-8 h-8 "/>:
+                            props.posicao===2?<img src={document.body.classList.value === "dark"?Darksegundo :segundo} alt="" className="mr-2 flex items-center justify-center lg:w-12 lg:h-12 rounded-full bg-black text-teste md:text-[19px] md:w-12 md:h-12 w-8 h-8 "/>:
                             <img src={document.body.classList.value === "dark"?Darkterceiro :terceiro} alt="" className="mr-2 flex items-center justify-center lg:w-14 lg:h-14 rounded-full bg-black text-teste  md:w-12 md:h-12  w-8 h-8"/>
                         }
                         
@@ -44,7 +44,7 @@ const CardLateral = (props) =>{
                     }
 
                 </div>
-                :<div className="lg:flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-lg mr-2 lg:w-full items-center md:w-[270px] md:h-14 md:text-sm w-[300px] ml-2">
+                :<div className="lg:flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-lg mr-2 lg:w-full items-center md:w-[270px] md:h-11 md:text-sm w-[300px] ml-2 md:mb-2">
                     <div className="flex text-textolado text-primary-200 dark:text-[#5C5C5C]">
                         <div className="ml-4 text-md mr-3  ">{props.posicao}°</div>
                         <div className="text-md font-medium  ">{props.nome}</div>

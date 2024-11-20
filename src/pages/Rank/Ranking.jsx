@@ -72,15 +72,15 @@ const Ranking = () => {
             Ranking atualizado
           </p>
         </div>
-        <div className="md:flex hidden w-1/5 flex-col  relative md:-top-14">
-          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3  md:m-1 lg:mt-14">
+        <div className="md:flex hidden w-1/5 flex-col  relative md:-top-14 ">
+          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3  md:m-1  ">
             Mostrando Ranking
           </p>
           <div className="relative w-fit  ">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[490px]  md:m-2 lg:mt-1  mt-11 "
+              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[490px]  md:m-2 lg:mt-1  mt-11 md:w-[260px]"
             >
               {options.map((option) => (
                 <option
@@ -96,7 +96,7 @@ const Ranking = () => {
         </div>
       </div>
       <div className="mt-10 w-10 md:hidden lg::block"></div>
-      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-1 ">
+      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-4">
         <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ml-3 md:-mt-12 ">
           <div className="flex justify-evenly  md:text-nowrap m-9  ">
             {ranking.slice(1, 2).map((ranking, index) => (
@@ -110,15 +110,15 @@ const Ranking = () => {
             ))}
           </div>
           <div className="mt-10"></div>
-          <div className="pr-3 lg:h-[551px] lg:overflow-y-auto">
+          <div className="pr-3 lg:h-[551px] overflow-y-scroll md:h-[600px] ">
             {ranking.slice(3, ranking.length).map((ranking, index) => (
               <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp} />
             ))}
           </div>
           <div className="mt-10"></div>
-          <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold">
+          <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold ">
             <span
-              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F]  md:-mt-9  -mt-2 lg:mt-80 text-[16px] lg:text-[40px]"
+              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F] -mt-2  text-[16px] lg:text-[40px] md:mt-16 md:text-[22px] md:ml-2 lg:-mt-6 md:w-[290px] lg:w-[530px]"
               style={{ color: "red" }}
             >
               ▼ Zona de Rebaixamento ▼
