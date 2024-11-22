@@ -3,6 +3,8 @@ import { useState } from "react";
 import catIcon from "../../assets/images/gato-planning.svg";
 import convertFloat from "../../utils/convertFloat";
 
+import showModal from "../../utils/showModal";
+
 function Top({ onClick, onClick2 }) {
   const [balance, setBalance] = useState(6000);
   const [income, setIncome] = useState(2500);
@@ -30,11 +32,17 @@ function Top({ onClick, onClick2 }) {
         </div>
 
         <div className="flex flex-col gap-2 text-[32px] leading-[1.1]">
-          <div className="flex items-center gap-1 rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] dark:bg-[rgba(11,85,5,0.50);]">
+          <div
+            onClick={() => showModal("new-income")}
+            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] dark:bg-[rgba(11,85,5,0.50);]"
+          >
             <Icon icon="icon-park-solid:up-one" width="25px" />
             <h1 className="">R$ {convertFloat(income)}</h1>
           </div>
-          <div className="flex items-center gap-1 rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000]">
+          <div
+            onClick={() => showModal("new-expense")}
+            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000]"
+          >
             <Icon icon="icon-park-solid:down-one" width="25px" />
             <h1 className="">R$ {convertFloat(expense)}</h1>
           </div>
@@ -50,11 +58,17 @@ function Top({ onClick, onClick2 }) {
         </div>
 
         <div className="flex flex-col gap-2 whitespace-nowrap text-[32px] leading-[1.1]">
-          <div className="flex items-center gap-1 rounded-md bg-[#FFB51533] px-4 py-3 font-medium text-[#FFB515]">
+          <div
+            onClick={() => showModal("notes-modal")}
+            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FFB51533] px-4 py-3 font-medium text-[#FFB515]"
+          >
             <Icon icon="solar:notes-bold" className="" width="25px" />
             <h1 className="">Anotações livres</h1>
           </div>
-          <div className="flex items-center gap-1 rounded-md bg-[#FF48A733] px-4 py-3 font-medium text-[#FF48A7]">
+          <div
+            onClick={() => showModal("budget-modal")}
+            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FF48A733] px-4 py-3 font-medium text-[#FF48A7]"
+          >
             <Icon icon="iconoir:wallet-solid" width="25px" />
             <h1 className="">Orçamento</h1>
           </div>
@@ -86,7 +100,10 @@ function Top({ onClick, onClick2 }) {
         </div>
 
         <div className="flex justify-between gap-7 text-[#8D8D8D] dark:text-white">
-          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
+          <div
+            onClick={() => showModal("tip-from-fin")}
+            className="flex h-20 cursor-pointer items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
+          >
             <img className="w-10" src={catIcon} alt="pequeno gato cinza" />
             <p className="text-base">Dicas do Fin</p>
           </div>
