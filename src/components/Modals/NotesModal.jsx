@@ -1,5 +1,6 @@
 import Modal from "./Modal";
 import NoteCard from "../Cards/NoteCard";
+import showModal from "../../utils/showModal";
 
 function NotesModal() {
   const nota =
@@ -16,7 +17,10 @@ function NotesModal() {
     >
       <ul className="mt-4 flex max-h-[65vh] flex-col gap-4 overflow-y-auto px-3">
         <li>
-          <button className="w-full rounded-[9px] border-4 border-[#8B4A00] p-2 text-md font-semibold text-[#8B4A00] transition-all hover:text-black">
+          <button
+            onClick={() => showModal("note-modal")}
+            className="w-full rounded-[9px] border-4 border-[#8B4A00] p-2 text-md font-semibold text-[#8B4A00] transition-all hover:text-black"
+          >
             Adicionar anotação
           </button>
         </li>

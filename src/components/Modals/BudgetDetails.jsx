@@ -43,7 +43,7 @@ function BudgetDetails() {
   return (
     // Background
     <div
-      className={`fixed left-0 top-0 z-50 flex hidden h-screen w-screen justify-center gap-3 overflow-hidden bg-white/50 backdrop-blur-xl dark:bg-black/50`}
+      className={`fixed left-0 top-0 z-50 flex hidden h-screen w-screen justify-center gap-3 overflow-hidden bg-white/50 pt-10 backdrop-blur-xl dark:bg-black/50`}
       id={"budget-details"}
     >
       {/* Modal container */}

@@ -5,14 +5,9 @@ import AvatarFull from "../../components/Header/AvatarFull";
 import Footer from "../../components/Footer/Footer";
 
 // Modals
-import showModal from "../../utils/showModal";
 import NewIncome from "../../components/Modals/NewIncome";
 import NewExpense from "../../components/Modals/NewExpense";
 import NotesModal from "../../components/Modals/NotesModal";
-
-import Top from "./Top";
-import Graphics from "./Graphics";
-import Goals from "./Goals";
 import Note from "../../components/Modals/Note";
 import BudgetModal from "../../components/Modals/BudgetModal";
 import BudgetDetails from "../../components/Modals/BudgetDetails";
@@ -21,6 +16,10 @@ import ChooseAccount from "../../components/Modals/ChooseAccount";
 import ChooseExpenseCategory from "../../components/Modals/ChooseExpenseCategory";
 import ChooseIncomeCategory from "../../components/Modals/ChooseIncomeCategory";
 import TipFromFin from "../../components/Modals/TipFromFin";
+
+import Top from "./Top";
+import Graphics from "./Graphics";
+import Goals from "./Goals";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -45,7 +44,7 @@ function Planning() {
       <ChooseExpenseCategory />
       <ChooseIncomeCategory />
       <TipFromFin />
-      <button onClick={() => showModal("tip-from-fin")}>click</button>
+
       <HeaderIntern
         iconActiveNumber={1}
         darkMode={darkMode}

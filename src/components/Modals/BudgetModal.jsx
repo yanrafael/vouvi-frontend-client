@@ -1,3 +1,4 @@
+import showModal from "../../utils/showModal";
 import Modal from "./Modal";
 import { Icon } from "@iconify/react";
 
@@ -49,14 +50,20 @@ export default function BudgetModal() {
                 R$ {item.economy}
               </span>
             </div>
-            <div className="h-auto rounded-sm bg-black/5 px-3 py-7 transition-all hover:bg-black/10">
+            <div
+              onClick={() => showModal("budget-details-edit")}
+              className="h-auto cursor-pointer rounded-sm bg-black/5 px-3 py-7 transition-all hover:bg-black/10"
+            >
               <Icon icon="mdi:pencil" />
             </div>
           </li>
         ))}
       </ul>
       <button className="flex w-full items-center justify-between gap-4">
-        <div className="mt-3 flex w-full items-center justify-center gap-2 rounded-sm border-4 border-dashed p-4">
+        <div
+          onClick={() => showModal("budget-details")}
+          className="mt-3 flex w-full items-center justify-center gap-2 rounded-sm border-4 border-dashed p-4"
+        >
           <Icon icon={"mdi:plus-bold"} /> <p>Criar orçamento</p>
         </div>
       </button>
