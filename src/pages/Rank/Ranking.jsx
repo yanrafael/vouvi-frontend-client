@@ -73,14 +73,14 @@ const Ranking = () => {
           </p>
         </div>
         <div className="md:flex hidden w-1/5 flex-col  relative md:-top-14 ">
-          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3  md:m-1  ">
+          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3  md:m-1 lg:mt-11 ">
             Mostrando Ranking
           </p>
           <div className="relative w-fit  ">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[490px]  md:m-2 lg:mt-1  mt-11 md:w-[260px]"
+              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[490px]  md:m-2  mt-11 md:w-[260px] lg:-mt-1"
             >
               {options.map((option) => (
                 <option
@@ -95,9 +95,9 @@ const Ranking = () => {
           </div>
         </div>
       </div>
-      <div className="mt-10 w-10 md:hidden lg::block"></div>
-      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-4">
-        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 lg:-mt-8 ml-3 md:-mt-12 ">
+      <div className="mt-10 w-10 md:hidden lg:block"></div>
+      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-4 lg:gap-0">
+        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 ml-3 md:-mt-12 lg:-mt-16">
           <div className="flex justify-evenly  md:text-nowrap m-9  ">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
@@ -118,7 +118,7 @@ const Ranking = () => {
           <div className="mt-10"></div>
           <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold ">
             <span
-              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F] -mt-2  text-[16px] lg:text-[40px] md:mt-16 md:text-[22px] md:ml-2 lg:-mt-6 md:w-[290px] lg:w-[530px]"
+              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F] -mt-5  text-[16px] lg:text-[40px] md:mt-16 md:text-[22px] md:ml-2 lg:-mt-6 md:w-[290px] lg:w-[530px]"
               style={{ color: "red" }}
             >
               ▼ Zona de Rebaixamento ▼
@@ -148,9 +148,12 @@ const Ranking = () => {
             </select>
           </div>
         </div> }
-        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[320px] ml-4 lg:-mt-8  -mt-5 md:-mt-12">
+        <p className=" lg:text-md font-bold  text-primary-200 md:text-[30px] ml-7 m-5 text-[24px] md:hidden -mt-6">
+              Ricos da Vouvi
+            </p>
+        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[320px] ml-4  -mt-5 md:-mt-10 lg:-mt-16">
           <div>
-            <p className=" lg:text-md font-bold text-white md:text-[30px] text-[18px] ml-5 mt-4">
+            <p className=" lg:text-md font-bold text-white md:text-[30px] text-[18px] ml-5 mt-4 hidden md:block">
               Ricos da Vouvi
             </p>
             <p className="mb-3 mr-px lg:text-md font-light text-white md:text-[20px]  pt-4 mt-0 text[16px] ml-5 text-[18px]">
