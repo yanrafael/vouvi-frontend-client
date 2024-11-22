@@ -21,7 +21,7 @@ function FriendsModal({ closeModal }) {
 
         <div className="mt-5 flex justify-between rounded-md bg-[#8D8D8D33] p-2 dark:bg-[#3D3D3D4D]">
           <input
-            className="w-full rounded-md bg-white bg-opacity-0 text-[24px] outline-none placeholder:text-[24px] placeholder:font-medium placeholder:text-[#02020B80] placeholder:dark:text-[#F5F5F44D]"
+            className="w-full rounded-md bg-white bg-opacity-0 text-[24px] outline-none placeholder:text-[24px] placeholder:font-medium placeholder:text-[#02020B80] dark:text-white placeholder:dark:text-[#F5F5F44D]"
             type="text"
             placeholder="Digite o nome do seu amigo"
           />
