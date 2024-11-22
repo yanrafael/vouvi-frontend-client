@@ -19,19 +19,20 @@ export default function BudgetModal() {
       top
     >
       {/* Legend for each colomn */}
-      <ul className="flex max-h-[55vh] w-[40vw] flex-col gap-3 overflow-hidden overflow-y-scroll">
+      <ul className="flex max-h-[55vh] w-[50vw] flex-col gap-3 overflow-hidden overflow-y-scroll">
         <li className="relative left-16 top-6 flex items-center justify-between gap-4">
-          <div className="flex gap-12">
-            <span className="">Mês</span>
-            <span className="">Receita</span>
-            <span className="">Despesa</span>
-            <span className="">Economia</span>
+          <div className="flex w-full">
+            <span className="w-1/4">Mês</span>
+            <span className="w-1/4">Receita</span>
+            <span className="w-1/4">Despesa</span>
+            <span className="w-1/4">Economia</span>
+            <span className="w-1/4"></span>
           </div>
         </li>
 
         {budget.map((item) => (
           <li className="flex items-center justify-between gap-2" key={item.id}>
-            <div className="flex w-full items-center justify-between gap-2 rounded-sm bg-black/5 p-4">
+            <div className="flex w-full items-center justify-between gap-2 rounded-sm bg-black/5 p-4 dark:bg-black">
               <Icon
                 icon={"mdi:wallet"}
                 width={48}
@@ -52,7 +53,7 @@ export default function BudgetModal() {
             </div>
             <div
               onClick={() => showModal("budget-details-edit")}
-              className="h-auto cursor-pointer rounded-sm bg-black/5 px-3 py-7 transition-all hover:bg-black/10"
+              className="h-auto cursor-pointer rounded-sm bg-black/5 px-3 py-7 transition-all hover:bg-black/10 dark:bg-white/50"
             >
               <Icon icon="mdi:pencil" />
             </div>
