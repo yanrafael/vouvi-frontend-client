@@ -18,7 +18,7 @@ function Store() {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       >
-        <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} />
+        <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} alt="icone de perfil de usuario com o level, xp e vcoin de cada pessoa"  title="icone de perfil de usuario com o level, xp e vcoin de cada pessoa"/>
       </HeaderIntern>
       <Top />
       <Low />

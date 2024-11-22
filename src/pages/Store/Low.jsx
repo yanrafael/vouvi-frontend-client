@@ -55,7 +55,7 @@ function Mid() {
         color3={"bg-[#8D8D8D]"}
         color4={"bg-[#E3D3F3]"}
       >
-        <img src={WhiteCat} alt="" />
+        <img src={WhiteCat} alt="fin, gato em sua versão com pelagem branca" title="fin, gato em sua versão com pelagem branca" />
       </StoreSingleCard>
 
       <StoreDoubleCard
@@ -94,7 +94,7 @@ function Mid() {
           }}
           className="flex w-full"
         >
-          <img src={WhiteCat} alt="fin, gato em sua versão com pelagem branca" />
+          <img src={WhiteCat} alt="fin, gato em sua versão com pelagem branca" title="fin, gato em sua versão com pelagem branca"/>
         </div>
       </StoreSingleCard>
     </section>

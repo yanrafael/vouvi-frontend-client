@@ -17,7 +17,7 @@ function CreateAvatar({ onClick }) {
       </p>
 
       <div className="lg:h-[301px] lg:w-[301px] md:h-[240px] md:w-[240px] w-[180px] h-[180px] rounded-full bg-[#7C20BE80]">
-        <img width={"400"} src={Avatar} alt="" />
+        <img width={"400"} src={Avatar} alt="Imagem do avatar do usuário" title="Este é o seu avatar, pronto para ser personalizado!"  />
       </div>
 
       <PrimaryButton

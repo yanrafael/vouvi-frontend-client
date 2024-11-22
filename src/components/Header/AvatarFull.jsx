@@ -17,12 +17,12 @@ function AvatarFull({ name, xp, vcoins }) {
               <p>{xp}</p>
             </div>
             <div className="flex items-center">
-              <img className="mr-1" src={Vicon} alt="" />
+              <img className="mr-1" src={Vicon} alt="Ícone representando Vcoins, a moeda virtual exclusiva do nosso projeto." />
               <p>{vcoins}</p>
             </div>
           </div>
         </div>
-        <img src={Avatar} alt="" />
+        <img src={Avatar} alt="Imagem de avatar representando o perfil do usuário." />
       </div>
     </Link>
   );
