@@ -144,7 +144,7 @@ function BudgetDetails() {
       </div>
 
       {/* Modal container 2 */}
-      <div className="h-fit w-fit min-w-80 max-w-[50vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50">
+      <div className="h-fit w-fit min-w-80 max-w-[50vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50 dark:bg-[#1B1B1B] dark:text-white">
         {/* Modal heading */}
         <div className="flex justify-between">
           <h2>Resumo</h2>

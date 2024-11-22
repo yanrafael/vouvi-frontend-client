@@ -56,12 +56,12 @@ function BudgetDetailsEdit() {
           </span>
           <span className="flex gap-3">
             <button
-              className="rounded-[9px] border-[3px] border-black p-1 px-4 transition-all duration-200 hover:bg-black/50 hover:text-white"
+              className="rounded-[9px] border-[3px] border-black p-1 px-4 transition-all duration-200 hover:bg-black/50 hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
               onClick={() => hideModal("budget-details-edit")}
             >
-              cancelar
+              Cancelar
             </button>
-            <button className="rounded-[9px] border-[3px] border-black p-1 px-4 transition-all duration-200 hover:bg-black/50 hover:text-white">
+            <button className="rounded-[9px] border-[3px] border-black p-1 px-4 transition-all duration-200 hover:bg-black/50 hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
               Apagar
             </button>
           </span>
@@ -74,13 +74,13 @@ function BudgetDetailsEdit() {
             <div>
               <h4 className="font-bold">A receber:</h4>
               <ul className="flex gap-3">
-                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light">
+                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light hover:bg-white hover:text-black dark:border-white">
                   Emprego
                 </li>
-                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light">
+                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light hover:bg-white hover:text-black dark:border-white">
                   Freelance
                 </li>
-                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light">
+                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light hover:bg-white hover:text-black dark:border-white">
                   Adicionar +
                 </li>
               </ul>
@@ -105,7 +105,7 @@ function BudgetDetailsEdit() {
           <div className="mt-8 rounded-sm bg-black/10 p-5">
             <div className="mb-5 flex justify-between">
               <h4>A pagar:</h4>
-              <span className="cursor-pointer rounded-[9px] border-[3px] border-black p-1 px-2 hover:bg-white">
+              <span className="cursor-pointer rounded-[9px] border-[3px] border-black p-1 px-2 hover:bg-white hover:text-black dark:border-white">
                 <p>+ Adicionar</p>
               </span>
             </div>
@@ -123,16 +123,18 @@ function BudgetDetailsEdit() {
                   key={expense.id}
                   className="flex items-center justify-between gap-1"
                 >
-                  <div className="flex w-full justify-between rounded-sm bg-white py-4">
-                    <p className="flex w-1/4 pl-4">
-                      <Icon icon={"mdi-wallet"} width={32} color="orange" />
+                  <div className="flex w-full items-center justify-between rounded-sm bg-white py-4 dark:bg-black">
+                    <p className="flex w-1/4 items-center gap-2 pl-4">
+                      <span className="w-fit rounded-full bg-red p-4">
+                        <Icon icon={"mdi-wallet"} width={32} color="white" />
+                      </span>
                       {expense.title}
                     </p>
                     <p className="w-1/4 pl-8">{expense.value}</p>
                     <p className="w-1/4 pl-8">{expense.type}</p>
                     <p className="w-1/4 pl-8">{expense.date}</p>
                   </div>
-                  <span className="cursor-pointer rounded-sm bg-white px-2 py-4 hover:bg-black/10">
+                  <span className="flex h-full cursor-pointer items-center rounded-sm bg-white px-2 py-4 hover:bg-black/10 dark:bg-black">
                     <Icon icon={"mdi-pencil"} width={32} className="" />
                   </span>
                 </li>
@@ -143,7 +145,7 @@ function BudgetDetailsEdit() {
       </div>
 
       {/* Modal container 2 */}
-      <div className="h-fit w-fit min-w-80 max-w-[50vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50">
+      <div className="h-fit w-fit min-w-80 max-w-[50vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50 dark:bg-[#1B1B1B] dark:text-white">
         {/* Modal heading */}
         <div className="flex justify-between">
           <h2>Resumo</h2>
