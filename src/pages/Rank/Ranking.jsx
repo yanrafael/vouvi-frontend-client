@@ -66,10 +66,10 @@ const Ranking = () => {
       </HeaderIntern>
       <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:w-30 text-nowrap">
         <div className="lg:w-3/5 top-8 mr-5  flex-col md:mx-30 ">
-          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white  ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-6 lg:mr-96 lg:-mt-28 md:p-1 mt-11 text-[30px]">
+          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white  ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-11 lg:mr-96 lg:-mt-28 md:p-1 mt-11 text-[30px]">
             Os Especialistas!
           </h2>
-          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-6 mr-20">
+          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-11 mr-20">
             Ranking atualizado
           </p>
         </div>
