@@ -40,7 +40,7 @@ function Top({ onClick, onClick2 }) {
   );
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <section className="mt-10 flex w-full justify-between gap-2">
         <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] px-4 py-4 leading-[1.1] dark:bg-[#1B1B1B] dark:text-white">
           <p className="text-[36px] font-light">Saldo</p>
@@ -118,18 +118,35 @@ function Top({ onClick, onClick2 }) {
         </div>
 
         <div className="flex justify-between gap-7 text-[#8D8D8D] dark:text-white">
-          <div onMouseEnter={setCatIconColor} onMouseLeave={() => setCatIconColor(null)}
-            onClick={() => showModal("tip-from-fin")}
-            className="flex h-20 cursor-pointer items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
-          >
-            {catIcon}
-            <p className="text-base">Dicas do Fin</p>
-          </div>
-          <div className="flex h-20 items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
-            <p className="flex flex-row items-center justify-center gap-4 text-nowrap text-base">
-              01 Out - 10 Out | <Icon icon={"bi:calendar-fill"} width={40} />
-            </p>
-          </div>
+          {btnOn == 1 ? (
+            <>
+              <div
+                onClick={() => showModal("")}
+                className="flex h-20 cursor-pointer items-center justify-center gap-4 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
+              >
+                <Icon icon={"typcn:plus"} className="text-base" />
+                <p className="text-base">Criar Meta</p>
+              </div>
+            </>
+          ) : (
+            <>
+              <div
+                onMouseEnter={setCatIconColor}
+                onMouseLeave={() => setCatIconColor(null)}
+                onClick={() => showModal("tip-from-fin")}
+                className="flex h-20 cursor-pointer items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
+              >
+                {catIcon}
+                <p className="text-base">Dicas do Fin</p>
+              </div>
+              <div className="flex h-20 items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
+                <p className="flex flex-row items-center justify-center gap-4 text-nowrap text-base">
+                  01 Out - 10 Out |{" "}
+                  <Icon icon={"bi:calendar-fill"} width={40} />
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </section>
     </div>
