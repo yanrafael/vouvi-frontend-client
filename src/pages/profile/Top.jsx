@@ -14,11 +14,11 @@ function Top() {
   return (
     <section className="m-auto mt-14 flex w-[90%] border-b-2 border-[#252525] pb-16 dark:border-[#F5F5F442]">
       <div className="flex flex-none">
-        <div className="h-[351px] w-[351px] rounded-full bg-[#7C20BE80]">
+        <div className="h-[350px] w-[350px] rounded-full bg-[#7C20BE80]">
           <img src={Avatar} alt="Avatar Finn"  title="Avatar Finn"/> 
         </div>
       </div>
-      <div className="ml-16 flex w-6/12 flex-col justify-center gap-2 font-medium text-[#252525] dark:text-white">
+      <div className="ml-14 flex w-[90%] flex-col justify-center gap-2 font-medium text-[#252525] dark:text-white">
         <h1 className="text-lg">Ana carolina</h1>
         <div className="bg-blue-500 w-[70%] rounded-md bg-[#014085] px-6">
           <div className="flex justify-between text-right text-[32px] font-semibold">
@@ -37,7 +37,7 @@ function Top() {
           <ProfileTags text={"15 Amigos"} />
         </div>
       </div>
-      <hr className="relative right-24 h-96 w-[2px] bg-[#252525] dark:bg-[#F5F5F442]" />
+      <hr className="relative 2xl:right-[7%] h-96 w-[2px] bg-[#252525] dark:bg-[#F5F5F442]" />
       <div className="flex flex-col justify-center"  title="ícone da vouvi, chamado Vcoins com uma estrela em cima  ">
         <div className="flex">
           <CoinCard
