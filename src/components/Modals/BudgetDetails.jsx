@@ -47,7 +47,7 @@ function BudgetDetails() {
       id={"budget-details"}
     >
       {/* Modal container */}
-      <div className="h-fit w-fit min-w-80 rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50">
+      <div className="h-fit w-fit min-w-80 rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50 dark:bg-[#1B1B1B] dark:text-white">
         {/* Modal heading */}
         <div className="flex justify-between">
           <span className="flex items-center gap-4">
@@ -71,13 +71,13 @@ function BudgetDetails() {
             <div>
               <h4 className="font-bold">A receber:</h4>
               <ul className="flex gap-3">
-                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light">
+                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light hover:bg-white hover:text-black dark:border-white">
                   Emprego
                 </li>
-                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light">
+                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light hover:bg-white hover:text-black dark:border-white">
                   Freelance
                 </li>
-                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light">
+                <li className="rounded-[9px] border-[3px] border-black p-1 px-2 font-light hover:bg-white hover:text-black dark:border-white">
                   Adicionar +
                 </li>
               </ul>
@@ -102,7 +102,7 @@ function BudgetDetails() {
           <div className="mt-8 rounded-sm bg-black/10 p-5">
             <div className="mb-5 flex justify-between">
               <h4>A pagar:</h4>
-              <span className="cursor-pointer rounded-[9px] border-[3px] border-black p-1 px-2 hover:bg-white">
+              <span className="cursor-pointer rounded-[9px] border-[3px] border-black p-1 px-2 hover:bg-white hover:text-black dark:border-white">
                 <p>+ Adicionar</p>
               </span>
             </div>
@@ -114,22 +114,26 @@ function BudgetDetails() {
               <p className="w-1/4 pl-8">Data</p>
             </div>
 
-            <ul className="flex h-[40vh] flex-col gap-3 overflow-y-scroll">
+            <ul className="flex h-[40vh] flex-col gap-3 overflow-y-scroll pr-2">
               {expenses.map((expense) => (
                 <li
                   key={expense.id}
                   className="flex items-center justify-between gap-1"
                 >
-                  <div className="flex w-full justify-between rounded-sm bg-white py-4">
-                    <p className="flex w-1/4 pl-4">
-                      <Icon icon={"mdi-wallet"} width={32} color="orange" />
-                      {expense.title}
+                  <div className="flex w-full items-center justify-between rounded-sm bg-white py-4 dark:bg-black">
+                    <p className="flex w-1/4 items-center gap-2 pl-4">
+                      <span className="w-fit rounded-full bg-red p-4">
+                        <Icon icon={"mdi-wallet"} width={32} color="white" />
+                      </span>
+                      {expense.title.length > 7
+                        ? expense.title.substring(0, 7) + "..."
+                        : expense.title}
                     </p>
-                    <p className="w-1/4 pl-8">{expense.value}</p>
+                    <p className="w-1/5 pl-8">{expense.value}</p>
                     <p className="w-1/4 pl-8">{expense.type}</p>
                     <p className="w-1/4 pl-8">{expense.date}</p>
                   </div>
-                  <span className="cursor-pointer rounded-sm bg-white px-2 py-4 hover:bg-black/10">
+                  <span className="flex h-full cursor-pointer items-center rounded-sm bg-white px-2 py-4 hover:bg-black/10 dark:bg-black">
                     <Icon icon={"mdi-pencil"} width={32} className="" />
                   </span>
                 </li>
@@ -140,7 +144,7 @@ function BudgetDetails() {
       </div>
 
       {/* Modal container 2 */}
-      <div className="h-fit w-fit min-w-80 max-w-[50vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50">
+      <div className="h-fit w-fit min-w-80 max-w-[50vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50 dark:bg-[#1B1B1B] dark:text-white">
         {/* Modal heading */}
         <div className="flex justify-between">
           <h2>Resumo</h2>
