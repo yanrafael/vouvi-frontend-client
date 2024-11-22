@@ -12,16 +12,16 @@ function Top() {
   const progressionbar = 19;
 
   return (
-    <section className="m-auto mt-14 flex w-[90%] border-b-2 border-[#252525] pb-16 dark:border-[#F5F5F442]">
+    <section className="m-auto mt-14 flex w-[90%] items-center border-b-2 border-[#252525] pb-16 dark:border-[#F5F5F442]">
       <div className="flex flex-none">
-        <div className="h-[350px] w-[350px] rounded-full bg-[#7C20BE80]">
+        <div className="xl:w-[300px] xl:h-[300px] 2xl:h-[350px] 2xl:w-[350px] rounded-full bg-[#7C20BE80]">
           <img src={Avatar} alt="Avatar Finn"  title="Avatar Finn"/> 
         </div>
       </div>
       <div className="ml-14 flex w-[90%] flex-col justify-center gap-2 font-medium text-[#252525] dark:text-white">
-        <h1 className="text-lg">Ana carolina</h1>
+        <h1 className="xl:text-base 2xl:text-lg">Ana carolina</h1>
         <div className="bg-blue-500 w-[70%] rounded-md bg-[#014085] px-6">
-          <div className="flex justify-between text-right text-[32px] font-semibold">
+          <div className="flex justify-between text-right xl:text-[26px] 2xl:text-[32px] font-semibold">
             <h2 className="text-white">Nivel</h2>
             <h2 className="text-secondary-200">Faltam 200XP</h2>
           </div>
@@ -37,7 +37,7 @@ function Top() {
           <ProfileTags text={"15 Amigos"} />
         </div>
       </div>
-      <hr className="relative 2xl:right-[7%] h-96 w-[2px] bg-[#252525] dark:bg-[#F5F5F442]" />
+      <hr className="relative 2xl:right-[6.5%] h-96 w-[2px] bg-[#252525] dark:bg-[#F5F5F442]" />
       <div className="flex flex-col justify-center"  title="ícone da vouvi, chamado Vcoins com uma estrela em cima  ">
         <div className="flex">
           <CoinCard
@@ -56,10 +56,10 @@ function Top() {
             text={"emblemas"}
           />
         </div>
-        <div className="mt-4 flex justify-center rounded-md bg-[#14A90033] px-4 py-2 text-[32px] font-bold text-[#14A900]">
+        <div className="mt-4 flex justify-center rounded-md bg-[#14A90033] px-4 py-2 xl:text-[26px] 2xl:text-[32px] font-bold text-[#14A900]">
           Sequência: 23 dias
         </div>
-        <div className="mt-4 flex justify-center rounded-md bg-[#7C20BE33] px-4 py-2 text-[32px] font-bold text-primary-200">
+        <div className="mt-4 flex justify-center rounded-md bg-[#7C20BE33] px-4 py-2 xl:text-[26px] 2xl:text-[32px] font-bold text-primary-200">
           Especialista em economia
         </div>
       </div>
