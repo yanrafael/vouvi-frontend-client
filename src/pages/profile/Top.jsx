@@ -22,7 +22,7 @@ function Top() {
         <h1 className="text-[40px] sm:text-[50px] lg:text-[30px] xl:text-base 2xl:text-lg">
           Ana carolina
         </h1>
-        <div className="bg-blue-500 mt-10 xs:mt-14 w-full rounded-md bg-[#014085] px-6 lg:mt-0 lg:w-[80%]">
+        <div className="bg-blue-500 mt-10 xs:mt-14 w-full rounded-[15px] md:rounded-md bg-[#014085] px-4 md:px-6 lg:mt-0 lg:w-[80%]">
           <div className="flex justify-between text-right font-semibold text-[15px] xs:text-[20px] sm:text-[30px] lg:text-[21px] xl:text-[26px] 2xl:text-[32px]">
             <h2 className="text-white">Nivel</h2>
             <h2 className="text-secondary-200">Faltam 200XP</h2>
@@ -44,7 +44,7 @@ function Top() {
         className="flex w-full items-end justify-center gap-3 lg:w-fit lg:flex-col lg:items-stretch lg:gap-0"
         title="ícone da vouvi, chamado Vcoins com uma estrela em cima  "
       >
-        <div className="flex gap-2 lg:gap-0">
+        <div className="flex lg:flex-auto gap-2 lg:gap-0">
           <CoinCard
             color={
               "lg:mr-5 xl:mr-8 2xl:mr-10 bg-[linear-gradient(180deg,rgba(255,77,0,0.80)_0%,rgba(255,216,46,0.80)_100%);]"
