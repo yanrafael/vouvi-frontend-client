@@ -16,6 +16,11 @@ import Goals from "./Goals";
 import Note from "../../components/Modals/Note";
 import BudgetModal from "../../components/Modals/BudgetModal";
 import BudgetDetails from "../../components/Modals/BudgetDetails";
+import BudgetDetailsEdit from "../../components/Modals/BudgetDetailsEdit";
+import ChooseAccount from "../../components/Modals/ChooseAccount";
+import ChooseExpenseCategory from "../../components/Modals/ChooseExpenseCategory";
+import ChooseIncomeCategory from "../../components/Modals/ChooseIncomeCategory";
+import TipFromFin from "../../components/Modals/TipFromFin";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -35,7 +40,12 @@ function Planning() {
       <Note />
       <BudgetModal />
       <BudgetDetails />
-      <button onClick={() => showModal("budget-details")}>click</button>
+      <BudgetDetailsEdit />
+      <ChooseAccount />
+      <ChooseExpenseCategory />
+      <ChooseIncomeCategory />
+      <TipFromFin />
+      <button onClick={() => showModal("tip-from-fin")}>click</button>
       <HeaderIntern
         iconActiveNumber={1}
         darkMode={darkMode}
