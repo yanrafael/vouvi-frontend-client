@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import HeaderMobile from "../../components/Header/HeaderMobile";
 import HeaderIntern from "../../components/Header/HeaderIntern";
 import AvatarFull from "../../components/Header/AvatarFull";
 import Footer from "../../components/Footer/Footer";
@@ -35,6 +36,7 @@ function Planning() {
       </main>
 
       <Footer />
+      <HeaderMobile iconId={1}/>
     </>
   );
 }
