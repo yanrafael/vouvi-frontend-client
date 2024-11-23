@@ -52,7 +52,7 @@ function Top({ onClick, onClick2 }) {
         <div className="flex flex-col gap-2 text-[32px] leading-[1.1]">
           <div
             onClick={() => showModal("new-income")}
-            className="group relative cursor-pointer rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] hover:bg-[#14A900] hover:text-[#133810] dark:bg-[rgba(11,85,5,0.50);] transition-all duration-300 hover:transition-none hover:duration-0"
+            className="group relative cursor-pointer rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] transition-all duration-300 hover:bg-[#14A900] hover:text-[#133810] hover:transition-none hover:duration-0 dark:bg-[rgba(11,85,5,0.50);]"
           >
             {/* Animação Hover */}
             <div
@@ -62,9 +62,7 @@ function Top({ onClick, onClick2 }) {
               <h1 className="">Adicionar</h1>
             </div>
 
-            <div
-              className={`flex items-center gap-1 group-hover:opacity-0`}
-            >
+            <div className={`flex items-center gap-1 group-hover:opacity-0`}>
               <Icon icon="icon-park-solid:up-one" width="25px" className="" />
               <h1 className="">R$ {convertFloat(income)}</h1>
             </div>
@@ -72,7 +70,7 @@ function Top({ onClick, onClick2 }) {
 
           <div
             onClick={() => showModal("new-expense")}
-            className="group relative cursor-pointer rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000] hover:bg-[#E30000] hover:text-[#390C0C] transition-all duration-300 hover:transition-none hover:duration-0"
+            className="group relative cursor-pointer rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000] transition-all duration-300 hover:bg-[#E30000] hover:text-[#390C0C] hover:transition-none hover:duration-0"
           >
             {/* Animação Hover */}
             <div
@@ -82,9 +80,7 @@ function Top({ onClick, onClick2 }) {
               <h1 className="">Adicionar</h1>
             </div>
 
-            <div
-              className={`flex items-center gap-1 group-hover:opacity-0`}
-            >
+            <div className={`flex items-center gap-1 group-hover:opacity-0`}>
               <Icon icon="icon-park-solid:down-one" width="25px" />
               <h1 className="">R$ {convertFloat(expense)}</h1>
             </div>
@@ -103,14 +99,14 @@ function Top({ onClick, onClick2 }) {
         <div className="flex flex-col gap-2 whitespace-nowrap text-[32px] leading-[1.1]">
           <div
             onClick={() => showModal("notes-modal")}
-            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FFB51533] px-4 py-3 font-medium text-[#FFB515]"
+            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FFB51533] hover:bg-yellow hover:text-[#493A1A] transition-all duration-300 px-4 py-3 font-medium text-[#FFB515]"
           >
             <Icon icon="solar:notes-bold" className="" width="25px" />
             <h1 className="">Anotações livres</h1>
           </div>
           <div
             onClick={() => showModal("budget-modal")}
-            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FF48A733] px-4 py-3 font-medium text-[#FF48A7]"
+            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FF48A733] hover:bg-[#FF48A7] hover:text-[#492437] transition-all duration-300 px-4 py-3 font-medium text-[#FF48A7]"
           >
             <Icon icon="iconoir:wallet-solid" width="25px" />
             <h1 className="">Orçamento</h1>

@@ -141,7 +141,7 @@ function HeaderMobile({ iconId }) {
     <>
       {activeModal === "settings" && <SettingsModal closeModal={closeModal} />}
       <header className="sticky bottom-0 left-0 z-10 m-auto flex h-24 w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:hidden dark:bg-[rgba(2,2,11,0.80);]">
-        <nav className="flex w-full justify-around">
+        <nav className="flex w-full justify-around items-center">
           <Link to={"/learn"}>
             <div onClick={() => StateChange(0)}>
               <Navigation

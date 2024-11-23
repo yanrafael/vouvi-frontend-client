@@ -68,8 +68,8 @@ function Transactions() {
   return (
     <div className="mt-10 flex w-full justify-between dark:text-white">
       <div className="w-7/12 rounded-md bg-[#888] bg-opacity-20 p-6 dark:bg-[#1B1B1B]">
-        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-bold text-white dark:bg-black">
-          Transações diárias
+        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-semibold text-white dark:bg-black">
+          Transações
         </h3>
 
         <br />
