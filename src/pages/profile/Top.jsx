@@ -12,7 +12,7 @@ function Top() {
   const progressionbar = 19;
 
   return (
-    <section className="m-auto mt-16 flex w-[90%] flex-col items-center border-b-2 border-[#252525] pb-16 lg:mt-10 lg:flex-row xl:mt-14 dark:border-[#F5F5F442]">
+    <section className="m-auto mt-16 flex w-[90%] flex-col items-center border-b-2 border-[#252525] pb-8 lg:pb-16 lg:mt-10 lg:flex-row xl:mt-14 dark:border-[#F5F5F442]">
       <div className="flex flex-none">
         <div className="rounded-full bg-[#7C20BE80] h-[150px] w-[150px] xs:h-[200px] xs:w-[200px] sm:h-[300px] sm:w-[300px] lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] 2xl:h-[350px] 2xl:w-[350px]">
           <img src={Avatar} alt="Avatar Finn" title="Avatar Finn" />
@@ -39,7 +39,7 @@ function Top() {
           <ProfileTags text={"15 Amigos"} />
         </div>
       </div>
-      <hr className="relative m-4 h-[2px] w-full bg-[#252525] lg:right-[4.5%] lg:m-0 lg:h-72 lg:w-[2px] xl:h-96 dark:bg-[#F5F5F442]" />
+      <hr className="relative m-8 h-[2px] w-full bg-[#252525] lg:right-[4.5%] lg:m-0 lg:h-72 lg:w-[2px] xl:h-96 dark:bg-[#F5F5F442]" />
       <div
         className="flex w-full items-end justify-center gap-3 lg:w-fit lg:flex-col lg:items-stretch lg:gap-0"
         title="ícone da vouvi, chamado Vcoins com uma estrela em cima  "

@@ -11,13 +11,13 @@ import { Icon } from "@iconify/react";
 
 function Mid({ openModal }) {
   return (
-    <section className="m-auto mt-20 flex w-11/12 justify-between">
-      <div>
-        <div className="flex w-[200px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white" >
+    <section className="m-auto mt-20 flex flex-wrap xl:flex-nowrap w-[93%] 2xl:w-11/12 justify-between">
+      <div className="w-full xl:w-fit">
+        <div className="flex w-[200px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] lg:text-[32px] xl:text-[40px] font-medium text-[#471650] dark:bg-[#1e1e1e] dark:text-white" >
           Missões
         </div>
         <div className="flex flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 dark:bg-[#1e1e1e]">
-          <div className="left-20 mb-10 flex">
+          <div className=" mb-10 flex">
             <Quest
               quest={"Missão Diária"}
               amount={"(04/05)"}
@@ -41,7 +41,7 @@ function Mid({ openModal }) {
             />
           </div>
 
-          <div className="left-20 mb-10 flex">
+          <div className=" mb-10 flex">
             <Quest
               quest={"Missão Semanal"}
               amount={""}
@@ -59,7 +59,7 @@ function Mid({ openModal }) {
             />
           </div>
 
-          <div className="left-20 mb-10 flex">
+          <div className=" mb-10 flex">
             <Quest
               quest={"Missão Mensal"}
               amount={""}
@@ -78,8 +78,8 @@ function Mid({ openModal }) {
           </div>
         </div>
       </div>
-      <div className="group ml-5">
-        <div className="flex w-[240px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] text-[40px] font-medium text-[#471650] transition-colors duration-500 group-hover:bg-primary-200 group-hover:text-white dark:bg-[#1e1e1e] dark:text-white dark:group-hover:bg-[#282828]">
+      <div className="group ml-5 w-full xl:w-fit">
+        <div className="flex w-[240px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] lg:text-[32px] xl:text-[40px] font-medium text-[#471650] transition-colors duration-500 group-hover:bg-primary-200 group-hover:text-white dark:bg-[#1e1e1e] dark:text-white dark:group-hover:bg-[#282828]">
           Conquistas
         </div>
         <div className="da flex h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 transition-colors duration-500 group-hover:bg-primary-200 dark:bg-[#1e1e1e] dark:group-hover:bg-[#282828]">
