@@ -1,8 +1,11 @@
-function PrimaryButton({text}){
-    return(
-        <button className="bg-primary-200 relative flex justify-center m-auto items-center rounded-sm h-[70px] px-10 font-bold mt-8">
-            <p className="text-[36px] text-white ">{text}</p>
-        </button>
-    )
+function PrimaryButton({ text, color, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`${color} relative m-auto mt-8 flex h-14 lg:h-[70px] items-center justify-center rounded-sm bg-primary-200 px-10 font-bold text-white transition-all duration-200 hover:bg-opacity-0 hover:text-primary-200 hover:outline hover:outline-[6px]`}
+    >
+      <p className="text-[24px] sm:text-[28px] lg:text-[36px]">{text}</p>
+    </button>
+  );
 }
-export default PrimaryButton
+export default PrimaryButton;

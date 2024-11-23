@@ -1,16 +1,52 @@
-function Subscription({color,colortitle,title,price,text1,text2,text3,mes}) {
-    return (
-        <div className={`${color} w-3/12 flex flex-col text-white rounded-md`}>
-            <div className="flex flex-col items-center mt-10">
-                <h3 className={`${colortitle} font-bold text-[40px]`}>{title}</h3>
-                <h2 className=" font-semibold text-lg">{price} <strong className="text-[24px] font-medium">{mes}</strong></h2>
-            </div>
-            <div className="font-extralight text-[32px] m-16">
-                <li>{text1}</li>
-                <li>{text2}</li>
-                <li>{text3}</li>
-            </div>
+import SecondaryButton from "../Buttons/SecondaryButton";
+
+function Subscription({
+  color,
+  colorbutton,
+  colortitle,
+  title,
+  price,
+  text1,
+  text2,
+  text3,
+  texthover,
+  mes,
+  bold,
+  children,
+}) {
+  return (
+      <div
+        className={`${color} group flex h-[35rem] w-80 xs:w-96 flex-col justify-between overflow-hidden rounded-md py-10 text-white m-auto mt-5 mb-5`}
+      >
+        <div className="flex flex-col items-center">
+          <h3 className={`${colortitle} text-[40px] font-bold`}>{title}</h3>
+          <h2 className="text-lg font-semibold">
+            {price} <strong className="text-[24px] font-medium">{mes}</strong>
+          </h2>
         </div>
-    )
+        <div className="ml-10 mt-10 flex w-9/12 flex-col gap-3 text-left text-[24px] xs:text-[32px] font-extralight leading-[1] transition-all duration-500 group-hover:pointer-events-none group-hover:cursor-text group-hover:opacity-0">
+          <div className="flex">
+            <li className="w-5"></li>
+            <p className={`${bold} `}>{text1}</p>
+          </div>
+          <div className="flex">
+            <li className="w-5"></li>
+            <p className={`${bold} `}>{text2}</p>
+          </div>
+          <div className="flex">
+            <li className="w-5"></li>
+            <p className={`${bold} `}>{text3}</p>
+          </div>
+        </div>
+        {children}
+        <div className="pointer-events-none mx-10 flex justify-center leading-[1.3] opacity-0 transition-all duration-700 group-hover:pointer-events-auto group-hover:-translate-y-72 group-hover:opacity-100">
+          <p className="absolute text-center text-[24px] xs:text-[32px]">{texthover}</p>
+          <SecondaryButton
+            color={`absolute mt-[200px] hover:bg-opacity-100 hover:bg-white text-nowrap ${colorbutton}`}
+            text={"Assinar Agora!"}
+          />
+        </div>
+      </div>
+  );
 }
-export default Subscription
+export default Subscription;

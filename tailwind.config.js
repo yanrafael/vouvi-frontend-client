@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "selector",
   theme: {
     colors: {
       white: "#f5f5f4",
@@ -57,6 +58,10 @@ export default {
         sm: "20px",
         md: "24px",
         lg: "30px",
+      },
+
+      screens: {
+        xs: "450px"
       },
     },
   },
