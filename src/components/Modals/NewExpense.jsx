@@ -88,7 +88,7 @@ function NewExpense() {
             <select
               name="account"
               id="account"
-              className="w-full rounded-md border-4 border-primary-200 p-2 text-md"
+              className="w-full rounded-md border-4 border-primary-200 p-2 text-md dark:border-secondary-200 dark:bg-black"
               value={account}
               onChange={(event) => setAccount(event.target.value)}
             >
@@ -105,7 +105,7 @@ function NewExpense() {
             <select
               name="category"
               id="category"
-              className="w-full rounded-md border-4 border-primary-200 p-2 text-md"
+              className="w-full rounded-md border-4 border-primary-200 p-2 text-md dark:border-secondary-200 dark:bg-black"
               value={category}
               onChange={(event) => setCategory(event.target.value)}
             >
@@ -136,7 +136,7 @@ function Input(props) {
   return (
     <input
       {...props}
-      className="w-full rounded-md border-4 border-primary-200 p-2 text-md"
+      className="w-full rounded-md border-4 border-primary-200 p-2 text-md outline-none dark:border-secondary-200 dark:bg-black dark:text-white"
     />
   );
 }
