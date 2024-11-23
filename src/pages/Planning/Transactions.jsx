@@ -52,7 +52,7 @@ function DailyTransaction({ description, value, type, date, iconSrc }) {
   return (
     <li className="mb-2 flex justify-around rounded-md bg-white p-3 text-md dark:bg-black">
       <div className="flex items-center">
-        <Icon icon={iconSrc} className=" w-12 h-12 bg-yellow rounded-full p-2" />
+        <Icon icon={iconSrc} className="h-12 w-12 rounded-full bg-yellow p-2" />
         <span className="w-1/4 p-4">{description}</span>
       </div>
       <span className="w-1/4 p-4">R$ {convertFloat(value)}</span>
@@ -89,7 +89,7 @@ function Transactions() {
       </div>
 
       <div className="relative flex w-2/5 flex-col items-center rounded-md bg-[#888] bg-opacity-20 p-6 dark:bg-[#1B1B1B]">
-        <h3>Desempenho Financeiro</h3>
+        <h3 className="text-lg">Desempenho Financeiro</h3>
         <PieChart
           series={[
             {
