@@ -78,11 +78,11 @@ function Mid({ openModal }) {
           </div>
         </div>
       </div>
-      <div className="group ml-5 w-full xl:w-fit">
-        <div className="flex w-[240px] justify-center rounded-t-md bg-[rgba(124,32,190,0.50);] lg:text-[32px] xl:text-[40px] font-medium text-[#471650] transition-colors duration-500 group-hover:bg-primary-200 group-hover:text-white dark:bg-[#1e1e1e] dark:text-white dark:group-hover:bg-[#282828]">
+      <div className="group xl:ml-5 w-full xl:w-fit">
+        <div className="flex w-[240px] justify-center lg:mt-20 xl:mt-0 rounded-t-md bg-[rgba(124,32,190,0.50);] lg:text-[32px] xl:text-[40px] font-medium text-[#471650] transition-colors duration-500 group-hover:bg-primary-200 group-hover:text-white dark:bg-[#1e1e1e] dark:text-white dark:group-hover:bg-[#282828]">
           Conquistas
         </div>
-        <div className="da flex h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 transition-colors duration-500 group-hover:bg-primary-200 dark:bg-[#1e1e1e] dark:group-hover:bg-[#282828]">
+        <div className="flex h-[92%] flex-col rounded-[0px_24px_24px] bg-[rgba(124,32,190,0.50);] p-7 transition-colors duration-500 group-hover:bg-primary-200 dark:bg-[#1e1e1e] dark:group-hover:bg-[#282828]">
           <Insigne
             icon={VouviLover}
             title={"Vouvi lover"}
