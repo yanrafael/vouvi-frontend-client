@@ -36,26 +36,26 @@ function SettingsModal({ closeModal }) {
         </div>
         <div className="mt-5 flex cursor-pointer items-center justify-between rounded-md bg-[rgba(141,141,141,0.30);] p-4 transition-colors duration-300 hover:bg-[#8D8D8DCC] dark:bg-black hover:dark:bg-[#02020B66]">
           <div className="flex flex-col">
-            <h1 className="text-[32px] font-medium dark:text-white">
+            <h1 className="text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Plano atual
             </h1>
-            <p className="text-md font-medium text-primary-200">
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-primary-200 hidden sm:block">
               Atualize seu plano hoje mesmo
             </p>
           </div>
           <div className="flex flex-col">
-            <h1 className="text-right text-[32px] font-medium dark:text-white">
+            <h1 className="text-right text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Essencial
             </h1>
-            <p className="text-md font-medium text-primary-200">Seja Premium</p>
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-primary-200 hidden sm:block">Seja Premium</p>
           </div>
         </div>
         <div className="mt-5 flex items-center justify-between rounded-md bg-[rgba(141,141,141,0.30);] p-4 transition-colors duration-300 hover:bg-[#8D8D8DCC] dark:bg-black hover:dark:bg-[#02020B66]">
           <div className="flex flex-col">
-            <h1 className="text-[32px] font-medium dark:text-white">
+            <h1 className="text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Modo claro
             </h1>
-            <p className="text-md font-medium text-primary-200">
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-primary-200 hidden sm:block">
               Aqui é você que escolhe a visualização
             </p>
           </div>
@@ -72,10 +72,10 @@ function SettingsModal({ closeModal }) {
         </div>
         <div className="mt-32 flex cursor-pointer items-center justify-between rounded-md bg-[#E3000033] px-4 py-2 transition-colors duration-300 hover:bg-[#E300001A]">
           <div className="flex flex-col">
-            <h1 className="text-[32px] font-medium dark:text-white">
+            <h1 className="text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Sair da conta
             </h1>
-            <p className="text-md font-medium text-red">
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-red">
               Aqui é você que escolhe a visualização
             </p>
           </div>
