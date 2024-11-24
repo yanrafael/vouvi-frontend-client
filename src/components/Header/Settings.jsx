@@ -8,11 +8,10 @@ function AvatarBasic({ openModal, textColor, width }) {
             Ajustes
           </h1>
         </div>
-        <div className="group flex h-[3.5rem] w-[3.5rem] items-center justify-center rounded-full bg-black dark:bg-white">
+        <div className="group flex w-10 h-10 text-[2rem] sm:text-[3rem] sm:h-[3.5rem] sm:w-[3.5rem] items-center justify-center rounded-full bg-black dark:bg-white">
           <Icon
-            className="relative right-[1px] text-white transition-transform duration-[800ms] group-hover:translate-x-[2px] group-hover:rotate-[180deg] dark:text-black"
+            className=" relative right-[1px] text-white transition-transform duration-[800ms] group-hover:translate-x-[2px] group-hover:rotate-[180deg] dark:text-black"
             icon="solar:settings-bold"
-            width="3rem"
           />
         </div>
       </div>

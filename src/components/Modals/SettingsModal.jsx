@@ -13,7 +13,7 @@ function SettingsModal({ closeModal }) {
 
   return (
     <section className="fixed left-0 top-0 z-20 flex h-full w-full items-center justify-center bg-white/50 backdrop-blur-[25px] dark:bg-black/50">
-      <div className="flex h-fit w-8/12 flex-col rounded-md bg-white p-6 shadow-2xl shadow-black dark:bg-[#1B1B1B]">
+      <div className="flex h-fit w-11/12 md:w-10/12 lg:w-8/12 flex-col rounded-md bg-white p-6 shadow-2xl shadow-black dark:bg-[#1B1B1B]">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="flex h-[3.5rem] w-[3.5rem] items-center justify-center rounded-full bg-black dark:bg-white">
@@ -36,26 +36,26 @@ function SettingsModal({ closeModal }) {
         </div>
         <div className="mt-5 flex cursor-pointer items-center justify-between rounded-md bg-[rgba(141,141,141,0.30);] p-4 transition-colors duration-300 hover:bg-[#8D8D8DCC] dark:bg-black hover:dark:bg-[#02020B66]">
           <div className="flex flex-col">
-            <h1 className="text-[32px] font-medium dark:text-white">
+            <h1 className="text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Plano atual
             </h1>
-            <p className="text-md font-medium text-primary-200">
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-primary-200 hidden sm:block">
               Atualize seu plano hoje mesmo
             </p>
           </div>
           <div className="flex flex-col">
-            <h1 className="text-right text-[32px] font-medium dark:text-white">
+            <h1 className="text-right text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Essencial
             </h1>
-            <p className="text-md font-medium text-primary-200">Seja Premium</p>
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-primary-200 hidden sm:block">Seja Premium</p>
           </div>
         </div>
         <div className="mt-5 flex items-center justify-between rounded-md bg-[rgba(141,141,141,0.30);] p-4 transition-colors duration-300 hover:bg-[#8D8D8DCC] dark:bg-black hover:dark:bg-[#02020B66]">
           <div className="flex flex-col">
-            <h1 className="text-[32px] font-medium dark:text-white">
+            <h1 className="text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Modo claro
             </h1>
-            <p className="text-md font-medium text-primary-200">
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-primary-200 hidden sm:block">
               Aqui é você que escolhe a visualização
             </p>
           </div>
@@ -72,10 +72,10 @@ function SettingsModal({ closeModal }) {
         </div>
         <div className="mt-32 flex cursor-pointer items-center justify-between rounded-md bg-[#E3000033] px-4 py-2 transition-colors duration-300 hover:bg-[#E300001A]">
           <div className="flex flex-col">
-            <h1 className="text-[32px] font-medium dark:text-white">
+            <h1 className="text-[20px] xs:text-[25px] sm:text-[32px] font-medium dark:text-white">
               Sair da conta
             </h1>
-            <p className="text-md font-medium text-red">
+            <p className="text-[16px] xs:text-[20px] sm:text-md font-medium text-red">
               Aqui é você que escolhe a visualização
             </p>
           </div>

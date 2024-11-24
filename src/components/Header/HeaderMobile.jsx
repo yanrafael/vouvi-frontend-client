@@ -23,7 +23,7 @@ function HeaderMobile({ iconId }) {
   // Icones
   const Learn = (
     <svg
-      className="w-14 overflow-visible"
+      className="w-10 sm:w-14 overflow-visible"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ function HeaderMobile({ iconId }) {
   );
   const Planning = (
     <svg
-      className="w-14 overflow-visible"
+      className="w-10 sm:w-14 overflow-visible"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ function HeaderMobile({ iconId }) {
 
   const Ranking = (
     <svg
-      className="w-14 overflow-visible"
+      className="w-10 sm:w-14 overflow-visible"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ function HeaderMobile({ iconId }) {
 
   const Store = (
     <svg
-      className="w-14 overflow-visible"
+      className="w-10 sm:w-14 overflow-visible"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -140,8 +140,8 @@ function HeaderMobile({ iconId }) {
   return (
     <>
       {activeModal === "settings" && <SettingsModal closeModal={closeModal} />}
-      <header className="sticky bottom-0 left-0 z-10 m-auto flex h-24 w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:hidden dark:bg-[rgba(2,2,11,0.80);]">
-        <nav className="flex w-full justify-around items-center">
+      <header className="sticky bottom-0 left-0 z-10 m-auto flex h-16 sm:h-20 w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:hidden dark:bg-[rgba(2,2,11,0.80);]">
+        <nav className="flex w-full items-center justify-around">
           <Link to={"/learn"}>
             <div onClick={() => StateChange(0)}>
               <Navigation
@@ -171,7 +171,7 @@ function HeaderMobile({ iconId }) {
                   textColor={`hidden `}
                 />
               ) : (
-                <AvatarBasic width={` group `} />
+                <AvatarBasic width={` group w-10 sm:w-14`} />
               )}
             </div>
           </Link>
