@@ -1,24 +1,30 @@
 import Header from "../../components/Header/HeaderIntern";
 import HeaderMobile from "../../components/Header/HeaderMobile";
-import Stage from "../../components/Learn/Stage";
 import TopSection from "../../components/Learn/TopSection";
+import AvatarFull from "../../components/Header/AvatarFull";
+import Section1 from "./Sections/Section1";
 
 function GameHome() {
   return (
     <>
-      <Header />
-      <HeaderMobile iconId={0} />
+      <Header>
+        <AvatarFull name={"Josefa"} />
+      </Header>
 
       <main>
         {/* Heading */}
-        <section></section>
+        <TopSection
+          section={1}
+          sectionName={"Fundamentos"}
+          playerCoins={938}
+          playerLevel={27}
+          playerXP={13_657}
+        />
 
         {/* Trail */}
-        <section>
-          <TopSection section={1} sectionName={"Fundamentos"} />
-          <Stage />
-        </section>
+        <Section1 />
       </main>
+      <HeaderMobile iconId={0} />
     </>
   );
 }
