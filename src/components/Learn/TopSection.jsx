@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 // Desc: Top section of the Learn page
 function TopSection({
@@ -60,11 +60,11 @@ function TopSection({
 }
 
 TopSection.propTypes = {
-  section: propTypes.number.isRequired,
-  sectionName: propTypes.string.isRequired,
-  playerLevel: propTypes.number.isRequired,
-  playerXP: propTypes.number.isRequired,
-  playerCoins: propTypes.number.isRequired,
+  section: PropTypes.number.isRequired,
+  sectionName: PropTypes.string.isRequired,
+  playerLevel: PropTypes.number.isRequired,
+  playerXP: PropTypes.number.isRequired,
+  playerCoins: PropTypes.number.isRequired,
 };
 
 export default TopSection;
