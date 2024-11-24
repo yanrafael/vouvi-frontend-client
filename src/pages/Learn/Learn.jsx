@@ -4,7 +4,7 @@ import TopSection from "../../components/Learn/TopSection";
 import Section from "./Section";
 import AvatarBasic from "../../components/Header/AvatarBasic";
 
-function GameHome() {
+function Learn() {
   const stages = [
     {
       id: 0,
@@ -45,4 +45,4 @@ function GameHome() {
   );
 }
 
-export default GameHome;
+export default Learn;
