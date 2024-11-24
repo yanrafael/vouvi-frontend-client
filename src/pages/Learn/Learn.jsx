@@ -1,7 +1,7 @@
 import Header from "../../components/Header/HeaderIntern";
 import HeaderMobile from "../../components/Header/HeaderMobile";
 import TopSection from "../../components/Learn/TopSection";
-import Section from "./Section";
+import Trail from "./Trail";
 import AvatarBasic from "../../components/Header/AvatarBasic";
 
 function Learn() {
@@ -9,15 +9,30 @@ function Learn() {
     {
       id: 0,
       icon: "mdi:book-open-page-variant",
-      iconWidth: 40,
-      top: 20,
-      left: 25,
+      iconWidth: 50,
+      top: 10,
+      left: 10,
+      finished: true,
     },
-    { id: 1, icon: "mdi:heart", iconWidth: 40, top: 200, left: 50 },
-    { id: 2, icon: "mdi:star", iconWidth: 40, top: 380, left: 110 },
-    { id: 3, top: 500, left: 250 },
-    { id: 4, top: 470, left: 350 },
-    { id: 5, top: 400, left: 450 },
+    {
+      id: 1,
+      icon: "mdi:heart",
+      iconWidth: 50,
+      top: 200,
+      left: 35,
+      finished: true,
+    },
+    {
+      id: 2,
+      icon: "mdi:star",
+      iconWidth: 50,
+      top: 390,
+      left: 110,
+      finished: false,
+    },
+    { id: 3, top: 500, left: 250, finished: false },
+    { id: 4, top: 470, left: 350, finished: false },
+    { id: 5, top: 400, left: 450, finished: false },
   ];
 
   return (
@@ -37,7 +52,7 @@ function Learn() {
         />
 
         {/* Trail 1 */}
-        <Section stages={stages} />
+        <Trail stages={stages} />
       </main>
 
       <HeaderMobile iconId={0} />

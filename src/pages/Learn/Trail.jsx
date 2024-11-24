@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Stage from "../../components/Learn/Stage";
 import trail from "../../assets/images/learning-trail-1.svg";
 
-function Section({ stages }) {
+function Trail({ stages }) {
   return (
     <section className="relative top-14 mx-auto">
       <img src={trail} alt="trilha de aprendizagem" />
@@ -14,7 +14,7 @@ function Section({ stages }) {
   );
 }
 
-Section.propTypes = {
+Trail.propTypes = {
   stages: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -22,8 +22,9 @@ Section.propTypes = {
       iconWidth: PropTypes.number,
       top: PropTypes.number.isRequired,
       left: PropTypes.number.isRequired,
+      finished: PropTypes.bool.isRequired,
     }),
   ).isRequired,
 };
 
-export default Section;
+export default Trail;

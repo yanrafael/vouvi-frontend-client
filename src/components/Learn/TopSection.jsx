@@ -25,18 +25,18 @@ function TopSection({
 
   return (
     <section className="mt-4 flex w-full justify-center gap-4 text-[32px]">
-      <div className="flex items-center rounded-[9px] bg-black/20 px-4">
+      <div className="flex items-center rounded-[9px] bg-black/20 px-4 dark:bg-white/15 dark:text-white">
         <p>
           <span className="font-bold">Sessão {section}:</span> {sectionName}
         </p>
       </div>
 
-      <div className="flex items-center rounded-[9px] bg-secondary-200 px-3 py-1 text-white">
+      <div className="flex items-center rounded-[9px] bg-secondary-200 px-3 py-1 text-white dark:bg-secondary-200/70">
         <span className="font-bold">Nível {playerLevel}</span>
 
         <div className="relative mx-2 h-6 w-[35vw] rounded-[4px] bg-secondary-400">
-          <div className="h-full w-4/5 rounded-[4px] bg-white"></div>
-          <span className="absolute right-1 top-0 text-right text-sm text-secondary-200">
+          <div className="h-full w-4/5 rounded-[4px] bg-white dark:bg-secondary-200"></div>
+          <span className="absolute right-1 top-0 text-right text-sm font-bold text-secondary-200">
             Faltam 338 XP
           </span>
         </div>
@@ -45,12 +45,12 @@ function TopSection({
       </div>
 
       <div className="flex gap-2">
-        <span className="flex items-center gap-2 rounded-[9px] bg-black/20 px-4">
+        <span className="flex items-center gap-2 rounded-[9px] bg-black/20 px-4 dark:bg-white/15 dark:text-white">
           <span className="font-bold text-secondary-200">XP</span>
           {playerXP.toLocaleString()}
         </span>
 
-        <span className="flex items-center gap-2 rounded-[9px] bg-black/20 px-4">
+        <span className="flex items-center gap-2 rounded-[9px] bg-black/20 px-4 dark:bg-white/15 dark:text-white">
           {vcoin}
           {playerCoins.toLocaleString()}
         </span>

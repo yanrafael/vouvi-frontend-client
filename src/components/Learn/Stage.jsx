@@ -1,13 +1,21 @@
 import { Icon } from "@iconify/react";
 import propTypes from "prop-types";
 
-function Stage({ icon, iconWidth, top, left }) {
+function Stage({ icon, iconWidth, top, left, finished }) {
   return (
     <button
-      className={`absolute flex ${icon ? "h-20 w-20" : "h-10 w-10"} items-center justify-center rounded-full bg-[#002952]`}
+      className={`absolute flex ${icon ? "h-28 w-28" : "h-10 w-10"} items-center justify-center rounded-full ${finished ? "bg-[#002952] dark:bg-[#D6EBFF]" : "bg-[#D6EBFF] dark:bg-[#002952]"}`}
       style={{ top: `${top}px`, left: `${left}px` }}
     >
-      <Icon icon={icon} width={iconWidth} color="#D6EBFF" />
+      <Icon
+        icon={icon}
+        width={iconWidth}
+        className={
+          finished
+            ? "text-[#D6EBFF] dark:text-[#002952]"
+            : "text-[#002952] dark:text-[#D6EBFF]"
+        }
+      />
     </button>
   );
 }
@@ -17,6 +25,7 @@ Stage.propTypes = {
   iconWidth: propTypes.number,
   top: propTypes.number.isRequired,
   left: propTypes.number.isRequired,
+  finished: propTypes.bool.isRequired,
 };
 
 export default Stage;
