@@ -52,8 +52,8 @@ function Top({ background }) {
           </p>
         </div>
 
-        <Link to={"/create-account"}>
-          <PrimaryButton text={"Começar agora"} />
+        <Link to={"/create-account"} title="Aperte para criar uma nova conta">
+          <PrimaryButton text={"Começar agora!"} />
         </Link>
 
         <div className="m-auto mt-5 xs:mt-[150px] flex flex-col items-center justify-center">
