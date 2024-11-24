@@ -92,7 +92,7 @@ function Top({ onClick, onClick2 }) {
           </div>
           <div className="flex h-20 items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
             <p className="flex flex-row items-center justify-center gap-4 text-nowrap text-base">
-              01 Out - 10 Out | <Icon icon={"bi:calendar-fill"} width={40} />
+              01 Out - 10 Out | <Icon icon={"bi:calendar-fill"} width={40} title="Calendário"/>
             </p>
           </div>
         </div>

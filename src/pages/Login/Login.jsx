@@ -14,7 +14,7 @@ function Form() {
   return (
     <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
       <video
-        src={bgVideo}
+        src={bgVideo}     
         className="fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
@@ -51,10 +51,10 @@ function Form() {
         />
 
         <div className="flex justify-between">
-          <Link className="login-link" to="/create-account">
+          <Link className="login-link" to="/create-account" title="clique aqui para criar uma conta">
             criar conta
           </Link>{" "}
-          <Link className="login-link" to="/forget-password">
+          <Link className="login-link" to="/forget-password" title="Clique aqui para alterar a senha">
             esqueci a senha
           </Link>
         </div>
