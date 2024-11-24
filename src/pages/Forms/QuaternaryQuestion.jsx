@@ -1,7 +1,7 @@
-import FormCard from "../../Cards/FormCard";
-import Title from "../../Cards/FormTitle";
-import InfoButton from "../../Buttons/InfoButton";
-import SecondaryButton from "../../Buttons/SecondaryButton";
+import FormCard from "../../components/Cards/FormCard";
+import Title from "../../components/Cards/FormTitle";
+import InfoButton from "../../components/Buttons/InfoButton";
+import SecondaryButton from "../../components/Buttons/SecondaryButton";
 function QuartenaryQuestion() {
     return (
 
