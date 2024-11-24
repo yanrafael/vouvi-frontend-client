@@ -14,7 +14,7 @@ function Friends({ icon, name, level, xp, vcoin }) {
           <p className="text-md font-light">Nível {level}</p>
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="sm:flex items-center hidden">
         <div className="mx-3 flex items-center rounded-[14px] bg-[rgba(141,141,141,0.30);] p-2 lg:mx-4 dark:bg-[#1F1F1F] dark:text-white">
           <h1 className="px-2 text-[24px] font-bold text-[#014085] lg:text-[30px]">
             XP

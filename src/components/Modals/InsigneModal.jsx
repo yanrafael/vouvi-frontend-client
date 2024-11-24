@@ -6,7 +6,7 @@ import Unknown from "../../assets/images/insigne-unknow.svg";
 function InsineModal({ closeModal }) {
   return (
     <section className="fixed left-0 top-0 z-20 flex h-full w-full items-center justify-center overflow-y-hidden bg-white/50 backdrop-blur-[25px] dark:bg-black/50">
-      <div className="flex h-[750px] w-8/12 flex-col rounded-md bg-white p-6 shadow-2xl shadow-black dark:bg-[#1B1B1B]">
+      <div className="flex h-[750px] w-11/12 md:w-10/12 lg:w-8/12 flex-col rounded-md bg-white p-6 shadow-2xl shadow-black dark:bg-[#1B1B1B]">
         <div className="flex items-center justify-between">
           <h1 className="text-right text-[32px] font-medium dark:text-white">
             Conquistas
