@@ -64,7 +64,7 @@ const Ranking = () => {
       <HeaderIntern iconActiveNumber={2}>
         <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} />
       </HeaderIntern>
-      <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:w-30 text-nowrap">
+      <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:w-30 text-nowrap ">
         <div className="lg:w-3/5 top-8 mr-5  flex-col md:mx-30 ">
           <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white  ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-11 lg:mr-96 lg:-mt-28 md:p-1 mt-11 text-[30px]">
             Os Especialistas!
@@ -97,7 +97,7 @@ const Ranking = () => {
         </div>
       </div>
       <div className="mt-10 w-10 md:hidden lg:block"></div>
-      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-4 lg:gap-0">
+      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-3 lg:gap-0 ">
         <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 ml-3 md:-mt-12 lg:-mt-16">
           <div className="flex justify-evenly  md:text-nowrap m-9  ">
             {ranking.slice(1, 2).map((ranking, index) => (
@@ -152,7 +152,7 @@ const Ranking = () => {
         <p className=" lg:text-md font-bold  text-primary-200 md:text-[30px] ml-7 m-5 text-[24px] md:hidden -mt-6">
               Ricos da Vouvi
             </p>
-        <div className="lg:w-1/4  flex  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[320px] ml-4  -mt-5 md:-mt-10 lg:-mt-16">
+        <div className="lg:w-[390px]  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[360px] ml-4  -mt-5 md:-mt-10 lg:ml-20 lg:-mt-14 ">
           <div>
             <p className=" lg:text-md font-bold text-white md:text-[30px] text-[18px] ml-5 mt-4 hidden md:block">
               Ricos da Vouvi
@@ -168,7 +168,7 @@ const Ranking = () => {
               <></>
             ),
           )}
-          <div className="lg:border-card m-auto my-4 lg:flex rounded-md border-2 md:w-60  w-64 md:m-4 lg:w-80 lg:ml-4 hidden md:block md:mr-1"></div>
+          <div className="lg:border-card m-auto my-4 lg:flex rounded-md border-2 md:w-60  w-64 md:m-4 lg:w-80 hidden md:block md:mr-1"></div>
           {lateral.map((lateral, index) => (
             <CardLateral
               posicao={index + 1}
