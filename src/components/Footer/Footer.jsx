@@ -35,14 +35,16 @@ function Footer({ darkMode }) {
 
   return (
     <footer className="w-12/12 m-auto mt-60 flex items-center justify-around bg-primary-200 py-8 lg:px-0 lg:p-8 xl:p-12">
-      <LogoWhite darkMode={"white"} Name={VouviWord} width={"66"} />
+      <div className="hidden md:block">
+        <LogoWhite darkMode={"white"} Name={VouviWord} width={"66"} />
+      </div>
       <p className="text-center text-[12px] sm:text-sm lg:text-[20px] xl:text-[24px] font-light text-white">
-        © 2024 Vouvi.<br className="xs:hidden block"/> Todos os direitos reservados.
+        © 2024 Vouvi.<br className="xs:hidden block"/> <strong className="hidden md:block">Todos os direitos reservados.</strong>
       </p>
       <div className="flex">
         {/* Insta */}
         <svg
-          className="mx-1 md:mx-2 lg:mx-3 h-4 sm:h-7 md:h-8 lg:h-10 xl:h-12"
+          className="mx-1 md:mx-2 lg:mx-3 h-7 md:h-8 lg:h-10 xl:h-12"
           viewBox="0 0 48 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +56,7 @@ function Footer({ darkMode }) {
         </svg>
         {/* Facebook */}
         <svg
-          className="mx-1 md:mx-2 lg:mx-3 h-4 sm:h-7 md:h-8 lg:h-10 xl:h-12"
+          className="mx-1 md:mx-2 lg:mx-3 h-7 md:h-8 lg:h-10 xl:h-12"
           viewBox="0 0 49 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +68,7 @@ function Footer({ darkMode }) {
         </svg>
         {/* Linkedin */}
         <svg
-          className="mx-1 md:mx-2 lg:mx-3 h-4 sm:h-7 md:h-8 lg:h-10 xl:h-12"
+          className="mx-1 md:mx-2 lg:mx-3 h-7 md:h-8 lg:h-10 xl:h-12"
           viewBox="0 0 49 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +80,7 @@ function Footer({ darkMode }) {
         </svg>
         {/* Twitter */}
         <svg
-          className="mx-1 md:mx-2 lg:mx-3 h-4 sm:h-7 md:h-8 lg:h-10 xl:h-12"
+          className="mx-1 md:mx-2 lg:mx-3 h-7 md:h-8 lg:h-10 xl:h-12"
           viewBox="0 0 49 44"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +93,7 @@ function Footer({ darkMode }) {
         {/* Info */}
         <Link to={"/about"}>
           <svg
-            className="mx-1 md:mx-2 lg:mx-3 h-4 sm:h-7 md:h-8 lg:h-10 xl:h-12"
+            className="mx-1 md:mx-2 lg:mx-3 h-7 md:h-8 lg:h-10 xl:h-12"
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

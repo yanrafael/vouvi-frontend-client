@@ -12,24 +12,39 @@ function StoreSingleCard({
   img3,
 }) {
   return (
-    <section className={`${color4} mb-20 mt-20 flex h-[600px] gap-10 rounded-md dark:bg-[#1F1F1F] p-10 max-2xl:justify-between`}>
-      <div className="flex h-[490px] w-[560px] flex-none rounded-md bg-[#C4C4C47D]">
+    <section
+      className={`${color4} mb-20 mt-20 flex h-full flex-col gap-5 rounded-md p-10 max-2xl:justify-between md:h-[420px] md:flex-row lg:h-[600px] lg:gap-10 dark:bg-[#1F1F1F]`}
+    >
+      <div className="flex flex-none rounded-md bg-[#C4C4C47D] md:h-[340px] md:w-[350px] lg:h-[490px] lg:w-[500px]">
         {children}
       </div>
-      <div className="flex flex-col relative">
-        <h1 className="text-base font-semibold text-black dark:text-white">{title} </h1>
-        <div className="mt-10 flex flex-wrap justify-center overflow-y-scroll ">
-          <StoreCard color2={'bg-primary-200'} color3={'bg-[#470063]'} color={color1}>
-            <img className="rounded-sm" src={img1} alt="" />
+      <div className="relative flex flex-col">
+        <h1 className="text-[25px] font-semibold text-black lg:text-base dark:text-white">
+          {title}{" "}
+        </h1>
+        <div className="mt-4 flex justify-center md:flex-wrap md:overflow-y-scroll lg:mt-10">
+          <StoreCard
+            color2={"bg-primary-200"}
+            color3={"bg-[#470063]"}
+            color={color1}
+          >
+            <img className="md:rounded-sm" src={img1} alt="" />
           </StoreCard>
-          <StoreCard color2={'bg-primary-200'} color3={'bg-[#470063]'} color={color2}>
-            <img className="rounded-sm" src={img2} alt="" />
+          <StoreCard
+            color2={"bg-primary-200"}
+            color3={"bg-[#470063]"}
+            color={color2}
+          >
+            <img className="md:rounded-sm" src={img2} alt="" />
           </StoreCard>
-          <StoreCard color2={'bg-primary-200'} color3={'bg-[#470063]'} color={color3}>
-            <img className="rounded-sm" src={img3} alt="" />
+          <StoreCard
+            color2={"bg-primary-200"}
+            color3={"bg-[#470063]"}
+            color={color3}
+          >
+            <img className="md:rounded-sm" src={img3} alt="" />
           </StoreCard>
         </div>
-        <div className="to-transparent absolute right-0 bottom-0 h-10 w-full bg-gradient-to-t from-[#E3D3F3] dark:from-[#1F1F1F]"></div>
       </div>
     </section>
   );

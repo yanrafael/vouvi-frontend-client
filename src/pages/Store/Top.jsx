@@ -18,9 +18,9 @@ function Top() {
   return (
     <>
       <section className="m-auto mt-24 flex w-11/12 justify-between rounded-md bg-primary-100 px-10 pt-10 outline outline-[26px] outline-[#7C20BE33]">
-        <div className="ml-5 mt-5 w-3/6 text-primary-200">
-          <h1 className="text-[54px] font-bold xl:text-xl">Seja Premium</h1>
-          <p className="mt-6 text-base font-light xl:text-lg">
+        <div className="lg:ml-5 mt-5 w-3/6 text-primary-200 leading-[1]">
+          <h1 className="text-[45px] lg:text-[54px] font-bold xl:text-xl">Seja Premium</h1>
+          <p className="mt-6 text-[29px] lg:text-base font-light xl:text-lg">
             Energia infinita, ferramentas avançadas, e relatórios em PDF, para
             toda a família.
           </p>
@@ -29,7 +29,7 @@ function Top() {
           </div>
         </div>
         <img
-          className="w-[390px] xl:w-[510px]"
+          className="w-[300px] lg:w-[390px] xl:w-[510px]"
           src={CatBanner}
           alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
           title="gato Fin, Uma ilustração em estilo cartoon de um gato preto "
