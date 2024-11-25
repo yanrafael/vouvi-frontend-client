@@ -34,6 +34,7 @@ function Mid() {
         title1={"Em promoção!"}
         text1={"Por tempo limitado!"}
         color1={"bg-[#84CE7A]"}
+        color2={"bg-[#FF595E]"}
         icon2={"mingcute:eye-fill"}
         title2={"Olhe intensamente!"}
         text2={"Os melhores olhos de gatinhos"}
@@ -63,6 +64,7 @@ function Mid() {
         title1={"Coleiras: Elegância e proteção"}
         text1={"Seu avatar mais incrível!"}
         color1={"bg-white"}
+        color2={"bg-white"}
         icon2={"mdi:necklace"}
         title2={"Pingentes: Detalhe de poder!"}
         text2={"Complete seu look com um toque!"}
@@ -94,7 +96,10 @@ function Mid() {
           }}
           className="flex w-full"
         >
-          <img src={WhiteCat} alt="fin, gato em sua versão com pelagem branca" />
+          <img
+            src={WhiteCat}
+            alt="fin, gato em sua versão com pelagem branca"
+          />
         </div>
       </StoreSingleCard>
     </section>
