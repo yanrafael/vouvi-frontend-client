@@ -15,15 +15,15 @@ const CardLateral = (props) =>{
     return(
         <>
             {props.nome === 'Usuario'
-                ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 p-1 rounded-md mr-2 items-center md:w-[270px] w-[310px] lg:w-full m-3 md:mr-0 md:ml-2 md:m-0 ml-4">
+                ?<div className="flex justify-between text-segundo bg-[#002952] text-secondary-200 rounded-md w-full ">
                     <div className="flex items-center ">
-                        <span className="lg:mr-2 flex items-center justify-center lg:w-14 lg:h-14 bg-secondary-200 rounded-full text-md text-[#002952] text-cardVoce md:w-10 md:h-10 h- w-9 ml-2">{props.posicao}°</span>
+                        <span className=" flex items-center justify-center lg:h-full bg-secondary-200 rounded-full text-md text-[#002952] text-cardVoce h-9 w-9 ml-1 md:h-10 md:w-10">{props.posicao}°</span>
                         <div className=" lg:text-md font-medium md:text-[19px] md:w-1 text-[20px] ml-2">Você</div>
                     </div>
                     <div className="lg:text-md underline text-secondary-200 font-light mr-2 mt-3 md:w-18 md:h-8 md:text-[18px] text-[19px] ">{props.vc} VC</div>
                 </div>
                 :props.posicao<4
-                ?<div className=" flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-md ml-6 md:w-[270px] md:h-[65px] h-14 w-[300px] m lg:w-full md:ml-1" >
+                ?<div className="w-full flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-md md:h-[65px] h-14 " >
                     <div className="flex items-center">
                         {
                             props.posicao===1?<img src={document.body.classList.value === "dark"?Darkprimeiro :primeiro} alt="" className="mr-2 flex items-center justify-center lg:w-14 lg:h-14 rounded-full bg-black text-teste md:w-12  md:h-12 w-8 h-8"/>:
@@ -44,7 +44,7 @@ const CardLateral = (props) =>{
                     }
 
                 </div>
-                :<div className="lg:flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-lg mr-2  items-center md:w-[270px] md:h-11 md:text-sm w-[300px] md:mb-2 lg:w-full ml-6 md:ml-1">
+                :<div className="w-full lg:flex justify-between text-segundo bg-white dark:bg-[#3D3D3D] p-1 mb-2 rounded-lg  items-center md:h-11 md:text-sm ">
                     <div className="flex text-textolado text-primary-200 dark:text-[#5C5C5C] ">
                         <div className="ml-4 text-md mr-3  ">{props.posicao}°</div>
                         <div className="text-md font-medium  ">{props.nome}</div>

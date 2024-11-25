@@ -64,78 +64,24 @@ const Ranking = () => {
       <HeaderIntern iconActiveNumber={2}>
         <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} />
       </HeaderIntern>
-      <div className="lg:lex-row items-center  gap-24 justify-center lg:mt-10 lg:flex md:m-50 md:w-30 text-nowrap ">
-        <div className="lg:w-3/5 top-8 mr-5  flex-col md:mx-30 ">
-          <h2 className=" mr-28 font-bold text-primary-200 md:text-nowrap  dark:text-white  ml-6 text-nowrap lg:text-[64px] md:text-[50px]  md:ml-11 lg:mr-96 lg:-mt-28 md:p-1 mt-11 text-[30px]">
+      <div className="lg:lex-row  items-center justify-center text-nowrap lg:mt-10 lg:flex ">
+        <div className=" top-8 mr-5 flex-col lg:w-3/5">
+          <h2 className="ml-6 mr-28 mt-11 text-nowrap text-[30px] font-bold text-primary-200  md:text-nowrap md:p-1 md:text-[45px] lg:-mt-28 lg:text-[55px] dark:text-white text-left">
             Os Especialistas!
           </h2>
-          <p className=" text-center lg:text-base font-light text-primary-200   dark:text-white md:text-[30px]  md:mr-[500px] text-[24px] lg:text-nowrap lg:-mt-1 4 md:-m-6 lg:-ml-16  md:ml-11 mr-20">
+          <p className="text-left text-[30px] font-light text-primary-200  md:text-[40px] lg:text-base dark:text-white relative">
             Ranking atualizado
           </p>
         </div>
-        <div className="md:flex hidden w-1/5 flex-col  relative md:-top-14 ">
-          <p className="lg:text-md font-light text-[#471650] md:text-[24px] dark:text-white md:ml-[499px]  lg:-ml-8 md:text-nowrap mr-44 lg:m-3  md:m-1 lg:mt-11 ">
+        <div className="relative hidden w-1/5 flex-col md:-top-14 md:flex">
+          <p className=" font-light text-[#471650] md:text-[24px] lg:mt-11 lg:text-md dark:text-white relative text-right ">
             Mostrando Ranking
           </p>
-          <div className="relative w-fit  ">
+          <div className="relative w-fit">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="lg:w-full focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm dark:border-primary-200 dark:text-primary-200   lg:-ml-10  md:-mt-52 md:m-30 md:ml-[490px]  md:m-2  mt-11 md:w-[260px] lg:-mt-1"
-            >
-              {options.map((option) => (
-                <option
-                  key={option.label}
-                  value={option.label}
-                  className="bg-white text-[#1a001a] dark:bg-[#1a001a] dark:text-white"
-                >
-                  {option.label} {option.xp}
-                </option>
-              ))}
-            </select> 
-          </div>
-        </div>
-      </div>
-      <div className="mt-10 w-10 md:hidden lg:block"></div>
-      <div className="flex lg:w-screen justify-center flex-col  md:flex-row md:ml-32 lg:ml-14 md:gap-3 lg:gap-0 ">
-        <div className="lg:mx-auto md:w-11/12 rounded-lg bg-[#DFDFDE] lg:w-3/5 dark:bg-[#1F1F1F] lg:h-5/5 lg:mr-14  w-11/12  -mt-10 ml-3 md:-mt-12 lg:-mt-16">
-          <div className="flex justify-evenly  md:text-nowrap m-9  ">
-            {ranking.slice(1, 2).map((ranking, index) => (
-              <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
-            ))}
-            {ranking.slice(0, 1).map((ranking, index) => (
-              <Colocacao posicao={1} nome={ranking.nome} xp={ranking.xp} />
-            ))}
-            {ranking.slice(2, 3).map((ranking, index) => (
-              <Colocacao posicao={3} nome={ranking.nome} xp={ranking.xp} />
-            ))}
-          </div>
-          <div className="mt-10"></div>
-          <div className="pr-3 lg:h-[551px] overflow-y-scroll md:h-[600px] ">
-            {ranking.slice(3, ranking.length).map((ranking, index) => (
-              <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp} />
-            ))}
-          </div>
-          <div className="mt-10"></div>
-          <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold ">
-            <span
-              className="flex h-12 cursor-pointer items-center rounded-sm bg-white dark:bg-[#1F1F1F] -mt-5  text-[16px] lg:text-[40px] md:mt-16 md:text-[22px] md:ml-2 lg:-mt-6 md:w-[290px] lg:w-[530px]"
-              style={{ color: "red" }}
-            >
-              ▼ Zona de Rebaixamento ▼
-            </span>
-          </div>
-        </div>
-        
-        { <div className="top-9 flex lg:w-1/5 flex-col md:relative md:hidden m-7 ">
-          <p className="text-nowrap lg:text-md font-light text-[#471650] md:ml-2 md:text-[19px] dark:text-white ml-3 text-[18px] ">
-            Mostrando Ranking
-          </p>
-          <div className="relative w-fit p-1">
-            <select
-              value={selectedOption}
-              onChange={(e) => setSelectedOption(e.target.value)}
-              className="focus:ring-purple-500 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 lg:text-md font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:w-full dark:border-primary-200 dark:text-primary-200 mr-4 text-[16px] w-72"
+              className="focus:ring-purple-500  w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:text-md dark:border-primary-200 dark:text-primary-200 relative "
             >
               {options.map((option) => (
                 <option
@@ -148,16 +94,72 @@ const Ranking = () => {
               ))}
             </select>
           </div>
-        </div> }
-        <p className=" lg:text-md font-bold  text-primary-200 md:text-[30px] ml-7 m-5 text-[24px] md:hidden -mt-6">
-              Ricos da Vouvi
+        </div>
+      </div>
+      <div className="mt-10 md:hidden lg:block"></div>
+      <div className="flex flex-col justify-center md:flex-row lg:w-screen lg:gap-0">
+        <div className="bg-[#DFDFDE] dark:bg-[#1F1F1F] lg:h-5/5 w-full rounded-lg  lg:-mt-16 mr-6">
+          <div className="m-9 flex justify-evenly md:text-nowrap">
+            {ranking.slice(1, 2).map((ranking, index) => (
+              <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
+            ))}
+            {ranking.slice(0, 1).map((ranking, index) => (
+              <Colocacao posicao={1} nome={ranking.nome} xp={ranking.xp} />
+            ))}
+            {ranking.slice(2, 3).map((ranking, index) => (
+              <Colocacao posicao={3} nome={ranking.nome} xp={ranking.xp} />
+            ))}
+          </div>
+          <div className="mt-10"></div>
+          <div className="overflow-y-scroll pr-3 md:h-[600px] lg:h-[551px]">
+            {ranking.slice(3, ranking.length).map((ranking, index) => (
+              <Card posicao={index + 4} nome={ranking.nome} xp={ranking.xp} />
+            ))}
+          </div>
+          <div className="mt-10"></div>
+          <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold">
+            <span
+              className="-mt-5 flex h-12 cursor-pointer items-center rounded-sm bg-white text-[16px] md:ml-2 md:mt-16 md:w-[290px] md:text-[22px] lg:-mt-6 lg:w-[530px] lg:text-[40px] dark:bg-[#1F1F1F]"
+              style={{ color: "red" }}
+            >
+              ▼ Zona de Rebaixamento ▼
+            </span>
+          </div>
+        </div>
+
+        {
+          <div className="top-9 m-7 flex flex-col md:relative md:hidden lg:w-1/5">
+            <p className="ml-3 text-nowrap text-[18px] font-light text-[#471650] md:ml-2 md:text-[19px] lg:text-md dark:text-white">
+              Mostrando Ranking
             </p>
-        <div className="lg:w-[390px]  flex-col rounded-lg bg-primary-200 md:p-3  dark:bg-[#1F1F1F] md:w-[300px] md:mr-36 mr-90 w-[360px] ml-4  -mt-5 md:-mt-10 lg:ml-20 lg:-mt-14 ">
+            <div className="relative w-fit p-1">
+              <select
+                value={selectedOption}
+                onChange={(e) => setSelectedOption(e.target.value)}
+                className="focus:ring-purple-500 mr-4 w-72 rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 text-[16px] font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:w-full lg:text-md dark:border-primary-200 dark:text-primary-200"
+              >
+                {options.map((option) => (
+                  <option
+                    key={option.label}
+                    value={option.label}
+                    className="bg-white text-[#1a001a] dark:bg-[#1a001a] dark:text-white"
+                  >
+                    {option.label} {option.xp}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        }
+        <p className="m-5 -mt-6 ml-7 text-[24px] font-bold text-primary-200 md:hidden md:text-[30px] lg:text-md">
+          Ricos da Vouvi
+        </p>
+        <div className="w-full md:w-fit flex-col rounded-lg bg-primary-200 md:-mt-1 dark:bg-[#1F1F1F] lg:-mt-14">
           <div>
-            <p className=" lg:text-md font-bold text-white md:text-[30px] text-[18px] ml-5 mt-4 hidden md:block">
+            <p className="ml-5 mt-4 hidden text-[18px] font-bold text-white md:block md:text-[30px] lg:text-md">
               Ricos da Vouvi
             </p>
-            <p className="mb-3 mr-px lg:text-md font-light text-white md:text-[20px]  pt-4 mt-0 text[16px] ml-5 text-[18px]">
+            <p className="text[16px] mb-3 ml-5 mr-px mt-0 pt-4 text-[18px] font-light text-white md:text-[20px] lg:text-md">
               Ranking de Vcoins
             </p>
           </div>
@@ -168,7 +170,7 @@ const Ranking = () => {
               <></>
             ),
           )}
-          <div className="lg:border-card m-auto my-4 lg:flex rounded-md border-2 md:w-60  w-64 md:m-4 lg:w-80 hidden md:block md:mr-1"></div>
+          <div className="lg:border-card m-auto my-4 hidden w-64 rounded-md border-2 md:m-4 md:mr-1 md:block md:w-60 lg:flex lg:w-80"></div>
           {lateral.map((lateral, index) => (
             <CardLateral
               posicao={index + 1}
@@ -179,7 +181,7 @@ const Ranking = () => {
         </div>
       </div>
       <Footer />
-      <HeaderMobile iconId={2}/>
+      <HeaderMobile iconId={2} />
     </>
   );
 };
