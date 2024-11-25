@@ -13,20 +13,21 @@ function StoreSingleCard({
 }) {
   return (
     <section
-      className={`${color4} mb-20 mt-20 flex h-full flex-col gap-5 rounded-md p-10 max-2xl:justify-between md:h-[420px] md:flex-row lg:h-[600px] lg:gap-10 dark:bg-[#1F1F1F]`}
+      className={`${color4} mb-20 mt-20 flex h-full flex-col gap-5 rounded-md p-5 md:p-10 max-2xl:justify-between md:h-[420px] md:flex-row lg:h-[600px] lg:gap-10 dark:bg-[#1F1F1F]`}
     >
       <div className="flex flex-none rounded-md bg-[#C4C4C47D] md:h-[340px] md:w-[350px] lg:h-[490px] lg:w-[500px]">
         {children}
       </div>
       <div className="relative flex flex-col">
-        <h1 className="text-[25px] font-semibold text-black lg:text-base dark:text-white">
+        <h1 className="text-[20px] md:text-[25px] font-medium text-black lg:text-base leading-[1] dark:text-white">
           {title}{" "}
         </h1>
-        <div className="mt-4 flex justify-center md:flex-wrap md:overflow-y-scroll lg:mt-10">
+        <div className="mt-4 flex justify-center flex-wrap md:overflow-y-scroll lg:mt-10">
           <StoreCard
             color2={"bg-primary-200"}
             color3={"bg-[#470063]"}
             color={color1}
+            value={"1"}
           >
             <img className="md:rounded-sm" src={img1} alt="" />
           </StoreCard>
@@ -34,6 +35,7 @@ function StoreSingleCard({
             color2={"bg-primary-200"}
             color3={"bg-[#470063]"}
             color={color2}
+            value={"2"}
           >
             <img className="md:rounded-sm" src={img2} alt="" />
           </StoreCard>
@@ -41,6 +43,7 @@ function StoreSingleCard({
             color2={"bg-primary-200"}
             color3={"bg-[#470063]"}
             color={color3}
+            value={"3"}
           >
             <img className="md:rounded-sm" src={img3} alt="" />
           </StoreCard>

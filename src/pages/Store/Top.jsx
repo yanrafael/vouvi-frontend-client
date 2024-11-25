@@ -17,10 +17,12 @@ function Top() {
 
   return (
     <>
-      <section className="m-auto mt-24 flex w-11/12 justify-between rounded-md bg-primary-100 px-10 pt-10 outline outline-[26px] outline-[#7C20BE33]">
-        <div className="lg:ml-5 mt-5 w-3/6 text-primary-200 leading-[1]">
-          <h1 className="text-[45px] lg:text-[54px] font-bold xl:text-xl">Seja Premium</h1>
-          <p className="mt-6 text-[29px] lg:text-base font-light xl:text-lg">
+      <section className="m-auto overflow-hidden mt-24 flex w-11/12 justify-between rounded-[10px] sm:rounded-md bg-primary-100 px-5 pt-5 outline outline-[20px] md:outline-[26px] outline-[#7C20BE33] md:px-10 md:pt-10">
+        <div className="mt-5 w-3/6 leading-[1] text-primary-200 lg:ml-5">
+          <h1 className="text-[24px] sm:text-[35px] font-bold md:text-[45px] lg:text-[54px] xl:text-xl text-nowrap">
+            Seja Premium
+          </h1>
+          <p className="mt-6 text-[22px] sm:text-[23px] font-light md:text-[29px] lg:text-base xl:text-lg w-[300px] sm:w-fit">
             Energia infinita, ferramentas avançadas, e relatórios em PDF, para
             toda a família.
           </p>
@@ -29,14 +31,14 @@ function Top() {
           </div>
         </div>
         <img
-          className="w-[300px] lg:w-[390px] xl:w-[510px]"
+          className=" w-[150px] pointer-events-none relative top-20 sm:top-0 sm:w-[240px] md:w-[300px] lg:w-[390px] xl:w-[510px]"
           src={CatBanner}
           alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
           title="gato Fin, Uma ilustração em estilo cartoon de um gato preto "
         />
       </section>
 
-      <hr className="m-auto mb-5 lg:mb-14 mt-20 w-10/12 rounded-md bg-black p-1 dark:bg-[#F5F5F442]" />
+      <hr className="m-auto mb-5 mt-20 w-10/12 rounded-md bg-black p-1 lg:mb-14 dark:bg-[#F5F5F442]" />
 
       <section className={`relative m-auto w-11/12`}>
         <div className="mb-6 flex flex-wrap items-center justify-center overflow-hidden lg:flex-nowrap lg:justify-between">
@@ -45,7 +47,7 @@ function Top() {
             <p className="font-light">Gaste vcoins!</p>
           </div>
 
-          <div className="flex w-full justify-around gap-2 lg:gap-4 mt-14 lg:mt-0">
+          <div className="mt-14 flex w-full justify-around gap-2 lg:mt-0 lg:gap-4 lg:overflow-x-scroll">
             <div onClick={() => setBtnColor(0)}>
               <StoreButton
                 title="opções de acessórios"
