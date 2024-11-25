@@ -5,7 +5,7 @@ import trail from "../../assets/images/learning-trail-1.svg";
 
 function Trail({ stages }) {
   return (
-    <section className="relative top-14 mx-auto">
+    <section className="relative top-14">
       <img src={trail} alt="trilha de aprendizagem" />
       {stages.map((stage) => (
         <Stage key={stage.id} {...stage} />

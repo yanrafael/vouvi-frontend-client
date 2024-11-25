@@ -41,7 +41,7 @@ function Learn() {
         <AvatarBasic name={"Josefa"} />
       </Header>
 
-      <main className="w-[100vw] px-[7vw]">
+      <main className="flex w-[100vw] flex-col items-center justify-center px-[7vw]">
         {/* Heading */}
         <TopSection
           section={1}
