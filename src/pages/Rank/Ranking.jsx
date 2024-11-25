@@ -64,24 +64,24 @@ const Ranking = () => {
       <HeaderIntern iconActiveNumber={2}>
         <AvatarFull name={"Ana Carolina"} xp={200} vcoins={928} />
       </HeaderIntern>
-      <div className="lg:lex-row  items-center justify-center text-nowrap lg:mt-10 lg:flex ">
-        <div className=" top-8 mr-5 flex-col lg:w-3/5">
-          <h2 className="ml-6 mr-28 mt-11 text-nowrap text-[30px] font-bold text-primary-200  md:text-nowrap md:p-1 md:text-[45px] lg:-mt-28 lg:text-[55px] dark:text-white text-left">
+      <div className="lg:lex-row items-center justify-center text-nowrap lg:mt-10 lg:flex">
+        <div className="top-8 mr-5 flex-col lg:w-3/5 ">
+          <h2 className="ml-6 mr-28 mt-11 text-nowrap text-left text-[30px] font-bold text-primary-200 md:text-nowrap md:p-1 md:text-[45px] lg:-mt-28 lg:text-[55px] dark:text-white">
             Os Especialistas!
           </h2>
-          <p className="text-left text-[30px] font-light text-primary-200  md:text-[40px] lg:text-base dark:text-white relative">
+          <p className="relative text-left text-[30px] font-light text-primary-200 md:text-[40px] lg:text-base dark:text-white">
             Ranking atualizado
           </p>
         </div>
-        <div className="relative hidden w-1/5 flex-col md:-top-14 md:flex">
-          <p className=" font-light text-[#471650] md:text-[24px] lg:mt-11 lg:text-md dark:text-white relative text-right ">
+        <div className="relative hidden lg:w-1/5 flex-col md:-top-14 md:flex items-end">
+          <p className="relative text-right font-light text-[#471650] md:text-[24px] lg:mt-11 lg:text-md dark:text-white">
             Mostrando Ranking
           </p>
           <div className="relative w-fit">
             <select
               value={selectedOption}
               onChange={(e) => setSelectedOption(e.target.value)}
-              className="focus:ring-purple-500  w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:text-md dark:border-primary-200 dark:text-primary-200 relative "
+              className="focus:ring-purple-500 relative w-full rounded-lg border-2 border-[#471650] bg-[#7C20BE1A] p-2 font-light text-[#471650] focus:outline-none focus:ring-2 md:text-sm lg:text-md dark:border-primary-200 dark:text-primary-200"
             >
               {options.map((option) => (
                 <option
@@ -98,7 +98,7 @@ const Ranking = () => {
       </div>
       <div className="mt-10 md:hidden lg:block"></div>
       <div className="flex flex-col justify-center md:flex-row lg:w-screen lg:gap-0">
-        <div className="bg-[#DFDFDE] dark:bg-[#1F1F1F] lg:h-5/5 w-full rounded-lg  lg:-mt-16 mr-6">
+        <div className="lg:h-5/5 mr-6 w-full rounded-lg bg-[#DFDFDE] lg:-mt-16 dark:bg-[#1F1F1F]">
           <div className="m-9 flex justify-evenly md:text-nowrap">
             {ranking.slice(1, 2).map((ranking, index) => (
               <Colocacao posicao={2} nome={ranking.nome} xp={ranking.xp} />
@@ -132,7 +132,7 @@ const Ranking = () => {
             <p className="ml-3 text-nowrap text-[18px] font-light text-[#471650] md:ml-2 md:text-[19px] lg:text-md dark:text-white">
               Mostrando Ranking
             </p>
-            <div className="relative w-fit p-1">
+            <div className="relative w-fit p-1 ">
               <select
                 value={selectedOption}
                 onChange={(e) => setSelectedOption(e.target.value)}
@@ -154,7 +154,7 @@ const Ranking = () => {
         <p className="m-5 -mt-6 ml-7 text-[24px] font-bold text-primary-200 md:hidden md:text-[30px] lg:text-md">
           Ricos da Vouvi
         </p>
-        <div className="w-full md:w-fit flex-col rounded-lg bg-primary-200 md:-mt-1 dark:bg-[#1F1F1F] lg:-mt-14">
+        <div className="w-full flex-col rounded-lg bg-primary-200 md:-mt-1 md:w-fit lg:-mt-14 dark:bg-[#1F1F1F]">
           <div>
             <p className="ml-5 mt-4 hidden text-[18px] font-bold text-white md:block md:text-[30px] lg:text-md">
               Ricos da Vouvi
