@@ -15,7 +15,7 @@ function Form() {
     <div className="align-center mt-5 flex h-full w-screen justify-center overflow-x-hidden sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
-        className="fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
+        className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
         loop
@@ -53,10 +53,17 @@ function Form() {
         </div>
 
         <div className="flex w-full justify-between">
-          <Link className="login-link text-[20px]" to="/create-account">
+          <Link
+            className="login-link text-[20px] sm:text-base lg:text-base"
+            to="/create-account"
+          >
             criar conta
           </Link>{" "}
-          <Link className="login-link text-[20px]" to="/forget-password">
+          x
+          <Link
+            className="login-link text-[20px] sm:text-base lg:text-base"
+            to="/forget-password"
+          >
             esqueci a senha
           </Link>
         </div>
