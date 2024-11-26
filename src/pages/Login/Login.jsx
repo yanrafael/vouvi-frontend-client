@@ -46,7 +46,7 @@ function Form() {
         <KeepConected />
         <div className="flex h-full w-full items-center justify-center">
           <input
-            className="h-[40px] w-[200px] rounded-md bg-primary-200 text-[20px] font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300 sm:h-[64px] sm:w-full sm:py-4 sm:text-base"
+            className="h-full w-[200px] rounded-md bg-primary-200 text-[20px] font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300 sm:h-[64px] sm:w-full sm:py-4 sm:text-base"
             type="submit"
             value="Entrar"
           />
