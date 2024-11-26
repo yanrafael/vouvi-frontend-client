@@ -59,7 +59,6 @@ function Form() {
           >
             criar conta
           </Link>{" "}
-          x
           <Link
             className="login-link text-[20px] sm:text-base lg:text-base"
             to="/forget-password"
