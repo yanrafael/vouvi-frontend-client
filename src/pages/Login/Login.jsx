@@ -12,7 +12,7 @@ function Form() {
   });
 
   return (
-    <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
+    <div className="m-5 flex h-full items-center justify-center sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
         className="fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
@@ -25,9 +25,11 @@ function Form() {
         className="flex h-full w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
         action=""
       >
-        <h1 className="text-center text-lg font-bold">Bem vindo de volta</h1>
+        <h1 className="w-full text-center text-lg font-bold">
+          Bem vindo de volta
+        </h1>
 
-        <label className="text-base" htmlFor="email">
+        <label className="w-full text-base" htmlFor="email">
           E-mail:
         </label>
         <input
@@ -35,11 +37,11 @@ function Form() {
           type="email"
           name="email"
           id="email"
-          placeholder="exemplo@email.com"
+          placeholder="Digite seu e-mail"
           autoComplete="on"
           required
         />
-
+        <label className="w-full text-base">Senha:</label>
         <PasswordInput />
 
         <KeepConected />
@@ -50,7 +52,7 @@ function Form() {
           value="Entrar"
         />
 
-        <div className="flex justify-between">
+        <div className="flex w-full justify-between">
           <Link className="login-link" to="/create-account">
             criar conta
           </Link>{" "}
