@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
 
 import Stage from "../../components/Learn/Stage";
-import trail from "../../assets/images/learning-trail-1.svg";
+import FinalStage from "../../components/Learn/FinalStage";
 
-function Trail({ stages }) {
+function Trail({ stages, bg }) {
   return (
-    <section className="relative top-14">
-      <img src={trail} alt="trilha de aprendizagem" />
+    <section className="relative top-14 rotate-90 xl:rotate-0">
+      <img src={bg} alt="trilha de aprendizagem" />
       {stages.map((stage) => (
         <Stage key={stage.id} {...stage} />
       ))}
+      <FinalStage top={220} left={1295} />
     </section>
   );
 }
@@ -25,6 +26,7 @@ Trail.propTypes = {
       finished: PropTypes.bool.isRequired,
     }),
   ).isRequired,
+  bg: PropTypes.string.isRequired,
 };
 
 export default Trail;
