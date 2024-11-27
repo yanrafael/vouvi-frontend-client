@@ -19,7 +19,7 @@ function FinalStage({ top, left }) {
 
   return (
     <button
-      style={{ top: `${top}px`, left: `${left}px` }}
+      style={{ top: `${top}%`, left: `${left}%` }}
       className={`group absolute flex h-28 w-28 items-center justify-center rounded-full border-white bg-secondary-200 transition-all duration-200 hover:border-4`}
     >
       {vcoinIcon}
