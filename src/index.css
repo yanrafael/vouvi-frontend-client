@@ -152,10 +152,7 @@
   .animate-bg-color-4 {
     animation: bgColorChange4 5s infinite;
   }
-
-
-
-
+  
   .slide-track {
     @apply flex;
     animation: scroll 7s linear infinite;
