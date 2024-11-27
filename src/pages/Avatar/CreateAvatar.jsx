@@ -6,23 +6,23 @@ import PrimaryButton from "../../components/Buttons/PrimaryButton";
 
 function CreateAvatar({ onClick }) {
   return (
-    <section className="flex w-[600px] flex-col items-center rounded-md bg-[#C9C9C8] py-10 dark:bg-[#151515]">
+    <section className="flex lg:w-[600px] md:w-[500px] w-full h-full md:h-auto flex-col items-center md:rounded-md bg-[#C9C9C8] py-10 dark:bg-[#151515]">
       <div className="mb-8 w-10/12 text-center">
-        <h1 className="text-lg font-medium text-secondary-200">Sucesso!</h1>
-        <div className="mt-4 rounded-md bg-secondary-200 py-2"></div>
+        <h1 className="lg:text-lg md:text-base text-[24px] font-medium text-secondary-200">Sucesso!</h1>
+        <div className="mt-4 rounded-md bg-secondary-200 lg:py-2 md:py-1 py-1"></div>
       </div>
 
-      <p className="mb-8 text-center text-[32px] font-light leading-[1.3] dark:text-white">
+      <p className="mb-8 text-center lg:text-[32px] md:text-[24px] text-[24px] font-light leading-[1.3] dark:text-white">
         Comece a <br /> criar seu avatar!
       </p>
 
-      <div className="h-[301px] w-[301px] rounded-full bg-[#7C20BE80]">
+      <div className="lg:h-[301px] lg:w-[301px] md:h-[240px] md:w-[240px] w-[180px] h-[180px] rounded-full bg-[#7C20BE80]">
         <img width={"400"} src={Avatar} alt="" />
       </div>
 
       <PrimaryButton
         onClick={onClick}
-        color={"mt-[45px]"}
+        color={"md:mt-[45px] mt-[20px]"}
         text={"Criar agora"}
       />
     </section>

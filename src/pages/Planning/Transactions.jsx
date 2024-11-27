@@ -1,39 +1,46 @@
 import { PieChart } from "@mui/x-charts";
 import PropTypes from "prop-types";
 import convertFloat from "../../utils/convertFloat";
+import { Icon } from "@iconify/react";
 
 const dailyTransactions = [
   {
+    iconSrc: "carbon:money",
     description: "Salário",
     value: 2000,
     type: "Entrada",
     date: "01/09/2021",
   },
   {
+    iconSrc: "carbon:money",
     description: "Mercado",
     value: 200,
     type: "Saída",
     date: "06/11/2024",
   },
   {
+    iconSrc: "carbon:money",
     description: "Salário",
     value: 2000,
     type: "Entrada",
     date: "01/09/2021",
   },
   {
+    iconSrc: "carbon:money",
     description: "Mercado",
     value: 200,
     type: "Saída",
     date: "06/11/2024",
   },
   {
+    iconSrc: "carbon:money",
     description: "Salário",
     value: 2000,
     type: "Entrada",
     date: "01/09/2021",
   },
   {
+    iconSrc: "carbon:money",
     description: "Mercado",
     value: 200,
     type: "Saída",
@@ -41,10 +48,13 @@ const dailyTransactions = [
   },
 ];
 
-function DailyTransaction({ description, value, type, date }) {
+function DailyTransaction({ description, value, type, date, iconSrc }) {
   return (
-    <li className="mb-2 flex justify-around rounded-md bg-white p-3 text-md dark:bg-secondary-300">
-      <span className="w-1/4 p-4">{description}</span>
+    <li className="mb-2 flex justify-around rounded-md bg-white p-3 text-md dark:bg-black">
+      <div className="flex items-center">
+        <Icon icon={iconSrc} className="h-12 w-12 rounded-full bg-yellow p-2" />
+        <span className="w-1/4 p-4">{description}</span>
+      </div>
       <span className="w-1/4 p-4">R$ {convertFloat(value)}</span>
       <span className="w-1/4 p-4 text-center">{type}</span>
       <span className="w-1/4 p-4">{date}</span>
@@ -58,13 +68,13 @@ function Transactions() {
   return (
     <div className="mt-10 flex w-full justify-between dark:text-white">
       <div className="w-7/12 rounded-md bg-[#888] bg-opacity-20 p-6 dark:bg-[#1B1B1B]">
-        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-bold text-white dark:bg-secondary-300">
-          Transações diárias
+        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-md font-semibold text-white dark:bg-black">
+          Transações
         </h3>
 
         <br />
 
-        <ul className="max-h-96 overflow-scroll">
+        <ul className="max-h-96 overflow-y-scroll">
           <li className="mb-2 flex justify-around text-md">
             <span className="w-1/4 p-4 text-center font-bold">Descrição</span>
             <span className="w-1/4 p-4 text-center font-bold">Valor</span>
@@ -79,7 +89,7 @@ function Transactions() {
       </div>
 
       <div className="relative flex w-2/5 flex-col items-center rounded-md bg-[#888] bg-opacity-20 p-6 dark:bg-[#1B1B1B]">
-        <h3>Desempenho Financeiro</h3>
+        <h3 className="text-lg">Desempenho Financeiro</h3>
         <PieChart
           series={[
             {

@@ -194,7 +194,7 @@ const Ranking = () => {
                     className="w-16 h-16"
                   />
                   <p className="text-center">Izzy</p>
-                  <p className="text-sm border-b border-gray-400 inline-block text-center">
+                  <p className="text-sm border-b border-gray-400 inline-block text-center md:text-[9px]">
                     12,020 XP
                   </p>
                 </div>

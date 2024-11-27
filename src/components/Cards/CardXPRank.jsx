@@ -1,18 +1,37 @@
-import React from "react";
+import PropTypes from "prop-types";
 
-const Card = (props) =>{
-    return(
-      <div className="flex justify-between items-center text-md bg-card p-2 mb-2 rounded-[20px] mr-2 text-primary-200  bg-primary-200 dark:bg-[#3D3D3D]"> 
-        <div className="flex items-center">
-        <span className="mr-2 flex items-center justify-center w-14 h-14 rounded-full text-base bg-[#DFDFDE] dark:bg-black dark:text-white md:w-19 md:mx-2">{props.posicao}°</span>
-          <div className="text-base font-medium text-[#DFDFDE] dark:text-[#B1B1B1]">{props.nome}</div>
-        </div>
-        <div className="flex underline text-base pr-9 text-[#DFDFDE] dark:text-[#B1B1B1]">
-          <div className="font-normal">{props.xp}</div>
-          <div className="font-light">ㅤ XP</div>
+const Card = (props) => {
+  return (
+    <div className="bg-card mb-2 flex h-10 w-full items-center justify-between rounded-[20px] bg-primary-200 p-2 text-[#DFDFDE] md:h-14 lg:items-center lg:text-md dark:bg-[#3D3D3D]">
+      <div className="flex items-center">
+        {/* 1º */}
+        <span className="mr-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#DFDFDE] text-[20px] text-primary-200 md:mx-2 md:h-9 md:w-9 lg:h-12 lg:w-12 lg:text-md dark:bg-black dark:text-white">
+          {props.posicao}°
+        </span>
+
+        {/* Alastor */}
+        <div className="text-[20px] font-medium lg:text-base dark:text-[#B1B1B1]">
+          {props.nome}
         </div>
       </div>
-    )
+
+      {/* 1000 XP */}
+      <div className="mr-9 flex h-fit w-fit border-b-2 border-white text-base leading-[1rem] md:leading-none dark:text-[#B1B1B1]">
+        <div className="text-[16px] md:text-[20px] lg:text-[30px] lg:font-normal">
+          {props.xp}
+        </div>
+        <div className="pl-[2px] text-[16px] md:text-[20px] lg:text-[30px] lg:font-light">
+          XP
+        </div>
+      </div>
+    </div>
+  );
+};
+
+Card.propTypes = {
+  posicao: PropTypes.number,
+  nome: PropTypes.string,
+  xp: PropTypes.number,
 };
 
 export default Card;

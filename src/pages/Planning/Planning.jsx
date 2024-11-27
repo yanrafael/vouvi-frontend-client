@@ -1,8 +1,22 @@
 import { useState } from "react";
 
+import HeaderMobile from "../../components/Header/HeaderMobile";
 import HeaderIntern from "../../components/Header/HeaderIntern";
 import AvatarFull from "../../components/Header/AvatarFull";
 import Footer from "../../components/Footer/Footer";
+
+// Modals
+import NewIncome from "../../components/Modals/NewIncome";
+import NewExpense from "../../components/Modals/NewExpense";
+import NotesModal from "../../components/Modals/NotesModal";
+import Note from "../../components/Modals/Note";
+import BudgetModal from "../../components/Modals/BudgetModal";
+import BudgetDetails from "../../components/Modals/BudgetDetails";
+import BudgetDetailsEdit from "../../components/Modals/BudgetDetailsEdit";
+import ChooseAccount from "../../components/Modals/ChooseAccount";
+import ChooseExpenseCategory from "../../components/Modals/ChooseExpenseCategory";
+import ChooseIncomeCategory from "../../components/Modals/ChooseIncomeCategory";
+import TipFromFin from "../../components/Modals/TipFromFin";
 
 import Top from "./Top";
 import Graphics from "./Graphics";
@@ -20,6 +34,18 @@ function Planning() {
 
   return (
     <>
+      <NewIncome />
+      <NewExpense />
+      <NotesModal />
+      <Note />
+      <BudgetModal />
+      <BudgetDetails />
+      <BudgetDetailsEdit />
+      <ChooseAccount />
+      <ChooseExpenseCategory />
+      <ChooseIncomeCategory />
+      <TipFromFin />
+
       <HeaderIntern
         iconActiveNumber={1}
         darkMode={darkMode}
@@ -35,6 +61,7 @@ function Planning() {
       </main>
 
       <Footer />
+      <HeaderMobile iconId={1}/>
     </>
   );
 }
