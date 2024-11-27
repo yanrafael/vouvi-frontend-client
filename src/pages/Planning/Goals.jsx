@@ -15,7 +15,7 @@ function Goals() {
   return (
     <section className="w-12/12 m-auto mt-5 flex justify-between gap-5">
       <div className="flex w-full flex-col gap-4 overflow-x-hidden">
-        <div className="flex flex-nowrap gap-4 overflow-x-scroll">
+        <div className="flex flex-nowrap gap-4 overflow-x-scroll pb-[1px]">
           <div onClick={() => activeButton(0)}>
             <GoalsButton
               color={`hover:bg-[#87878733] hover:text-black hover:dark:text-white transition-colors duration-300 ${
