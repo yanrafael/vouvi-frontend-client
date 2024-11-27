@@ -15,7 +15,7 @@ const CardLateral = ({ nome, posicao, vc }) => {
     <>
       {/* If its the user */}
       {nome === "Usuario" ? (
-        <div className="flex w-full items-center justify-between rounded-md bg-[#002952] p-4 text-secondary-200">
+        <div className="flex w-full items-center justify-between rounded-md bg-[#002952] p-4 text-secondary-200 m-2 mr-3">
           <div className="flex items-center">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary-200 text-md text-[#002952] md:h-10 md:w-10">
               {posicao}°
