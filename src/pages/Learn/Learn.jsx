@@ -79,7 +79,7 @@ function Learn() {
         <AvatarBasic name={"Josefa"} />
       </Header>
 
-      <main className="flex w-[100vw] flex-col items-center justify-center px-0 md:px-[1vw] xl:px-[7vw]">
+      <main className="relative flex w-[100vw] flex-col items-center justify-center px-0 md:px-[1vw] xl:px-[7vw]">
         {/* Heading */}
         <TopSection
           section={1}
@@ -90,10 +90,14 @@ function Learn() {
         />
 
         {/* Trail 1 */}
-        <Trail stages={stages} bg={trailImage1} />
+        <div className="relative h-full w-full">
+          <Trail stages={stages} bg={trailImage1} />
+        </div>
       </main>
 
-      <HeaderMobile iconId={0} />
+      <div className="fixed bottom-0 w-screen">
+        <HeaderMobile iconId={0} />
+      </div>
     </>
   );
 }

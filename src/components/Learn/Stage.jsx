@@ -4,7 +4,7 @@ import propTypes from "prop-types";
 function Stage({ icon, iconWidth, top, left, finished }) {
   return (
     <button
-      className={`absolute flex ${icon ? "h-28 w-28" : "h-10 w-10"} group items-center justify-center rounded-full border-white transition-all duration-200 ${finished ? "bg-[#002952] hover:border-4 hover:bg-secondary-200 dark:bg-[#D6EBFF]" : "bg-[#D6EBFF] dark:bg-[#002952]"}`}
+      className={`absolute flex ${icon ? "h-20 w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28" : "h-10 w-10"} group items-center justify-center rounded-full border-white transition-all duration-200 ${finished ? "bg-[#002952] hover:border-4 hover:bg-secondary-200 dark:bg-[#D6EBFF]" : "bg-[#D6EBFF] dark:bg-[#002952]"}`}
       style={{ top: `${top}%`, left: `${left}%` }}
     >
       <Icon
@@ -12,8 +12,8 @@ function Stage({ icon, iconWidth, top, left, finished }) {
         width={iconWidth}
         className={
           finished
-            ? "text-[#D6EBFF] group-hover:text-[#D6EBFF] dark:text-[#002952]"
-            : "text-[#002952] dark:text-[#D6EBFF]"
+            ? "-rotate-90 text-[#D6EBFF] group-hover:text-[#D6EBFF] lg:rotate-0 dark:text-[#002952]"
+            : "-rotate-90 text-[#002952] lg:rotate-0 dark:text-[#D6EBFF]"
         }
       />
     </button>

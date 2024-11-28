@@ -5,8 +5,8 @@ import FinalStage from "../../components/Learn/FinalStage";
 
 function Trail({ stages, bg }) {
   return (
-    <section className="relative xl:top-5">
-      <img src={bg} alt="trilha de aprendizagem" className="w-[1400px]" />
+    <section className="relative left-0 top-0 min-w-[100vh] rotate-90 md:w-auto lg:rotate-0 xl:top-5">
+      <img src={bg} alt="trilha de aprendizagem" />
       {stages.map((stage) => (
         <Stage key={stage.id} {...stage} />
       ))}
