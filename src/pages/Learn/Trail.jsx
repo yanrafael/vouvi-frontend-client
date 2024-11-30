@@ -5,12 +5,12 @@ import FinalStage from "../../components/Learn/FinalStage";
 
 function Trail({ stages, bg }) {
   return (
-    <section className="relative left-0 top-0 min-w-[100vh] rotate-90 md:w-auto lg:rotate-0 xl:top-5">
-      <img src={bg} alt="trilha de aprendizagem" />
+    <section className="relative left-0 top-0 rotate-90 md:w-auto lg:rotate-0 xl:top-5">
+      <img src={bg} alt="trilha de aprendizagem" width={1920} />
       {stages.map((stage) => (
         <Stage key={stage.id} {...stage} />
       ))}
-      <FinalStage top={35} left={91.2} />
+      <FinalStage top={35} left={91.5} />
     </section>
   );
 }
@@ -23,7 +23,7 @@ Trail.propTypes = {
       iconWidth: PropTypes.number,
       top: PropTypes.number.isRequired,
       left: PropTypes.number.isRequired,
-      finished: PropTypes.bool.isRequired,
+      open: PropTypes.bool.isRequired,
     }),
   ).isRequired,
   bg: PropTypes.string.isRequired,
