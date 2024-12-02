@@ -6,11 +6,11 @@ function FinancialPerformance() {
     <Modal
       id="financial-performance"
       // TODO colocar o ícone correto
-      icon={"material-symbols:info-outline"}
-      iconColor={"blue"}
+      icon={"si:info-fill"}
+      iconColor={"gray"}
       iconWidth={48}
-      title={"Como calculamos o seu Desempenho Financeiro "}
-      top
+      title={"Como calculamos o seu Desempenho Financeiro"}
+      titleColor="font-bold text-[25px] "
     >
       <div className="mx-5 my-4 text-center md:text-md text-sm">
         

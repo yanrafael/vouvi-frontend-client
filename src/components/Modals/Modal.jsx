@@ -9,6 +9,7 @@ const colors = {
   green: "text-[#00FF00]",
   blue: "text-[#0000FF]",
   black: "text-black",
+  gray: "text-[#8D8D8D]"
 };
 
 function Modal({
