@@ -21,7 +21,7 @@ function PasswordInput({
     <>
       <div className="relative flex h-fit w-full flex-row items-center border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-all focus-within:outline-none hover:border-b-primary-200">
         <input
-          className="bg-white bg-opacity-0 focus:outline-none"
+          className="text-[25px] sm:text-[40px] w-full bg-white bg-opacity-0 focus:outline-none"
           type="password"
           name={name}
           id={id}

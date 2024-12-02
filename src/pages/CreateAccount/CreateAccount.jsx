@@ -129,10 +129,10 @@ function CreateAccount() {
         id="bg-video"
       ></video>
       <form
-        className="flex h-full w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
+        className="flex h-full w-[450px] sm:w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
         action=""
       >
-        <h1 className="text-center text-lg font-bold">Criar uma conta</h1>
+        <h1 className="text-[30px] text-center sm:text-lg font-bold">Criar uma conta</h1>
 
         {verifyStep()}
       </form>
