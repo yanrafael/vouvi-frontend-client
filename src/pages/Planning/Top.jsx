@@ -58,12 +58,12 @@ function Top({ onClick, onClick2 }) {
             <div
               className={`absolute inset-0 flex items-center justify-center lg:gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
             >
-              <Icon icon="typcn:plus" width="25px" className="lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon icon="typcn:plus" width="25px" className="2xl:w-[25px] xl:w-[20px] lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">Adicionar</h1>
             </div>
 
             <div className={`flex items-center gap-1 group-hover:opacity-0`}>
-              <Icon icon="icon-park-solid:up-one" width="25px" className="lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon icon="icon-park-solid:up-one" width="25px" className="2xl:w-auto lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">R$ {convertFloat(income)}</h1>
             </div>
           </div>
@@ -74,20 +74,21 @@ function Top({ onClick, onClick2 }) {
           >
             {/* Animação Hover */}
             <div
-              className={`absolute inset-0 flex items-center justify-center lg:gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
+              className={`absolute inset-0 flex items-center justify-center lg:gap-1 mr-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
             >
-              <Icon icon="typcn:plus" width="25px" className="2xl:w-[25px] lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon icon="typcn:plus" width="25px" className="2xl:w-[25px] xl:w-[20px] lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">Adicionar</h1>
             </div>
 
-            <div className={`flex items-center gap-1 group-hover:opacity-0`}>
-              <Icon icon="icon-park-solid:down-one" width="25px" className="2xl:w-[25px] lg:w-full md:w-4 xs:w-5 w-4" />
+            <div className={`flex items-center group-hover:opacity-0`}>
+              <Icon icon="icon-park-solid:down-one" width="25px" className="2xl:w-auto lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">R$ {convertFloat(expense)}</h1>
             </div>
           </div>
         </div>
 
-        <div className="md:flex hidden xl:w-5/12 lg:w-[35%] md:w-[42%] flex-col xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B]">
+        <div onClick={() => showModal("financial-missions")}
+        className="md:flex hidden cursor-pointer xl:w-5/12 lg:w-[35%] md:w-[42%] flex-col xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B] py-4">
           <p className="2xl:p-2 lg:p-1 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] font-light dark:text-white">Missões</p>
           <div className="overflow-hidden whitespace-nowrap xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-white 2xl:p-2 lg:p-1 2xl:text-[32px] xl:text-[28px] lg:text-[20px] md:text-[14px] text-black">
             <p className="slide-track animate-scroll relative left-[800px]">

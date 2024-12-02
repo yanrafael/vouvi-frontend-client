@@ -16,6 +16,7 @@ import BudgetDetailsEdit from "../../components/Modals/BudgetDetailsEdit";
 import ChooseAccount from "../../components/Modals/ChooseAccount";
 import ChooseExpenseCategory from "../../components/Modals/ChooseExpenseCategory";
 import ChooseIncomeCategory from "../../components/Modals/ChooseIncomeCategory";
+import FinancialMissions from "../../components/Modals/FinancialMissions";
 import TipFromFin from "../../components/Modals/TipFromFin";
 
 import Top from "./Top";
@@ -44,6 +45,7 @@ function Planning() {
       <ChooseAccount />
       <ChooseExpenseCategory />
       <ChooseIncomeCategory />
+      <FinancialMissions />
       <TipFromFin />
 
       <HeaderIntern
