@@ -20,6 +20,18 @@ function StoreDoubleCard({
   img8,
   img9,
   img10,
+  value1,
+  value2,
+  value3,
+  value4,
+  value5,
+  value6,
+  value7,
+  value8,
+  value9,
+  value10,
+  value11,
+  value12,
 }) {
   return (
     <section className="flex flex-col rounded-md bg-[#007FFF33] p-3 md:p-10 dark:bg-[#1F1F1F]">
@@ -36,7 +48,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={color1}
           color2={"bg-secondary-200"}
-          value={"1"} // Se necessario coloque props para o valor unitario de cada unidade
+          value={value1} // Se necessario coloque props para o valor unitario de cada unidade
         >
           <img className="rounded-sm" src={img1} alt="" />
         </StoreCard>
@@ -44,7 +56,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"2"}
+          value={value2}
         >
           <img className="rounded-sm" src={img2} alt="" />
         </StoreCard>
@@ -52,7 +64,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"3"}
+          value={value3}
         >
           <img className="rounded-sm" src={img3} alt="" />
         </StoreCard>
@@ -60,7 +72,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"4"}
+          value={value4}
         >
           <img className="rounded-sm" src={img4} alt="" />
         </StoreCard>
@@ -68,7 +80,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"5"}
+          value={value5}
         >
           <img className="rounded-sm" src={img5} alt="" />
         </StoreCard>
@@ -76,7 +88,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={color2}
           color2={"bg-secondary-200"}
-          value={"6"}
+          value={value6}
         >
           <img className="rounded-sm" src={img1} alt="" />
         </StoreCard>
@@ -95,7 +107,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"7"}
+          value={value7}
         >
           <img className="rounded-sm" src={img6} alt="" />
         </StoreCard>
@@ -103,7 +115,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"8"}
+          value={value8}
         >
           <img className="rounded-sm" src={img7} alt="" />
         </StoreCard>
@@ -111,7 +123,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"9"}
+          value={value9}
         >
           <img className="rounded-sm" src={img8} alt="" />
         </StoreCard>
@@ -119,7 +131,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"10"}
+          value={value10}
         >
           <img className="rounded-sm" src={img9} alt="" />
         </StoreCard>
@@ -127,7 +139,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"11"}
+          value={value11}
         >
           <img className="rounded-sm" src={img10} alt="" />
         </StoreCard>
@@ -135,7 +147,7 @@ function StoreDoubleCard({
           color3={"bg-[#002952]"}
           color={"bg-white"}
           color2={"bg-secondary-200"}
-          value={"12"}
+          value={value12}
         >
           <img className="rounded-sm" src={img6} alt="" />
         </StoreCard>
