@@ -38,18 +38,22 @@ function SettingsModal({ closeModal }) {
         </div>
         <div className="mt-5 flex cursor-pointer items-center justify-between rounded-md bg-[rgba(141,141,141,0.30);] p-4 transition-colors duration-300 hover:bg-[#8D8D8DCC] dark:bg-black hover:dark:bg-[#02020B66]">
           <div className="flex flex-col">
+          <Link to="/plans" className="block">
             <h1 className="text-[32px] font-medium dark:text-white">
               Plano atual
             </h1>
             <p className="text-md font-medium text-primary-200">
               Atualize seu plano hoje mesmo
             </p>
+            </Link>
           </div>
           <div className="flex flex-col">
+          <Link to="/plans" className="block">
             <h1 className="text-right text-[32px] font-medium dark:text-white">
               Essencial
             </h1>
             <p className="text-md font-medium text-primary-200">Seja Premium</p>
+            </Link>
           </div>
         </div>
         <div className="mt-5 flex items-center justify-between rounded-md bg-[rgba(141,141,141,0.30);] p-4 transition-colors duration-300 hover:bg-[#8D8D8DCC] dark:bg-black hover:dark:bg-[#02020B66]">

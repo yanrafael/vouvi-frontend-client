@@ -45,7 +45,7 @@ function Subscription({
       <div className="pointer-events-none mx-10 flex justify-center leading-[1.3] opacity-0 transition-all duration-700 group-hover:pointer-events-auto group-hover:-translate-y-72 group-hover:opacity-100">
   <p className="absolute text-center text-[24px] xs:text-[32px]">{texthover}</p>
   
-  {/* Wrapping Link in a div to isolate styles */}
+  
   <div className="absolute mt-[200px]">
     <Link to="/plans" className="block">
       <SecondaryButton
