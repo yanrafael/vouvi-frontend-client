@@ -18,7 +18,7 @@ import ChooseExpenseCategory from "../../components/Modals/ChooseExpenseCategory
 import ChooseIncomeCategory from "../../components/Modals/ChooseIncomeCategory";
 import FinancialMissions from "../../components/Modals/FinancialMissions";
 import TipFromFin from "../../components/Modals/TipFromFin";
-
+import FinancialPerformance from "../../components/Modals/Financialperformance";
 import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
@@ -47,6 +47,7 @@ function Planning() {
       <ChooseIncomeCategory />
       <FinancialMissions />
       <TipFromFin />
+      <FinancialPerformance />
 
       <HeaderIntern
         iconActiveNumber={1}

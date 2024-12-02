@@ -2,6 +2,7 @@ import { PieChart } from "@mui/x-charts";
 import PropTypes from "prop-types";
 import convertFloat from "../../utils/convertFloat";
 import { Icon } from "@iconify/react";
+import showModal from "../../utils/showModal";
 
 const dailyTransactions = [
   {
@@ -115,7 +116,7 @@ function Transactions() {
 
         <span className="absolute lg:top-1/2 top-1/2 md:top-[55%] lg:text-xl md:text-lg text-lg">{performance}%</span>
 
-        <button className="lg:w-4/6 md:w-3/5 w-full rounded-md border-4 border-black py-3 text-md md:text-[20px] dark:border-white">
+        <button onClick={() => showModal ("financial-performance")} className="lg:w-4/6 md:w-3/5 w-full rounded-md border-4 border-black py-3 text-md md:text-[20px] dark:border-white ">
           Saiba Mais
         </button>
       </div>
