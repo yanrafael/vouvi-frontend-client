@@ -24,7 +24,7 @@ function Top({ onClick, onClick2 }) {
 
   const catIcon = (
     <svg
-      className="w-10"
+      className="2xl:w-10 xl:w-8 lg:w-7 w-5"
       viewBox="0 0 39 39"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -40,113 +40,119 @@ function Top({ onClick, onClick2 }) {
   );
 
   return (
-    <div className="w-full">
-      <section className="mt-10 flex w-full justify-between gap-2">
-        <div className="flex w-2/12 flex-col justify-center whitespace-nowrap rounded-md bg-[#DDDDDD] px-4 py-4 leading-[1.1] dark:bg-[#1B1B1B] dark:text-white">
-          <p className="text-[36px] font-light">Saldo</p>
-          <h1 className="text-[36px] font-medium">
+    <div className="lg:w-full md:w-[97%]">
+      <section className="2xl:mt-10 lg:mt-8 sm:mt-6 mt-5 flex w-full justify-between lg:gap-2 md:gap-[1px] 2xl:h-auto">
+        <div className="flex 2xl:w-2/12 lg:w-[18%] md:w-[15%] sm:w-[63%] xs:w-[57%] w-[50%] flex-col justify-center whitespace-nowrap xl:rounded-md lg:rounded-sm rounded-[12px] bg-[#DDDDDD] 2xl:px-4 2xl:py-4 xl:px-3 md:px-2 md:py-0 px-3 sm:py-4 2xl:gap-3 leading-[1.1] dark:bg-[#1B1B1B] dark:text-white">
+          <p className="2xl:text-[36px] xl:text-[32px] lg:text-md md:text-[16px] sm:text-[20px] text-[16px] font-light">Saldo</p>
+          <h1 className="2xl:text-[36px] xl:text-[32px] lg:text-md md:text-[16px] sm:text-[32px] xs:text-[24px] font-medium">
             R$ {convertFloat(balance)}
           </h1>
         </div>
 
-        <div className="flex flex-col gap-2 text-[32px] leading-[1.1]">
+        <div className="flex flex-col lg:gap-2 gap-1 2xl:text-[32px] xl:text-[28px] lg:text-md md:text-[16px] sm:text-[20px] text-[16px] leading-[1.1] whitespace-nowrap">
           <div
             onClick={() => showModal("new-income")}
-            className="group relative cursor-pointer rounded-md bg-[#84CE7A99] px-4 py-3 font-medium text-[#14A900] transition-all duration-300 hover:bg-[#14A900] hover:text-[#133810] hover:transition-none hover:duration-0 dark:bg-[rgba(11,85,5,0.50);]"
+            className="group relative cursor-pointer xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#84CE7A99] xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-1 md:py-[1%] sm:px-4 py-2 font-medium text-[#14A900] transition-all duration-300 hover:bg-[#14A900] hover:text-[#133810] hover:transition-none hover:duration-0 dark:bg-[rgba(11,85,5,0.50);]"
           >
             {/* Animação Hover */}
             <div
-              className={`absolute inset-0 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
+              className={`absolute inset-0 flex items-center justify-center lg:gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
             >
-              <Icon icon="typcn:plus" width="25px" className="" />
+              <Icon icon="typcn:plus" width="25px" className="lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">Adicionar</h1>
             </div>
 
             <div className={`flex items-center gap-1 group-hover:opacity-0`}>
-              <Icon icon="icon-park-solid:up-one" width="25px" className="" />
+              <Icon icon="icon-park-solid:up-one" width="25px" className="lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">R$ {convertFloat(income)}</h1>
             </div>
           </div>
 
           <div
             onClick={() => showModal("new-expense")}
-            className="group relative cursor-pointer rounded-md bg-[#A9000066] px-4 py-3 font-medium text-[#E30000] transition-all duration-300 hover:bg-[#E30000] hover:text-[#390C0C] hover:transition-none hover:duration-0"
+            className="group relative cursor-pointer xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#A9000066] xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-1 md:py-[1%] sm:px-4 py-2 font-medium text-[#E30000] transition-all duration-300 hover:bg-[#E30000] hover:text-[#390C0C] hover:transition-none hover:duration-0"
           >
             {/* Animação Hover */}
             <div
-              className={`absolute inset-0 flex items-center justify-center gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
+              className={`absolute inset-0 flex items-center justify-center lg:gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
             >
-              <Icon icon="typcn:plus" width="25px" className="" />
+              <Icon icon="typcn:plus" width="25px" className="2xl:w-[25px] lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">Adicionar</h1>
             </div>
 
             <div className={`flex items-center gap-1 group-hover:opacity-0`}>
-              <Icon icon="icon-park-solid:down-one" width="25px" />
+              <Icon icon="icon-park-solid:down-one" width="25px" className="2xl:w-[25px] lg:w-full md:w-4 xs:w-5 w-4" />
               <h1 className="">R$ {convertFloat(expense)}</h1>
             </div>
           </div>
         </div>
 
-        <div className="flex w-5/12 flex-col rounded-md bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B]">
-          <p className="p-2 text-base font-light dark:text-white">Missões</p>
-          <div className="overflow-hidden whitespace-nowrap rounded-md bg-white p-2 text-[32px] text-black">
+        <div className="md:flex hidden xl:w-5/12 lg:w-[35%] md:w-[42%] flex-col xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B]">
+          <p className="2xl:p-2 lg:p-1 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] font-light dark:text-white">Missões</p>
+          <div className="overflow-hidden whitespace-nowrap xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-white 2xl:p-2 lg:p-1 2xl:text-[32px] xl:text-[28px] lg:text-[20px] md:text-[14px] text-black">
             <p className="slide-track animate-scroll relative left-[800px]">
               Anote três pequenas economias que você fez hoje
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 whitespace-nowrap text-[32px] leading-[1.1]">
+        <div className="flex flex-col lg:gap-2 gap-1 whitespace-nowrap 2xl:text-[32px] xl:text-[28px] lg:text-md md:text-[16px] leading-[1.1]">
           <div
             onClick={() => showModal("notes-modal")}
-            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FFB51533] hover:bg-yellow hover:text-[#493A1A] transition-all duration-300 px-4 py-3 font-medium text-[#FFB515]"
+            className="flex lg:w-full md:w-[115%] xl:h-[61px] lg:h-[44px] md:h-[27px] cursor-pointer items-center gap-1 xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#FFB51533] hover:bg-yellow hover:text-[#493A1A] transition-all duration-300 xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-2 md:py-0 px-1 font-medium text-[#FFB515]"
           >
-            <Icon icon="solar:notes-bold" className="" width="25px" />
-            <h1 className="">Anotações livres</h1>
+            <Icon icon="solar:notes-bold" className="2xl:w-[25px] xl:w-[23px] lg:w-[10%] md:w-[9%] sm:w-[33px] w-[30px]" width="41px" />
+            <h1 className="md:flex hidden">Anotações livres</h1>
           </div>
           <div
             onClick={() => showModal("budget-modal")}
-            className="flex cursor-pointer items-center gap-1 rounded-md bg-[#FF48A733] hover:bg-[#FF48A7] hover:text-[#492437] transition-all duration-300 px-4 py-3 font-medium text-[#FF48A7]"
+            className="flex lg:w-full md:w-[115%] xl:h-[61px] lg:h-[44px] md:h-[27px] cursor-pointer items-center gap-1 xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#FF48A733] hover:bg-[#FF48A7] hover:text-[#492437] transition-all duration-300 xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-2 md:py-0 px-1 font-medium text-[#FF48A7]"
           >
-            <Icon icon="iconoir:wallet-solid" width="25px" />
-            <h1 className="">Orçamento</h1>
+            <Icon icon="iconoir:wallet-solid" className="2xl:w-[25px] xl:w-[23px] lg:w-[10%] md:w-[9%] sm:w-[33px] w-[30px]" width="41px" />
+            <h1 className="md:flex hidden">Orçamento</h1>
           </div>
         </div>
       </section>
+      <div className="flex md:hidden mt-3 flex-col rounded-[12px] bg-[#DDDDDD] px-3 py-2 dark:bg-[#1B1B1B]">
+          <p className="xs:text-[25px] text-[16px] font-light dark:text-white">Missões</p>
+          <div className="overflow-hidden whitespace-nowrap rounded-[12px] bg-white xs:p-2 p-1 xs:text-[20px] text-[16px] text-black">
+            <p className="slide-track animate-scroll relative left-[800px]">
+              Anote três pequenas economias que você fez hoje
+            </p>
+          </div>
+        </div>
 
-      <section className="mt-10 flex w-full items-center justify-between rounded-md p-4">
-        <div className="flex justify-between gap-7">
+      <section className="lg:w-full md:w-[103.2%] 2xl:mt-10 xl:mt-5 lg:mt-4 mt-3 flex sm:flex-row flex-col w-full sm:items-center justify-between rounded-md 2xl:p-4 xl:p-2">
+        <div className="flex justify-between sm:w-auto w-full 2xl:gap-7 xl:gap-5 sm:gap-2">
           <button
             onClick={() => handleClick(0)}
-            className={`${
-              btnOn == 0
+            className={`${btnOn == 0
                 ? "bg-black text-white dark:bg-white dark:text-black"
                 : "bg-[#8D8D8D] text-white transition-colors duration-500 hover:bg-[#282828]"
-            } rounded-md p-4 text-base`}
+              } 2xl:rounded-md lg:rounded-sm xs:rounded-[12px] rounded-[8px] 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[24px] 2xl:h-auto xl:h-14 2xl:py-4 xl:py-0 lg:p-4 p-2`}
           >
             Planejar
           </button>
           <button
             onClick={() => handleClick(1)}
-            className={`${
-              btnOn == 1
+            className={`${btnOn == 1
                 ? "bg-black text-white dark:bg-white dark:text-black"
                 : "bg-[#8D8D8D] text-white transition-colors duration-500 hover:bg-[#282828]"
-            } rounded-md p-4 text-base`}
+              } 2xl:rounded-md lg:rounded-sm xs:rounded-[12px] rounded-[8px] 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[24px] 2xl:h-auto xl:h-14 xl:py-0 lg:p-4 p-2`}
           >
             Metas
           </button>
         </div>
 
-        <div className="flex justify-between gap-7 text-[#8D8D8D] dark:text-white">
+        <div className="flex justify-between whitespace-nowrap lg:gap-7 sm:gap-2 text-[#8D8D8D] dark:text-white">
           {btnOn == 1 ? (
             <>
               <div
                 onClick={() => showModal("")}
-                className="flex h-20 cursor-pointer items-center justify-center gap-4 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
+                className="flex 2xl:h-20 lg:h-[60px] md:h-[38px] cursor-pointer items-center justify-center xl:gap-4 lg:gap-2 gap-1 sm:mt-0 mt-2 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 xs:border-[3px] border-[2px] border-[#8D8D8D] lg:px-6 px-3 py-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
               >
-                <Icon icon={"typcn:plus"} className="text-base" />
-                <p className="text-base">Criar Meta</p>
+                <Icon icon={"typcn:plus"} className="xl:text-base lg:text-md md:text-[16px] text-[20px]" />
+                <p className="2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[20px]">Criar Meta</p>
               </div>
             </>
           ) : (
@@ -155,16 +161,17 @@ function Top({ onClick, onClick2 }) {
                 onMouseEnter={() => setCatIconColor(true)}
                 onMouseLeave={() => setCatIconColor(false)}
                 onClick={() => showModal("tip-from-fin")}
-                className="flex h-20 cursor-pointer items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
+                className="flex 2xl:h-20 lg:h-[60px] md:h-[39px] 2xl:mt-0 lg:mt-[1px] md:mt-0 xs:mt-2 mt-5 cursor-pointer items-center justify-center 2xl:gap-6 xl:gap-4 lg:gap-3 gap-1 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 lg:border-[3px] border-[3px] border-[#8D8D8D] lg:px-6 md:px-3 p-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
               >
                 {catIcon}
-                <p className="text-base">Dicas do Fin</p>
+                <p className="2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[20px]">Dicas do Fin</p>
               </div>
-              <div className="flex h-20 items-center justify-center gap-6 rounded-md border-4 border-[#8D8D8D] px-6 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
-                <p className="flex flex-row items-center justify-center gap-4 text-nowrap text-base">
+              <div className="flex 2xl:h-20 lg:h-[60px] md:h-[39px] 2xl:mt-0 lg:mt-[1px] md:mt-0 xs:mt-2 mt-5 items-center justify-center lg:gap-6 md:gap-1 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 lg:border-[3px] border-[3px] border-[#8D8D8D] lg:px-6 md:px-3 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
+                <p className="md:flex hidden flex-row items-center justify-center lg:gap-4 md:gap-2 text-nowrap 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px]">
                   01 Out - 10 Out |{" "}
-                  <Icon icon={"bi:calendar-fill"} width={40} />
+                  <Icon className="2xl:w-full xl:w-8 lg:w-7 md:w-5" icon={"bi:calendar-fill"} width={40} />
                 </p>
+                <Icon className="flex md:hidden px-2" icon={"bi:calendar-fill"} width={40} />
               </div>
             </>
           )}
