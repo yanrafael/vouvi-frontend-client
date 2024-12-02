@@ -15,7 +15,7 @@ function FinancialPerformance() {
       <div className="mx-5 my-4 text-center md:text-md text-sm">
         
         <p>
-        <span className="font-bold">Renda:</span> O total de dinheiro que você ganha, incluindo <br/> salário, bônus, investimentos, etc. <br/> <br/><span className="font-bold">Suas despesas mensais:</span> Todos os gastos mensais, como <br/>  aluguel, alimentação, transporte, lazer, etc.<br/> <br/>
+        <span className="font-bold">Renda:</span> O total de dinheiro que você ganha, incluindo <br/> salário, bônus, investimentos, etc. <br/> <br/><span className="font-bold">despesas mensais:</span> Todos os gastos mensais, como <br/>  aluguel, alimentação, transporte, lazer, etc.<br/> <br/>
 
         <span className="font-bold">Economias:</span> A diferença entre sua renda e suas despesas.</p>
 

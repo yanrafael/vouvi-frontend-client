@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
-import convertFloat from "../../utils/convertFloat";
+import convertFloat from "../../utils/convertFloat"
 
 import showModal from "../../utils/showModal";
 
@@ -166,10 +166,13 @@ function Top({ onClick, onClick2 }) {
                 {catIcon}
                 <p className="2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[20px]">Dicas do Fin</p>
               </div>
-              <div className="flex 2xl:h-20 lg:h-[60px] md:h-[39px] 2xl:mt-0 lg:mt-[1px] md:mt-0 xs:mt-2 mt-5 items-center justify-center lg:gap-6 md:gap-1 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 lg:border-[3px] border-[3px] border-[#8D8D8D] lg:px-6 md:px-3 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200">
-                <p className="md:flex hidden flex-row items-center justify-center lg:gap-4 md:gap-2 text-nowrap 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px]">
-                  01 Out - 10 Out |{" "}
-                  <Icon className="2xl:w-full xl:w-8 lg:w-7 md:w-5" icon={"bi:calendar-fill"} width={40} />
+              <div className="flex 2xl:h-20 lg:h-[60px] md:h-[39px] 2xl:mt-0 lg:mt-[1px] md:mt-0 xs:mt-2 mt-5 items-center justify-center lg:gap-6 md:gap-1 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 lg:border-[3px] border-[3px] border-[#8D8D8D] lg:px-6 md:px-3 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200 ">
+                <p className="md:flex hidden flex-row items-center justify-center lg:gap-4 md:gap-2 text-nowrap 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] ">
+                  <input className="2xl:w-full xl:w-8 lg:w-7 md:w-5" icon={"bi:calendar-fill"} width={40} 
+                   type="date"
+                  
+                  />
+                  
                 </p>
                 <Icon className="flex md:hidden px-2" icon={"bi:calendar-fill"} width={40} />
               </div>
