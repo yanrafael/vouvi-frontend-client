@@ -2,13 +2,7 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function PasswordInput({
-  id = "",
-  name = "",
-  value = "",
-  onChange,
-  placeholder = "Digite sua senha",
-}) {
+function PasswordInput({ id = "", name = "", value = "", onChange }) {
   const [icon, setIcon] = useState("mdi:eye-off");
 
   const showPassword = () => {
@@ -28,7 +22,6 @@ function PasswordInput({
           value={value}
           onChange={onChange || (() => console.log("Hello"))}
           autoComplete="current-password"
-          placeholder={placeholder}
           required
         />
         <div
