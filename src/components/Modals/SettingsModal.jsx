@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 function SettingsModal({ closeModal }) {
   const [ballAnimation, noBallAnimation] = useState(true);

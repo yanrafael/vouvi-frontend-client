@@ -1,13 +1,12 @@
-import FeedbackCard from "../../components/Cards/FeedbackCard";
-import PrimaryButton from "../../components/Buttons/PrimaryButton";
-import SecondaryButton from "../../components/Buttons/SecondaryButton";
-import Subscription from "../../components/Cards/SubscriptionCard";
 
-import FiveStars from "../../assets/images/fivestars-icon.svg";
+import Subscription from "../../components/Cards/SubscriptionCard";
 import subscriptionHover from "../../assets/images/subscription-hover.svg";
 import subscriptionStar from "../../assets/images/subscription-star.svg";
 import subscriptionStar2 from "../../assets/images/subscription-star2.svg";
 import subscriptionStar3 from "../../assets/images/subscription-star3.svg";
+import HeaderWhite from "../../components/Header/HeaderWhite";
+import Footer from "../../components/Footer/Footer";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -52,7 +51,12 @@ const PrevArrow = ({ className, style, onClick }) => {
   );
 };
 
-function Low() {
+function Plans() {
+
+  const [darkMode, setDarkMode] = useState(
+    document.body.classList.contains("dark"),
+  );
+
   const settings = {
     dots: true,
     infinite: true,
@@ -64,7 +68,7 @@ function Low() {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1280, // Ativar o slider apenas abaixo de 1200px
+        breakpoint: 1280,
         settings: {
           slidesToShow: 2,
           centerMode: false,
@@ -72,7 +76,7 @@ function Low() {
         },
       },
       {
-        breakpoint: 800, // Ativar o slider apenas abaixo de 768px
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           centerMode: false,
@@ -88,82 +92,11 @@ function Low() {
   useEffect(() => {
     AOS.init({ duration: 1200 });
     AOS.init({ once: true });
-  });
+  }, []);
 
   return (
     <>
-      <section
-        className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12 flex-col-reverse items-center lg:flex-row"
-        title="Seção de feedback"
-      >
-        <SecondaryButton
-          color={
-            "text-white lg:hidden block mt-10 sm:block hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
-          }
-          text={"Enviar feedback"}
-          title="Botão para enviar feedback"
-        />
-        <div className="flex w-full flex-col lg:w-[60%]">
-          <div data-aos="zoom-in-up" className="flex justify-between">
-            <FeedbackCard
-              color={"bg-[#FA7ABC] text-[#A90057]"}
-              text={"Manda a real!"}
-              title="Cartão de feedback: Manda a real!"
-            />
-            <FeedbackCard
-              img={FiveStars}
-              color={"bg-[#FABE7A] text-[#773F00]"}
-              text={"Avalie-nos"}
-              title="Cartão de feedback com avaliação de 5 estrelas"
-              alt="Ícone de cinco estrelas"
-            />
-          </div>
-          <div data-aos="zoom-in-up" className="mt-6 flex justify-between">
-            <FeedbackCard
-              color={"bg-[#84CE7A] text-[#0A5800]"}
-              text={"Solta o verbo!"}
-              title="Cartão de feedback: Solta o verbo!"
-            />
-            <FeedbackCard
-              color={"bg-[#B88AD9] text-[#480479]"}
-              text={`Diz aí, Mandamos bem?`}
-              title="Cartão de feedback: Diz aí, Mandamos bem?"
-            />
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          className="mb-5 flex w-full flex-col items-center justify-center text-center lg:ml-10 lg:w-[40%] lg:items-start lg:text-left"
-          title="Texto introdutório e botão para feedback"
-        >
-          <div className="flex flex-col">
-            <h1
-              data-aos="fade-left"
-              className={`${TextGradient} text-[36px] font-medium leading-[1] sm:text-[50px] md:text-[72px] lg:text-[90px]`}
-              title="Mensagem principal de feedback"
-            >
-              A Gente Cresce Com Seu Feedback
-            </h1>
-            <p
-              data-aos="zoom-in-up"
-              className={`${TextGradient} mb-5 mt-5 text-[16px] leading-[1] sm:text-[28px] lg:mb-16 lg:w-[400px] lg:text-[36px]`}
-              title="Mensagem secundária sobre ouvir o usuário"
-            >
-              Você faz parte do Time. Queremos te ouvir!
-            </p>
-          </div>
-          
-          <SecondaryButton
-            color={
-              "text-white hidden lg:block hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
-            }
-            text={"Enviar feedback"}
-            title="Botão para enviar feedback (visível apenas em telas grandes)"
-          />
-          
-        </div>
-      </section>
-
+    <HeaderWhite darkMode={darkMode} setDarkMode={setDarkMode} />
       <section data-aos="fade-right">
         <h1
           className={`${TextGradient} mt-[160px] text-center text-[36px] font-medium leading-[1.1] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2]`}
@@ -247,23 +180,10 @@ function Low() {
           </Slider>
         </div>
       </section>
-
-      <section className="m-auto lg:w-8/12">
-        <p
-          className={`${TextGradient} mb-16 mt-28 text-center text-[24px] font-light md:mt-[200px] md:text-[28px] lg:text-base`}
-        >
-          Venha com a gente e faça valer cada centavo. <br />
-          <strong className="font-bold">
-            Junte-se à
-            <strong className="text-primary-200 dark:bg-black">Vouvi</strong> e
-            transforme sua vida financeira!
-          </strong>
-        </p>
-        <Link to={"/create-account"} title="Aperte para criar uma nova conta">
-          <PrimaryButton text={"Começar agora!"} />
-        </Link>
-      </section>
+      <Footer darkMode={darkMode} />
     </>
   );
 }
-export default Low;
+
+export default Plans;  
+

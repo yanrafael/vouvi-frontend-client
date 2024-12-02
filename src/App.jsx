@@ -11,6 +11,9 @@ import UserReturn from "./pages/UserReturn/UserReturn";
 import Planning from "./pages/Planning/Planning";
 import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
+import Plans from "./pages/Plans/plans";
+
+
 function App() {
   return (
     <>
@@ -29,6 +32,7 @@ function App() {
         <Route Component={Ranking} path="/ranking" />
         <Route Component={UserReturn} path="/user-return" />
         <Route Component={Planning} path="/planning" />
+        <Route Component={Plans} path="/plans" />
       </Routes>
     </>
   );
