@@ -47,6 +47,18 @@ function Mid() {
         img8={EyesBlack}
         img9={EyesPink}
         img10={EyesYellow}
+        value1={"35"}
+        value2={"50"}
+        value3={"70"}
+        value4={"100"}
+        value5={"300"}
+        value6={"80"}
+        value7={"35"}
+        value8={"70"}
+        value9={"90"}
+        value10={"45"}
+        value11={"45"}
+        value12={"35"}
       />
 
       <StoreSingleCard
@@ -78,6 +90,18 @@ function Mid() {
         img8={PendantYYBlack}
         img9={Sun}
         img10={Thunder}
+        value1={"130"}
+        value2={"115"}
+        value3={"100"}
+        value4={"100"}
+        value5={"130"}
+        value6={"130"}
+        value7={"100"}
+        value8={"150"}
+        value9={"150"}
+        value10={"135"}
+        value11={"200"}
+        value12={"100"}
       />
 
       <StoreSingleCard
