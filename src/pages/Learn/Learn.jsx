@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+import { Icon } from "@iconify/react";
+
 import Header from "../../components/Header/HeaderIntern";
 import HeaderMobile from "../../components/Header/HeaderMobile";
 import TopSection from "../../components/Learn/TopSection";
@@ -5,8 +8,6 @@ import AvatarBasic from "../../components/Header/AvatarBasic";
 import Trail from "./Trail";
 
 import trailImage1 from "../../assets/images/learning-trail-1.svg";
-
-import { Icon } from "@iconify/react";
 
 function Learn() {
   const stages = [
@@ -95,13 +96,9 @@ function Learn() {
         <div className="relative h-full w-full">
           <Trail stages={stages} bg={trailImage1} />
         </div>
-      </main>
 
-      <div className="sticky bottom-5 left-32 flex w-fit gap-2 rounded-sm bg-secondary-200/20 p-3">
-        <Icon icon="mdi:thunder" width={48} className="text-secondary-200" />
-        <Icon icon="mdi:thunder" width={48} className="text-secondary-200" />
-        <Icon icon="mdi:thunder" width={48} className="text-secondary-200" />
-      </div>
+        <LifeMeter />
+      </main>
 
       <div className="fixed bottom-0 w-screen">
         <HeaderMobile iconId={0} />
@@ -109,5 +106,31 @@ function Learn() {
     </>
   );
 }
+
+function LifeMeter({ lives = 3 }) {
+  return (
+    <div className="sticky bottom-5 left-32 flex w-fit gap-2 rounded-sm bg-secondary-200/20 p-3">
+      <Icon
+        icon={lives >= 1 ? "mdi:thunder" : ""}
+        width={48}
+        className="text-secondary-200"
+      />
+      <Icon
+        icon={lives >= 2 ? "mdi:thunder" : ""}
+        width={48}
+        className="text-secondary-200"
+      />
+      <Icon
+        icon={lives >= 3 ? "mdi:thunder" : ""}
+        width={48}
+        className="text-secondary-200"
+      />
+    </div>
+  );
+}
+
+LifeMeter.propTypes = {
+  lives: PropTypes.number,
+};
 
 export default Learn;
