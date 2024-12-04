@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import propTypes from "prop-types";
 
-function BonusStage({ type, color, iconColor = "white", top, left, open }) {
+function BonusStage({ type, color, iconColor = "white", top, left }) {
   const icons = {
     accessory: "solar:gift-bold",
     xp: "bi:star-fill",
