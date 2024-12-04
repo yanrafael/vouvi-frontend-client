@@ -12,49 +12,57 @@ function Form() {
   });
 
   return (
-    <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
+    <div className="align-center mt-5 flex h-full w-screen justify-center overflow-x-hidden sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
-        className="fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
+        className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
         loop
         id="bg-video"
       ></video>
       <form
-        className="flex h-full w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
+        className="flex w-[350px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10 sm:w-[650px] lg:w-[650px]"
         action=""
       >
-        <h1 className="text-center text-lg font-bold">Bem vindo de volta</h1>
+        <h1 className="w-full text-center text-[30px] font-bold sm:text-lg">
+          Bem vindo de volta
+        </h1>
 
-        <label className="text-base" htmlFor="email">
+        <label className="w-full text-[24px] sm:text-base" htmlFor="email">
           E-mail:
         </label>
         <input
-          className="w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base transition-all hover:border-b-primary-200 focus:outline-none"
+          className="w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base transition-all hover:border-b-primary-200 focus:outline-none sm:w-full"
           type="email"
           name="email"
           id="email"
-          placeholder="exemplo@email.com"
           autoComplete="on"
           required
         />
-
+        <label className="w-full text-[24px] sm:text-base">Senha:</label>
         <PasswordInput />
 
         <KeepConected />
+        <div className="flex w-full items-center justify-center">
+          <input
+            className="h-full w-[200px] rounded-md bg-primary-200 text-[20px] font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300 sm:h-[64px] sm:w-full sm:py-4 sm:text-base"
+            type="submit"
+            value="Entrar"
+          />
+        </div>
 
-        <input
-          className="w-full rounded-md bg-primary-200 py-4 text-base font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300"
-          type="submit"
-          value="Entrar"
-        />
-
-        <div className="flex justify-between">
-          <Link className="login-link" to="/create-account">
+        <div className="flex w-full justify-between">
+          <Link
+            className="login-link text-[20px] sm:text-base lg:text-base"
+            to="/create-account"
+          >
             criar conta
           </Link>{" "}
-          <Link className="login-link" to="/forget-password">
+          <Link
+            className="login-link text-[20px] sm:text-base lg:text-base"
+            to="/forget-password"
+          >
             esqueci a senha
           </Link>
         </div>

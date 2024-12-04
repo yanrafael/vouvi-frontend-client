@@ -24,7 +24,7 @@ function CreateAccountStep5() {
     <>
       <ProgressBar value={80} />
 
-      <h2 className="text-center text-lg">
+      <h2 className="text-center text-[25px] sm:text-lg">
         Agora é só
         <br />
         confirmar o seu e-mail
@@ -37,28 +37,28 @@ function CreateAccountStep5() {
           className="mb-0 mt-16 flex items-center justify-center gap-4"
         >
           <input
-            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
+            className="h-15 w-16 sm:h-32 sm:w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
+            className="h-15 w-16 sm:h-32 sm:w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
+            className="h-15 w-16 sm:h-32 sm:w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required
             onKeyUp={changeToNext}
           />
           <input
-            className="h-32 w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
+            className="h-15 w-16 sm:h-32 sm:w-28 cursor-pointer border-b-4 border-b-secondary-200 text-center text-lg font-bold outline-none transition-all hover:border-b-primary-200 focus:border-b-primary-200"
             type="text"
             maxLength={1}
             required

@@ -13,9 +13,9 @@ function Goals() {
   };
 
   return (
-    <section className="w-12/12 m-auto mt-5 flex justify-between gap-5">
+    <section className="w-12/12 m-auto mt-5 flex md:flex-row flex-col justify-between gap-5">
       <div className="flex w-full flex-col gap-4 overflow-x-hidden">
-        <div className="flex flex-nowrap gap-4 overflow-x-scroll pb-[1px]">
+        <div className="flex sm:flex-nowrap flex-wrap md:gap-4 sm:gap-3 gap-2 overflow-x-scroll pb-[1px]">
           <div onClick={() => activeButton(0)}>
             <GoalsButton
               color={`hover:bg-[#87878733] hover:text-black hover:dark:text-white transition-colors duration-300 ${
@@ -67,7 +67,7 @@ function Goals() {
             />
           </div>
         </div>
-        <div className="flex h-[1000px] flex-col gap-4 overflow-y-scroll">
+        <div className="flex md:h-[1000px] flex-col gap-4 overflow-y-scroll">
           <GoalsCard
             actualValue={20}
             maxValue={2999}
@@ -95,23 +95,23 @@ function Goals() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
-        <div className="flex h-14 items-center">
+      <div className="flex flex-col gap-4 2xl:w-auto lg:w-[38%] md:w-[40%] w-full">
+        <div className="flex lg:h-14 md:h-9 sm:h-[42px] h-[30px] items-center 2xl:w-auto lg:w-[38%] md:w-[40%] w-full">
           <input
             type="text"
             placeholder="Histórico"
-            className="h-14 rounded-l-[14px] bg-[#86868633] px-5 text-base font-medium outline-none placeholder:text-black dark:bg-[#1B1B1B] dark:text-[#878787] dark:placeholder:text-[#878787]"
+            className="lg:h-14 md:h-9 sm:h-[42px] h-[30px] 2xl:w-auto md:w-[30vw] w-full lg:rounded-l-[14px] sm:rounded-l-[10px] rounded-l-[8px] bg-[#86868633] px-5 2xl:text-base lg:text-[32px] sm:text-[24px] font-medium outline-none placeholder:text-black dark:bg-[#1B1B1B] dark:text-[#878787] dark:placeholder:text-[#878787]"
           />
-          <div className="flex h-14 cursor-pointer items-center rounded-r-[14px] bg-black p-2 dark:bg-[#878787]">
+          <div className="flex lg:h-14 md:h-9 sm:h-[42px] h-[30px] cursor-pointer items-center lg:rounded-r-[14px] sm:rounded-r-[10px] rounded-r-[8px] bg-black p-2 dark:bg-[#878787]">
             <Icon
               icon="flowbite:filter-solid"
-              className="text-base text-white dark:text-black"
+              className="text-base text-white dark:text-black lg:w-auto sm:w-[24px] w-[20px]"
             />
           </div>
         </div>
 
-        <div className="relative flex h-[1000px] flex-col gap-5 overflow-hidden rounded-md bg-[#86868633] px-8 py-8 dark:bg-[#1B1B1B]">
-          <div className="flex h-[1000px] w-full flex-col gap-4 overflow-y-scroll">
+        <div className="relative flex xl:h-[1000px] lg:h-[925px] md:h-[920px] h-[500px] flex-col gap-5 overflow-hidden rounded-md bg-[#86868633] p-8 dark:bg-[#1B1B1B]">
+          <div className="flex xl:h-[1000px] lg:h-[925px] md:h-[920px] h-[500px] w-full flex-col md:gap-4 sm:gap-3 gap-2 overflow-y-scroll">
             <GoalsHistory />
             <GoalsHistory />
             <GoalsHistory />
