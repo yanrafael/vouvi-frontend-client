@@ -16,7 +16,7 @@ function Learn() {
       icon: "ic:round-menu-book",
       iconWidth: 50,
       top: 1,
-      left: 0.8,
+      left: 1.5,
       open: true,
     },
     {
@@ -24,7 +24,7 @@ function Learn() {
       icon: "iconoir:heart-solid",
       iconWidth: 50,
       top: 27,
-      left: 2.2,
+      left: 2.5,
       open: true,
     },
     {
@@ -74,6 +74,12 @@ function Learn() {
       left: 91,
       open: false,
     },
+    {
+      id: 15,
+      top: 37,
+      left: 92,
+      final: true,
+    },
   ];
 
   return (
@@ -97,7 +103,7 @@ function Learn() {
           <Trail stages={stages} bg={trailImage1} />
         </div>
 
-        <LifeMeter />
+        <LifeMeter lives={3} />
       </main>
 
       <div className="fixed bottom-0 w-screen">
@@ -109,21 +115,21 @@ function Learn() {
 
 function LifeMeter({ lives = 3 }) {
   return (
-    <div className="sticky bottom-5 left-32 flex w-fit gap-2 rounded-sm bg-secondary-200/20 p-3">
+    <div className="sticky bottom-2 flex h-fit w-fit gap-2 rounded-sm bg-secondary-200/20 p-3">
       <Icon
-        icon={lives >= 1 ? "mdi:thunder" : ""}
+        icon={"mdi:thunder"}
         width={48}
-        className="text-secondary-200"
+        className={lives >= 1 ? "text-secondary-200" : "text-secondary-200/30"}
       />
       <Icon
-        icon={lives >= 2 ? "mdi:thunder" : ""}
+        icon={"mdi:thunder"}
         width={48}
-        className="text-secondary-200"
+        className={lives >= 2 ? "text-secondary-200" : "text-secondary-200/30"}
       />
       <Icon
-        icon={lives >= 3 ? "mdi:thunder" : ""}
+        icon={"mdi:thunder"}
         width={48}
-        className="text-secondary-200"
+        className={lives >= 3 ? "text-secondary-200" : "text-secondary-200/30"}
       />
     </div>
   );
