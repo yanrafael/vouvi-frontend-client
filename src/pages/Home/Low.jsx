@@ -165,6 +165,7 @@ function Low() {
         <div className="slider-container">
           <Slider {...settings}>
             <Subscription
+            tabIndex="-1"
               color={"bg-[#007FFF]"}
               colortitle={"text-[#002952]"}
               title={"Free"}
@@ -183,6 +184,7 @@ function Low() {
               color={
                 "bg-primary-200 border-8 dark:border-black outline outline-8 outline-primary-300 relative"
               }
+              tabIndex="-1"
               colortitle={"text-[#35005B]"}
               title={"Premium"}
               price={"R$14,90"}
@@ -204,6 +206,7 @@ function Low() {
               />
             </Subscription>
             <Subscription
+            tabIndex="-1"
               color={"bg-[#DDA010] dark:bg-[#FFB12099]"}
               colortitle={"text-[#583900]"}
               title={"Family"}

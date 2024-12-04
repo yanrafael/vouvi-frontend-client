@@ -52,7 +52,7 @@ function Top({ background }) {
           </p>
         </div>
 
-        <Link to={"/create-account"}>
+        <Link tabIndex="-1" to={"/create-account"}>
           <PrimaryButton text={"Começar agora"} />
         </Link>
 
