@@ -1,5 +1,6 @@
 import Modal from "./Modal";
 import hideModal from "../../utils/hideModal";
+import showModal from "../../utils/showModal";
 import { useState } from "react";
 
 function NewExpense() {
@@ -85,36 +86,28 @@ function NewExpense() {
         <div className="flex gap-5">
           <div className="flex w-1/2 flex-col">
             <label htmlFor="account">Conta/Cartão</label>
-            <select
+            <button
               name="account"
               id="account"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 p-2 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={account}
-              onChange={(event) => setAccount(event.target.value)}
+              onClick={() => showModal("choose-account")}
             >
-              {userAccounts.map((account) => (
-                <option key={account.id} value={account.id}>
-                  {account.name}
-                </option>
-              ))}
-            </select>
+              Conta
+            </button>
           </div>
 
           <div className="flex w-1/2 flex-col">
             <label htmlFor="category">Categoria:</label>
-            <select
+            <button
               name="category"
               id="category"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 p-2 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={category}
-              onChange={(event) => setCategory(event.target.value)}
+              onClick={() => showModal("choose-expense-category")}
             >
-              {userCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
+              Categoria
+            </button>
           </div>
         </div>
 
