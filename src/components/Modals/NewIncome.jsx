@@ -1,5 +1,6 @@
 import Modal from "./Modal";
 import hideModal from "../../utils/hideModal";
+import showModal from "../../utils/showModal";
 import { useState } from "react";
 
 function NewIncome() {
@@ -79,7 +80,7 @@ function NewIncome() {
               type="button"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={account}
-              onChange={(event) => setAccount(event.target.value)}
+              onClick={() => showModal("choose-account")}
             >
               Conta
             </button>
@@ -93,7 +94,7 @@ function NewIncome() {
               type="button"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={category}
-              onChange={(event) => setCategory(event.target.value)}
+              onClick={() => showModal("choose-income-category")}
             >
               Categoria
             </button>
