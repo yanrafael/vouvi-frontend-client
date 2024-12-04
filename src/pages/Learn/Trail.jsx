@@ -6,7 +6,7 @@ import BonusStage from "../../components/Learn/BonusStage";
 
 function Trail({ stages, bonusStages, bg }) {
   return (
-    <section className="relative left-0 top-0 rotate-90 md:w-auto lg:rotate-0 xl:top-5">
+    <section className="relative rotate-90 md:w-auto lg:rotate-0 xl:top-5">
       <img src={bg} alt="trilha de aprendizagem" width={1920} />
       {stages.map((stage) =>
         stage.final ? (
