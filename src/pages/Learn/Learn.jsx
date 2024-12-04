@@ -88,7 +88,7 @@ function Learn() {
         <AvatarBasic name={"Josefa"} />
       </Header>
 
-      <main className="relative flex w-[100vw] flex-col items-center justify-center px-0 md:px-[1vw] xl:px-[7vw]">
+      <main className="flex w-[100vw] flex-col items-center justify-center px-0 md:px-[1vw] xl:px-[7vw]">
         {/* Heading */}
         <TopSection
           section={1}
@@ -115,7 +115,7 @@ function Learn() {
 
 function LifeMeter({ lives = 3 }) {
   return (
-    <div className="sticky bottom-2 flex h-fit w-fit gap-2 rounded-sm bg-secondary-200/20 p-3">
+    <div className="absolute bottom-5 left-32 flex h-fit w-fit gap-2 rounded-sm bg-secondary-200/20 p-3">
       <Icon
         icon={"mdi:thunder"}
         width={48}
