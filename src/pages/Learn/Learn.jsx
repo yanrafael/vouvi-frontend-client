@@ -8,6 +8,7 @@ import AvatarBasic from "../../components/Header/AvatarBasic";
 import Trail from "./Trail";
 
 import trailImage1 from "../../assets/images/learning-trail-1.svg";
+import trailImage1Dark from "../../assets/images/learning-trail-1-dark.svg";
 
 function Learn() {
   const stages = [
@@ -25,7 +26,7 @@ function Learn() {
       iconWidth: 50,
       top: 27,
       left: 2.5,
-      open: true,
+      open: false,
     },
     {
       id: 2,
@@ -35,13 +36,13 @@ function Learn() {
       left: 5.8,
       open: false,
     },
-    { id: 3, top: 80, left: 15, finished: false },
-    { id: 4, top: 80, left: 23, finished: false },
-    { id: 5, top: 70, left: 30, finished: false },
-    { id: 6, top: 56, left: 35, finished: false },
-    { id: 7, top: 40, left: 38, finished: false },
-    { id: 8, top: 28, left: 45, finished: false },
-    { id: 9, top: 28, left: 54, finished: false },
+    { id: 3, top: 80, left: 15, open: false },
+    { id: 4, top: 80, left: 23, open: false },
+    { id: 5, icon: "mdi:bomb", iconWidth: 65, top: 66, left: 27, open: false },
+    { id: 6, top: 56, left: 35, open: false },
+    { id: 7, top: 40, left: 38, open: false },
+    { id: 8, top: 28, left: 45, open: false },
+    { id: 9, top: 28, left: 54, open: false },
     {
       id: 10,
       icon: "bi:phone-fill",
@@ -58,8 +59,10 @@ function Learn() {
     },
     {
       id: 12,
-      top: 85,
-      left: 78,
+      icon: "mdi:dice-multiple",
+      iconWidth: 60,
+      top: 81,
+      left: 76,
       open: false,
     },
     {
@@ -82,6 +85,35 @@ function Learn() {
     },
   ];
 
+  const bonusStages = [
+    {
+      id: 1,
+      type: "accessory",
+      iconColor: "black",
+      color: "green",
+      top: 30,
+      left: 20,
+      open: false,
+    },
+    {
+      id: 2,
+      type: "accessory",
+      color: "yellow",
+      iconColor: "black",
+      top: 63,
+      left: 48,
+      open: false,
+    },
+    {
+      id: 3,
+      type: "accessory",
+      color: "pink",
+      top: 40,
+      left: 75,
+      open: false,
+    },
+  ];
+
   return (
     <>
       <Header>
@@ -100,7 +132,15 @@ function Learn() {
 
         {/* Trail 1 */}
         <div className="relative h-full w-full">
-          <Trail stages={stages} bg={trailImage1} />
+          <Trail
+            stages={stages}
+            bonusStages={bonusStages}
+            bg={
+              !document.body.classList.contains("dark")
+                ? trailImage1
+                : trailImage1Dark
+            }
+          />
         </div>
 
         <LifeMeter lives={3} />
