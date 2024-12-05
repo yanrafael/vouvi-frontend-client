@@ -35,7 +35,7 @@ function PasswordInput({
           className="absolute right-5 hover:cursor-pointer"
           onClick={showPassword}
         >
-          <Icon icon={icon} />
+          <Icon tabIndex="0" icon={icon} />
         </div>
       </div>
     </>

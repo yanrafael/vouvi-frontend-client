@@ -146,7 +146,7 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
   );
 
   return (
-    <div className="relative flex flex-none flex-col items-center bg-[#C9C9C8] md:w-[182px] md:rounded-bl-md md:rounded-tl-md md:py-5 lg:w-[520px] lg:rounded-l-md 2xl:rounded-md lg:py-10 dark:bg-[#151515]">
+    <div className="relative flex flex-none flex-col items-center bg-[#C9C9C8] md:w-[182px] md:rounded-bl-md md:rounded-tl-md md:py-5 lg:w-[520px] lg:rounded-l-md lg:py-10 2xl:rounded-md dark:bg-[#151515]">
       <h1 className="mb-5 mt-8 text-[24px] font-semibold md:hidden dark:text-white">
         Crie seu avatar!
       </h1>
@@ -174,31 +174,37 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
       </div>
       <div className="flex w-[230px] justify-around py-6 md:w-10/12 md:py-6">
         <div
+          tabIndex="0"
           style={{ backgroundColor: IconBorder === 0 ? Bg[0] : "#007fff" }}
           className={`h-6 w-6 cursor-pointer rounded-full bg-secondary-200 transition-all duration-300 md:h-5 md:w-5 lg:h-14 lg:w-14 ${IconBorder === 0 ? Border : ""} `}
           onClick={() => IconStates(0)}
         ></div>
         <div
+          tabIndex="0"
           style={{ backgroundColor: IconBorder === 1 ? Bg[1] : "#FF2D2D" }}
           className={`h-6 w-6 cursor-pointer rounded-full bg-[#FF2D2D] transition-all duration-300 md:h-5 md:w-5 lg:h-14 lg:w-14 ${IconBorder === 1 ? Border : ""} `}
           onClick={() => IconStates(1)}
         ></div>
         <div
+          tabIndex="0"
           style={{ backgroundColor: IconBorder === 2 ? Bg[2] : "#37FF2D" }}
           className={`h-6 w-6 cursor-pointer rounded-full bg-[#37FF2D] transition-all duration-300 md:h-5 md:w-5 lg:h-14 lg:w-14 ${IconBorder === 2 ? Border : ""} `}
           onClick={() => IconStates(2)}
         ></div>
         <div
+          tabIndex="0"
           style={{ backgroundColor: IconBorder === 3 ? Bg[3] : "#7C20BE" }}
           className={`h-6 w-6 cursor-pointer rounded-full bg-primary-200 transition-all duration-300 md:h-5 md:w-5 lg:h-14 lg:w-14 ${IconBorder === 3 ? Border : ""} `}
           onClick={() => IconStates(3)}
         ></div>
         <div
+          tabIndex="0"
           style={{ backgroundColor: IconBorder === 4 ? Bg[4] : "yellow" }}
           className={`h-6 w-6 cursor-pointer rounded-full bg-yellow transition-all duration-300 md:h-5 md:w-5 lg:h-14 lg:w-14 ${IconBorder === 4 ? Border : ""} `}
           onClick={() => IconStates(4)}
         ></div>
         <div
+          tabIndex="0"
           style={{ backgroundColor: IconBorder === 5 ? Bg[5] : "#FF0084" }}
           className={`h-6 w-6 cursor-pointer rounded-full bg-[#FF0084] transition-all duration-300 md:h-5 md:w-5 lg:h-14 lg:w-14 ${IconBorder === 5 ? Border : ""} `}
           onClick={() => IconStates(5)}

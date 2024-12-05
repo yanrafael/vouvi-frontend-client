@@ -8,15 +8,18 @@ import { Icon } from "@iconify/react";
 function HeaderIntern({ iconActiveNumber, children }) {
   const darkMode = document.body.classList.contains("dark");
 
-  {/* Que Merda fiz aqui? */}
-
+  {
+    /* Que Merda fiz aqui? */
+  }
 
   // Borda ao clicar
-  const Outline = "outline lg:outline-[7px] xl:outline-[8px] 2xl:outline-[10px] outline-[rgba(0,127,255,0.15)]";
+  const Outline =
+    "outline lg:outline-[7px] xl:outline-[8px] 2xl:outline-[10px] outline-[rgba(0,127,255,0.15)]";
   const [useOutline, setUseOutline] = useState(false);
 
   // Preenchimento ao clicar
-  const Fill = "-z-10 w-[inherit] lg:h-[38px] xl:h-[43px] 2xl:h-[54px] ml-0 mt-0 ";
+  const Fill =
+    "-z-10 w-[inherit] lg:h-[38px] xl:h-[43px] 2xl:h-[54px] ml-0 mt-0 ";
   const [fillComponent, setAnimationFill] = useState(false);
 
   // Controle de cor do texto ao clicar
@@ -51,7 +54,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   const Learn = (
     <svg
-      className="lg:h-[33px] m-[3px] 2xl:m-1 xl:h-[37px] 2xl:h-[46px] overflow-visible"
+      className="m-[3px] overflow-visible lg:h-[33px] xl:h-[37px] 2xl:m-1 2xl:h-[46px]"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +79,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
   );
   const Planning = (
     <svg
-      className="lg:h-[33px] m-[3px] 2xl:m-1 xl:h-[37px] 2xl:h-[46px] overflow-visible"
+      className="m-[3px] overflow-visible lg:h-[33px] xl:h-[37px] 2xl:m-1 2xl:h-[46px]"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +105,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   const Ranking = (
     <svg
-      className="lg:h-[33px] m-[3px] 2xl:m-1 xl:h-[37px] 2xl:h-[46px] overflow-visible"
+      className="m-[3px] overflow-visible lg:h-[33px] xl:h-[37px] 2xl:m-1 2xl:h-[46px]"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +131,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   const Store = (
     <svg
-      className="lg:h-[33px] m-[3px] 2xl:m-1 xl:h-[37px] 2xl:h-[46px] overflow-visible"
+      className="m-[3px] overflow-visible lg:h-[33px] xl:h-[37px] 2xl:m-1 2xl:h-[46px]"
       viewBox="0 0 46 46"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -188,12 +191,17 @@ function HeaderIntern({ iconActiveNumber, children }) {
 
   return (
     <>
-      <header className="hidden sticky left-0 top-0 z-10 m-auto lg:flex w-full items-center justify-around bg-[rgba(2,2,11,0.15)] lg:py-7 xl:py-8 2xl:py-10 backdrop-blur-[13px] dark:bg-[rgba(2,2,11,0.80);]">
-        <LogoWhite Name={VouviWord} width2={`lg:h-[45px] xl:h-[53px] 2xl:h-[66px]`} darkMode={darkMode} />
+      <header className="sticky left-0 top-0 z-10 m-auto hidden w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:flex lg:py-7 xl:py-8 2xl:py-10 dark:bg-[rgba(2,2,11,0.80);]">
+        <LogoWhite
+          Name={VouviWord}
+          width2={`lg:h-[45px] xl:h-[53px] 2xl:h-[66px]`}
+          darkMode={darkMode}
+        />
         <nav className="flex">
           <Link to={"/learn"}>
             <div onClick={() => IconStates(0)}>
               <Navigation
+                tabIndex="0"
                 width={`lg:w-[161px] xl:w-[179px] 2xl:w-[224px] group ${useOutline === 0 ? Outline : ""}`}
                 fill={` ${fillComponent === 0 ? Fill : "lg:m-[3px] xl:m-[3px] 2xl:m-1 lg:h-[33px] lg:w-[33px] xl:h-[37px] xl:w-[37px] 2xl:h-[46px] 2xl:w-[46px]"}`}
                 icon={Learn}
@@ -210,6 +218,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={"/planning"}>
             <div onClick={() => IconStates(1)}>
               <Navigation
+                tabIndex="0"
                 width={`lg:w-[146px] xl:w-[163px] 2xl:w-[204px] group ${useOutline === 1 ? Outline : ""} `}
                 fill={` ${fillComponent === 1 ? Fill : "lg:m-[3px] xl:m-[3px] 2xl:m-1 lg:h-[33px] lg:w-[33px] xl:h-[37px] xl:w-[37px] 2xl:h-[46px] 2xl:w-[46px]"}`}
                 icon={Planning}
@@ -226,6 +235,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={"/ranking"}>
             <div onClick={() => IconStates(2)}>
               <Navigation
+                tabIndex="0"
                 width={`lg:w-[146px] xl:w-[163px] 2xl:w-[204px] group ${useOutline === 2 ? Outline : ""} `}
                 fill={` ${fillComponent === 2 ? Fill : "lg:m-[3px] xl:m-[3px] 2xl:m-1 lg:h-[33px] lg:w-[33px] xl:h-[37px] xl:w-[37px] 2xl:h-[46px] 2xl:w-[46px]"}`}
                 icon={Ranking}
@@ -242,6 +252,7 @@ function HeaderIntern({ iconActiveNumber, children }) {
           <Link to={"/store"}>
             <div onClick={() => IconStates(3)}>
               <Navigation
+                tabIndex="0"
                 width={`lg:w-[104px] xl:w-[116px] 2xl:w-[145px] group ${useOutline === 3 ? Outline : ""} `}
                 fill={` ${fillComponent === 3 ? Fill : "lg:m-[3px] xl:m-[3px] 2xl:m-1 lg:h-[33px] lg:w-[33px] xl:h-[37px] xl:w-[37px] 2xl:h-[46px] 2xl:w-[46px]"}`}
                 icon={Store}
