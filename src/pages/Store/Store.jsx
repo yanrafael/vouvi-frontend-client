@@ -4,6 +4,7 @@ import Low from "./Low";
 import HeaderIntern from "../../components/Header/HeaderIntern";
 import Footer from "../../components/Footer/Footer";
 import AvatarFull from "../../components/Header/AvatarFull";
+import HeaderMobile from "../../components/Header/HeaderMobile";
 
 import { useState } from "react";
 
@@ -23,6 +24,7 @@ function Store() {
       <Top />
       <Low />
       <Footer />
+      <HeaderMobile iconId={3}/>
     </>
   );
 }

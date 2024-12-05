@@ -12,37 +12,42 @@ function Top() {
   const progressionbar = 19;
 
   return (
-    <section className="m-auto mt-14 flex w-[90%] border-b-2 border-[#252525] pb-16 dark:border-[#F5F5F442]">
+    <section className="m-auto mt-16 flex w-[90%] flex-col items-center border-b-2 border-[#252525] pb-8 lg:pb-16 lg:mt-10 lg:flex-row xl:mt-14 dark:border-[#F5F5F442]">
       <div className="flex flex-none">
-        <div className="h-[351px] w-[351px] rounded-full bg-[#7C20BE80]">
-          <img src={Avatar} alt="Avatar Finn"  title="Avatar Finn"/> 
+        <div className="rounded-full bg-[#7C20BE80] h-[150px] w-[150px] xs:h-[200px] xs:w-[200px] sm:h-[300px] sm:w-[300px] lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] 2xl:h-[350px] 2xl:w-[350px]">
+          <img src={Avatar} alt="Avatar Finn" title="Avatar Finn" />
         </div>
       </div>
-      <div className="ml-16 flex w-6/12 flex-col justify-center gap-2 font-medium text-[#252525] dark:text-white">
-        <h1 className="text-lg">Ana carolina</h1>
-        <div className="bg-blue-500 w-[70%] rounded-md bg-[#014085] px-6">
-          <div className="flex justify-between text-right text-[32px] font-semibold">
+      <div className="flex w-full flex-col items-center justify-center gap-2 font-medium text-[#252525] lg:ml-10 lg:w-[90%] lg:items-stretch xl:ml-12 2xl:ml-14 dark:text-white">
+        <h1 className="text-[40px] sm:text-[50px] lg:text-[30px] xl:text-base 2xl:text-lg">
+          Ana carolina
+        </h1>
+        <div className="bg-blue-500 mt-10 xs:mt-14 w-full rounded-[15px] md:rounded-md bg-[#014085] px-4 md:px-6 lg:mt-0 lg:w-[80%]">
+          <div className="flex justify-between text-right font-semibold text-[15px] xs:text-[20px] sm:text-[30px] lg:text-[21px] xl:text-[26px] 2xl:text-[32px]">
             <h2 className="text-white">Nivel</h2>
             <h2 className="text-secondary-200">Faltam 200XP</h2>
           </div>
-          <div className="m-auto mb-2 flex h-[10px] w-[100%] rounded-md bg-[#F5F5F480]" >
+          <div className="m-auto mb-2 flex h-[10px] w-[100%] rounded-md bg-[#F5F5F480]">
             <div
               style={{ width: `${progressionbar}%` }}
-              className={`rounded-md bg-white`} 
+              className={`rounded-md bg-white`}
             ></div>
           </div>
         </div>
-        <div className="flex w-4/6 flex-wrap font-medium" >
+        <div className="flex w-full flex-wrap font-medium lg:w-5/6">
           <ProfileTags text={"Sessão de investimentos"} />
           <ProfileTags text={"15 Amigos"} />
         </div>
       </div>
-      <hr className="relative right-24 h-96 w-[2px] bg-[#252525] dark:bg-[#F5F5F442]" />
-      <div className="flex flex-col justify-center"  title="ícone da vouvi, chamado Vcoins com uma estrela em cima  ">
-        <div className="flex">
+      <hr className="relative m-8 h-[2px] w-full bg-[#252525] lg:right-[4.5%] lg:m-0 lg:h-72 lg:w-[2px] xl:h-96 dark:bg-[#F5F5F442]" />
+      <div
+        className="flex w-full items-end justify-center gap-3 lg:w-fit lg:flex-col lg:items-stretch lg:gap-0"
+        title="ícone da vouvi, chamado Vcoins com uma estrela em cima  "
+      >
+        <div className="flex lg:flex-auto gap-2 lg:gap-0">
           <CoinCard
             color={
-              "mr-10 bg-[linear-gradient(180deg,rgba(255,77,0,0.80)_0%,rgba(255,216,46,0.80)_100%);]"
+              "lg:mr-5 xl:mr-8 2xl:mr-10 bg-[linear-gradient(180deg,rgba(255,77,0,0.80)_0%,rgba(255,216,46,0.80)_100%);]"
             }
             icon={Vicon}
             title={"928"}
@@ -56,11 +61,13 @@ function Top() {
             text={"emblemas"}
           />
         </div>
-        <div className="mt-4 flex justify-center rounded-md bg-[#14A90033] px-4 py-2 text-[32px] font-bold text-[#14A900]">
-          Sequência: 23 dias
-        </div>
-        <div className="mt-4 flex justify-center rounded-md bg-[#7C20BE33] px-4 py-2 text-[32px] font-bold text-primary-200">
-          Especialista em economia
+        <div className="flex flex-col gap-2 whitespace-nowrap md:gap-0 lg:gap-0">
+          <div className="flex justify-center rounded-md bg-[#14A90033] px-2 py-1 font-bold text-[#14A900] sm:mt-4 text-[12px] xs:text-[16px] sm:text-[26px] md:px-4 md:py-2 lg:text-[21px] xl:text-[26px] 2xl:text-[32px]">
+            Sequência: 23 dias
+          </div>
+          <div className="flex justify-center rounded-md bg-[#7C20BE33] px-2 py-1 font-bold text-primary-200 sm:mt-4 text-[12px] xs:text-[16px] sm:text-[26px] md:px-4 md:py-2 lg:text-[21px] xl:text-[26px] 2xl:text-[32px]">
+            Especialista em economia
+          </div>
         </div>
       </div>
     </section>

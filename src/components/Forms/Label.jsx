@@ -1,6 +1,6 @@
 function Label({ children, htmlFor = "" }) {
   return (
-    <label className="w-fit text-base" htmlFor={htmlFor}>
+    <label className="w-fit text-[24px] sm:text-base" htmlFor={htmlFor}>
       {children}
     </label>
   );

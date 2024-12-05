@@ -1,20 +1,9 @@
 import Modal from "./Modal";
 import hideModal from "../../utils/hideModal";
+import showModal from "../../utils/showModal";
 import { useState } from "react";
 
 function NewIncome() {
-  const userAccounts = [
-    { id: 0, name: "nu" },
-    { id: 1, name: "carteira" },
-    { id: 2, name: "depósitos" },
-  ];
-
-  const userCategories = [
-    { id: 0, name: "salário" },
-    { id: 1, name: "freelance" },
-    { id: 2, name: "investimentos" },
-  ];
-
   const [title, setTitle] = useState("");
   const [ammount, setAmmount] = useState(0);
   const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
@@ -40,10 +29,10 @@ function NewIncome() {
       top
     >
       <form
-        className="flex w-96 flex-col gap-7"
+        className="flex md:w-96 flex-col gap-7 md:text-md sm:text-[20px] xs:text-[14px] text-[12px]"
         onSubmit={(event) => {
-          hideModal("new-income");
           event.preventDefault();
+          hideModal("new-income");
           clearForm();
         }}
       >
@@ -85,47 +74,44 @@ function NewIncome() {
         <div className="flex gap-5">
           <div className="flex w-1/2 flex-col">
             <label htmlFor="account">Conta/Cartão</label>
-            <select
+            <button
               name="account"
               id="account"
-              className="w-full rounded-md border-4 border-primary-200 p-2 text-md"
+              type="button"
+              className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={account}
-              onChange={(event) => setAccount(event.target.value)}
+              onClick={() => showModal("choose-account")}
             >
-              {userAccounts.map((account) => (
-                <option key={account.id} value={account.id}>
-                  {account.name}
-                </option>
-              ))}
-            </select>
+              Conta
+            </button>
           </div>
 
           <div className="flex w-1/2 flex-col">
             <label htmlFor="category">Categoria:</label>
-            <select
+            <button
               name="category"
               id="category"
-              className="w-full rounded-md border-4 border-primary-200 p-2 text-md"
+              type="button"
+              className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={category}
-              onChange={(event) => setCategory(event.target.value)}
+              onClick={() => showModal("choose-income-category")}
             >
-              {userCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
+              Categoria
+            </button>
           </div>
         </div>
 
-        <button className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0">
+        <button
+          type="button"
+          className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0 xs:text-[18px] text-[14px]"
+        >
           Adicionar repetição
         </button>
 
         <button
           className={`flex w-full items-center justify-center rounded-sm bg-primary-200 p-3 font-bold text-white transition-all duration-200 hover:bg-secondary-200 hover:text-black`}
         >
-          <p className="text-md">Salvar</p>
+          <p className="md:text-md sm:text-[20px] xs:text-[18px] text-[14px]">Salvar</p>
         </button>
       </form>
     </Modal>
@@ -136,7 +122,7 @@ function Input(props) {
   return (
     <input
       {...props}
-      className="w-full rounded-md border-4 border-primary-200 p-2 text-md"
+      className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 pl-2 md:text-md sm:text-[20px] outline-none dark:border-secondary-200 dark:bg-black dark:text-white"
     />
   );
 }

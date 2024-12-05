@@ -147,7 +147,7 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
 
   return (
     <div className="relative flex flex-none flex-col items-center bg-[#C9C9C8] md:w-[182px] md:rounded-bl-md md:rounded-tl-md md:py-5 lg:w-[520px] lg:rounded-l-md 2xl:rounded-md lg:py-10 dark:bg-[#151515]">
-      <h1 className="mb-5 mt-10 text-[24px] font-semibold md:hidden dark:text-white">
+      <h1 className="mb-5 mt-8 text-[24px] font-semibold md:hidden dark:text-white">
         Crie seu avatar!
       </h1>
       <div
@@ -161,7 +161,7 @@ function AvatarColors({ Eyes, Necklace, Pendant, Texture, Background }) {
         className={`relative flex h-[140px] w-[130px] rounded-md border-[6px] border-white transition-all duration-500 md:h-[160px] md:w-10/12 md:pt-8 lg:h-auto lg:border-[10px] lg:pt-16 dark:border-black`}
       >
         {AvatarStyle}
-        <div className="absolute ml-[34.5%] mt-[43%] w-[40px] md:ml-[33%] md:mt-7 md:w-12 lg:ml-[33%] lg:mt-[19.5%] lg:w-[140px]">
+        <div className="absolute ml-[34.17%] mt-[43%] w-[40px] md:ml-[33%] md:mt-7 md:w-12 lg:ml-[33%] lg:mt-[19.5%] lg:w-[140px]">
           <img width="140px" src={Eyes} alt="" />
         </div>
         <div className="absolute ml-[32.5%] mt-[71.5%] w-[45px] md:ml-[31.95%] md:mt-[66px] md:w-12 lg:ml-[33%] lg:mt-[183px] lg:w-[130px]">

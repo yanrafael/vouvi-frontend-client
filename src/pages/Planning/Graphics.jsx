@@ -9,9 +9,9 @@ function Graphics() {
 
   return (
     <div className="mt-5 dark:text-white">
-      <div className="flex justify-between">
-        <div className="w-7/12 rounded-md bg-[#868686] bg-opacity-20 pb-10 dark:bg-[#1B1B1B]">
-          <h3 className="m-8 text-lg font-bold dark:text-white">
+      <div className="flex md:flex-row flex-col justify-between">
+        <div className="md:w-7/12 w-full rounded-md bg-[#868686] bg-opacity-20 xl:pb-10 md:mb-0 mb-5 dark:bg-[#1B1B1B]">
+          <h3 className="lg:m-8 m-5 lg:text-nowrap font-bold 2xl:text-[46px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] dark:text-white">
             Veja seus investimentos decolando
           </h3>
           <LineChart
@@ -28,11 +28,14 @@ function Graphics() {
           />
         </div>
 
-        <div className="w-2/5 rounded-md bg-[#868686] bg-opacity-20 pb-10 dark:bg-[#1B1B1B]">
-          <h3 className="m-8 text-lg font-bold dark:text-white">
+        <div className="md:w-2/5 sm:w-full rounded-md bg-[#868686] bg-opacity-20 xl:pb-8 xl:pt-0 lg:pt-2 dark:bg-[#1B1B1B]">
+          <h3 className="xl:m-8 lg:m-6 m-5 lg:text-nowrap font-bold 2xl:text-[46px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] dark:text-white">
             Distribuição de gastos
           </h3>
-          <div className="relative mt-20 w-full dark:text-white">
+          <span className="flex absolute md:hidden pl-[60%] text-[18px] font-bold">
+              R${convertFloat(expenses)}
+          </span>
+          <div className="relative 2xl:w-auto xl:w-[600px] lg:w-[455px] md:w-[350px] 2xl:mt-20 w-full dark:text-white">
             <PieChart
               series={[
                 {
@@ -44,12 +47,18 @@ function Graphics() {
                     { id: 4, value: 12, label: "Saúde", color: "#f72585" },
                     { id: 5, value: 40, label: "Carro", color: "#8d8d8d" },
                   ],
-                  outerRadius: 9 * (window.innerWidth / 100),
+                  outerRadius: (window.innerWidth > 768)? 9 * (window.innerWidth / 100): 20 * (window.innerWidth / 100),
                 },
               ]}
               margin={{
                 top: 0,
-                right: 270 - 2 * (window.innerWidth / 100),
+                right: (window.innerWidth > 768 && window.innerWidth < 1024) 
+                     ? (window.innerWidth / 100) + 180 
+                     : (window.innerWidth > 640)
+                     ? 270 - 2 * (window.innerWidth / 100)
+                     : (window.innerWidth > 400) 
+                     ? 200 - (window.innerWidth / 100)
+                     : 150 - (window.innerWidth / 100),
                 bottom: 0,
                 left: 0,
               }}
@@ -58,12 +67,14 @@ function Graphics() {
                   direction: "column",
                   position: { vertical: "middle", horizontal: "right" },
                   labelStyle: { color: "white" },
-                  padding: { right: 9 * (window.innerWidth / 100) },
+                  padding: {
+                    right: (window.innerWidth > 768 && window.innerWidth < 1024) ? ((window.innerWidth / 100) + (window.innerWidth / 100) * 9) : 9 * (window.innerWidth / 100),
+                  },
                 },
               }}
               height={350}
             />
-            <span className="absolute right-24 top-0 text-left text-md font-bold">
+            <span className="md:flex md:absolute hidden xl:left-[60%] lg:right-24 md:left-[50%] md:right-0 sm:left-[70%] md:top-0 sm:top-5 text-left lg:text-md md:text-[20px] font-bold">
               R${convertFloat(expenses)}
             </span>
           </div>
@@ -71,16 +82,16 @@ function Graphics() {
       </div>
 
       <div className="m-auto mt-8 w-full rounded-md bg-[#888] bg-opacity-20 p-3 dark:bg-[#1B1B1B]">
-        <h3 className="m-8 text-base font-bold">
+        <h3 className="md:flex m-8 xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] hidden font-bold">
           Acompanhe seus gastos e ganhos
         </h3>
-        <div className="ml-16 flex gap-10 text-md">
-          <span className="flex items-center gap-2">
-            <span className="h-3 w-3 rounded-full bg-[#b5179e]"></span>
+        <div className="sm:ml-16 xs:ml-10 ml-5 flex lg:gap-10 md:gap-8 sm:gap-6 gap-4 xl:text-md lg:text-[20px] md:text-[18px] text-[20px] sm:mt-10 mt-4">
+          <span className="flex items-center lg:gap-2 gap-2">
+            <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-[#b5179e]"></span>
             <p>Ganhos</p>
           </span>
-          <span className="flex items-center gap-2">
-            <span className="h-3 w-3 rounded-full bg-[#480ca8]"></span>
+          <span className="flex items-center lg:gap-2 gap-1">
+            <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-[#480ca8]"></span>
             <span className=""></span>
             <p>Gastos</p>
           </span>
@@ -89,7 +100,7 @@ function Graphics() {
           xAxis={[{ data: [1, 3, 7, 10, 14, 20, 23, 27, 30] }]}
           sx={{
             "& .MuiLineElement-root": {
-              strokeWidth: 10,
+              strokeWidth: (window.innerWidth<768)?5:10,
             },
           }}
           series={[
@@ -103,7 +114,7 @@ function Graphics() {
               connectNulls: true,
             },
           ]}
-          height={500}
+          height={(window.innerWidth<768)?(window.innerWidth-window.innerWidth/2):500}
           grid={{ horizontal: true }}
         />
       </div>

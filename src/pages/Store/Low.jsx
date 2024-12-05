@@ -34,6 +34,7 @@ function Mid() {
         title1={"Em promoção!"}
         text1={"Por tempo limitado!"}
         color1={"bg-[#84CE7A]"}
+        color2={"bg-[#FF595E]"}
         icon2={"mingcute:eye-fill"}
         title2={"Olhe intensamente!"}
         text2={"Os melhores olhos de gatinhos"}
@@ -46,6 +47,18 @@ function Mid() {
         img8={EyesBlack}
         img9={EyesPink}
         img10={EyesYellow}
+        value1={"35"}
+        value2={"50"}
+        value3={"70"}
+        value4={"100"}
+        value5={"300"}
+        value6={"80"}
+        value7={"35"}
+        value8={"70"}
+        value9={"90"}
+        value10={"45"}
+        value11={"45"}
+        value12={"35"}
       />
 
       <StoreSingleCard
@@ -63,6 +76,7 @@ function Mid() {
         title1={"Coleiras: Elegância e proteção"}
         text1={"Seu avatar mais incrível!"}
         color1={"bg-white"}
+        color2={"bg-white"}
         icon2={"mdi:necklace"}
         title2={"Pingentes: Detalhe de poder!"}
         text2={"Complete seu look com um toque!"}
@@ -76,6 +90,18 @@ function Mid() {
         img8={PendantYYBlack}
         img9={Sun}
         img10={Thunder}
+        value1={"130"}
+        value2={"115"}
+        value3={"100"}
+        value4={"100"}
+        value5={"130"}
+        value6={"130"}
+        value7={"100"}
+        value8={"150"}
+        value9={"150"}
+        value10={"135"}
+        value11={"200"}
+        value12={"100"}
       />
 
       <StoreSingleCard
@@ -94,7 +120,10 @@ function Mid() {
           }}
           className="flex w-full"
         >
-          <img src={WhiteCat} alt="fin, gato em sua versão com pelagem branca" title="fin, gato em sua versão com pelagem branca"/>
+          <img
+            src={WhiteCat}
+            alt="fin, gato em sua versão com pelagem branca" title="fin, gato em sua versão com pelagem branca"
+          />
         </div>
       </StoreSingleCard>
     </section>

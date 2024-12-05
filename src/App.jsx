@@ -13,7 +13,6 @@ import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
 import Plans from "./pages/Plans/plans";
 
-
 function App() {
   return (
     <>

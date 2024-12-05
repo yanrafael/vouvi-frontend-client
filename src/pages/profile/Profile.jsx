@@ -12,6 +12,7 @@ import FriendsModal from "../../components/Modals/FriendsModal";
 import FriendsAddModal from "../../components/Modals/FriendAddModal";
 
 import { useState } from "react";
+import HeaderMobile from "../../components/Header/HeaderMobile";
 
 function Profile() {
   const [darkMode, setDarkMode] = useState(
@@ -50,6 +51,7 @@ function Profile() {
       {activeModal === "friendsAdd" && (
         <FriendsAddModal closeModal={closeModal} />
       )}
+      <HeaderMobile iconId={4}/>
     </>
   );
 }

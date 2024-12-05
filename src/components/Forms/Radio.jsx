@@ -16,7 +16,7 @@ function KeepConected() {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-center sm:justify-start">
       <span className="text-primary-200" onClick={changeKeepConected}>
         <Icon icon={icon} width={"30px"} />
       </span>
@@ -27,7 +27,7 @@ function KeepConected() {
         id="keepconected"
         value={active}
       />
-      <label className="text-md" htmlFor="keepconected">
+      <label className="text-[20px] sm:text-md" htmlFor="keepconected">
         Mantenha-me conectado
       </label>
     </div>
