@@ -14,17 +14,18 @@ function NoteCard({ title, content }) {
 
   return (
     <div
-      className={`flex max-h-64 sm:w-[40vw] flex-col rounded-sm bg-[#FFB515] xs:p-4 p-2`}
+      className={`flex max-h-64 flex-col rounded-sm bg-[#FFB515] p-2 xs:p-4 sm:w-[40vw]`}
     >
       <div className="flex justify-between">
-        <h3 className="relative float-left my-2 w-fit md:text-lg text-sm font-bold">
+        <h3 className="relative float-left my-2 w-fit text-sm font-bold md:text-lg">
           {title}
         </h3>
         <Icon
+          tabIndex="0"
           icon="mdi:trash-can-outline"
           width={38}
           color="white"
-          className="relative float-left cursor-pointer w-10"
+          className="relative float-left w-10 cursor-pointer"
         />
       </div>
 

@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
-import convertFloat from "../../utils/convertFloat"
+import convertFloat from "../../utils/convertFloat";
 
 import showModal from "../../utils/showModal";
 
@@ -24,7 +24,7 @@ function Top({ onClick, onClick2 }) {
 
   const catIcon = (
     <svg
-      className="2xl:w-10 xl:w-8 lg:w-7 w-5"
+      className="w-5 lg:w-7 xl:w-8 2xl:w-10"
       viewBox="0 0 39 39"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -40,143 +40,198 @@ function Top({ onClick, onClick2 }) {
   );
 
   return (
-    <div className="lg:w-full md:w-[97%]">
-      <section className="2xl:mt-10 lg:mt-8 sm:mt-6 mt-5 flex w-full justify-between lg:gap-2 md:gap-[1px] 2xl:h-auto">
-        <div className="flex 2xl:w-2/12 lg:w-[18%] md:w-[15%] sm:w-[63%] xs:w-[57%] w-[50%] flex-col justify-center whitespace-nowrap xl:rounded-md lg:rounded-sm rounded-[12px] bg-[#DDDDDD] 2xl:px-4 2xl:py-4 xl:px-3 md:px-2 md:py-0 px-3 sm:py-4 2xl:gap-3 leading-[1.1] dark:bg-[#1B1B1B] dark:text-white">
-          <p className="2xl:text-[36px] xl:text-[32px] lg:text-md md:text-[16px] sm:text-[20px] text-[16px] font-light">Saldo</p>
-          <h1 className="2xl:text-[36px] xl:text-[32px] lg:text-md md:text-[16px] sm:text-[32px] xs:text-[24px] font-medium">
+    <div className="md:w-[97%] lg:w-full">
+      <section className="mt-5 flex w-full justify-between sm:mt-6 md:gap-[1px] lg:mt-8 lg:gap-2 2xl:mt-10 2xl:h-auto">
+        <div className="flex w-[50%] flex-col justify-center whitespace-nowrap rounded-[12px] bg-[#DDDDDD] px-3 leading-[1.1] xs:w-[57%] sm:w-[63%] sm:py-4 md:w-[15%] md:px-2 md:py-0 lg:w-[18%] lg:rounded-sm xl:rounded-md xl:px-3 2xl:w-2/12 2xl:gap-3 2xl:px-4 2xl:py-4 dark:bg-[#1B1B1B] dark:text-white">
+          <p className="text-[16px] font-light sm:text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px]">
+            Saldo
+          </p>
+          <h1 className="font-medium xs:text-[24px] sm:text-[32px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px]">
             R$ {convertFloat(balance)}
           </h1>
         </div>
 
-        <div className="flex flex-col lg:gap-2 gap-1 2xl:text-[32px] xl:text-[28px] lg:text-md md:text-[16px] sm:text-[20px] text-[16px] leading-[1.1] whitespace-nowrap">
+        <div className="flex flex-col gap-1 whitespace-nowrap text-[16px] leading-[1.1] sm:text-[20px] md:text-[16px] lg:gap-2 lg:text-md xl:text-[28px] 2xl:text-[32px]">
           <div
+            tabIndex="0"
             onClick={() => showModal("new-income")}
-            className="group relative cursor-pointer xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#84CE7A99] xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-1 md:py-[1%] sm:px-4 py-2 font-medium text-[#14A900] transition-all duration-300 hover:bg-[#14A900] hover:text-[#133810] hover:transition-none hover:duration-0 dark:bg-[rgba(11,85,5,0.50);]"
+            className="group relative cursor-pointer rounded-[8px] bg-[#84CE7A99] py-2 font-medium text-[#14A900] transition-all duration-300 hover:bg-[#14A900] hover:text-[#133810] hover:transition-none hover:duration-0 sm:px-4 md:px-1 md:py-[1%] lg:rounded-sm lg:px-3 lg:py-2 xl:rounded-md xl:px-4 xl:py-4 dark:bg-[rgba(11,85,5,0.50);]"
           >
             {/* Animação Hover */}
             <div
-              className={`absolute inset-0 flex items-center justify-center lg:gap-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
+              className={`absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300 lg:gap-1`}
             >
-              <Icon icon="typcn:plus" width="25px" className="2xl:w-[25px] xl:w-[20px] lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon
+                icon="typcn:plus"
+                width="25px"
+                className="w-4 xs:w-5 md:w-4 lg:w-full xl:w-[20px] 2xl:w-[25px]"
+              />
               <h1 className="">Adicionar</h1>
             </div>
 
             <div className={`flex items-center gap-1 group-hover:opacity-0`}>
-              <Icon icon="icon-park-solid:up-one" width="25px" className="2xl:w-auto lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon
+                icon="icon-park-solid:up-one"
+                width="25px"
+                className="w-4 xs:w-5 md:w-4 lg:w-full 2xl:w-auto"
+              />
               <h1 className="">R$ {convertFloat(income)}</h1>
             </div>
           </div>
 
           <div
+            tabIndex="0"
             onClick={() => showModal("new-expense")}
-            className="group relative cursor-pointer xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#A9000066] xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-1 md:py-[1%] sm:px-4 py-2 font-medium text-[#E30000] transition-all duration-300 hover:bg-[#E30000] hover:text-[#390C0C] hover:transition-none hover:duration-0"
+            className="group relative cursor-pointer rounded-[8px] bg-[#A9000066] py-2 font-medium text-[#E30000] transition-all duration-300 hover:bg-[#E30000] hover:text-[#390C0C] hover:transition-none hover:duration-0 sm:px-4 md:px-1 md:py-[1%] lg:rounded-sm lg:px-3 lg:py-2 xl:rounded-md xl:px-4 xl:py-4"
           >
             {/* Animação Hover */}
             <div
-              className={`absolute inset-0 flex items-center justify-center lg:gap-1 mr-1 opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300`}
+              className={`absolute inset-0 mr-1 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:transition-all group-hover:duration-300 lg:gap-1`}
             >
-              <Icon icon="typcn:plus" width="25px" className="2xl:w-[25px] xl:w-[20px] lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon
+                icon="typcn:plus"
+                width="25px"
+                className="w-4 xs:w-5 md:w-4 lg:w-full xl:w-[20px] 2xl:w-[25px]"
+              />
               <h1 className="">Adicionar</h1>
             </div>
 
             <div className={`flex items-center group-hover:opacity-0`}>
-              <Icon icon="icon-park-solid:down-one" width="25px" className="2xl:w-auto lg:w-full md:w-4 xs:w-5 w-4" />
+              <Icon
+                icon="icon-park-solid:down-one"
+                width="25px"
+                className="w-4 xs:w-5 md:w-4 lg:w-full 2xl:w-auto"
+              />
               <h1 className="">R$ {convertFloat(expense)}</h1>
             </div>
           </div>
         </div>
 
-        <div onClick={() => showModal("financial-missions")}
-        className="md:flex hidden cursor-pointer xl:w-5/12 lg:w-[35%] md:w-[42%] flex-col xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-[#DDDDDD] p-2 dark:bg-[#1B1B1B] py-4">
-          <p className="2xl:p-2 lg:p-1 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] font-light dark:text-white">Missões</p>
-          <div className="overflow-hidden whitespace-nowrap xl:rounded-md lg:rounded-sm md:rounded-[12px] bg-white 2xl:p-2 lg:p-1 2xl:text-[32px] xl:text-[28px] lg:text-[20px] md:text-[14px] text-black">
+        <div
+          tabIndex="0"
+          onClick={() => showModal("financial-missions")}
+          className="hidden cursor-pointer flex-col bg-[#DDDDDD] p-2 py-4 md:flex md:w-[42%] md:rounded-[12px] lg:w-[35%] lg:rounded-sm xl:w-5/12 xl:rounded-md dark:bg-[#1B1B1B]"
+        >
+          <p className="font-light md:text-[16px] lg:p-1 lg:text-md xl:text-[32px] 2xl:p-2 2xl:text-base dark:text-white">
+            Missões
+          </p>
+          <div className="overflow-hidden whitespace-nowrap bg-white text-black md:rounded-[12px] md:text-[14px] lg:rounded-sm lg:p-1 lg:text-[20px] xl:rounded-md xl:text-[28px] 2xl:p-2 2xl:text-[32px]">
             <p className="slide-track animate-scroll relative left-[800px]">
               Anote três pequenas economias que você fez hoje
             </p>
           </div>
         </div>
 
-        <div className="flex flex-col lg:gap-2 gap-1 whitespace-nowrap 2xl:text-[32px] xl:text-[28px] lg:text-md md:text-[16px] leading-[1.1]">
+        <div className="flex flex-col gap-1 whitespace-nowrap leading-[1.1] md:text-[16px] lg:gap-2 lg:text-md xl:text-[28px] 2xl:text-[32px]">
           <div
+            tabIndex="0"
             onClick={() => showModal("notes-modal")}
-            className="flex lg:w-full md:w-[115%] xl:h-[61px] lg:h-[44px] md:h-[27px] cursor-pointer items-center gap-1 xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#FFB51533] hover:bg-yellow hover:text-[#493A1A] transition-all duration-300 xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-2 md:py-0 px-1 font-medium text-[#FFB515]"
+            className="flex cursor-pointer items-center gap-1 rounded-[8px] bg-[#FFB51533] px-1 font-medium text-[#FFB515] transition-all duration-300 hover:bg-yellow hover:text-[#493A1A] md:h-[27px] md:w-[115%] md:px-2 md:py-0 lg:h-[44px] lg:w-full lg:rounded-sm lg:px-3 lg:py-2 xl:h-[61px] xl:rounded-md xl:px-4 xl:py-4"
           >
-            <Icon icon="solar:notes-bold" className="2xl:w-[25px] xl:w-[23px] lg:w-[10%] md:w-[9%] sm:w-[33px] w-[30px]" width="41px" />
-            <h1 className="md:flex hidden">Anotações livres</h1>
+            <Icon
+              icon="solar:notes-bold"
+              className="w-[30px] sm:w-[33px] md:w-[9%] lg:w-[10%] xl:w-[23px] 2xl:w-[25px]"
+              width="41px"
+            />
+            <h1 className="hidden md:flex">Anotações livres</h1>
           </div>
           <div
+            tabIndex="0"
             onClick={() => showModal("budget-modal")}
-            className="flex lg:w-full md:w-[115%] xl:h-[61px] lg:h-[44px] md:h-[27px] cursor-pointer items-center gap-1 xl:rounded-md lg:rounded-sm rounded-[8px] bg-[#FF48A733] hover:bg-[#FF48A7] hover:text-[#492437] transition-all duration-300 xl:px-4 xl:py-4 lg:px-3 lg:py-2 md:px-2 md:py-0 px-1 font-medium text-[#FF48A7]"
+            className="flex cursor-pointer items-center gap-1 rounded-[8px] bg-[#FF48A733] px-1 font-medium text-[#FF48A7] transition-all duration-300 hover:bg-[#FF48A7] hover:text-[#492437] md:h-[27px] md:w-[115%] md:px-2 md:py-0 lg:h-[44px] lg:w-full lg:rounded-sm lg:px-3 lg:py-2 xl:h-[61px] xl:rounded-md xl:px-4 xl:py-4"
           >
-            <Icon icon="iconoir:wallet-solid" className="2xl:w-[25px] xl:w-[23px] lg:w-[10%] md:w-[9%] sm:w-[33px] w-[30px]" width="41px" />
-            <h1 className="md:flex hidden">Orçamento</h1>
+            <Icon
+              icon="iconoir:wallet-solid"
+              className="w-[30px] sm:w-[33px] md:w-[9%] lg:w-[10%] xl:w-[23px] 2xl:w-[25px]"
+              width="41px"
+            />
+            <h1 className="hidden md:flex">Orçamento</h1>
           </div>
         </div>
       </section>
-      <div className="flex md:hidden mt-3 flex-col rounded-[12px] bg-[#DDDDDD] px-3 py-2 dark:bg-[#1B1B1B]">
-          <p className="xs:text-[25px] text-[16px] font-light dark:text-white">Missões</p>
-          <div className="overflow-hidden whitespace-nowrap rounded-[12px] bg-white xs:p-2 p-1 xs:text-[20px] text-[16px] text-black">
-            <p className="slide-track animate-scroll relative left-[800px]">
-              Anote três pequenas economias que você fez hoje
-            </p>
-          </div>
+      <div className="mt-3 flex flex-col rounded-[12px] bg-[#DDDDDD] px-3 py-2 md:hidden dark:bg-[#1B1B1B]">
+        <p className="text-[16px] font-light xs:text-[25px] dark:text-white">
+          Missões
+        </p>
+        <div className="overflow-hidden whitespace-nowrap rounded-[12px] bg-white p-1 text-[16px] text-black xs:p-2 xs:text-[20px]">
+          <p className="slide-track animate-scroll relative left-[800px]">
+            Anote três pequenas economias que você fez hoje
+          </p>
         </div>
+      </div>
 
-      <section className="lg:w-full md:w-[103.2%] 2xl:mt-10 xl:mt-5 lg:mt-4 mt-3 flex sm:flex-row flex-col w-full sm:items-center justify-between rounded-md 2xl:p-4 xl:p-2">
-        <div className="flex justify-between sm:w-auto w-full 2xl:gap-7 xl:gap-5 sm:gap-2">
+      <section className="mt-3 flex w-full flex-col justify-between rounded-md sm:flex-row sm:items-center md:w-[103.2%] lg:mt-4 lg:w-full xl:mt-5 xl:p-2 2xl:mt-10 2xl:p-4">
+        <div className="flex w-full justify-between sm:w-auto sm:gap-2 xl:gap-5 2xl:gap-7">
           <button
             onClick={() => handleClick(0)}
-            className={`${btnOn == 0
+            className={`${
+              btnOn == 0
                 ? "bg-black text-white dark:bg-white dark:text-black"
                 : "bg-[#8D8D8D] text-white transition-colors duration-500 hover:bg-[#282828]"
-              } 2xl:rounded-md lg:rounded-sm xs:rounded-[12px] rounded-[8px] 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[24px] 2xl:h-auto xl:h-14 2xl:py-4 xl:py-0 lg:p-4 p-2`}
+            } rounded-[8px] p-2 text-[24px] xs:rounded-[12px] md:text-[16px] lg:rounded-sm lg:p-4 lg:text-md xl:h-14 xl:py-0 xl:text-[32px] 2xl:h-auto 2xl:rounded-md 2xl:py-4 2xl:text-base`}
           >
             Planejar
           </button>
           <button
             onClick={() => handleClick(1)}
-            className={`${btnOn == 1
+            className={`${
+              btnOn == 1
                 ? "bg-black text-white dark:bg-white dark:text-black"
                 : "bg-[#8D8D8D] text-white transition-colors duration-500 hover:bg-[#282828]"
-              } 2xl:rounded-md lg:rounded-sm xs:rounded-[12px] rounded-[8px] 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[24px] 2xl:h-auto xl:h-14 xl:py-0 lg:p-4 p-2`}
+            } rounded-[8px] p-2 text-[24px] xs:rounded-[12px] md:text-[16px] lg:rounded-sm lg:p-4 lg:text-md xl:h-14 xl:py-0 xl:text-[32px] 2xl:h-auto 2xl:rounded-md 2xl:text-base`}
           >
             Metas
           </button>
         </div>
-          <div className="flex justify-between whitespace-nowrap lg:gap-7 sm:gap-2 text-[#8D8D8D] dark:text-white">
-            {btnOn == 1 ? (
-              <>
-                <div
-                  onClick={() => showModal("")}
-                  className="flex 2xl:h-20 lg:h-[60px] md:h-[38px] cursor-pointer items-center justify-center xl:gap-4 lg:gap-2 gap-1 sm:mt-0 mt-2 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 xs:border-[3px] border-[2px] border-[#8D8D8D] lg:px-6 px-3 py-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
-                >
-                  <Icon icon={"typcn:plus"} className="xl:text-base lg:text-md md:text-[16px] text-[20px]" />
-                  <p className="2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[20px]">Criar Meta</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div
-                  onMouseEnter={() => setCatIconColor(true)}
-                  onMouseLeave={() => setCatIconColor(false)}
-                  onClick={() => showModal("tip-from-fin")}
-                  className="flex 2xl:h-20 lg:h-[60px] md:h-[39px] 2xl:mt-0 lg:mt-[1px] md:mt-0 xs:mt-2 mt-5 cursor-pointer items-center justify-center 2xl:gap-6 xl:gap-4 lg:gap-3 gap-1 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 lg:border-[3px] border-[3px] border-[#8D8D8D] lg:px-6 md:px-3 p-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200"
-                >
-                  {catIcon}
-                  <p className="2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] text-[20px]">Dicas do Fin</p>
-                </div>
-                <div className="flex 2xl:h-20 lg:h-[60px] md:h-[39px] 2xl:mt-0 lg:mt-[1px] md:mt-0 xs:mt-2 mt-5 items-center justify-center lg:gap-6 md:gap-1 2xl:rounded-md lg:rounded-sm rounded-[12px] 2xl:border-4 lg:border-[3px] border-[3px] border-[#8D8D8D] lg:px-6 md:px-3 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200 ">
-                  <p className="md:flex hidden flex-row items-center justify-center lg:gap-4 md:gap-2 text-nowrap 2xl:text-base xl:text-[32px] lg:text-md md:text-[16px] ">
-                    <input 
-                      className="2xl:w-full xl:w-8 lg:w-7 md:w-5" 
-                      type="date" 
-                    />
-                  </p>
-                  <Icon className="flex md:hidden px-2" icon={"bi:calendar-fill"} width={40} />
-                </div>
-              </>
-            )}
+        <div className="flex justify-between whitespace-nowrap text-[#8D8D8D] sm:gap-2 lg:gap-7 dark:text-white">
+          {btnOn == 1 ? (
+            <>
+              <div
+                onClick={() => showModal("")}
+                className="mt-2 flex cursor-pointer items-center justify-center gap-1 rounded-[12px] border-[2px] border-[#8D8D8D] px-3 py-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200 xs:border-[3px] sm:mt-0 md:h-[38px] lg:h-[60px] lg:gap-2 lg:rounded-sm lg:px-6 xl:gap-4 2xl:h-20 2xl:rounded-md 2xl:border-4"
+              >
+                <Icon
+                  icon={"typcn:plus"}
+                  className="text-[20px] md:text-[16px] lg:text-md xl:text-base"
+                />
+                <p className="text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-base">
+                  Criar Meta
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              <div
+                tabIndex="0"
+                onMouseEnter={() => setCatIconColor(true)}
+                onMouseLeave={() => setCatIconColor(false)}
+                onClick={() => showModal("tip-from-fin")}
+                className="mt-5 flex cursor-pointer items-center justify-center gap-1 rounded-[12px] border-[3px] border-[#8D8D8D] p-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200 xs:mt-2 md:mt-0 md:h-[39px] md:px-3 lg:mt-[1px] lg:h-[60px] lg:gap-3 lg:rounded-sm lg:border-[3px] lg:px-6 xl:gap-4 2xl:mt-0 2xl:h-20 2xl:gap-6 2xl:rounded-md 2xl:border-4"
+              >
+                {catIcon}
+                <p className="text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-base">
+                  Dicas do Fin
+                </p>
+              </div>
+              <div
+                tabIndex="0"
+                className="mt-5 flex items-center justify-center rounded-[12px] border-[3px] border-[#8D8D8D] transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200 xs:mt-2 md:mt-0 md:h-[39px] md:gap-1 md:px-3 lg:mt-[1px] lg:h-[60px] lg:gap-6 lg:rounded-sm lg:border-[3px] lg:px-6 2xl:mt-0 2xl:h-20 2xl:rounded-md 2xl:border-4"
+              >
+                <p className="hidden flex-row items-center justify-center text-nowrap md:flex md:gap-2 md:text-[16px] lg:gap-4 lg:text-md xl:text-[32px] 2xl:text-base">
+                  <input
+                    className="md:w-5 lg:w-7 xl:w-8 2xl:w-full"
+                    type="date"
+                  />
+                </p>
+                <Icon
+                  tabIndex="-1"
+                  className="flex px-2 md:hidden"
+                  icon={"bi:calendar-fill"}
+                  width={40}
+                />
+              </div>
+            </>
+          )}
         </div>
       </section>
     </div>
