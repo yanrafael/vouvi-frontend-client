@@ -14,7 +14,7 @@ function Form() {
   return (
     <div className="align-center mt-5 flex h-full w-screen justify-center overflow-x-hidden sm:h-[850px] md:h-[750px]">
       <video
-        src={bgVideo}
+        src={bgVideo}     
         className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
         autoPlay
         muted
@@ -51,18 +51,17 @@ function Form() {
             value="Entrar"
           />
         </div>
+        <input
+          className="w-full rounded-md bg-primary-200 py-4 text-base font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300"
+          type="submit"
+          value="Entrar"
+        />
 
         <div className="flex w-full justify-between">
-          <Link
-            className="login-link text-[20px] sm:text-base lg:text-base"
-            to="/create-account"
-          >
+          <Link className="login-link text-[20px] sm:text-base lg:text-base" to="/create-account" title="clique aqui para criar uma conta">
             criar conta
           </Link>{" "}
-          <Link
-            className="login-link text-[20px] sm:text-base lg:text-base"
-            to="/forget-password"
-          >
+          <Link className="login-link text-[20px] sm:text-base" to="/forget-password" title="Clique aqui para alterar a senha">
             esqueci a senha
           </Link>
         </div>
