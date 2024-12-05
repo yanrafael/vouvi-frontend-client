@@ -9,6 +9,7 @@ const colors = {
   green: "text-[#00FF00]",
   blue: "text-[#0000FF]",
   black: "text-black",
+  gray: "text-[#8D8D8D]"
 };
 
 function Modal({
@@ -28,7 +29,7 @@ function Modal({
       id={id}
     >
       {/* Modal container */}
-      <div className="h-fit w-fit min-w-80 max-w-[70vw] rounded-md bg-white p-9 text-md text-black shadow-lg shadow-black/50 dark:bg-[#1B1B1B] dark:text-white">
+      <div className="h-fit w-fit min-w-80 max-w-[70vw] rounded-md bg-white lg:p-9 md:p-5 p-2 text-md text-black shadow-lg shadow-black/50 dark:bg-[#1B1B1B] dark:text-white">
         {/* Modal heading */}
         <div className="flex justify-between">
           <span className="flex items-center gap-4">

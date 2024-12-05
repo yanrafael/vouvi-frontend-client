@@ -25,13 +25,15 @@ function Low({ friends, openModal, openModal2 }) {
             level={"15"}
             xp={"7.000"}
             vcoin={"5.000"}
-          />
+            alt="icone de perfil de usuario da cor vermelhar com o level, xp e vcoin de cada pessoa" />
+          
           <Friends
             icon={"blue"}
             name={"Wesley rocha"}
             level={"15"}
             xp={"7.000"}
             vcoin={"5.000"}
+            alt="icone de perfil de usuario da cor azul com o level, xp e vcoin de cada pessoa"
           />
           <Friends
             icon={"green"}
@@ -39,6 +41,7 @@ function Low({ friends, openModal, openModal2 }) {
             level={"15"}
             xp={"7.000"}
             vcoin={"5.000"}
+            alt="icone de perfil de usuario da cor verde com o level, xp e vcoin de cada pessoa"
           />
         </div>
         <div

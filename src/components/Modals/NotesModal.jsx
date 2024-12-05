@@ -20,7 +20,7 @@ function NotesModal() {
           <button
             onClick={() => showModal("note-modal")}
             type="button"
-            className="w-full rounded-[9px] border-4 border-[#8B4A00] p-2 text-md font-semibold text-[#8B4A00] transition-all hover:text-black"
+            className="w-full rounded-[9px] border-4 border-[#8B4A00] p-2 sm:text-md xs:text-[20px] text-[18px] font-semibold text-[#8B4A00] transition-all hover:text-black"
           >
             Adicionar anotação
           </button>

@@ -144,28 +144,44 @@ function AvatarCustom() {
             onClick={() => ChangeEyes(EyesBrown)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={EyesBrown} alt="" />
+            <img
+              src={EyesBrown}
+              alt="Olhos castanhos"
+              title="Clique para selecionar olhos castanhos"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeEyes(EyesDarkGreen)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={EyesDarkGreen} alt="" />
+            <img
+              src={EyesDarkGreen}
+              alt="Olhos verde escuro"
+              title="Clique para selecionar olhos verde escuro"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeEyes(EyesGray)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={EyesGray} alt="" />
+            <img
+              src={EyesGray}
+              alt="Olhos cinza"
+              title="Clique para selecionar olhos cinza"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeEyes(EyesLightBlue)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={EyesLightBlue} alt="" />
+            <img
+              src={EyesLightBlue}
+              alt="Olhos azul claro"
+              title="Clique para selecionar olhos azul claro"
+            />
           </AvatarTrinkets>
         </div>
         <div
@@ -175,21 +191,29 @@ function AvatarCustom() {
             tabIndex="0"
             onClick={() => ChangeTexture("white")}
             color={"bg-white"}
+            aria-label="Selecione a textura branca"
+            title="Selecione a textura branca"
           ></AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeTexture("#D5BAA5")}
             color={"bg-[#D5BAA5]"}
+            aria-label="Selecione a textura bege"
+            title="Selecione a textura bege"
           ></AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeTexture("#090909")}
             color={"bg-[#090909]"}
+            aria-label="Selecione a textura preta"
+            title="Selecione a textura preta"
           ></AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeTexture("#C44A07")}
             color={"bg-[#C44A07]"}
+            aria-label="Selecione a textura marrom"
+            title="Selecione a textura marrom"
           ></AvatarTrinkets>
         </div>
         <div
@@ -200,28 +224,44 @@ function AvatarCustom() {
             onClick={() => ChangeNecklace(NecklaceYale)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={NecklaceYale} alt="" />
+            <img
+              src={NecklaceYale}
+              alt="Colar Yale"
+              title="Clique para selecionar o colar Yale"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeNecklace(NecklaceNaples)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={NecklaceNaples} alt="" />
+            <img
+              src={NecklaceNaples}
+              alt="Colar Naples"
+              title="Clique para selecionar o colar Naples"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeNecklace(NecklaceLemon)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={NecklaceLemon} alt="" />
+            <img
+              src={NecklaceLemon}
+              alt="Colar Lemon"
+              title="Clique para selecionar o colar Lemon"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeNecklace(NecklaceVerdigris)}
             color={"bg-[#B5B5B5] dark:bg-white"}
           >
-            <img src={NecklaceVerdigris} alt="" />
+            <img
+              src={NecklaceVerdigris}
+              alt="Colar Verdigris"
+              title="Clique para selecionar o colar Verdigris"
+            />
           </AvatarTrinkets>
         </div>
         <div
@@ -232,28 +272,44 @@ function AvatarCustom() {
             onClick={() => ChangePendant(Pendant8Star)}
             color={"bg-white"}
           >
-            <img src={Pendant8Star} alt="" />
+            <img
+              src={Pendant8Star}
+              alt="Pingente em forma de estrela com 8 pontas"
+              title="Clique para selecionar o pingente estrela com 8 pontas"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangePendant(PendantHearth)}
             color={"bg-white"}
           >
-            <img src={PendantHearth} alt="" />
+            <img
+              src={PendantHearth}
+              alt="Pingente em forma de coração"
+              title="Clique para selecionar o pingente coração"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangePendant(PendantIndigo)}
             color={"bg-white"}
           >
-            <img src={PendantIndigo} alt="" />
+            <img
+              src={PendantIndigo}
+              alt="Pingente na cor índigo"
+              title="Clique para selecionar o pingente índigo"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangePendant(PendantTiffany)}
             color={"bg-white"}
           >
-            <img src={PendantTiffany} alt="" />
+            <img
+              src={PendantTiffany}
+              alt="Pingente na cor Tiffany"
+              title="Clique para selecionar o pingente Tiffany"
+            />
           </AvatarTrinkets>
         </div>
         <div
@@ -263,22 +319,42 @@ function AvatarCustom() {
             tabIndex="0"
             onClick={() => ChangeBackground(BgBeach)}
           >
-            <img className="h-full max-w-none" src={BgBeach} alt="" />
+            <img
+              className="h-full max-w-none"
+              src={BgBeach}
+              alt="Imagem de fundo de uma praia"
+              title="Clique para selecionar o fundo de praia"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeBackground(BgForest)}
           >
-            <img className="h-full max-w-none" src={BgForest} alt="" />
+            <img
+              className="h-full max-w-none"
+              src={BgForest}
+              alt="Imagem de fundo de uma floresta"
+              title="Clique para selecionar o fundo de floresta"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets
             tabIndex="0"
             onClick={() => ChangeBackground(BgSpace)}
           >
-            <img className="h-full max-w-none" src={BgSpace} alt="" />
+            <img
+              className="h-full max-w-none"
+              src={BgSpace}
+              alt="Imagem de fundo do espaço"
+              title="Clique para selecionar o fundo de espaço"
+            />
           </AvatarTrinkets>
           <AvatarTrinkets tabIndex="0" onClick={() => ChangeBackground(BgRoom)}>
-            <img className="h-full max-w-none" src={BgRoom} alt="" />
+            <img
+              className="h-full max-w-none"
+              src={BgRoom}
+              alt="Imagem de fundo de um quarto"
+              title="Clique para selecionar o fundo de quarto"
+            />
           </AvatarTrinkets>
         </div>
         <div className="relative mx-auto flex w-[296px] flex-row justify-between pt-[5%] md:absolute">

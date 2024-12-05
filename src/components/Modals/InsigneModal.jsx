@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import InsigneModalCard from "../Cards/InsigneModalCard";
 import VouviLover from "../../assets/images/vouvi-lover-md-icon.svg";
-import Newbie from "../../assets/images/newbie-Insigne.svg";
+import Newbie from "../../assets/images/newbie-insigne.svg";
 import Unknown from "../../assets/images/insigne-unknow.svg";
 function InsineModal({ closeModal }) {
   return (

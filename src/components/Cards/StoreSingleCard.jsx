@@ -27,7 +27,7 @@ function StoreSingleCard({
             color2={"bg-primary-200"}
             color3={"bg-[#470063]"}
             color={color1}
-            value={"1"}
+            value={"120"}
           >
             <img className="md:rounded-sm" src={img1} alt="" />
           </StoreCard>
@@ -35,7 +35,7 @@ function StoreSingleCard({
             color2={"bg-primary-200"}
             color3={"bg-[#470063]"}
             color={color2}
-            value={"2"}
+            value={"100"}
           >
             <img className="md:rounded-sm" src={img2} alt="" />
           </StoreCard>
@@ -43,7 +43,7 @@ function StoreSingleCard({
             color2={"bg-primary-200"}
             color3={"bg-[#470063]"}
             color={color3}
-            value={"3"}
+            value={"150"}
           >
             <img className="md:rounded-sm" src={img3} alt="" />
           </StoreCard>

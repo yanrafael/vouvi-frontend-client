@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @layer utilities {
   @keyframes pulseColor {
     0%, 100% {
@@ -131,10 +152,7 @@
   .animate-bg-color-4 {
     animation: bgColorChange4 5s infinite;
   }
-
-
-
-
+  
   .slide-track {
     @apply flex;
     animation: scroll 7s linear infinite;

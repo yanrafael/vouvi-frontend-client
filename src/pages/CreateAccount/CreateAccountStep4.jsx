@@ -22,7 +22,7 @@ function CreateAccountStep4({
       <ProgressBar value={60} />
 
       {/* Área onde o usuário insere informações */}
-      <div className="flex flex-col justify-around gap-5">
+      <div className=" flex flex-col justify-around gap-5">
         <span className="grid">
           <Label htmlFor="email">E-mail:</Label>
           <Input
