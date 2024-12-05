@@ -51,11 +51,6 @@ function Form() {
             value="Entrar"
           />
         </div>
-        <input
-          className="w-full rounded-md bg-primary-200 py-4 text-base font-bold text-white transition-all hover:cursor-pointer hover:bg-secondary-200 hover:text-secondary-300"
-          type="submit"
-          value="Entrar"
-        />
 
         <div className="flex w-full justify-between">
           <Link className="login-link text-[20px] sm:text-base lg:text-base" to="/create-account" title="clique aqui para criar uma conta">

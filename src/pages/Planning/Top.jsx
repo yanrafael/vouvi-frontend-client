@@ -144,7 +144,6 @@ function Top({ onClick, onClick2 }) {
             Metas
           </button>
         </div>
-
           <div className="flex justify-between whitespace-nowrap lg:gap-7 sm:gap-2 text-[#8D8D8D] dark:text-white">
             {btnOn == 1 ? (
               <>
@@ -178,7 +177,6 @@ function Top({ onClick, onClick2 }) {
                 </div>
               </>
             )}
-          </div>
         </div>
       </section>
     </div>

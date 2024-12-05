@@ -11,7 +11,7 @@ import UserReturn from "./pages/UserReturn/UserReturn";
 import Planning from "./pages/Planning/Planning";
 import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
-import Plans from "./pages/Plans/plans";
+import Plans from "./pages/Plans/Plans";
 
 function App() {
   return (

@@ -6,7 +6,7 @@ import Insigne from "../../components/Cards/Insigne";
 // Import Assets
 import VcoinIcon from "../../assets/images/vcoin-reward-icon.svg";
 import VouviLover from "../../assets/images/vouvi-lover-md-icon.svg";
-import Newbie from "../../assets/images/newbie-Insigne.svg";
+import Newbie from "../../assets/images/newbie-insigne.svg";
 import { Icon } from "@iconify/react";
 
 function Mid({ openModal }) {
