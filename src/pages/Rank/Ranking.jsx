@@ -148,7 +148,10 @@ const Ranking = () => {
             ))}
           </div>
           <div className="mt-10"></div>
-          <div className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold">
+          <div
+            tabIndex="0"
+            className="mt-4 flex h-12 items-center justify-center text-center text-md font-bold"
+          >
             <span
               className="-mt-5 flex h-12 cursor-pointer items-center rounded-sm bg-white text-[16px] md:ml-2 md:mt-16 md:w-[290px] md:text-[22px] lg:-mt-6 lg:w-[530px] lg:text-[40px] dark:bg-[#1F1F1F]"
               style={{ color: "red" }}

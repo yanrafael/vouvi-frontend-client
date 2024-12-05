@@ -58,6 +58,7 @@ function CreateAccount() {
       case 1:
         return (
           <CreateAccountStep1
+          tabIndex="0"
             setStep={setStep}
             cep={cep}
             setCep={setCep}
@@ -70,6 +71,7 @@ function CreateAccount() {
       case 2:
         return (
           <CreateAccountStep2
+          tabIndex="0"
             setStep={setStep}
             day={day}
             setDay={setDay}
@@ -88,6 +90,7 @@ function CreateAccount() {
       case 3:
         return (
           <CreateAccountStep3
+          tabIndex="0"
             setStep={setStep}
             username={username}
             setUsername={setUsername}
@@ -100,6 +103,7 @@ function CreateAccount() {
       case 4:
         return (
           <CreateAccountStep4
+          tabIndex="0"
             setStep={setStep}
             email={email}
             setEmail={setEmail}
@@ -108,7 +112,7 @@ function CreateAccount() {
           />
         );
       case 5:
-        return <CreateAccountStep5 />;
+        return <CreateAccountStep5 tabIndex="0" />;
       default:
         break;
     }

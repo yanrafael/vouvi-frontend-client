@@ -17,12 +17,12 @@ function Top() {
 
   return (
     <>
-      <section className="m-auto overflow-hidden mt-24 flex w-11/12 justify-between rounded-[10px] sm:rounded-md bg-primary-100 px-5 pt-5 outline outline-[20px] md:outline-[26px] outline-[#7C20BE33] md:px-10 md:pt-10">
+      <section className="m-auto mt-24 flex w-11/12 justify-between overflow-hidden rounded-[10px] bg-primary-100 px-5 pt-5 outline outline-[20px] outline-[#7C20BE33] sm:rounded-md md:px-10 md:pt-10 md:outline-[26px]">
         <div className="mt-5 w-3/6 leading-[1] text-primary-200 lg:ml-5">
-          <h1 className="text-[24px] sm:text-[35px] font-bold md:text-[45px] lg:text-[54px] xl:text-xl text-nowrap">
+          <h1 className="text-nowrap text-[24px] font-bold sm:text-[35px] md:text-[45px] lg:text-[54px] xl:text-xl">
             Seja Premium
           </h1>
-          <p className="mt-6 text-[22px] sm:text-[23px] font-light md:text-[29px] lg:text-base xl:text-lg w-[300px] sm:w-fit">
+          <p className="mt-6 w-[300px] text-[22px] font-light sm:w-fit sm:text-[23px] md:text-[29px] lg:text-base xl:text-lg">
             Energia infinita, ferramentas avançadas, e relatórios em PDF, para
             toda a família.
           </p>
@@ -31,7 +31,7 @@ function Top() {
           </div>
         </div>
         <img
-          className=" w-[150px] pointer-events-none relative top-20 sm:top-0 sm:w-[240px] md:w-[300px] lg:w-[390px] xl:w-[510px]"
+          className="pointer-events-none relative top-20 w-[150px] sm:top-0 sm:w-[240px] md:w-[300px] lg:w-[390px] xl:w-[510px]"
           src={CatBanner}
           alt="gato Fin, Uma ilustração em estilo cartoon de um gato preto com olhos bem abertos que têm dinheiro roxos nas pupilas. A boca do gato está aberta e um brilho roxo com dinheiro está emanando dela. O fundo é de cor roxa clara e o gato está usando um colar azul."
           title="gato Fin, Uma ilustração em estilo cartoon de um gato preto "
@@ -50,6 +50,7 @@ function Top() {
           <div className="mt-14 flex w-full justify-around gap-2 lg:mt-0 lg:gap-4 lg:overflow-x-scroll">
             <div onClick={() => setBtnColor(0)}>
               <StoreButton
+                tabIndex="0"
                 title="opções de acessórios"
                 color={
                   btnColor === 0
@@ -64,7 +65,7 @@ function Top() {
                 />
               </StoreButton>
             </div>
-            <div onClick={() => setBtnColor(1)}>
+            <div tabIndex="0" onClick={() => setBtnColor(1)}>
               <StoreButton
                 color={
                   btnColor === 1
@@ -76,7 +77,7 @@ function Top() {
                 <Icon icon={"mingcute:eye-fill"} />
               </StoreButton>
             </div>
-            <div onClick={() => setBtnColor(2)}>
+            <div tabIndex="0" onClick={() => setBtnColor(2)}>
               <StoreButton
                 color={
                   btnColor === 2
@@ -88,7 +89,7 @@ function Top() {
                 <Icon icon={"icon-park-outline:texture"} />
               </StoreButton>
             </div>
-            <div onClick={() => setBtnColor(3)}>
+            <div tabIndex="0" onClick={() => setBtnColor(3)}>
               <StoreButton
                 color={
                   btnColor === 3
@@ -100,7 +101,7 @@ function Top() {
                 <Icon icon={"carbon:circle-dash"} />
               </StoreButton>
             </div>
-            <div onClick={() => setBtnColor(4)}>
+            <div tabIndex="0" onClick={() => setBtnColor(4)}>
               <StoreButton
                 color={
                   btnColor === 4
@@ -112,7 +113,7 @@ function Top() {
                 <Icon icon={"mdi:necklace"} />
               </StoreButton>
             </div>
-            <div onClick={() => activeButton(5)}>
+            <div tabIndex="0" onClick={() => activeButton(5)}>
               <StoreButton
                 color={`${
                   btnColor === 5

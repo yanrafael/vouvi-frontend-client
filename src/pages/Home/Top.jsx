@@ -35,28 +35,35 @@ function Top({ background }) {
           <div className="to-transparent absolute bottom-0 h-32 w-full bg-gradient-to-t from-[#ffffff] dark:from-black"></div>
         </div>
 
-        <div className="m-auto mt-[200px] mb-32 sm:mb-0 flex flex-col justify-center text-center text-black dark:text-white">
+        <div className="m-auto mb-32 mt-[200px] flex flex-col justify-center text-center text-black sm:mb-0 dark:text-white">
           <h1 className="text-[40px] font-normal leading-[0.85] sm:text-[50px] md:text-[60px] lg:text-[90px]">
             <strong className="font-medium text-secondary-200 drop-shadow-[0px_0px_50px_#007FFF]">
               Transforme
             </strong>{" "}
             suas{" "}
-            <strong className="font-medium text-primary-200"> <br className="xs:hidden block"/> finanças </strong>
+            <strong className="font-medium text-primary-200">
+              {" "}
+              <br className="block xs:hidden" /> finanças{" "}
+            </strong>
             <br className="hidden xs:block" />
-            em 
-            <br className="xs:hidden block"/> uma{" "}
+            em
+            <br className="block xs:hidden" /> uma{" "}
             <strong className="font-medium text-primary-200">aventura</strong>
           </h1>
-          <p className="mt-2 text-[16px] md:mt-7 md:text-[28px] lg:text-[36px] leading-[1]">
-            Aprenda a fazer essa <br className="xs:hidden block"/> grana durar!
+          <p className="mt-2 text-[16px] leading-[1] md:mt-7 md:text-[28px] lg:text-[36px]">
+            Aprenda a fazer essa <br className="block xs:hidden" /> grana durar!
           </p>
         </div>
 
-        <Link to={"/create-account"} title="Aperte para criar uma nova conta">
+        <Link
+          tabIndex="-1"
+          to={"/create-account"}
+          title="Aperte para criar uma nova conta"
+        >
           <PrimaryButton text={"Começar agora!"} />
         </Link>
 
-        <div className="m-auto mt-5 xs:mt-[150px] flex flex-col items-center justify-center">
+        <div className="m-auto mt-5 flex flex-col items-center justify-center xs:mt-[150px]">
           <p className="text-[30px] sm:text-[36px] dark:text-white">
             Saiba mais
           </p>

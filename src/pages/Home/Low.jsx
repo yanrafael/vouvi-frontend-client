@@ -152,7 +152,7 @@ function Low() {
               Você faz parte do Time. Queremos te ouvir!
             </p>
           </div>
-          
+
           <SecondaryButton
             color={
               "text-white hidden lg:block hover:text-black bg-black dark:text-black dark:bg-white dark:hover:text-white"
@@ -160,7 +160,6 @@ function Low() {
             text={"Enviar feedback"}
             title="Botão para enviar feedback (visível apenas em telas grandes)"
           />
-          
         </div>
       </section>
 
@@ -179,6 +178,7 @@ function Low() {
         <div className="slider-container">
           <Slider {...settings}>
             <Subscription
+              tabIndex="-1"
               color={"bg-[#007FFF]"}
               colortitle={"text-[#002952]"}
               title={"Free"}
@@ -197,6 +197,7 @@ function Low() {
               color={
                 "bg-primary-200 border-8 dark:border-black outline outline-8 outline-primary-300 relative"
               }
+              tabIndex="-1"
               colortitle={"text-[#35005B]"}
               title={"Premium"}
               price={"R$14,90"}
@@ -218,6 +219,7 @@ function Low() {
               />
             </Subscription>
             <Subscription
+              tabIndex="-1"
               color={"bg-[#DDA010] dark:bg-[#FFB12099]"}
               colortitle={"text-[#583900]"}
               title={"Family"}
