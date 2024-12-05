@@ -193,7 +193,6 @@ function HeaderIntern({ iconActiveNumber, children }) {
     <>
       <header className="sticky left-0 top-0 z-10 m-auto hidden w-full items-center justify-around bg-[rgba(2,2,11,0.15)] backdrop-blur-[13px] lg:flex lg:py-7 xl:py-8 2xl:py-10 dark:bg-[rgba(2,2,11,0.80);]">
         <LogoWhite
-          Name={VouviWord}
           width2={`lg:h-[45px] xl:h-[53px] 2xl:h-[66px]`}
           darkMode={darkMode}
         />

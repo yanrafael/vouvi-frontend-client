@@ -1,5 +1,6 @@
 import HeaderWhite from "../../components/Header/HeaderWhite";
 import Footer from "../../components/Footer/Footer";
+import HomeAnimation from "../../components/Rive/HomeAnimation";
 import Top from "./Top";
 import Mid from "./Mid";
 import Low from "./Low";
@@ -21,6 +22,15 @@ function Home() {
       <Mid />
       <Low />
       <Footer darkMode={darkMode} />
+      {/* <div className="h-screen w-screen">
+        <HomeAnimation stateMachine={"rico"} />
+      </div> */}
+      <div className="h-screen w-screen">
+        <HomeAnimation stateMachine={"piscadinha"} />
+      </div>
+      <div className="h-screen w-screen">
+        <HomeAnimation stateMachine={"personalize"} />
+      </div>
     </main>
   );
 }
