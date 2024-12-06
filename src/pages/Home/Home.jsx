@@ -1,5 +1,6 @@
 import HeaderWhite from "../../components/Header/HeaderWhite";
 import Footer from "../../components/Footer/Footer";
+import HomeAnimation from "../../components/Rive/HomeAnimation";
 import Top from "./Top";
 import Mid from "./Mid";
 import Low from "./Low";

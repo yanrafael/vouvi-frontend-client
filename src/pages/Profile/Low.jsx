@@ -10,7 +10,6 @@ function Low({ friends, openModal, openModal2 }) {
           </h1>
 
           <div
-            tabIndex="0"
             onClick={openModal2}
             className="flex cursor-pointer flex-row-reverse items-center rounded-xl border-[#471650] px-2 text-[25px] transition-colors duration-500 hover:bg-black group-hover:border-white sm:flex-row sm:border-4 sm:text-[32px] dark:border-white dark:hover:bg-white dark:hover:text-black"
           >
@@ -18,36 +17,30 @@ function Low({ friends, openModal, openModal2 }) {
             <p className="mx-1">Adicionar amigo</p>
           </div>
         </div>
-        <div>
+        <div className="h-[37vh]">
           <Friends
             icon={"red"}
-            name={"Wesley rocha"}
-            level={"15"}
-            xp={"7.000"}
-            vcoin={"5.000"}
-            alt="icone de perfil de usuario da cor vermelhar com o level, xp e vcoin de cada pessoa" />
-          
+            name={"Débora paixão"}
+            level={"999"}
+            xp={"999"}
+            vcoin={"999"}
+          />
           <Friends
             icon={"blue"}
-            name={"Wesley rocha"}
-            level={"15"}
-            xp={"7.000"}
+            name={"Pipoca"}
+            level={"999"}
+            xp={"5.000"}
             vcoin={"5.000"}
-            alt="icone de perfil de usuario da cor azul com o level, xp e vcoin de cada pessoa"
           />
           <Friends
-            icon={"green"}
-            name={"Wesley rocha"}
-            level={"15"}
+            icon={"red"}
+            name={"PetiGatão"}
+            level={"999"}
             xp={"7.000"}
             vcoin={"5.000"}
-            alt="icone de perfil de usuario da cor verde com o level, xp e vcoin de cada pessoa"
           />
         </div>
-        <div
-          tabIndex="0"
-          className="mx-5 mt-3 flex items-center justify-end text-[#471650] group-hover:text-white dark:text-white"
-        >
+        <div className="mx-5 mt-3 flex items-center justify-end text-[#471650] group-hover:text-white dark:text-white">
           <p
             onClick={openModal}
             className="cursor-pointer text-[32px] font-medium transition-colors duration-500"

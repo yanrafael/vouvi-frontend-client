@@ -1,10 +1,12 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import convertFloat from "../../utils/convertFloat";
-
+import axios from "axios";
+import { useEffect } from "react";
 import showModal from "../../utils/showModal";
 
 function Top({ onClick, onClick2 }) {
+  const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(6000);
   const [income, setIncome] = useState(2500);
   const [expense, setExpense] = useState(6021);
@@ -39,10 +41,40 @@ function Top({ onClick, onClick2 }) {
     </svg>
   );
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/transaction")
+      .then((response) => {
+        const fetchedTransactions = response.data;
+
+        // Calcula o saldo total a partir das transações
+        const totalBalance = fetchedTransactions.reduce(
+          (sum, transaction) => sum + transaction.value,
+          0,
+        );
+        setBalance(totalBalance);
+
+        // Filtra as transações de entrada (positive value)
+        const totalIncome = fetchedTransactions
+          .filter((transaction) => transaction.value > 0)
+          .reduce((sum, transaction) => sum + transaction.value, 0);
+        setIncome(totalIncome);
+
+        // Filtra as transações de saída (negative value)
+        const totalExpense = fetchedTransactions
+          .filter((transaction) => transaction.value < 0)
+          .reduce((sum, transaction) => sum + transaction.value, 0);
+        setExpense(totalExpense);
+
+        setTransactions(fetchedTransactions);
+      })
+      .catch((error) => console.error("Erro ao buscar transações:", error));
+  }, []);
+
   return (
     <div className="md:w-[97%] lg:w-full">
       <section className="mt-5 flex w-full justify-between sm:mt-6 md:gap-[1px] lg:mt-8 lg:gap-2 2xl:mt-10 2xl:h-auto">
-        <div className="flex w-[50%] flex-col justify-center whitespace-nowrap rounded-[12px] bg-[#DDDDDD] px-3 leading-[1.1] xs:w-[57%] sm:w-[63%] sm:py-4 md:w-[15%] md:px-2 md:py-0 lg:w-[18%] lg:rounded-sm xl:rounded-md xl:px-3 2xl:w-2/12 2xl:gap-3 2xl:px-4 2xl:py-4 dark:bg-[#1B1B1B] dark:text-white">
+        <div className="flex w-[50%] flex-col justify-center whitespace-nowrap rounded-[12px] bg-[#DDDDDD] px-3 leading-[1.1] overflow-hidden xs:w-[57%] sm:w-[63%] sm:py-4 md:w-[15%] md:px-2 md:py-0 lg:w-[18%] lg:rounded-sm xl:rounded-md xl:px-3 2xl:w-2/12 2xl:gap-3 2xl:px-4 2xl:py-4 dark:bg-[#1B1B1B] dark:text-white">
           <p className="text-[16px] font-light sm:text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px]">
             Saldo
           </p>
@@ -219,13 +251,13 @@ function Top({ onClick, onClick2 }) {
               >
                 <p className="hidden flex-row items-center justify-center text-nowrap md:flex md:gap-2 md:text-[16px] lg:gap-4 lg:text-md xl:text-[32px] 2xl:text-base">
                   <input
-                    className="md:w-5 lg:w-7 xl:w-8 2xl:w-full"
+                    className="md:w-5 lg:w-7 xl:w-8 2xl:w-full dark:bg-black outline-none"
                     type="date"
                   />
                 </p>
                 <Icon
                   tabIndex="-1"
-                  className="flex px-2 md:hidden"
+                  className="flex px-2 md:hidden "
                   icon={"bi:calendar-fill"}
                   width={40}
                 />

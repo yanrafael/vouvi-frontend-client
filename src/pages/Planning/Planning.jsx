@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 import HeaderMobile from "../../components/Header/HeaderMobile";
 import HeaderIntern from "../../components/Header/HeaderIntern";
@@ -8,6 +10,7 @@ import Footer from "../../components/Footer/Footer";
 // Modals
 import NewIncome from "../../components/Modals/NewIncome";
 import NewExpense from "../../components/Modals/NewExpense";
+import NewRepetition from "../../components/Modals/NewRepetition";
 import NotesModal from "../../components/Modals/NotesModal";
 import Note from "../../components/Modals/Note";
 import BudgetModal from "../../components/Modals/BudgetModal";
@@ -33,10 +36,19 @@ function Planning() {
   const handleClickGraphics = () => setActiveContent("graphics");
   const handleClickGoals = () => setActiveContent("goals");
 
+  const [transactions, setTransactions] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/transaction")
+      .then((response) => setTransactions(response.data))
+      .catch((error) => console.error("Erro ao buscar conquistas:", error));
+  }, []);
+
   return (
     <>
       <NewIncome />
       <NewExpense />
+      <NewRepetition />
       <NotesModal />
       <Note />
       <BudgetModal />
@@ -54,7 +66,7 @@ function Planning() {
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       >
-        <AvatarFull name={"Miro"} xp={"2000"} vcoins={"2000"} />
+        <AvatarFull />
       </HeaderIntern>
 
       <main className="m-auto w-11/12">
@@ -64,7 +76,7 @@ function Planning() {
       </main>
 
       <Footer />
-      <HeaderMobile iconId={1}/>
+      <HeaderMobile iconId={1} />
     </>
   );
 }

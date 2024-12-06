@@ -7,6 +7,7 @@ function TopSection({
   playerLevel,
   playerXP,
   playerCoins,
+  progressionBar,
 }) {
   const vcoin = (
     <svg
@@ -35,7 +36,10 @@ function TopSection({
         <span className="font-bold">Nível {playerLevel}</span>
 
         <div className="relative mx-2 h-6 w-[35vw] rounded-[4px] bg-secondary-400">
-          <div className="h-full w-4/5 rounded-[4px] bg-white dark:bg-secondary-200"></div>
+          <div
+            style={{ width: `${progressionBar}%` }}
+            className={`h-full rounded-[4px] bg-white dark:bg-secondary-200`}
+          ></div>
           <span className="absolute right-1 top-0 text-right text-sm font-bold text-secondary-200">
             Faltam 338 XP
           </span>
