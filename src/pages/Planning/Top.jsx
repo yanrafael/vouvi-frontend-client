@@ -74,7 +74,7 @@ function Top({ onClick, onClick2 }) {
   return (
     <div className="md:w-[97%] lg:w-full">
       <section className="mt-5 flex w-full justify-between sm:mt-6 md:gap-[1px] lg:mt-8 lg:gap-2 2xl:mt-10 2xl:h-auto">
-        <div className="flex w-[50%] flex-col justify-center whitespace-nowrap rounded-[12px] bg-[#DDDDDD] px-3 leading-[1.1] xs:w-[57%] sm:w-[63%] sm:py-4 md:w-[15%] md:px-2 md:py-0 lg:w-[18%] lg:rounded-sm xl:rounded-md xl:px-3 2xl:w-2/12 2xl:gap-3 2xl:px-4 2xl:py-4 dark:bg-[#1B1B1B] dark:text-white">
+        <div className="flex w-[50%] flex-col justify-center whitespace-nowrap rounded-[12px] bg-[#DDDDDD] px-3 leading-[1.1] overflow-hidden xs:w-[57%] sm:w-[63%] sm:py-4 md:w-[15%] md:px-2 md:py-0 lg:w-[18%] lg:rounded-sm xl:rounded-md xl:px-3 2xl:w-2/12 2xl:gap-3 2xl:px-4 2xl:py-4 dark:bg-[#1B1B1B] dark:text-white">
           <p className="text-[16px] font-light sm:text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px]">
             Saldo
           </p>
@@ -251,13 +251,13 @@ function Top({ onClick, onClick2 }) {
               >
                 <p className="hidden flex-row items-center justify-center text-nowrap md:flex md:gap-2 md:text-[16px] lg:gap-4 lg:text-md xl:text-[32px] 2xl:text-base">
                   <input
-                    className="md:w-5 lg:w-7 xl:w-8 2xl:w-full"
+                    className="md:w-5 lg:w-7 xl:w-8 2xl:w-full dark:bg-black outline-none"
                     type="date"
                   />
                 </p>
                 <Icon
                   tabIndex="-1"
-                  className="flex px-2 md:hidden"
+                  className="flex px-2 md:hidden "
                   icon={"bi:calendar-fill"}
                   width={40}
                 />

@@ -261,7 +261,7 @@ function Low() {
             transforme sua vida financeira!
           </strong>
         </p>
-        <Link to={"/create-account"} title="Aperte para criar uma nova conta">
+        <Link to={"/login"} title="Aperte para criar uma nova conta">
           <PrimaryButton text={"Começar agora!"} />
         </Link>
       </section>
