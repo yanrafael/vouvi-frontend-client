@@ -1,6 +1,6 @@
 import PasswordInput from "../../components/Forms/PasswordInput";
 import KeepConected from "../../components/Forms/Radio";
-import bgVideo from "../../assets/videos/video-background-dark.mp4";
+import bgVideo from "../../assets/videos/video_do_login.mp4";
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -14,8 +14,8 @@ function Form() {
   return (
     <div className="align-center mt-5 flex h-full w-screen justify-center overflow-x-hidden sm:h-[850px] md:h-[750px]">
       <video
-        src={bgVideo}     
-        className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
+        src={bgVideo}
+        className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-100"
         autoPlay
         muted
         loop
