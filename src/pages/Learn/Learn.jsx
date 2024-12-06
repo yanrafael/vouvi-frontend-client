@@ -8,7 +8,10 @@ import AvatarBasic from "../../components/Header/AvatarBasic";
 import Trail from "./Trail";
 
 import trailImage1 from "../../assets/images/learning-trail-1.svg";
-import trailImage1Dark from "../../assets/images/learning-trail-1-dark.svg";
+import trailImage1Dark from "../../assets/images/learning-trail-1-dark-test.svg";
+import trailImage2Dark from "../../assets/images/learning-trail-2-dark.svg";
+import trailImage3Dark from "../../assets/images/learning-trail-3-dark.svg";
+import Slider from "react-slick";
 
 function Learn() {
   const stages = [
@@ -17,102 +20,104 @@ function Learn() {
       icon: "ic:round-menu-book",
       iconWidth: 50,
       top: 1,
-      left: 1.5,
+      left: 1,
       open: true,
     },
-    {
-      id: 1,
-      icon: "iconoir:heart-solid",
-      iconWidth: 50,
-      top: 27,
-      left: 2.5,
-      open: false,
-    },
-    {
-      id: 2,
-      icon: "bi:phone-fill",
-      iconWidth: 50,
-      top: 54,
-      left: 5.8,
-      open: false,
-    },
-    { id: 3, top: 80, left: 15, open: false },
-    { id: 4, top: 80, left: 23, open: false },
-    { id: 5, icon: "mdi:bomb", iconWidth: 65, top: 66, left: 27, open: false },
-    { id: 6, top: 56, left: 35, open: false },
-    { id: 7, top: 40, left: 38, open: false },
-    { id: 8, top: 28, left: 45, open: false },
-    { id: 9, top: 28, left: 54, open: false },
-    {
-      id: 10,
-      icon: "bi:phone-fill",
-      iconWidth: 50,
-      top: 43,
-      left: 61,
-      open: false,
-    },
-    {
-      id: 11,
-      top: 73,
-      left: 70,
-      open: false,
-    },
-    {
-      id: 12,
-      icon: "mdi:dice-multiple",
-      iconWidth: 60,
-      top: 81,
-      left: 76,
-      open: false,
-    },
-    {
-      id: 13,
-      top: 80,
-      left: 86,
-      open: false,
-    },
-    {
-      id: 14,
-      top: 65,
-      left: 91,
-      open: false,
-    },
-    {
-      id: 15,
-      top: 37,
-      left: 92,
-      final: true,
-    },
+    // {
+    //   id: 1,
+    //   icon: "iconoir:heart-solid",
+    //   iconWidth: 50,
+    //   top: 27,
+    //   left: 2.5,
+    //   open: false,
+    // },
+    // {
+    //   id: 2,
+    //   icon: "bi:phone-fill",
+    //   iconWidth: 50,
+    //   top: 54,
+    //   left: 5.8,
+    //   open: false,
+    // },
+    // { id: 3, top: 80, left: 15, open: false },
+    // { id: 4, top: 80, left: 23, open: false },
+    // { id: 5, icon: "mdi:bomb", iconWidth: 65, top: 66, left: 27, open: false },
+    // { id: 6, top: 56, left: 35, open: false },
+    // { id: 7, top: 40, left: 38, open: false },
+    // { id: 8, top: 28, left: 45, open: false },
+    // { id: 9, top: 28, left: 54, open: false },
+    // {
+    //   id: 10,
+    //   icon: "bi:phone-fill",
+    //   iconWidth: 50,
+    //   top: 43,
+    //   left: 61,
+    //   open: false,
+    // },
+    // {
+    //   id: 11,
+    //   top: 73,
+    //   left: 70,
+    //   open: false,
+    // },
+    // {
+    //   id: 12,
+    //   icon: "mdi:dice-multiple",
+    //   iconWidth: 60,
+    //   top: 81,
+    //   left: 76,
+    //   open: false,
+    // },
+    // {
+    //   id: 13,
+    //   top: 80,
+    //   left: 86,
+    //   open: false,
+    // },
+    // {
+    //   id: 14,
+    //   top: 65,
+    //   left: 91,
+    //   open: false,
+    // },
+    // {
+    //   id: 15,
+    //   top: 37,
+    //   left: 92,
+    //   final: true,
+    // },
   ];
 
-  const bonusStages = [
-    {
-      id: 1,
-      type: "accessory",
-      iconColor: "black",
-      color: "green",
-      top: 30,
-      left: 20,
-      open: false,
-    },
-    {
-      id: 2,
-      type: "accessory",
-      color: "yellow",
-      iconColor: "black",
-      top: 63,
-      left: 48,
-      open: false,
-    },
-    {
-      id: 3,
-      type: "accessory",
-      color: "pink",
-      top: 40,
-      left: 75,
-      open: false,
-    },
-  ];
+  const stages2 = [];
+
+  // const bonusStages = [
+  //   {
+  //     id: 1,
+  //     type: "accessory",
+  //     iconColor: "black",
+  //     color: "green",
+  //     top: 30,
+  //     left: 20,
+  //     open: false,
+  //   },
+  //   {
+  //     id: 2,
+  //     type: "accessory",
+  //     color: "yellow",
+  //     iconColor: "black",
+  //     top: 63,
+  //     left: 48,
+  //     open: false,
+  //   },
+  //   {
+  //     id: 3,
+  //     type: "accessory",
+  //     color: "pink",
+  //     top: 40,
+  //     left: 75,
+  //     open: false,
+  //   },
+  // ];
 
   const nextArrow = (
     <svg
@@ -148,18 +153,22 @@ function Learn() {
 
         {/* Trail 1 */}
         <div className="relative h-full w-full">
-          <Trail
-            stages={stages}
-            bonusStages={bonusStages}
-            bg={
-              !document.body.classList.contains("dark")
-                ? trailImage1
-                : trailImage1Dark
-            }
-          />
+          <Slider infinite={false}>
+            <Trail
+              stages={stages}
+              bg={
+                !document.body.classList.contains("dark")
+                  ? trailImage1
+                  : trailImage1Dark
+              }
+            />
+
+            <img src={trailImage2Dark} alt="trilha 2" />
+            <img src={trailImage3Dark} alt="trilha 3" />
+          </Slider>
         </div>
 
-        {nextArrow}
+        {/* {nextArrow} */}
 
         <LifeMeter lives={3} />
       </main>

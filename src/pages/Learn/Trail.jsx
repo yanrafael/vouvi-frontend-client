@@ -4,7 +4,7 @@ import Stage from "../../components/Learn/Stage";
 import FinalStage from "../../components/Learn/FinalStage";
 import BonusStage from "../../components/Learn/BonusStage";
 
-function Trail({ stages, bonusStages, bg }) {
+function Trail({ stages, bg }) {
   return (
     <section className="relative rotate-90 md:w-auto lg:rotate-0 xl:top-5">
       <img src={bg} alt="trilha de aprendizagem" width={1920} />
@@ -26,18 +26,6 @@ function Trail({ stages, bonusStages, bg }) {
           />
         ),
       )}
-
-      {bonusStages.map((stage) => (
-        <BonusStage
-          key={stage.id}
-          top={stage.top}
-          type={stage.type}
-          color={stage.color}
-          iconColor={stage.iconColor}
-          left={stage.left - 300 / (window.innerWidth / 2)}
-          open={stage.open}
-        />
-      ))}
     </section>
   );
 }
