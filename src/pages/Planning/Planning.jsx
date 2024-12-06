@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 // Modals
 import NewIncome from "../../components/Modals/NewIncome";
 import NewExpense from "../../components/Modals/NewExpense";
+import NewRepetition from "../../components/Modals/NewRepetition";
 import NotesModal from "../../components/Modals/NotesModal";
 import Note from "../../components/Modals/Note";
 import BudgetModal from "../../components/Modals/BudgetModal";
@@ -37,6 +38,7 @@ function Planning() {
     <>
       <NewIncome />
       <NewExpense />
+      <NewRepetition />
       <NotesModal />
       <Note />
       <BudgetModal />

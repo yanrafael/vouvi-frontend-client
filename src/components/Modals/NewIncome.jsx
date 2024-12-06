@@ -104,6 +104,7 @@ function NewIncome() {
         <button
           type="button"
           className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0 xs:text-[18px] text-[14px]"
+          onClick={() => showModal("new-repetition")}
         >
           Adicionar repetição
         </button>

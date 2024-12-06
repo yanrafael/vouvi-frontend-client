@@ -111,7 +111,9 @@ function NewExpense() {
           </div>
         </div>
 
-        <button className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0">
+        <button className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0"
+        type="button"
+        onClick={() => showModal("new-repetition")}>
           Adicionar repetição
         </button>
 
