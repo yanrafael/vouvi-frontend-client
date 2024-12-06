@@ -222,35 +222,39 @@ function Mid() {
 
         <br />
 
-        <div className="flex h-[500px] w-screen items-center">
-          <div className="h-full w-1/2">
+        <div className="flex h-[500px] w-screen flex-col items-center sm:flex-row">
+          <div className="m-0 h-[300px] md:ml-40 md:h-full lg:ml-40 lg:w-1/3">
             <HomeAnimation stateMachine={"rico"} />
           </div>
-          <div className="-ml-40 flex h-full items-center">
-            <h1 className={`${TextGradient} text-xl`}>
+          <div className="-mt-10 flex h-full w-full items-center justify-start text-center sm:m-0 md:ml-10 md:w-1/2 md:text-left">
+            <h1
+              className={`${TextGradient} w-full text-lg sm:text-lg md:text-[40px] lg:text-xl`}
+            >
               Faça missões e <br /> ganhe recompensas
             </h1>
           </div>
         </div>
 
-        <div className="flex h-[500px] w-full flex-row-reverse items-center">
-          <div className="h-full w-1/2">
+        <div className="mt-15 flex h-[500px] w-screen flex-col items-center gap-5 sm:mt-0 sm:flex-row-reverse md:mt-0">
+          <div className="m-0 h-[300px] w-[350px] md:h-full lg:w-1/3">
             <HomeAnimation stateMachine={"personalize"} />
           </div>
-          <div className="-mr-40 flex h-full items-center">
-            <h1 className={`${TextGradient} text-right text-xl`}>
+          <div className="flex h-full w-full items-start text-center sm:items-center sm:text-end md:w-1/2">
+            <h1
+              className={`${TextGradient} w-full text-lg sm:text-lg md:text-lg lg:text-xl`}
+            >
               Personalize <br /> o seu avatar
             </h1>
           </div>
         </div>
 
-        <div className="flex h-[500px] w-screen items-center">
-          <div className="h-full w-1/2">
+        <div className="flex h-[500px] w-screen flex-col items-center sm:flex-row">
+          <div className="m-0 h-[300px] w-[400px] md:ml-40 md:h-full lg:ml-40 lg:w-1/3">
             <HomeAnimation stateMachine={"piscadinha"} />
           </div>
-          <div className="-ml-40 flex h-full items-center">
+          <div className="-mt-20 flex h-full w-full items-center justify-start text-center sm:m-0 md:ml-10 md:w-1/2 md:text-left">
             <h1
-              className={`${TextGradient} text-left sm:text-md md:text-lg lg:text-xl`}
+              className={`${TextGradient} w-full text-lg sm:text-lg md:text-[40px] lg:text-xl`}
             >
               Economize e <br /> suba de ranking
             </h1>
