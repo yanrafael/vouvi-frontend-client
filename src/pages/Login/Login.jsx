@@ -2,7 +2,10 @@ import PasswordInput from "../../components/Forms/PasswordInput";
 import KeepConected from "../../components/Forms/Radio";
 import bgVideo from "../../assets/videos/video_do_login.mp4";
 
-import { useEffect } from "react";
+import axios from "axios";
+
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
@@ -10,6 +13,40 @@ function Form() {
   useEffect(() => {
     document.getElementById("bg-video").play();
   });
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate(); // Usando o useNavigate para redirecionar após login bem-sucedido
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(""); // Limpa qualquer erro anterior
+
+    try {
+      const response = await axios.post("http://localhost:3000/users/login", {
+        email: email,
+        password: password,
+      });
+
+      if (response.data) {
+        localStorage.setItem("user", JSON.stringify(response.data)); // Armazenando no localStorage como exemplo
+        console.log("Usuário autenticado:", response.data);
+
+        // Redireciona para a página de perfil após login bem-sucedido
+        navigate("/profile");
+      }
+    } catch (err) {
+      // Verifica se há uma resposta do servidor, caso contrário, trata o erro de conexão
+      if (err.response) {
+        setError("Login falhou: email ou senha inválidos.");
+      } else {
+        setError(
+          "Erro ao conectar com o servidor. Tente novamente mais tarde.",
+        );
+      }
+    }
+  };
 
   return (
     <div className="align-center mt-5 flex h-full w-screen justify-center overflow-x-hidden sm:h-[850px] md:h-[750px]">
@@ -24,6 +61,7 @@ function Form() {
       <form
         className="flex w-[350px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10 sm:w-[650px] lg:w-[650px]"
         action=""
+        onSubmit={handleSubmit}
       >
         <h1 className="w-full text-center text-[30px] font-bold sm:text-lg">
           Bem vindo de volta
@@ -38,10 +76,18 @@ function Form() {
           name="email"
           id="email"
           autoComplete="on"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <label className="w-full text-[24px] sm:text-base">Senha:</label>
-        <PasswordInput />
+        <PasswordInput
+          id={"password"}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        {error && <p className="text-red">{error}</p>}
 
         <KeepConected />
         <div className="flex w-full items-center justify-center">
@@ -53,10 +99,18 @@ function Form() {
         </div>
 
         <div className="flex w-full justify-between">
-          <Link className="login-link text-[20px] sm:text-base lg:text-base" to="/create-account" title="clique aqui para criar uma conta">
+          <Link
+            className="login-link text-[20px] sm:text-base lg:text-base"
+            to="/create-account"
+            title="clique aqui para criar uma conta"
+          >
             criar conta
           </Link>{" "}
-          <Link className="login-link text-[20px] sm:text-base" to="/forget-password" title="Clique aqui para alterar a senha">
+          <Link
+            className="login-link text-[20px] sm:text-base"
+            to="/forget-password"
+            title="Clique aqui para alterar a senha"
+          >
             esqueci a senha
           </Link>
         </div>

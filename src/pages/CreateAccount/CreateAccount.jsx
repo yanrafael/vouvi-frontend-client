@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 // Import components
 import CreateAccountStep1 from "./CreateAccountStep1";
@@ -53,12 +54,18 @@ function CreateAccount() {
     setAge(date.getUTCFullYear() - year);
   }, [day, month, year]);
 
+  useEffect(() => {
+    if (step === 5) {
+      handleSubmit(); // Envia automaticamente o formulário quando chegar no step 5
+    }
+  }, [step]);
+
   const verifyStep = () => {
     switch (step) {
       case 1:
         return (
           <CreateAccountStep1
-          tabIndex="0"
+            tabIndex="0"
             setStep={setStep}
             cep={cep}
             setCep={setCep}
@@ -71,7 +78,7 @@ function CreateAccount() {
       case 2:
         return (
           <CreateAccountStep2
-          tabIndex="0"
+            tabIndex="0"
             setStep={setStep}
             day={day}
             setDay={setDay}
@@ -90,7 +97,7 @@ function CreateAccount() {
       case 3:
         return (
           <CreateAccountStep3
-          tabIndex="0"
+            tabIndex="0"
             setStep={setStep}
             username={username}
             setUsername={setUsername}
@@ -103,7 +110,7 @@ function CreateAccount() {
       case 4:
         return (
           <CreateAccountStep4
-          tabIndex="0"
+            tabIndex="0"
             setStep={setStep}
             email={email}
             setEmail={setEmail}
@@ -122,6 +129,34 @@ function CreateAccount() {
     document.getElementById("bg-video").play();
   });
 
+  const [error, setError] = useState("");
+  const handleSubmit = async () => {
+    const user = {
+      username: username,
+      name: name,
+      lastname: lastName,
+      email: email,
+      password: password,
+      gender: "m", // arrumar para pegar o valor do input
+      pronoun: pronoum,
+      cep: cep,
+      birthdate: "1999-01-01", // Exemplo, ajustar a formatação
+    };
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/users/register",
+        user,
+      );
+      console.log("Cadastro realizado com sucesso:", response.data);
+      localStorage.setItem("user", JSON.stringify(response.data));
+    } catch (err) {
+      setError(
+        "Erro no cadastro: " + (err.response?.data || "Erro desconhecido"),
+      );
+    }
+  };
+
   return (
     <div className="m-5 flex items-center justify-center sm:h-[850px] md:h-[750px]">
       <video
@@ -133,12 +168,18 @@ function CreateAccount() {
         id="bg-video"
       ></video>
       <form
-        className="flex h-full w-[350px] sm:w-[600px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10"
+        className="flex h-full w-[350px] flex-col justify-around gap-4 rounded-sm bg-white bg-opacity-90 p-10 sm:w-[600px]"
         action=""
       >
-        <h1 className="text-[30px] text-center sm:text-lg font-bold">Criar uma conta</h1>
+        <h1 className="text-center text-[30px] font-bold sm:text-lg">
+          Criar uma conta
+        </h1>
 
+        {/* Exibe os passos do formulário */}
         {verifyStep()}
+
+        {/* Exibe erro, se houver */}
+        {error && <p className="text-red-500 text-center">{error}</p>}
       </form>
     </div>
   );

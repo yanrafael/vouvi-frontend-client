@@ -4,52 +4,11 @@ import convertFloat from "../../utils/convertFloat";
 import { Icon } from "@iconify/react";
 import showModal from "../../utils/showModal";
 
-const dailyTransactions = [
-  {
-    iconSrc: "carbon:money",
-    description: "Salário",
-    value: 2000,
-    type: "Entrada",
-    date: "01/09/2021",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Mercado",
-    value: 200,
-    type: "Saída",
-    date: "06/11/2024",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Salário",
-    value: 2000,
-    type: "Entrada",
-    date: "01/09/2021",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Mercado",
-    value: 200,
-    type: "Saída",
-    date: "06/11/2024",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Salário",
-    value: 2000,
-    type: "Entrada",
-    date: "01/09/2021",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Mercado",
-    value: 200,
-    type: "Saída",
-    date: "06/11/2024",
-  },
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function DailyTransaction({ description, value, type, date, iconSrc }) {
+  
   return (
     <li className="mb-2 flex justify-around rounded-md bg-white p-2 text-[12px] xs:text-[14px] sm:text-[18px] md:text-[16px] lg:text-[18px] xl:p-3 xl:text-[22px] 2xl:text-md dark:bg-black">
       <div className="flex items-center">
@@ -69,6 +28,22 @@ function DailyTransaction({ description, value, type, date, iconSrc }) {
 }
 
 function Transactions() {
+
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/transaction')
+      .then(response => {
+        // Ordena as transações por data, mais recentes primeiro
+        const sortedTransactions = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setTransactions(sortedTransactions);
+      })
+      .catch(error => console.error('Erro ao buscar transações:', error));
+  }, []);
+
+  
+  
+  
   const performance = 88;
 
   return (
@@ -92,8 +67,15 @@ function Transactions() {
             <span className="w-1/4 p-4 text-center font-bold">Data</span>
           </li>
 
-          {dailyTransactions.map((transaction, index) => (
-            <DailyTransaction key={index} {...transaction} />
+          {transactions.map((transaction) => (
+            <DailyTransaction
+              key={transaction.id}
+              description={transaction.title}
+              value={transaction.value}
+              type={transaction.type}
+              date={new Date(transaction.date).toLocaleDateString('pt-BR')}
+              iconSrc="carbon:money"
+            />
           ))}
         </ul>
       </div>

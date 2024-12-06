@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Icon } from "@iconify/react";
+import Slider from "react-slick";
 
 import Header from "../../components/Header/HeaderIntern";
 import HeaderMobile from "../../components/Header/HeaderMobile";
@@ -8,10 +9,11 @@ import AvatarBasic from "../../components/Header/AvatarBasic";
 import Trail from "./Trail";
 
 import trailImage1 from "../../assets/images/learning-trail-1.svg";
+
+import { useState, useEffect } from "react";
 import trailImage1Dark from "../../assets/images/learning-trail-1-dark-test.svg";
 import trailImage2Dark from "../../assets/images/learning-trail-2-dark.svg";
 import trailImage3Dark from "../../assets/images/learning-trail-3-dark.svg";
-import Slider from "react-slick";
 
 function Learn() {
   const stages = [
@@ -136,10 +138,22 @@ function Learn() {
     </svg>
   );
 
+  const [levelUser, setLevelUser] = useState(1);
+  const [xp, setXp] = useState(0);
+  const [vcoin, setVcoin] = useState(0);
+
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("user"));
+    if (userData) {
+      setXp(userData.xp);
+      setVcoin(userData.vcoin);
+      setLevelUser(Math.floor(xp / 100) + 1);
+    }
+  }, []);
   return (
     <>
       <Header>
-        <AvatarBasic name={"Josefa"} />
+        <AvatarBasic />
       </Header>
 
       <main className="flex w-[100vw] flex-col items-center justify-center px-0 md:px-[1vw] xl:px-[7vw]">
@@ -147,9 +161,10 @@ function Learn() {
         <TopSection
           section={1}
           sectionName={"Fundamentos"}
-          playerCoins={938}
-          playerLevel={27}
-          playerXP={13_657}
+          playerCoins={vcoin}
+          playerLevel={levelUser}
+          playerXP={xp}
+          progressionBar={(xp / (levelUser * 100)) * 100}
         />
 
         {/* Trail 1 */}

@@ -1,10 +1,12 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import convertFloat from "../../utils/convertFloat";
-
+import axios from "axios";
+import { useEffect } from "react";
 import showModal from "../../utils/showModal";
 
 function Top({ onClick, onClick2 }) {
+  const [transactions, setTransactions] = useState([]);
   const [balance, setBalance] = useState(6000);
   const [income, setIncome] = useState(2500);
   const [expense, setExpense] = useState(6021);
@@ -38,6 +40,36 @@ function Top({ onClick, onClick2 }) {
       />
     </svg>
   );
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/transaction")
+      .then((response) => {
+        const fetchedTransactions = response.data;
+
+        // Calcula o saldo total a partir das transações
+        const totalBalance = fetchedTransactions.reduce(
+          (sum, transaction) => sum + transaction.value,
+          0,
+        );
+        setBalance(totalBalance);
+
+        // Filtra as transações de entrada (positive value)
+        const totalIncome = fetchedTransactions
+          .filter((transaction) => transaction.value > 0)
+          .reduce((sum, transaction) => sum + transaction.value, 0);
+        setIncome(totalIncome);
+
+        // Filtra as transações de saída (negative value)
+        const totalExpense = fetchedTransactions
+          .filter((transaction) => transaction.value < 0)
+          .reduce((sum, transaction) => sum + transaction.value, 0);
+        setExpense(totalExpense);
+
+        setTransactions(fetchedTransactions);
+      })
+      .catch((error) => console.error("Erro ao buscar transações:", error));
+  }, []);
 
   return (
     <div className="md:w-[97%] lg:w-full">
