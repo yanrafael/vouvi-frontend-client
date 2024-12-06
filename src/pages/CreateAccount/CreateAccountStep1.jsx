@@ -78,13 +78,13 @@ function CreateAccountStep1({
       </div>
 
       <div className="flex flex-row items-center justify-center gap-3">
-        <span className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
+        <span tabIndex="0" className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
           <Icon icon={"flat-color-icons:google"} width={"60px"} />
         </span>
-        <span className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
+        <span tabIndex="0" className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
           <Icon icon={"ic:baseline-facebook"} width={"60px"} />
         </span>
-        <span className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
+        <span tabIndex="0" className="cursor-pointer rounded-full border-4 border-secondary-200 bg-white p-1">
           <Icon icon={"ic:baseline-apple"} width={"60px"} />
         </span>
       </div>

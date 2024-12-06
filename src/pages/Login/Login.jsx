@@ -1,6 +1,6 @@
 import PasswordInput from "../../components/Forms/PasswordInput";
 import KeepConected from "../../components/Forms/Radio";
-import bgVideo from "../../assets/videos/video-background-dark.mp4";
+import bgVideo from "../../assets/videos/video_do_login.mp4";
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ function Form() {
     <div className="align-center mt-5 flex h-full w-screen justify-center overflow-x-hidden sm:h-[850px] md:h-[750px]">
       <video
         src={bgVideo}
-        className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-40"
+        className="pointer-events-none fixed left-0 top-0 -z-10 h-full w-full object-cover opacity-100"
         autoPlay
         muted
         loop
@@ -53,16 +53,10 @@ function Form() {
         </div>
 
         <div className="flex w-full justify-between">
-          <Link
-            className="login-link text-[20px] sm:text-base lg:text-base"
-            to="/create-account"
-          >
+          <Link className="login-link text-[20px] sm:text-base lg:text-base" to="/create-account" title="clique aqui para criar uma conta">
             criar conta
           </Link>{" "}
-          <Link
-            className="login-link text-[20px] sm:text-base lg:text-base"
-            to="/forget-password"
-          >
+          <Link className="login-link text-[20px] sm:text-base" to="/forget-password" title="Clique aqui para alterar a senha">
             esqueci a senha
           </Link>
         </div>

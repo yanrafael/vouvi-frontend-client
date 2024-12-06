@@ -121,6 +121,7 @@ function Learn() {
 
   const nextArrow = (
     <svg
+      tabIndex="0"
       width="49"
       height="84"
       viewBox="0 0 49 84"

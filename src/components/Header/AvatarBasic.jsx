@@ -8,7 +8,7 @@ function AvatarBasic({ name, width }) {
           {name}
         </h1>
       </div>
-      <img src={Avatar} className={`${width}`} alt="" />
+      <img src={Avatar} className={`${width}`} alt="Imagem de avatar representando o perfil do usuário." />
     </div>
   );
 }
