@@ -91,7 +91,7 @@ function Low() {
   });
 
   return (
-    <>
+    <div className="-mt-32">
       <section
         className="bg-slate-500 relative m-auto mt-[200px] flex w-10/12 flex-col-reverse items-center lg:flex-row"
         title="Seção de feedback"
@@ -265,7 +265,7 @@ function Low() {
           <PrimaryButton text={"Começar agora!"} />
         </Link>
       </section>
-    </>
+    </div>
   );
 }
 export default Low;

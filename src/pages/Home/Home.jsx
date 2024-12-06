@@ -22,15 +22,6 @@ function Home() {
       <Mid />
       <Low />
       <Footer darkMode={darkMode} />
-      {/* <div className="h-screen w-screen">
-        <HomeAnimation stateMachine={"rico"} />
-      </div> */}
-      <div className="h-screen w-screen">
-        <HomeAnimation stateMachine={"piscadinha"} />
-      </div>
-      <div className="h-screen w-screen">
-        <HomeAnimation stateMachine={"personalize"} />
-      </div>
     </main>
   );
 }
