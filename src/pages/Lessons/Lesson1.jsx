@@ -1,7 +1,10 @@
 import { Icon } from "@iconify/react";
-import moneyIcon from "../../assets/images/money-icon.svg";
 import { useState } from "react";
+
 import FinCheer from "../../components/Lessons/FinCheer";
+
+import moneyIcon from "../../assets/images/money-icon.svg";
+import smartphoneIcon from "../../assets/images/smartphone-icon.svg";
 
 function Lesson1({ lives }) {
   const logo = (
@@ -177,6 +180,26 @@ function Question1() {
             >
               Itália
             </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question2() {
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">
+        Organize os eventos na ordem de acontecimento
+      </h2>
+
+      <div>{/* Onde vai ficar */}</div>
+      <div>
+        {/* Onde tá */}
+        <ul>
+          <li>
+            <img src={smartphoneIcon} alt="ícone de celular" />
           </li>
         </ul>
       </div>
