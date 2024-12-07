@@ -208,7 +208,7 @@ function Mid() {
 
       <h1
         data-aos="fade-right"
-        className={`${TextGradient} w-10/12 text-center text-[36px] font-medium leading-[1] xs:w-full sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2]`}
+        className={`${TextGradient} w-10/12 text-center text-[36px] font-medium leading-[1] xs:w-full sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2] mt-[250px]`}
       >
         Domine o jogo, domine o dinheiro!
       </h1>
