@@ -6,8 +6,12 @@ import WrongAnswer from "../../components/Lessons/WrongAnswer";
 
 import moneyIcon from "../../assets/images/money-icon.svg";
 import smartphoneIcon from "../../assets/images/smartphone-icon.svg";
+import cardIcon from "../../assets/images/card-icon.svg";
+import appleIcon from "../../assets/images/apple-icon.svg";
+import coinIcon from "../../assets/images/coin-icon.svg";
+import moneyIconBig from "../../assets/images/money-icon-big.svg";
 
-function Lesson1({ lives }) {
+function Lesson1(/*{ lives }*/) {
   const [currentPhase, setCurrentPhase] = useState(1);
 
   const logo = (
@@ -36,21 +40,15 @@ function Lesson1({ lives }) {
     </svg>
   );
 
-  lives = 1;
+  let lives = 1;
 
   const [isCheerVisible, setIsCheerVisible] = useState(false);
   const [wrongAnswer, setWrongAnswer] = useState(false);
 
-  const checkAnswer = () => {
-    const answer = document.getElementById("answer").innerText;
-
-    if (
-      answer === "China" ||
-      (currentPhase === 3 && answer === "Valor") ||
-      answer === "Celular" ||
-      answer === "Depois" ||
-      answer === "Metal"
-    ) {
+  const checkAnswer = (correctAnswer = "", currentAnswer = "") => {
+    console.log(currentAnswer);
+    console.log(correctAnswer);
+    if (currentAnswer === correctAnswer) {
       setIsCheerVisible(true);
     } else {
       setWrongAnswer(true);
@@ -61,7 +59,7 @@ function Lesson1({ lives }) {
     if (currentPhase < 5) {
       setCurrentPhase((prev) => prev + 1); // Avança para a próxima fase
     } else {
-      alert("Você completou todas as fases!");
+      open("learn", "_self"); // Redireciona para a página de lições
     }
   };
 
@@ -125,6 +123,7 @@ function Lesson1({ lives }) {
       </div>
 
       {currentPhase === 1 && <Question1 />}
+      {currentPhase === 2 && <Question2 />}
       {currentPhase === 3 && <Question3 />}
       {currentPhase === 4 && <Question4 />}
       {currentPhase === 5 && <Question5 />}
@@ -132,7 +131,45 @@ function Lesson1({ lives }) {
 
       <div className="text-right">
         <button
-          onClick={checkAnswer}
+          onClick={() => {
+            switch (currentPhase) {
+              case 1:
+                checkAnswer(
+                  "China",
+                  document.getElementById("answer").innerText,
+                );
+                break;
+              case 2:
+                checkAnswer("correctAnswer", "correctAnswer");
+                break;
+              case 3:
+                checkAnswer(
+                  "Valor",
+                  document.getElementById("answer").innerText,
+                );
+                break;
+              case 4:
+                checkAnswer(
+                  "Celular",
+                  document.getElementById("answer").innerText,
+                );
+                break;
+              case 5:
+                checkAnswer(
+                  "Depois",
+                  document.getElementById("answer").innerText,
+                );
+                break;
+              case 6:
+                checkAnswer(
+                  "Dinheiro",
+                  document.getElementById("answer").innerText,
+                );
+                break;
+              default:
+                break;
+            }
+          }}
           className="rounded-md border-4 bg-white p-3 text-base text-black transition-all duration-200 hover:border-primary-200 hover:text-primary-200"
         >
           Verificar
@@ -219,6 +256,127 @@ function Question1() {
             </button>
           </li>
         </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question2() {
+  const correctAnswer = ["escambo", "moeda", "cédula", "cartão", "digital"];
+
+  const [currentAnswer, setCurrentAnswer] = useState(["", "", "", "", ""]);
+
+  const handleAddAnwswer = (item) => {
+    const index = currentAnswer.indexOf("");
+
+    if (index >= 0) {
+      const newAnswer = [...currentAnswer];
+      newAnswer[index] = item;
+
+      setCurrentAnswer(newAnswer);
+    }
+  };
+
+  const handleRemoveAnwswer = (item) => {
+    const index = currentAnswer.indexOf(item);
+
+    if (index >= 0) {
+      const newAnswer = [...currentAnswer];
+      newAnswer[index] = "";
+
+      setCurrentAnswer(newAnswer);
+    }
+  };
+
+  const showAnswerImage = (item) => {
+    switch (item) {
+      case "escambo":
+        return (
+          <button onClick={() => handleRemoveAnwswer("escambo")}>
+            <img src={appleIcon} alt="ícone de maçã" />
+          </button>
+        );
+      case "moeda":
+        return (
+          <button onClick={() => handleRemoveAnwswer("moeda")}>
+            <img src={coinIcon} alt="ícone de celular" />
+          </button>
+        );
+      case "cédula":
+        return (
+          <button onClick={() => handleRemoveAnwswer("cédula")}>
+            <img src={moneyIconBig} alt="ícone de celular" />
+          </button>
+        );
+      case "cartão":
+        return (
+          <button onClick={() => handleRemoveAnwswer("cartão")}>
+            <img src={cardIcon} alt="ícone de cartão" />
+          </button>
+        );
+      case "digital":
+        return (
+          <button onClick={() => console.log("Hello")}>
+            <img src={smartphoneIcon} alt="ícone de celular" />
+          </button>
+        );
+      default:
+        return "erro";
+    }
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">
+        Organize os eventos na ordem de acontecimento
+      </h2>
+
+      <div className="mt-16 flex flex-col items-center gap-20">
+        <div className="rounded-md border-[6px] border-[#8D8D8D] p-8">
+          <ul className="flex flex-row gap-20">
+            {currentAnswer.map((item, index) => (
+              <li key={index} id={`answer-${index}`}>
+                {item != "" ? (
+                  showAnswerImage(item)
+                ) : (
+                  <div className="flex h-44 w-44 items-center justify-center rounded-[50px] border-[10px] border-dashed">
+                    {correctAnswer[index].toUpperCase()}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <ul className="flex gap-20">
+            <li>
+              <button onClick={() => handleAddAnwswer("digital")}>
+                <img src={smartphoneIcon} alt="ícone de celular" />
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleAddAnwswer("cartão")}>
+                <img src={cardIcon} alt="ícone de cartão" />
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleAddAnwswer("escambo")}>
+                <img src={appleIcon} alt="ícone de maçã" />
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleAddAnwswer("moeda")}>
+                <img src={coinIcon} alt="ícone de celular" />
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleAddAnwswer("cédula")}>
+                <img src={moneyIconBig} alt="ícone de celular" />
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -545,26 +703,6 @@ function Question6() {
             >
               Madeira
             </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-}
-
-function Question2() {
-  return (
-    <div className="block h-[60vh] w-full">
-      <h2 className="text-base">
-        Organize os eventos na ordem de acontecimento
-      </h2>
-
-      <div>{/* Onde vai ficar */}</div>
-      <div>
-        {/* Onde tá */}
-        <ul>
-          <li>
-            <img src={smartphoneIcon} alt="ícone de celular" />
           </li>
         </ul>
       </div>
