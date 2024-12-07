@@ -14,6 +14,39 @@ function Form() {
     document.getElementById("bg-video").play();
   });
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate(); // Usando o useNavigate para redirecionar após login bem-sucedido
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(""); // Limpa qualquer erro anterior
+
+    try {
+      const response = await axios.post("http://localhost:3000/users/login", {
+        email: email,
+        password: password,
+      });
+
+      if (response.data) {
+        localStorage.setItem("user", JSON.stringify(response.data)); // Armazenando no localStorage como exemplo
+        console.log("Usuário autenticado:", response.data);
+
+        // Redireciona para a página de perfil após login bem-sucedido
+        navigate("/profile");
+      }
+    } catch (err) {
+      // Verifica se há uma resposta do servidor, caso contrário, trata o erro de conexão
+      if (err.response) {
+        setError("Login falhou: email ou senha inválidos.");
+      } else {
+        setError(
+          "Erro ao conectar com o servidor. Tente novamente mais tarde.",
+        );
+      }
+    }
+  };
 
   return (
     <><video
