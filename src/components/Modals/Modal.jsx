@@ -43,7 +43,7 @@ function Modal({
           <button className="cursor-pointer">
             <Icon
               onClick={() => hideModal(id)}
-              className="relative right-[1px] cursor-pointer text-black"
+              className="relative right-[1px] cursor-pointer text-black opacity-35 dark:text-white"
               icon="carbon:close-filled"
               width="3rem"
             />
