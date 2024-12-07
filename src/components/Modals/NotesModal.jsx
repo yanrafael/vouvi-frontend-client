@@ -20,7 +20,7 @@ function NotesModal() {
       fetchNotes();
     }, [notes]);
   
-    
+    const sortedNotes = [...notes].sort((a, b) => b.id - a.id);
 
   return (
     <Modal
@@ -41,7 +41,7 @@ function NotesModal() {
             Adicionar anotação
           </button>
         </li>
-        {notes.map((note) => (
+        {sortedNotes.map((note) => (
           <li key={note.id}>
             <NoteCard title={note.title} content={note.text} />
           </li>
