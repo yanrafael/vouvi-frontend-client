@@ -18,7 +18,7 @@ function NotesModal() {
       };
   
       fetchNotes();
-    }, []);
+    }, [notes]);
   
     
 
@@ -26,8 +26,8 @@ function NotesModal() {
     <Modal
       title="Anotações livres"
       id="notes-modal"
-      icon={"mdi:note-outline"}
-      iconColor={"green"}
+      icon={"solar:notes-bold"}
+      iconColor={"#8B4A00"}
       iconWidth={32}
       top
     >
@@ -36,7 +36,7 @@ function NotesModal() {
           <button
             onClick={() => showModal("note-modal")}
             type="button"
-            className="w-full rounded-[9px] border-4 border-[#8B4A00] p-2 sm:text-md xs:text-[20px] text-[18px] font-semibold text-[#8B4A00] transition-all hover:text-black"
+            className="w-full rounded-[16px] border-4 dark:bg-yellow bg-[transparent] dark:border-0 border-[#8B4A00] p-2 sm:text-md xs:text-[20px] text-[18px] font-semibold text-[#8B4A00] transition-all duration-300 dark:hover:bg-white hover:text-black"
           >
             Adicionar anotação
           </button>

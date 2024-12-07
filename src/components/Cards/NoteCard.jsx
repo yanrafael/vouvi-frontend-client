@@ -14,7 +14,7 @@ function NoteCard({ title, content }) {
 
   return (
     <div
-      className={`flex max-h-64 flex-col rounded-sm bg-[#FFB515] p-2 xs:p-4 sm:w-[40vw]`}
+      className={`flex max-h-64 flex-col rounded-sm dark:bg-[#FFB51566] bg-[#FFB515] text-black dark:text-white p-2 xs:p-4 sm:w-[40vw]`}
     >
       <div className="flex justify-between">
         <h3 className="relative float-left my-2 w-fit text-sm font-bold md:text-lg">
