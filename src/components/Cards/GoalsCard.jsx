@@ -97,14 +97,14 @@ function GoalsCard({ objective, actualValue, maxValue, date }) {
       </div>
       {/* Animação Hover */}
       <div
-        className={`absolute cursor-pointer w-full flex justify-center h-full items-center left-0 top-0 opacity-0 group-hover:opacity-100 text-base group-hover:transition-all group-hover:duration-300 lg:gap-1`}
+        className={`absolute cursor-pointer w-full flex justify-center h-full items-center left-0 top-0 opacity-0 group-hover:opacity-100 text-base group-hover:transition-all group-hover:duration-300 lg:gap-1 text-[#6F6F6F]`}
       >
         <Icon
           icon="typcn:plus"
           width="25px"
           className="w-4 xs:w-5 md:w-4 lg:w-full xl:w-[20px] 2xl:w-[25px]"
         />
-        <h1 className="">Adicionar</h1>
+        <h1 className="">Alterar</h1>
       </div>
     </div>
   );

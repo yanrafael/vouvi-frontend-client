@@ -75,7 +75,7 @@ function Top({ onClick, onClick2 }) {
     <div className="md:w-[97%] lg:w-full">
       <section className="mt-5 flex w-full justify-between sm:mt-6 md:gap-[1px] lg:mt-8 lg:gap-2 2xl:mt-10 2xl:h-auto">
         <div className="flex w-[50%] flex-col justify-center whitespace-nowrap rounded-[12px] bg-[#DDDDDD] px-3 leading-[1.1] overflow-hidden xs:w-[57%] sm:w-[63%] sm:py-4 md:w-[15%] md:px-2 md:py-0 lg:w-[18%] lg:rounded-sm xl:rounded-md xl:px-3 2xl:w-2/12 2xl:gap-3 2xl:px-4 2xl:py-4 dark:bg-[#1B1B1B] dark:text-white">
-          <p className="text-[16px] font-light sm:text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px]">
+          <p className="text-[16px] font-light sm:text-[20px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px] mb-1">
             Saldo
           </p>
           <h1 className="font-medium xs:text-[24px] sm:text-[32px] md:text-[16px] lg:text-md xl:text-[32px] 2xl:text-[36px]">
@@ -142,12 +142,12 @@ function Top({ onClick, onClick2 }) {
         <div
           tabIndex="0"
           onClick={() => showModal("financial-missions")}
-          className="hidden cursor-pointer flex-col bg-[#DDDDDD] p-2 py-4 md:flex md:w-[42%] md:rounded-[12px] lg:w-[35%] lg:rounded-sm xl:w-5/12 xl:rounded-md dark:bg-[#1B1B1B]"
+          className="hidden cursor-pointer flex-col bg-[#DDDDDD] p-2 py-2 justify-around md:flex md:w-[42%] md:rounded-[12px] lg:w-[35%] lg:rounded-sm xl:w-5/12 xl:rounded-md dark:bg-[#1B1B1B]"
         >
           <p className="font-light md:text-[16px] lg:p-1 lg:text-md xl:text-[32px] 2xl:p-2 2xl:text-base dark:text-white">
             Missões
           </p>
-          <div className="overflow-hidden whitespace-nowrap bg-white text-black md:rounded-[12px] md:text-[14px] lg:rounded-sm lg:p-1 lg:text-[20px] xl:rounded-md xl:text-[28px] 2xl:p-2 2xl:text-[32px]">
+          <div className="overflow-hidden whitespace-nowrap bg-white text-black md:rounded-[12px] md:text-[14px] lg:rounded-sm lg:p-1 xl:p-2 lg:text-[20px] xl:rounded-md xl:text-[28px] 2xl:p-1 2xl:text-[32px]">
             <p className="slide-track animate-scroll relative left-[800px]">
               Anote três pequenas economias que você fez hoje
             </p>
