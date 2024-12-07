@@ -11,7 +11,7 @@ function Graphics() {
     <div className="mt-5 dark:text-white">
       <div className="flex md:flex-row flex-col justify-between">
         <div className="md:w-7/12 w-full rounded-md bg-[#868686] bg-opacity-20 xl:pb-10 md:mb-0 mb-5 dark:bg-[#1B1B1B]">
-          <h3 className="lg:m-8 m-5 lg:text-nowrap font-medium 2xl:text-[32px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] dark:text-white bg-black w-fit p-4 py-3 rounded-2xl">
+          <h3 className="lg:m-8 m-5 lg:text-nowrap font-medium 2xl:text-[32px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] text-white bg-primary-200  dark:bg-black w-fit p-4 py-3 rounded-2xl">
             Seus investimentos decolando
           </h3>
           <LineChart
@@ -29,7 +29,7 @@ function Graphics() {
         </div>
 
         <div className="md:w-2/5 sm:w-full rounded-md bg-[#868686] bg-opacity-20 xl:pb-8 xl:pt-0 lg:pt-2 dark:bg-[#1B1B1B]">
-          <h3 className="xl:m-8 lg:m-6 m-5 lg:text-nowrap font-medium 2xl:text-[32px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] dark:text-white bg-black w-fit p-4 py-3 rounded-2xl">
+          <h3 className="xl:m-8 lg:m-6 m-5 lg:text-nowrap font-medium 2xl:text-[32px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] text-white bg-primary-200  dark:bg-black w-fit p-4 py-3 rounded-2xl">
             Distribuição de gastos
           </h3>
           <span className="flex absolute md:hidden pl-[60%] text-[18px] font-bold">
@@ -82,16 +82,13 @@ function Graphics() {
       </div>
 
       <div className="m-auto mt-8 w-full rounded-md bg-[#888] bg-opacity-20 p-3 dark:bg-[#1B1B1B]">
-        <h3 className="md:flex m-8 xl:text-[32px] lg:text-[30px] md:text-[28px] sm:text-[3vw] hidden font-normal bg-primary-200 dark:bg-black w-fit p-4 py-2 rounded-2xl">
-          Acompanhe seus gastos e ganhos
-        </h3>
         <div className="sm:ml-16 xs:ml-10 ml-5 flex lg:gap-10 md:gap-8 sm:gap-6 gap-4 xl:text-md lg:text-[20px] md:text-[18px] text-[20px] sm:mt-10 mt-4">
-          <span className="flex items-center lg:gap-2 gap-2">
-            <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-[#b5179e]"></span>
+          <span className="flex items-center lg:gap-2 gap-2 bg-secondary-200 dark:bg-primary-500 w-fit font-bold lg-text[32px] p-3 py-3 rounded-[12px] text-secondary-200 text-[32px] dark:bg-opacity-80 bg-opacity-40">
+            <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-secondary-200" ></span>
             <p>Ganhos</p>
           </span>
-          <span className="flex items-center lg:gap-2 gap-1">
-            <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-[#480ca8]"></span>
+          <span className="flex items-center lg:gap-2 gap-1 text-[32px] w-fit font-bold bg-primary-300 bg-opacity-30 p-4 py-2 rounded-[12px] text-primary-200">
+            <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-primary-200"></span>
             <span className=""></span>
             <p>Gastos</p>
           </span>

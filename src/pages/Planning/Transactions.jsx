@@ -49,7 +49,7 @@ function Transactions() {
   return (
     <div className="mt-10 flex w-full flex-col justify-between md:flex-row dark:text-white">
       <div className="rounded-md bg-[#888] bg-opacity-20 p-6 sm:w-full md:w-7/12 dark:bg-[#1B1B1B]">
-        <h3 className="w-fit rounded-xl bg-primary-200 p-2 text-[18px] font-semibold text-white sm:text-[3vw] md:text-[26px] lg:text-md dark:bg-black">
+        <h3 className="w-fit rounded-xl bg-primary-200 p-3 font-semibold text-white sm:text-[3vw] md:text-[26px] lg:text-[32px] dark:bg-black py-1">
           Transações
         </h3>
 
