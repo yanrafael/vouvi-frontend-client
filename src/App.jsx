@@ -13,7 +13,6 @@ import Lesson1 from "./pages/Lessons/Lesson1";
 import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
 import Plans from "./pages/Plans/Plans";
-
 function App() {
   return (
     <>

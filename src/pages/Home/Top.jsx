@@ -57,7 +57,7 @@ function Top({ background }) {
 
         <Link
           tabIndex="-1"
-          to={"/create-account"}
+          to={"/login"}
           title="Aperte para criar uma nova conta"
         >
           <PrimaryButton text={"Começar agora!"} />

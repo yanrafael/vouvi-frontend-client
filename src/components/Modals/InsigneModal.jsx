@@ -48,7 +48,7 @@ function InsineModal({ closeModal }) {
   };
 
   const getAchievementColor = (achievementId) => {
-    return achievementColors[achievementId] || "bg-[#D3D3D3]";
+    return achievementColors[achievementId] || "bg-[#D3D3D333]";
   };
   
   return (

@@ -2,11 +2,14 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 import FinCheer from "../../components/Lessons/FinCheer";
+import WrongAnswer from "../../components/Lessons/WrongAnswer";
 
 import moneyIcon from "../../assets/images/money-icon.svg";
 import smartphoneIcon from "../../assets/images/smartphone-icon.svg";
 
 function Lesson1({ lives }) {
+  const [currentPhase, setCurrentPhase] = useState(1);
+
   const logo = (
     <svg
       className={`h-8 xs:h-10 sm:h-12 lg:h-16 lg:w-auto`}
@@ -36,14 +39,29 @@ function Lesson1({ lives }) {
   lives = 1;
 
   const [isCheerVisible, setIsCheerVisible] = useState(false);
+  const [wrongAnswer, setWrongAnswer] = useState(false);
 
   const checkAnswer = () => {
     const answer = document.getElementById("answer").innerText;
 
-    if (answer === "China") {
+    if (
+      answer === "China" ||
+      (currentPhase === 3 && answer === "Valor") ||
+      answer === "Celular" ||
+      answer === "Depois" ||
+      answer === "Metal"
+    ) {
       setIsCheerVisible(true);
     } else {
-      alert("Resposta incorreta!");
+      setWrongAnswer(true);
+    }
+  };
+
+  const handleContinue = () => {
+    if (currentPhase < 5) {
+      setCurrentPhase((prev) => prev + 1); // Avança para a próxima fase
+    } else {
+      alert("Você completou todas as fases!");
     }
   };
 
@@ -54,8 +72,23 @@ function Lesson1({ lives }) {
           title={"Olha só quem tá arrasando!"}
           text={"Tá mais afiado que minhas garras quando vejo um sofá novo!"}
           hide={() => setIsCheerVisible(!isCheerVisible)}
+          next={() => {
+            handleContinue();
+            setIsCheerVisible(!isCheerVisible);
+          }}
         />
       )}
+      {wrongAnswer && (
+        <WrongAnswer
+          title={"Não foi dessa vez!"}
+          text={"Mas calma, todo mundo tropeça às vezes!"}
+          hide={() => setWrongAnswer(!wrongAnswer)}
+          next={() => {
+            setWrongAnswer(!wrongAnswer);
+          }}
+        />
+      )}
+
       <header className="flex justify-between">
         <span>{logo}</span>
 
@@ -91,7 +124,11 @@ function Lesson1({ lives }) {
         <div className="h-full w-2 rounded bg-secondary-200"></div>
       </div>
 
-      <Question1 />
+      {currentPhase === 1 && <Question1 />}
+      {currentPhase === 3 && <Question3 />}
+      {currentPhase === 4 && <Question4 />}
+      {currentPhase === 5 && <Question5 />}
+      {currentPhase === 6 && <Question6 />}
 
       <div className="text-right">
         <button
@@ -179,6 +216,334 @@ function Question1() {
               className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
             >
               Itália
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question3() {
+  const changeAnswer = (answer) => {
+    document.getElementById("answer").innerText = answer;
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">Complete a frase</h2>
+
+      <div className="my-5 flex flex-col justify-between gap-56">
+        <span className="flex items-center gap-5">
+          <img src={moneyIcon} alt="icone de dinheiro" />
+          <p className="text-base">
+            No escambo era difícil calcular o
+            <span
+              id="answer"
+              className="inline-block w-44 border-b-4 border-b-white"
+            ></span>
+            justo entre os itens.
+          </p>
+        </span>
+
+        <ul className="flex w-fit gap-4 rounded-md bg-secondary-200/10 p-5">
+          <li>
+            <button
+              onClick={() => changeAnswer("Peso")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Peso
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Cor")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Cor
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Tipo")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Tipo
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Forma")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Forma
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Valor")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Valor
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Dinheiro")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Dinheiro
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question4() {
+  const changeAnswer = (answer) => {
+    document.getElementById("answer").innerText = answer;
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">Complete a frase</h2>
+
+      <div className="my-5 flex flex-col justify-between gap-56">
+        <span className="flex items-center gap-5">
+          <img src={moneyIcon} alt="icone de dinheiro" />
+          <p className="text-base">
+            Hoje em dia, muitos pagamentos são feitos apenas com
+            <span
+              id="answer"
+              className="inline-block w-44 border-b-4 border-b-white"
+            ></span>
+            .
+          </p>
+        </span>
+
+        <ul className="flex w-fit gap-4 rounded-md bg-secondary-200/10 p-5">
+          <li>
+            <button
+              onClick={() => changeAnswer("Celular")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Celular
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Dinheiro")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Dinheiro
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Cheque")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Cheque
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Moeda")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Moeda
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Valor")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Valor
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Boleto")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Boleto
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question5() {
+  const changeAnswer = (answer) => {
+    document.getElementById("answer").innerText = answer;
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">Complete a frase</h2>
+
+      <div className="my-5 flex flex-col justify-between gap-56">
+        <span className="flex items-center gap-5">
+          <img src={moneyIcon} alt="icone de dinheiro" />
+          <p className="text-base">
+            O cartão de crédito permite que você compre agora e pague
+            <span
+              id="answer"
+              className="inline-block w-44 border-b-4 border-b-white"
+            ></span>
+            .
+          </p>
+        </span>
+
+        <ul className="flex w-fit gap-4 rounded-md bg-secondary-200/10 p-5">
+          <li>
+            <button
+              onClick={() => changeAnswer("Nunca")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Nunca
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Agora")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Agora
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Depois")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Depois
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Antecipado")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Antecipado
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Antes")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Antes
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Logo")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Logo
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question6() {
+  const changeAnswer = (answer) => {
+    document.getElementById("answer").innerText = answer;
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">Complete a frase</h2>
+
+      <div className="my-5 flex flex-col justify-between gap-56">
+        <span className="flex items-center gap-5">
+          <img src={moneyIcon} alt="icone de dinheiro" />
+          <p className="text-base">
+            As primeiras moedas eram feitas de
+            <span
+              id="answer"
+              className="inline-block w-44 border-b-4 border-b-white"
+            ></span>
+            .
+          </p>
+        </span>
+
+        <ul className="flex w-fit gap-4 rounded-md bg-secondary-200/10 p-5">
+          <li>
+            <button
+              onClick={() => changeAnswer("Cerâmica")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Cerâmica
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Plástico")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Plástico
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Borracha")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Borracha
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Metal")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Metal
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Papel")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Papel
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Madeira")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Madeira
             </button>
           </li>
         </ul>
