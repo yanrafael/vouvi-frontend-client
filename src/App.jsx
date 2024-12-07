@@ -20,7 +20,7 @@ function App() {
   const location = useLocation(); // Obtém a localização da página atual
 
   // Páginas sem animação
-  const noAnimationPaths = ["/store", "/profile", "/learn", "/ranking", "/planning", "/lesson-1"];
+  const noAnimationPaths = ["/store", "/profile", "/learn", "/ranking", "/planning", "/lesson1"];
 
   // Verifica se a página atual deve ter animação
   const shouldAnimate = !noAnimationPaths.includes(location.pathname);
