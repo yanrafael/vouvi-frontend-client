@@ -25,6 +25,8 @@ import FinancialPerformance from "../../components/Modals/Financialperformance";
 import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
+import CreateGoals from "../../components/Modals/GoalsCreate";
+import GoalsUpdate from "../../components/Modals/GoalsUpdate";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -60,6 +62,8 @@ function Planning() {
       <FinancialMissions />
       <TipFromFin />
       <FinancialPerformance />
+      <CreateGoals/>
+      <GoalsUpdate/>
 
       <HeaderIntern
         iconActiveNumber={1}

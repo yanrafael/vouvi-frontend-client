@@ -3,6 +3,10 @@ import moneyIcon from "../../assets/images/money-icon.svg";
 import { useState } from "react";
 import FinCheer from "../../components/Lessons/FinCheer";
 import WrongAnswer from "../../components/Lessons/WrongAnswer";
+import apple from "../../assets/images/learn-question-apple.svg";
+import smarthphone from "../../assets/images/learn-question-smartphone.svg";
+import coin from "../../assets/images/learn-question-coin.svg";
+import card from "../../assets/images/learn-question-card.svg";
 
 function Lesson1({ lives }) {
   const [currentPhase, setCurrentPhase] = useState(1);
@@ -41,7 +45,13 @@ function Lesson1({ lives }) {
   const checkAnswer = () => {
     const answer = document.getElementById("answer").innerText;
 
-    if (answer === "China" || answer === "Celular" || answer === "Depois") {
+    if (
+      answer === "China" ||
+      (currentPhase === 3 && answer === "Valor") ||
+      answer === "Celular" ||
+      answer === "Depois" ||
+      answer === "Metal"
+    ) {
       setIsCheerVisible(true);
     } else {
       setWrongAnswer(true);
@@ -68,7 +78,8 @@ function Lesson1({ lives }) {
             setIsCheerVisible(!isCheerVisible);
           }}
         />
-      )}{wrongAnswer && (
+      )}
+      {wrongAnswer && (
         <WrongAnswer
           title={"Não foi dessa vez!"}
           text={"Mas calma, todo mundo tropeça às vezes!"}
@@ -115,8 +126,11 @@ function Lesson1({ lives }) {
       </div>
 
       {currentPhase === 1 && <Question1 />}
-      {currentPhase === 2 && <Question4 />}
-      {currentPhase === 3 && <Question5 />}
+      {currentPhase === 2 && <Question1 />}
+      {currentPhase === 3 && <Question3 />}
+      {currentPhase === 4 && <Question4 />}
+      {currentPhase === 5 && <Question5 />}
+      {currentPhase === 6 && <Question6 />}
 
       <div className="text-right">
         <button
@@ -143,7 +157,7 @@ function Question1() {
         <span className="flex items-center gap-5">
           <img src={moneyIcon} alt="icone de dinheiro" />
           <p className="text-base">
-            As primeiras notas de papel foram criadas na{" "}
+            As primeiras notas de papel foram criadas na .{" "}
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
@@ -212,6 +226,88 @@ function Question1() {
   );
 }
 
+function Question3() {
+  const changeAnswer = (answer) => {
+    document.getElementById("answer").innerText = answer;
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">Complete a frase</h2>
+
+      <div className="my-5 flex flex-col justify-between gap-56">
+        <span className="flex items-center gap-5">
+          <img src={apple} className="w-24" alt="icone de maçã" />
+          <p className="text-base">
+            No escambo era difícil calcular o .
+            <span
+              id="answer"
+              className="inline-block w-44 border-b-4 border-b-white"
+            ></span>
+            justo entre os itens.
+          </p>
+        </span>
+
+        <ul className="flex w-fit gap-4 rounded-md bg-secondary-200/10 p-5">
+          <li>
+            <button
+              onClick={() => changeAnswer("Peso")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Peso
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Cor")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Cor
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Tipo")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Tipo
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Forma")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Forma
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Valor")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Valor
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Dinheiro")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Dinheiro
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function Question4() {
   const changeAnswer = (answer) => {
     document.getElementById("answer").innerText = answer;
@@ -223,14 +319,14 @@ function Question4() {
 
       <div className="my-5 flex flex-col justify-between gap-56">
         <span className="flex items-center gap-5">
-          <img src={moneyIcon} alt="icone de dinheiro" />
+          <img src={smarthphone} className="w-24" alt="icone de celular" />
           <p className="text-base">
             Hoje em dia, muitos pagamentos são feitos apenas com .
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
             ></span>
-            .
+            
           </p>
         </span>
 
@@ -305,14 +401,14 @@ function Question5() {
 
       <div className="my-5 flex flex-col justify-between gap-56">
         <span className="flex items-center gap-5">
-          <img src={moneyIcon} alt="icone de dinheiro" />
+          <img src={card} className="w-24" alt="icone de cartão" />
           <p className="text-base">
             O cartão de crédito permite que você compre agora e pague .
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
             ></span>
-            .
+            
           </p>
         </span>
 
@@ -368,6 +464,88 @@ function Question5() {
               className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
             >
               Logo
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function Question6() {
+  const changeAnswer = (answer) => {
+    document.getElementById("answer").innerText = answer;
+  };
+
+  return (
+    <div className="block h-[60vh] w-full">
+      <h2 className="text-base">Complete a frase</h2>
+
+      <div className="my-5 flex flex-col justify-between gap-56">
+        <span className="flex items-center gap-5">
+          <img src={coin} className="w-24" alt="icone de moeda" />
+          <p className="text-base">
+            As primeiras moedas eram feitas de .
+            <span
+              id="answer"
+              className="inline-block w-44 border-b-4 border-b-white"
+            ></span>
+          
+          </p>
+        </span>
+
+        <ul className="flex w-fit gap-4 rounded-md bg-secondary-200/10 p-5">
+          <li>
+            <button
+              onClick={() => changeAnswer("Cerâmica")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Cerâmica
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Plástico")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Plástico
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Borracha")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Borracha
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Metal")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Metal
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Papel")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Papel
+            </button>
+          </li>
+
+          <li>
+            <button
+              onClick={() => changeAnswer("Madeira")}
+              className="cursor-pointer rounded-md bg-white/20 p-3 text-base transition-all duration-200 hover:bg-white hover:text-black"
+            >
+              Madeira
             </button>
           </li>
         </ul>

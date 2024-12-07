@@ -219,7 +219,7 @@ function Top({ onClick, onClick2 }) {
           {btnOn == 1 ? (
             <>
               <div
-                onClick={() => showModal("")}
+                onClick={() => showModal("create-goal")}
                 className="mt-2 flex cursor-pointer items-center justify-center gap-1 rounded-[12px] border-[2px] border-[#8D8D8D] px-3 py-2 transition-colors duration-500 hover:border-secondary-200 hover:text-secondary-200 xs:border-[3px] sm:mt-0 md:h-[38px] lg:h-[60px] lg:gap-2 lg:rounded-sm lg:px-6 xl:gap-4 2xl:h-20 2xl:rounded-md 2xl:border-4"
               >
                 <Icon

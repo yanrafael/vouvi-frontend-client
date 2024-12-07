@@ -149,22 +149,23 @@ function Learn() {
       setVcoin(userData.vcoin);
       setLevelUser(Math.floor(xp / 100) + 1);
     }
-  }, []);
+  }, [xp]);
   return (
     <>
-      <Header>
+      <Header iconActiveNumber={0}>
         <AvatarBasic />
       </Header>
 
       <main className="flex w-[100vw] flex-col items-center justify-center px-0 md:px-[1vw] xl:px-[7vw]">
         {/* Heading */}
         <TopSection
+          xpLeft={levelUser * 100 - xp}
           section={1}
           sectionName={"Fundamentos"}
           playerCoins={vcoin}
           playerLevel={levelUser}
           playerXP={xp}
-          progressionBar={(xp / (levelUser * 100)) * 100}
+          progressionBar={((xp % 100) / 100) * 100}
         />
 
         {/* Trail 1 */}
