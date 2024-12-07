@@ -42,7 +42,7 @@ function Profile() {
       setVcoin(userData.vcoin);
       setLevelUser(Math.floor(xp / 100) + 1);
     }
-  }, []);
+  }, [xp]);
 
   const [achievements, setAchievements] = useState([]);
   const [achievementCount, setAchievementCount] = useState(0);
@@ -76,7 +76,7 @@ function Profile() {
         userName={userName}
         levelUser={levelUser}
         xpLeft={levelUser * 100 - xp}
-        progressionbar={(xp / (levelUser * 100)) * 100}
+        progressionbar={((xp % 100) / 100) * 100}
         vcoin={vcoin}
         achievements={achievementCount+"/20"}
       />

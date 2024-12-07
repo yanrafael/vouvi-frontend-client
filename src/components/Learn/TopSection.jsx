@@ -8,6 +8,7 @@ function TopSection({
   playerXP,
   playerCoins,
   progressionBar,
+  xpLeft,
 }) {
   const vcoin = (
     <svg
@@ -41,7 +42,7 @@ function TopSection({
             className={`h-full rounded-[4px] bg-white dark:bg-secondary-200`}
           ></div>
           <span className="absolute right-1 top-0 text-right text-sm font-bold text-secondary-200">
-            Faltam 338 XP
+            Faltam  {xpLeft}XP
           </span>
         </div>
 
