@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import { atom, useAtom } from "jotai";
 
 import FinCheer from "../../components/Lessons/FinCheer";
 import WrongAnswer from "../../components/Lessons/WrongAnswer";
@@ -14,6 +15,10 @@ import cardIcon from "../../assets/images/card-icon.svg";
 import appleIcon from "../../assets/images/apple-icon.svg";
 import coinIcon from "../../assets/images/coin-icon.svg";
 import moneyIconBig from "../../assets/images/money-icon-big.svg";
+
+const q2correctAnswer = ["escambo", "moeda", "cédula", "cartão", "digital"];
+
+const q2answerAtom = atom(["", "", "", "", ""]);
 
 function Lesson1(/*{ lives }*/) {
   const [currentPhase, setCurrentPhase] = useState(1);
@@ -52,10 +57,25 @@ function Lesson1(/*{ lives }*/) {
   const checkAnswer = (correctAnswer = "", currentAnswer = "") => {
     console.log(currentAnswer);
     console.log(correctAnswer);
-    if (currentAnswer === correctAnswer) {
-      setIsCheerVisible(true);
+
+    // console.log(
+    //   currentAnswer.every((value, index) => value === correctAnswer[index]),
+    // );
+
+    if (currentPhase === 2) {
+      if (
+        currentAnswer.every((value, index) => value === correctAnswer[index])
+      ) {
+        setIsCheerVisible(true);
+      } else {
+        setWrongAnswer(true);
+      }
     } else {
-      setWrongAnswer(true);
+      if (currentAnswer === correctAnswer) {
+        setIsCheerVisible(true);
+      } else {
+        setWrongAnswer(true);
+      }
     }
   };
 
@@ -66,6 +86,8 @@ function Lesson1(/*{ lives }*/) {
       open("learn", "_self"); // Redireciona para a página de lições
     }
   };
+
+  const [q2currentAnswer, setQ2CurrentAnswer] = useAtom(q2answerAtom);
 
   return (
     <main className="mx-20 mt-5 dark:text-white">
@@ -144,7 +166,7 @@ function Lesson1(/*{ lives }*/) {
                 );
                 break;
               case 2:
-                checkAnswer("correctAnswer", "correctAnswer");
+                checkAnswer(q2correctAnswer, q2currentAnswer);
                 break;
               case 3:
                 checkAnswer(
@@ -266,29 +288,27 @@ function Question1() {
 }
 
 function Question2() {
-  const correctAnswer = ["escambo", "moeda", "cédula", "cartão", "digital"];
-
-  const [currentAnswer, setCurrentAnswer] = useState(["", "", "", "", ""]);
+  const [q2currentAnswer, setQ2CurrentAnswer] = useAtom(q2answerAtom);
 
   const handleAddAnwswer = (item) => {
-    const index = currentAnswer.indexOf("");
+    const index = q2currentAnswer.indexOf("");
 
     if (index >= 0) {
-      const newAnswer = [...currentAnswer];
+      const newAnswer = [...q2currentAnswer];
       newAnswer[index] = item;
 
-      setCurrentAnswer(newAnswer);
+      setQ2CurrentAnswer(newAnswer);
     }
   };
 
   const handleRemoveAnwswer = (item) => {
-    const index = currentAnswer.indexOf(item);
+    const index = q2currentAnswer.indexOf(item);
 
     if (index >= 0) {
-      const newAnswer = [...currentAnswer];
+      const newAnswer = [...q2currentAnswer];
       newAnswer[index] = "";
 
-      setCurrentAnswer(newAnswer);
+      setQ2CurrentAnswer(newAnswer);
     }
   };
 
@@ -338,13 +358,13 @@ function Question2() {
       <div className="mt-16 flex flex-col items-center gap-20">
         <div className="rounded-md border-[6px] border-[#8D8D8D] p-8">
           <ul className="flex flex-row gap-20">
-            {currentAnswer.map((item, index) => (
+            {q2currentAnswer.map((item, index) => (
               <li key={index} id={`answer-${index}`}>
                 {item != "" ? (
                   showAnswerImage(item)
                 ) : (
                   <div className="flex h-44 w-44 items-center justify-center rounded-[50px] border-[10px] border-dashed">
-                    {correctAnswer[index].toUpperCase()}
+                    {q2correctAnswer[index].toUpperCase()}
                   </div>
                 )}
               </li>
