@@ -1,10 +1,26 @@
 import Modal from "./Modal";
 import NoteCard from "../Cards/NoteCard";
 import showModal from "../../utils/showModal";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function NotesModal() {
-  const nota =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua jkvofmapfmo jfkldjaokfj jo jfodkaj fofdjaofjodsaj fjkamfioewjmkl joi fdjaoj fojdao pfj odasifjsdoaio.";
+  const [notes, setNotes] = useState([]); // Estado para armazenar anotações
+
+    useEffect(() => {
+      const fetchNotes = async () => {
+        try {
+          const response = await axios.get("http://localhost:3000/annotation");
+          setNotes(response.data); // Atualiza o estado com as anotações do backend
+        } catch (error) {
+          console.error("Erro ao buscar anotações:", error);
+        }
+      };
+  
+      fetchNotes();
+    }, []);
+  
+    
 
   return (
     <Modal
@@ -25,18 +41,11 @@ function NotesModal() {
             Adicionar anotação
           </button>
         </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
+        {notes.map((note) => (
+          <li key={note.id}>
+            <NoteCard title={note.title} content={note.text} />
+          </li>
+        ))}
       </ul>
     </Modal>
   );

@@ -39,7 +39,7 @@ function Transactions() {
         setTransactions(sortedTransactions);
       })
       .catch(error => console.error('Erro ao buscar transações:', error));
-  }, []);
+  }, [transactions]);
 
   
   
