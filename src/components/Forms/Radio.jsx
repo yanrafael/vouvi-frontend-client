@@ -27,7 +27,7 @@ function KeepConected() {
         id="keepconected"
         value={active}
       />
-      <label className="text-[20px] sm:text-md" htmlFor="keepconected">
+      <label className="text-[20px] sm:text-md font-light" htmlFor="keepconected">
         Mantenha-me conectado
       </label>
     </div>

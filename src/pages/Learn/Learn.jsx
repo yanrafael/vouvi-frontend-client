@@ -148,7 +148,7 @@ function Learn() {
   }, [xp]);
   return (
     <>
-      <Header>
+      <Header iconActiveNumber={0}>
         <AvatarBasic />
       </Header>
 
