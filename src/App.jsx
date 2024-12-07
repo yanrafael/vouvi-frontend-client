@@ -13,7 +13,6 @@ import Lesson1 from "./pages/Lessons/Lesson1";
 import ScrollToTop from "./utils/scrollUp";
 import { Route, Routes } from "react-router-dom";
 import Plans from "./pages/Plans/Plans";
-import GoalsCreate from "./components/Modals/GoalsCreate";
 function App() {
   return (
     <>
@@ -34,7 +33,6 @@ function App() {
         <Route Component={Planning} path="/planning" />
         <Route Component={Lesson1} path="/lesson-1" />
         <Route Component={Plans} path="/plans" />
-        <Route Component={GoalsCreate} path="/goals" />
       </Routes>
     </>
   );
