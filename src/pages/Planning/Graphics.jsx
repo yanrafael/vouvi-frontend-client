@@ -83,11 +83,11 @@ function Graphics() {
 
       <div className="m-auto mt-8 w-full rounded-md bg-[#888] bg-opacity-20 p-3 dark:bg-[#1B1B1B]">
         <div className="sm:ml-16 xs:ml-10 ml-5 flex lg:gap-10 md:gap-8 sm:gap-6 gap-4 xl:text-md lg:text-[20px] md:text-[18px] text-[20px] sm:mt-10 mt-4">
-          <span className="flex items-center lg:gap-2 gap-2 bg-secondary-200 dark:bg-primary-500 w-fit font-bold lg-text[32px] p-3 py-3 rounded-[12px] text-secondary-200 text-[32px] dark:bg-opacity-80 bg-opacity-40">
+          <span className="flex items-center lg:gap-2 gap-2 bg-secondary-200 dark:bg-primary-500 w-fit font-bold lg-text[32px] p-2 md:p-3 lg:p-4 py-3 rounded-[12px] text-secondary-200 dark:bg-opacity-80 bg-opacity-40 text-[18px] md:text-[24px] lg:text-[32px]">
             <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-secondary-200" ></span>
             <p>Ganhos</p>
           </span>
-          <span className="flex items-center lg:gap-2 gap-1 text-[32px] w-fit font-bold bg-primary-300 bg-opacity-30 p-4 py-2 rounded-[12px] text-primary-200">
+          <span className="flex items-center lg:gap-2 gap-1 text-[18px] md:text-[24px] lg:text-[32px] w-fit font-bold bg-primary-300 bg-opacity-30 p-2 md:p-3 lg:p-4 py-2 rounded-[12px] text-primary-200">
             <span className="lg:h-3 lg:w-3 w-2 h-2 rounded-full bg-primary-200"></span>
             <span className=""></span>
             <p>Gastos</p>
