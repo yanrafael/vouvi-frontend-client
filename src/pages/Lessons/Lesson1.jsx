@@ -3,6 +3,10 @@ import moneyIcon from "../../assets/images/money-icon.svg";
 import { useState } from "react";
 import FinCheer from "../../components/Lessons/FinCheer";
 import WrongAnswer from "../../components/Lessons/WrongAnswer";
+import apple from "../../assets/images/learn-question-apple.svg";
+import smarthphone from "../../assets/images/learn-question-smartphone.svg";
+import coin from "../../assets/images/learn-question-coin.svg";
+import card from "../../assets/images/learn-question-card.svg";
 
 function Lesson1({ lives }) {
   const [currentPhase, setCurrentPhase] = useState(1);
@@ -45,7 +49,7 @@ function Lesson1({ lives }) {
       answer === "China" ||
       (currentPhase === 3 && answer === "Valor") ||
       answer === "Celular" ||
-      answer === "Depois" || 
+      answer === "Depois" ||
       answer === "Metal"
     ) {
       setIsCheerVisible(true);
@@ -122,6 +126,7 @@ function Lesson1({ lives }) {
       </div>
 
       {currentPhase === 1 && <Question1 />}
+      {currentPhase === 2 && <Question1 />}
       {currentPhase === 3 && <Question3 />}
       {currentPhase === 4 && <Question4 />}
       {currentPhase === 5 && <Question5 />}
@@ -152,7 +157,7 @@ function Question1() {
         <span className="flex items-center gap-5">
           <img src={moneyIcon} alt="icone de dinheiro" />
           <p className="text-base">
-            As primeiras notas de papel foram criadas na{" "}
+            As primeiras notas de papel foram criadas na .{" "}
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
@@ -232,9 +237,9 @@ function Question3() {
 
       <div className="my-5 flex flex-col justify-between gap-56">
         <span className="flex items-center gap-5">
-          <img src={moneyIcon} alt="icone de dinheiro" />
+          <img src={apple} className="w-24" alt="icone de maçã" />
           <p className="text-base">
-            No escambo era difícil calcular o
+            No escambo era difícil calcular o .
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
@@ -314,14 +319,14 @@ function Question4() {
 
       <div className="my-5 flex flex-col justify-between gap-56">
         <span className="flex items-center gap-5">
-          <img src={moneyIcon} alt="icone de dinheiro" />
+          <img src={smarthphone} className="w-24" alt="icone de celular" />
           <p className="text-base">
-            Hoje em dia, muitos pagamentos são feitos apenas com
+            Hoje em dia, muitos pagamentos são feitos apenas com .
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
             ></span>
-            .
+            
           </p>
         </span>
 
@@ -396,14 +401,14 @@ function Question5() {
 
       <div className="my-5 flex flex-col justify-between gap-56">
         <span className="flex items-center gap-5">
-          <img src={moneyIcon} alt="icone de dinheiro" />
+          <img src={card} className="w-24" alt="icone de cartão" />
           <p className="text-base">
-            O cartão de crédito permite que você compre agora e pague
+            O cartão de crédito permite que você compre agora e pague .
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
             ></span>
-            .
+            
           </p>
         </span>
 
@@ -478,14 +483,14 @@ function Question6() {
 
       <div className="my-5 flex flex-col justify-between gap-56">
         <span className="flex items-center gap-5">
-          <img src={moneyIcon} alt="icone de dinheiro" />
+          <img src={coin} className="w-24" alt="icone de moeda" />
           <p className="text-base">
-            As primeiras moedas eram feitas de
+            As primeiras moedas eram feitas de .
             <span
               id="answer"
               className="inline-block w-44 border-b-4 border-b-white"
             ></span>
-            .
+          
           </p>
         </span>
 
