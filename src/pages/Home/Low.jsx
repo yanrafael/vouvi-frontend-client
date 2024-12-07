@@ -250,11 +250,11 @@ function Low() {
         </div>
       </section>
 
-      <section className="m-auto lg:w-8/12">
+      <section data-aos="fade-up" className="m-auto lg:w-8/1 mb-[800px] mt-[320px] mx-px-[500px]">
         <p
           className={`${TextGradient} mb-16 mt-28 text-center text-[24px] font-light md:mt-[200px] md:text-[28px] lg:text-base`}
         >
-          Venha com a gente e faça valer cada centavo. <br />
+          Não deixe seu dinheiro trabalhar sozinho, venha com a gente e faça valer cada centavo! <br />
           <strong className="font-bold">
             Junte-se à
             <strong className="text-primary-200 dark:bg-black">Vouvi</strong> e

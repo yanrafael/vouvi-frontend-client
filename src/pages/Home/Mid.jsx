@@ -207,13 +207,13 @@ function Mid() {
       </section>
 
       <h1
-        data-aos="fade-right"
+        data-aos="fade-up"
         className={`${TextGradient} w-10/12 text-center text-[36px] font-medium leading-[1] xs:w-full sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2] mt-[250px]`}
       >
         Domine o jogo, domine o dinheiro!
       </h1>
       <p
-        data-aos="fade-right"
+        data-aos="fade-up"
         className={`${TextGradient} text-center text-sm sm:text-md lg:text-base`}
       >
         Economize de Verdade Com Cada Missão Completa.
@@ -222,7 +222,7 @@ function Mid() {
       <br />
 
       <section className="mt-28 flex flex-col items-center lg:mt-20">
-        <div className="m-auto flex h-[500px] w-screen flex-col items-center justify-center sm:flex-row">
+        <div data-aos="fade-right" className="m-auto flex h-[500px] w-screen flex-col items-center justify-center sm:flex-row">
           <div className="m-0 h-[300px] md:ml-40 md:h-full lg:ml-40 lg:w-1/3">
             <HomeAnimation stateMachine={"rico"} />
           </div>
@@ -235,7 +235,7 @@ function Mid() {
           </div>
         </div>
 
-        <div className="mt-15 flex h-[500px] w-screen flex-col items-center justify-center gap-5 sm:mt-0 sm:flex-row-reverse md:mt-0">
+        <div data-aos="fade-left" className="mt-15 flex h-[500px] w-screen flex-col items-center justify-center gap-5 sm:mt-0 sm:flex-row-reverse md:mt-0">
           <div className="h-[300px] w-[350px] md:h-full lg:w-1/3">
             <HomeAnimation stateMachine={"personalize"} />
           </div>
@@ -248,7 +248,7 @@ function Mid() {
           </div>
         </div>
 
-        <div className="flex h-[500px] w-screen flex-col items-center sm:flex-row">
+        <div data-aos="fade-right" className="flex h-[500px] w-screen flex-col items-center sm:flex-row">
           <div className="m-0 h-[300px] w-[400px] md:ml-40 md:h-full lg:ml-40 lg:w-1/3">
             <HomeAnimation stateMachine={"piscadinha"} />
           </div>

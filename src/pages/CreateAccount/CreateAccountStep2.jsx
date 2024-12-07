@@ -89,7 +89,7 @@ function CreateAccountStep2({
           <span className="grid">
             <Label htmlFor="gender">Gênero:</Label>
             <select
-              className="h-fit w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-all hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none"
+              className="h-fit w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-colors duration-500 ease-in-out hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none"
               name="gender"
               id="gender"
               value={gender}
@@ -109,7 +109,7 @@ function CreateAccountStep2({
           <span className="grid">
             <Label htmlFor="pronoum">Pronome</Label>
             <select
-              className="h-fit w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-all hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none"
+              className="h-fit w-full border-b-4 border-b-secondary-200 bg-black bg-opacity-15 p-1 text-base outline-primary-200 transition-colors duration-500 ease-in-out hover:border-b-primary-200 focus:border-b-primary-200 focus:outline-none"
               name="pronoum"
               id="pronoum"
               value={pronoum}
