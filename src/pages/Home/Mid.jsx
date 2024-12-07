@@ -222,7 +222,7 @@ function Mid() {
       <br />
 
       <section className="mt-28 flex flex-col items-center lg:mt-20">
-        <div className="m-auto flex h-[500px] w-screen flex-col items-center justify-center sm:flex-row">
+        <div data-aos="fade-right" className="m-auto flex h-[500px] w-screen flex-col items-center justify-center sm:flex-row">
           <div className="m-0 h-[300px] md:ml-40 md:h-full lg:ml-40 lg:w-1/3">
             <HomeAnimation stateMachine={"rico"} />
           </div>
@@ -235,7 +235,7 @@ function Mid() {
           </div>
         </div>
 
-        <div className="mt-15 flex h-[500px] w-screen flex-col items-center justify-center gap-5 sm:mt-0 sm:flex-row-reverse md:mt-0">
+        <div data-aos="fade-left" className="mt-15 flex h-[500px] w-screen flex-col items-center justify-center gap-5 sm:mt-0 sm:flex-row-reverse md:mt-0">
           <div className="h-[300px] w-[350px] md:h-full lg:w-1/3">
             <HomeAnimation stateMachine={"personalize"} />
           </div>
@@ -248,7 +248,7 @@ function Mid() {
           </div>
         </div>
 
-        <div className="flex h-[500px] w-screen flex-col items-center sm:flex-row">
+        <div data-aos="fade-right" className="flex h-[500px] w-screen flex-col items-center sm:flex-row">
           <div className="m-0 h-[300px] w-[400px] md:ml-40 md:h-full lg:ml-40 lg:w-1/3">
             <HomeAnimation stateMachine={"piscadinha"} />
           </div>
