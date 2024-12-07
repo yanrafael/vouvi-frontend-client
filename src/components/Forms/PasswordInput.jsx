@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function PasswordInput({ id = "", name = "", value = "", onChange }) {
+function PasswordInput({ id = "", name = "", value, onChange }) {
   const [icon, setIcon] = useState("mdi:eye-off");
 
   const showPassword = () => {
