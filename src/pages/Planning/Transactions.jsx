@@ -80,7 +80,7 @@ function Transactions() {
         </ul>
       </div>
 
-      <div className="relative mt-5 flex flex-col rounded-md bg-[#888] bg-opacity-20 p-1 sm:w-full md:mt-0 md:w-2/5 dark:bg-[#1B1B1B]">
+      <div className="relative mt-5 flex flex-col rounded-md bg-[#888] bg-opacity-20 p-1 sm:w-full md:mt-0 md:w-2/5 dark:bg-[#1B1B1B] pb-10">
         <h3 className="xl:m-8 lg:m-6 m-5 lg:text-nowrap font-medium 2xl:text-[32px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] text-white bg-primary-200  dark:bg-black w-fit p-4 py-3 rounded-2xl">
           Desempenho Financeiro
         </h3>
