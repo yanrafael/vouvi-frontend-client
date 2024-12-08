@@ -15,6 +15,7 @@ import cardIcon from "../../assets/images/card-icon.svg";
 import appleIcon from "../../assets/images/apple-icon.svg";
 import coinIcon from "../../assets/images/coin-icon.svg";
 import moneyIconBig from "../../assets/images/money-icon-big.svg";
+import { useNavigate } from "react-router-dom";
 
 const q2correctAnswer = ["escambo", "moeda", "cédula", "cartão", "digital"];
 
@@ -22,6 +23,7 @@ const q2answerAtom = atom(["", "", "", "", ""]);
 
 function Lesson1(/*{ lives }*/) {
   const [currentPhase, setCurrentPhase] = useState(1);
+  const navigate = useNavigate();
 
   const logo = (
     <svg
@@ -154,6 +156,7 @@ function Lesson1(/*{ lives }*/) {
       {currentPhase === 4 && <Question4 />}
       {currentPhase === 5 && <Question5 />}
       {currentPhase === 6 && <Question6 />}
+      {currentPhase === 7 ? navigate("/learn") : null}
 
       <div className="text-right">
         <button
