@@ -43,7 +43,7 @@ function Top({ onClick, onClick2 }) {
 
   useEffect(() => {
     axios
-      .get("http://3.134.245.183:3000/transaction")
+      .get("https://backend.vouvi.com.br/transaction")
       .then((response) => {
         const fetchedTransactions = response.data;
 

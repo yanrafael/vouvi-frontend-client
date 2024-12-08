@@ -145,7 +145,7 @@ function CreateAccount() {
 
     try {
       const response = await axios.post(
-        "http://3.134.245.183:3000/users/register",
+        "https://backend.vouvi.com.br/users/register",
         user,
       );
       console.log("Cadastro realizado com sucesso:", response.data);

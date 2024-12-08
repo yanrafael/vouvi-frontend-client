@@ -13,7 +13,7 @@ function InsineModal({ closeModal }) {
 
   useEffect(() => {
     axios
-      .get("http://3.134.245.183:3000/achievement")
+      .get("https://backend.vouvi.com.br/achievement")
       .then((response) => setAchievements(response.data))
       .catch((error) => console.error("Erro ao buscar conquistas:", error));
   }, []);
@@ -21,7 +21,7 @@ function InsineModal({ closeModal }) {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://3.134.245.183:3000/achieved/${userId}`)
+        .get(`https://backend.vouvi.com.br/achieved/${userId}`)
         .then((response) => setUserAchievements(response.data))
         .catch((error) =>
           console.error("Erro ao buscar conquistas do usuário:", error)

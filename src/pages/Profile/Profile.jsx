@@ -50,7 +50,7 @@ function Profile() {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://3.134.245.183:3000/achieved/${userId}`)
+        .get(`https://backend.vouvi.com.br/achieved/${userId}`)
         .then((response) => {
           setAchievements(response.data);
           setAchievementCount(response.data.length); // Contar as conquistas

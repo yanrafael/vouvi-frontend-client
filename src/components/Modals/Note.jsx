@@ -15,7 +15,7 @@ function Note() {
     };
 
     try {
-      await axios.post("http://3.134.245.183:3000/annotation", newAnnotation); // Faz o POST
+      await axios.post("https://backend.vouvi.com.br/annotation", newAnnotation); // Faz o POST
       alert("Anotação salva com sucesso!"); // Alerta de sucesso
       setTitle(""); // Limpa o campo de título
       setNote(""); // Limpa o campo de texto

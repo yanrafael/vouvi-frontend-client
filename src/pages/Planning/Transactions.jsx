@@ -32,7 +32,7 @@ function Transactions() {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    axios.get('http://3.134.245.183:3000/transaction')
+    axios.get('https://backend.vouvi.com.br/transaction')
       .then(response => {
         // Ordena as transações por data, mais recentes primeiro
         const sortedTransactions = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
