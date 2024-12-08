@@ -1,10 +1,10 @@
-
 import Subscription from "../../components/Cards/SubscriptionCard";
 import subscriptionHover from "../../assets/images/subscription-hover.svg";
 import subscriptionStar from "../../assets/images/subscription-star.svg";
 import subscriptionStar2 from "../../assets/images/subscription-star2.svg";
 import subscriptionStar3 from "../../assets/images/subscription-star3.svg";
-import HeaderWhite from "../../components/Header/HeaderWhite";
+import HeaderIntern from "../../components/Header/HeaderIntern";
+import AvatarFull from "../../components/Header/AvatarFull";
 import Footer from "../../components/Footer/Footer";
 
 import AOS from "aos";
@@ -52,7 +52,6 @@ const PrevArrow = ({ className, style, onClick }) => {
 };
 
 function Plans() {
-
   const [darkMode, setDarkMode] = useState(
     document.body.classList.contains("dark"),
   );
@@ -96,7 +95,13 @@ function Plans() {
 
   return (
     <>
-    <HeaderWhite darkMode={darkMode} setDarkMode={setDarkMode} />
+      <HeaderIntern
+        iconActiveNumber={1}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
+      >
+        <AvatarFull />
+      </HeaderIntern>
       <section data-aos="fade-right">
         <h1
           className={`${TextGradient} mt-[160px] text-center text-[36px] font-medium leading-[1.1] sm:text-[50px] md:text-[72px] lg:text-[90px] xl:leading-[1.2]`}
@@ -185,5 +190,4 @@ function Plans() {
   );
 }
 
-export default Plans;  
-
+export default Plans;
