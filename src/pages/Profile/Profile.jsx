@@ -50,7 +50,7 @@ function Profile() {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:3000/achieved/${userId}`)
+        .get(`http://3.134.245.183:3000/achieved/${userId}`)
         .then((response) => {
           setAchievements(response.data);
           setAchievementCount(response.data.length); // Contar as conquistas

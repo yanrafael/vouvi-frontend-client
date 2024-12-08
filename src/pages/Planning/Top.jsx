@@ -43,7 +43,7 @@ function Top({ onClick, onClick2 }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/transaction")
+      .get("http://3.134.245.183:3000/transaction")
       .then((response) => {
         const fetchedTransactions = response.data;
 
@@ -69,7 +69,7 @@ function Top({ onClick, onClick2 }) {
         setTransactions(fetchedTransactions);
       })
       .catch((error) => console.error("Erro ao buscar transações:", error));
-  }, []);
+  }, [balance, income, expense]);
 
   return (
     <div className="md:w-[97%] lg:w-full">

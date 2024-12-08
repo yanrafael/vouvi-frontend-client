@@ -5,17 +5,6 @@ import { useState } from "react";
 import axios from "axios";
 
 function NewExpense() {
-  const userAccounts = [
-    { id: 0, name: "nu" },
-    { id: 1, name: "carteira" },
-    { id: 2, name: "depósitos" },
-  ];
-
-  const userCategories = [
-    { id: 0, name: "salário" },
-    { id: 1, name: "freelance" },
-    { id: 2, name: "investimentos" },
-  ];
 
   const [title, setTitle] = useState("");
   const [ammount, setAmmount] = useState(0);
@@ -42,7 +31,7 @@ function NewExpense() {
     };
 
     axios
-      .post("http://localhost:3000/transaction/add", newTransaction)
+      .post("http://3.134.245.183:3000/transaction/add", newTransaction)
       .then((response) => {
         console.log("Transação salva com sucesso:", response.data);
         clearForm();

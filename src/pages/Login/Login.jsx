@@ -24,7 +24,7 @@ function Form() {
     setError(""); // Limpa qualquer erro anterior
 
     try {
-      const response = await axios.post("http://localhost:3000/users/login", {
+      const response = await axios.post("http://3.134.245.183:3000/users/login", {
         email: email,
         password: password,
       });
@@ -97,6 +97,8 @@ function Form() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
+
+                {error}
                 <KeepConected />
               </div>
               <div className="flex w-full items-center justify-center">

@@ -10,7 +10,7 @@ function NotesModal() {
     useEffect(() => {
       const fetchNotes = async () => {
         try {
-          const response = await axios.get("http://localhost:3000/annotation");
+          const response = await axios.get("http://3.134.245.183:3000/annotation");
           setNotes(response.data); // Atualiza o estado com as anotações do backend
         } catch (error) {
           console.error("Erro ao buscar anotações:", error);

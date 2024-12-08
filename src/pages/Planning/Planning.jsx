@@ -41,7 +41,7 @@ function Planning() {
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/transaction")
+      .get("http://3.134.245.183:3000/transaction")
       .then((response) => setTransactions(response.data))
       .catch((error) => console.error("Erro ao buscar conquistas:", error));
   }, []);
