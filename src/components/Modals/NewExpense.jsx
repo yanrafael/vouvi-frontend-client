@@ -1,19 +1,10 @@
 import Modal from "./Modal";
 import hideModal from "../../utils/hideModal";
+import showModal from "../../utils/showModal";
 import { useState } from "react";
+import axios from "axios";
 
 function NewExpense() {
-  const userAccounts = [
-    { id: 0, name: "nu" },
-    { id: 1, name: "carteira" },
-    { id: 2, name: "depósitos" },
-  ];
-
-  const userCategories = [
-    { id: 0, name: "salário" },
-    { id: 1, name: "freelance" },
-    { id: 2, name: "investimentos" },
-  ];
 
   const [title, setTitle] = useState("");
   const [ammount, setAmmount] = useState(0);
@@ -27,6 +18,28 @@ function NewExpense() {
     setDate(new Date().toISOString().split("T")[0]);
     setAccount(0);
     setCategory(0);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const newTransaction = {
+      title: title,
+      value: -Math.abs(parseFloat(ammount)),
+      type: "Saída", // Definido como 'Saída', ou ajuste conforme necessário.
+      date: date,
+    };
+
+    axios
+      .post("https://backend.vouvi.com.br/transaction/add", newTransaction)
+      .then((response) => {
+        console.log("Transação salva com sucesso:", response.data);
+        clearForm();
+        hideModal("new-expense"); // Fecha o modal após a requisição.
+      })
+      .catch((error) => {
+        console.error("Erro ao salvar a transação:", error);
+      });
   };
 
   return (
@@ -85,44 +98,39 @@ function NewExpense() {
         <div className="flex gap-5">
           <div className="flex w-1/2 flex-col">
             <label htmlFor="account">Conta/Cartão</label>
-            <select
+            <button
               name="account"
               id="account"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 p-2 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={account}
-              onChange={(event) => setAccount(event.target.value)}
+              onClick={() => showModal("choose-account")}
             >
-              {userAccounts.map((account) => (
-                <option key={account.id} value={account.id}>
-                  {account.name}
-                </option>
-              ))}
-            </select>
+              Conta
+            </button>
           </div>
 
           <div className="flex w-1/2 flex-col">
             <label htmlFor="category">Categoria:</label>
-            <select
+            <button
               name="category"
               id="category"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 p-2 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={category}
-              onChange={(event) => setCategory(event.target.value)}
+              onClick={() => showModal("choose-expense-category")}
             >
-              {userCategories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
+              Categoria
+            </button>
           </div>
         </div>
 
-        <button className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0">
+        <button className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0"
+        type="button"
+        onClick={() => showModal("new-repetition")}>
           Adicionar repetição
         </button>
 
         <button
+          onClick={handleSubmit}
           className={`flex w-full items-center justify-center rounded-sm bg-primary-200 p-3 font-bold text-white transition-all duration-200 hover:bg-secondary-200 hover:text-black`}
         >
           <p className="md:text-md sm:text-[20px] xs:text-[18px] text-[14px]">Salvar</p>

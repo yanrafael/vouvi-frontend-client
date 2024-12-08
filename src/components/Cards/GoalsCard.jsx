@@ -4,6 +4,7 @@ import conclude from "../../assets/images/goals-conclude.svg";
 import notStarted from "../../assets/images/goals-notstarted.svg";
 import delayed from "../../assets/images/goals-delayed.svg";
 import { useEffect, useState } from "react";
+import showModal from "../../utils/showModal";
 
 function GoalsCard({ objective, actualValue, maxValue, date }) {
   const [iconBar, setIconBar] = useState(null);
@@ -56,24 +57,32 @@ function GoalsCard({ objective, actualValue, maxValue, date }) {
   }, [progression, currentDate, objectiveDate]);
 
   return (
-    <div className="flex flex-col rounded-md bg-[#86868633] xl:px-14 py-8 lg:px-8 md:px-4 sm:px-6 px-4 dark:bg-[#1B1B1B]">
-      <p className="2xl:text-base xl:text-[32px] lg:text-[28px] sm:text-[24px] text-[20px] text-[#878787]">{objective}</p>
-      <div className="mt-4 flex items-center gap-5">
-        <div className={`${bgColor} h-fit w-fit flex-none rounded-full xl:p-4 lg:p-2 lg:px-3 md:p-1 md:px-2 sm:p-3 sm:px-3 p-1 px-[8px]`}>
-          <Icon icon="fa6-solid:house" width="36px" className="text-white xl:w-auto lg:w-[24px] md:w-[20px] sm:w-[28px] w-[20px]" />
+    <div onClick={() => showModal("update-goal")} className="relative flex flex-col rounded-md bg-[#86868633] px-4 py-8 sm:px-6 md:px-4 lg:px-8 xl:px-14 dark:bg-[#1B1B1B] group">
+      <p className="text-[20px] text-[#878787] sm:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-base group-hover:opacity-0 transition-opacity duration-300">
+        {objective}
+      </p>
+      <div className="mt-4 flex items-center gap-5 group-hover:opacity-0 transition-opacity duration-300">
+        <div
+          className={`${bgColor} h-fit w-fit flex-none rounded-full p-1 px-[8px] sm:p-3 sm:px-3 md:p-1 md:px-2 lg:p-2 lg:px-3 xl:p-4`}
+        >
+          <Icon
+            icon="fa6-solid:house"
+            width="36px"
+            className="w-[20px] text-white sm:w-[28px] md:w-[20px] lg:w-[24px] xl:w-auto"
+          />
         </div>
         <div className="flex w-full flex-col justify-between">
-          <div className="flex justify-between 2xl:text-[32px] xl:text-[28px] lg:text-[24px] sm:text-[20px] text-[14px] text-[#6F6F6F]">
+          <div className="flex justify-between text-[14px] text-[#6F6F6F] sm:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
             <p>{describeText}</p>
             <p>{progression}%</p>
           </div>
-          <div className="m-auto flex 2xl:h-[25px] xl:h-[20px] lg:h-[16px] md:h-[12px] h-[8px ] w-[100%] rounded-md bg-[#F5F5F480]">
+          <div className="h-[8px ] m-auto flex w-[100%] rounded-md bg-[#F5F5F480] md:h-[12px] lg:h-[16px] xl:h-[20px] 2xl:h-[25px]">
             <div
               style={{ width: `${progression}%` }}
               className={` ${bgColor} rounded-md`}
             ></div>
           </div>
-          <div className="flex justify-between 2xl:text-[32px] xl:text-[28px] lg:text-[24px] sm:text-[20px] text-[14px] text-[#6F6F6F]">
+          <div className="flex justify-between text-[14px] text-[#6F6F6F] sm:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[32px]">
             <p>
               R${actualValue.toFixed(2)} / R${maxValue.toFixed(2)}
             </p>
@@ -85,6 +94,17 @@ function GoalsCard({ objective, actualValue, maxValue, date }) {
         <div>
           <img src={iconBar} alt="Icone de progresso" />
         </div>
+      </div>
+      {/* Animação Hover */}
+      <div
+        className={`absolute cursor-pointer w-full flex justify-center h-full items-center left-0 top-0 opacity-0 group-hover:opacity-100 text-base group-hover:transition-all group-hover:duration-300 lg:gap-1 text-[#6F6F6F]`}
+      >
+        <Icon
+          icon="typcn:plus"
+          width="25px"
+          className="w-4 xs:w-5 md:w-4 lg:w-full xl:w-[20px] 2xl:w-[25px]"
+        />
+        <h1 className="">Alterar</h1>
       </div>
     </div>
   );

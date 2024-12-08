@@ -1,6 +1,8 @@
 import Modal from "./Modal";
 import hideModal from "../../utils/hideModal";
+import showModal from "../../utils/showModal";
 import { useState } from "react";
+import axios from "axios";
 
 function NewIncome() {
   const [title, setTitle] = useState("");
@@ -15,6 +17,28 @@ function NewIncome() {
     setDate(new Date().toISOString().split("T")[0]);
     setAccount(0);
     setCategory(0);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const newTransaction = {
+      title: title,
+      value: parseFloat(ammount),
+      type: "Entrada", // Definido como 'Entrada', ou ajuste conforme necessário.
+      date: date, // Ajustar para a data correta.
+    };
+
+    axios
+      .post("https://backend.vouvi.com.br/transaction/add", newTransaction)
+      .then((response) => {
+        console.log("Transação salva com sucesso:", response.data);
+        clearForm();
+        hideModal("new-income"); // Fecha o modal após a requisição.
+      })
+      .catch((error) => {
+        console.error("Erro ao salvar a transação:", error);
+      });
   };
 
   return (
@@ -79,7 +103,7 @@ function NewIncome() {
               type="button"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={account}
-              onChange={(event) => setAccount(event.target.value)}
+              onClick={() => showModal("choose-account")}
             >
               Conta
             </button>
@@ -93,7 +117,7 @@ function NewIncome() {
               type="button"
               className="w-full rounded-md sm:border-4 border-[3px] border-primary-200 sm:p-2 p-1 md:text-md sm:text-[20px] dark:border-secondary-200 dark:bg-black"
               value={category}
-              onChange={(event) => setCategory(event.target.value)}
+              onClick={() => showModal("choose-income-category")}
             >
               Categoria
             </button>
@@ -103,11 +127,13 @@ function NewIncome() {
         <button
           type="button"
           className="rounded-sm bg-black/40 p-3 font-bold transition-all duration-200 hover:bg-black/0 xs:text-[18px] text-[14px]"
+          onClick={() => showModal("new-repetition")}
         >
           Adicionar repetição
         </button>
 
         <button
+          onClick={handleSubmit}
           className={`flex w-full items-center justify-center rounded-sm bg-primary-200 p-3 font-bold text-white transition-all duration-200 hover:bg-secondary-200 hover:text-black`}
         >
           <p className="md:text-md sm:text-[20px] xs:text-[18px] text-[14px]">Salvar</p>

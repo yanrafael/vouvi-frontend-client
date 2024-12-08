@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 import HeaderMobile from "../../components/Header/HeaderMobile";
 import HeaderIntern from "../../components/Header/HeaderIntern";
@@ -8,6 +10,7 @@ import Footer from "../../components/Footer/Footer";
 // Modals
 import NewIncome from "../../components/Modals/NewIncome";
 import NewExpense from "../../components/Modals/NewExpense";
+import NewRepetition from "../../components/Modals/NewRepetition";
 import NotesModal from "../../components/Modals/NotesModal";
 import Note from "../../components/Modals/Note";
 import BudgetModal from "../../components/Modals/BudgetModal";
@@ -22,6 +25,8 @@ import FinancialPerformance from "../../components/Modals/Financialperformance";
 import Top from "./Top";
 import Graphics from "./Graphics";
 import Goals from "./Goals";
+import CreateGoals from "../../components/Modals/GoalsCreate";
+import GoalsUpdate from "../../components/Modals/GoalsUpdate";
 
 function Planning() {
   const [darkMode, setDarkMode] = useState(
@@ -37,6 +42,7 @@ function Planning() {
     <>
       <NewIncome />
       <NewExpense />
+      <NewRepetition />
       <NotesModal />
       <Note />
       <BudgetModal />
@@ -48,13 +54,15 @@ function Planning() {
       <FinancialMissions />
       <TipFromFin />
       <FinancialPerformance />
+      <CreateGoals/>
+      <GoalsUpdate/>
 
       <HeaderIntern
         iconActiveNumber={1}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       >
-        <AvatarFull name={"Miro"} xp={"2000"} vcoins={"2000"} />
+        <AvatarFull />
       </HeaderIntern>
 
       <main className="m-auto w-11/12">
@@ -64,7 +72,7 @@ function Planning() {
       </main>
 
       <Footer />
-      <HeaderMobile iconId={1}/>
+      <HeaderMobile iconId={1} />
     </>
   );
 }

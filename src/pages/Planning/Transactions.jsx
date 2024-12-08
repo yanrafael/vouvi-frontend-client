@@ -4,121 +4,121 @@ import convertFloat from "../../utils/convertFloat";
 import { Icon } from "@iconify/react";
 import showModal from "../../utils/showModal";
 
-const dailyTransactions = [
-  {
-    iconSrc: "carbon:money",
-    description: "Salário",
-    value: 2000,
-    type: "Entrada",
-    date: "01/09/2021",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Mercado",
-    value: 200,
-    type: "Saída",
-    date: "06/11/2024",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Salário",
-    value: 2000,
-    type: "Entrada",
-    date: "01/09/2021",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Mercado",
-    value: 200,
-    type: "Saída",
-    date: "06/11/2024",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Salário",
-    value: 2000,
-    type: "Entrada",
-    date: "01/09/2021",
-  },
-  {
-    iconSrc: "carbon:money",
-    description: "Mercado",
-    value: 200,
-    type: "Saída",
-    date: "06/11/2024",
-  },
-];
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function DailyTransaction({ description, value, type, date, iconSrc }) {
+  
   return (
-    <li className="mb-2 flex justify-around rounded-md bg-white xl:p-3 p-2 2xl:text-md xl:text-[22px] lg:text-[18px] md:text-[16px] sm:text-[18px] xs:text-[14px] text-[12px] dark:bg-black">
+    <li className="mb-2 flex justify-around rounded-md bg-white p-2 text-[12px] xs:text-[14px] sm:text-[18px] md:text-[16px] lg:text-[18px] xl:p-3 xl:text-[22px] 2xl:text-md dark:bg-black">
       <div className="flex items-center">
-        <Icon icon={iconSrc} className="2xl:h-12 2xl:w-12 xl:h-10 xl:w-10 md:h-8 md:w-8 sm:w-10 sm:h-10 xs:w-7 xs:h-7 w-5 h-5 rounded-full bg-yellow xl:p-2 md:p-1 sm:p-2 xs:p-1 p-[2px]" />
-        <span className="w-1/4 xl:p-4 md:p-2 p-1">{description}</span>
+        <Icon
+          icon={iconSrc}
+          className="h-5 w-5 rounded-full bg-yellow p-[2px] xs:h-7 xs:w-7 xs:p-1 sm:h-10 sm:w-10 sm:p-2 md:h-8 md:w-8 md:p-1 xl:h-10 xl:w-10 xl:p-2 2xl:h-12 2xl:w-12"
+        />
+        <span className="w-1/4 p-1 md:p-2 xl:p-4">{description}</span>
       </div>
-      <span className="w-1/3 xl:p-4 lg:p-3 md:pt-2 p-2 px-0 text-center">R$ {convertFloat(value)}</span>
-      <span className="w-1/4 xl:p-4 lg:p-3 md:p-2 p-2 text-center">{type}</span>
-      <span className="w-1/4 xl:p-4 lg:p-3 md:p-2 p-2">{date}</span>
+      <span className="w-1/3 p-2 px-0 text-center md:pt-2 lg:p-3 xl:p-4">
+        R$ {convertFloat(value)}
+      </span>
+      <span className="w-1/4 p-2 text-center md:p-2 lg:p-3 xl:p-4">{type}</span>
+      <span className="w-1/4 p-2 md:p-2 lg:p-3 xl:p-4">{date}</span>
     </li>
   );
 }
 
 function Transactions() {
+
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://backend.vouvi.com.br/transaction')
+      .then(response => {
+        // Ordena as transações por data, mais recentes primeiro
+        const sortedTransactions = response.data.sort((a, b) => new Date(b.date) - new Date(a.date));
+        setTransactions(sortedTransactions);
+      })
+      .catch(error => console.error('Erro ao buscar transações:', error));
+  }, [transactions]);
+
+  
+  
+  
   const performance = 88;
 
   return (
-    <div className="mt-10 flex w-full md:flex-row flex-col justify-between dark:text-white">
-      <div className="md:w-7/12 sm:w-full rounded-md bg-[#888] bg-opacity-20 p-6 dark:bg-[#1B1B1B]">
-        <h3 className="w-fit rounded-xl bg-primary-200 p-2 lg:text-md md:text-[26px] sm:text-[3vw] text-[18px] font-semibold text-white dark:bg-black">
+    <div className="mt-10 flex w-full flex-col justify-between md:flex-row dark:text-white">
+      <div className="rounded-md bg-[#888] bg-opacity-20 p-6 sm:w-full md:w-7/12 dark:bg-[#1B1B1B]">
+        <h3 className="w-fit rounded-xl bg-primary-200 p-3 font-semibold text-white sm:text-[3vw] md:text-[26px] lg:text-[32px] dark:bg-black py-1">
           Transações
         </h3>
 
         <br />
 
         <ul className="max-h-96 overflow-y-scroll">
-          <li className="sm:mb-2 xs:mb-0 flex justify-around text-md md:text-[20px] sm:text-[16px] xs:text-[14px] text-[17px]">
+          <li className="flex justify-around text-[17px] text-md xs:mb-0 xs:text-[14px] sm:mb-2 sm:text-[16px] md:text-[20px]">
             <span className="w-1/4 p-4 text-center font-bold">Descrição</span>
-            <span className="w-1/4 lg:p-4 md:py-4 md:pl-10 xs:pl-0 pl-[39px] p-4 text-center font-bold">Valor</span>
-            <span className="w-1/4 lg:p-4 md:py-4 md:pl-4 xs:pl-0 pl-7 p-4 text-center font-bold">Tipo</span>
+            <span className="w-1/4 p-4 pl-[39px] text-center font-bold xs:pl-0 md:py-4 md:pl-10 lg:p-4">
+              Valor
+            </span>
+            <span className="w-1/4 p-4 pl-7 text-center font-bold xs:pl-0 md:py-4 md:pl-4 lg:p-4">
+              Tipo
+            </span>
             <span className="w-1/4 p-4 text-center font-bold">Data</span>
           </li>
 
-          {dailyTransactions.map((transaction, index) => (
-            <DailyTransaction key={index} {...transaction} />
+          {transactions.map((transaction) => (
+            <DailyTransaction
+              key={transaction.id}
+              description={transaction.title}
+              value={transaction.value}
+              type={transaction.type}
+              date={new Date(transaction.date).toLocaleDateString('pt-BR')}
+              iconSrc="carbon:money"
+            />
           ))}
         </ul>
       </div>
 
-      <div className="relative flex md:w-2/5 sm:w-full flex-col items-center rounded-md bg-[#888] bg-opacity-20 p-6 dark:bg-[#1B1B1B] md:mt-0 mt-5">
-        <h3 className="lg:text-lg md:text-base sm:text-base xs:text-[32px] text-[28px]">Desempenho Financeiro</h3>
-        <PieChart
-          series={[
-            {
-              data: [
-                { id: 0, value: 50, color: "#480ca8" },
-                { id: 1, value: 15, color: "#560bad" },
-                { id: 2, value: 15, color: "#7209b7" },
-                { id: 3, value: 20, color: "#b5179E" },
-              ],
-
-              innerRadius: (window.innerWidth>768&&window.innerWidth<1024)?100:150,
-              outerRadius: (window.innerWidth>768&&window.innerWidth<1024)?120:180,
-              cornerRadius: 35,
-              startAngle: -90,
-              endAngle: 90,
-              paddingAngle: 3,
-            },
-          ]}
-          margin={{ top: 150, right: 0, bottom: 0, left: 0 }}
-          width={600}
-          height={300}
-        />
-
-        <span className="absolute lg:top-1/2 top-1/2 md:top-[55%] lg:text-xl md:text-lg text-lg">{performance}%</span>
-
-        <button onClick={() => showModal ("financial-performance")} className="lg:w-4/6 md:w-3/5 w-full rounded-md border-4 border-black py-3 text-md md:text-[20px] dark:border-white ">
-          Saiba Mais
-        </button>
+      <div className="relative mt-5 flex flex-col rounded-md bg-[#888] bg-opacity-20 p-1 sm:w-full md:mt-0 md:w-2/5 dark:bg-[#1B1B1B] pb-10">
+        <h3 className="xl:m-8 lg:m-6 m-5 lg:text-nowrap font-medium 2xl:text-[32px] xl:text-base lg:text-[30px] md:text-[28px] sm:text-[3vw] text-[20px] text-white bg-primary-200  dark:bg-black w-fit p-4 py-3 rounded-2xl">
+          Desempenho Financeiro
+        </h3>
+        <div className="flex flex-col items-center">
+          <PieChart
+            series={[
+              {
+                data: [
+                  { id: 0, value: 50, color: "#480ca8" },
+                  { id: 1, value: 15, color: "#560bad" },
+                  { id: 2, value: 15, color: "#7209b7" },
+                  { id: 3, value: 20, color: "#b5179E" },
+                ],
+                innerRadius:
+                  window.innerWidth > 768 && window.innerWidth < 1024 ? 100 : 150,
+                outerRadius:
+                  window.innerWidth > 768 && window.innerWidth < 1024 ? 120 : 180,
+                cornerRadius: 35,
+                startAngle: -90,
+                endAngle: 90,
+                paddingAngle: 3,
+              },
+            ]}
+            margin={{ top: 150, right: 0, bottom: 0, left: 0 }}
+            width={600}
+            height={300}
+          />
+          <span className="absolute top-1/2 text-lg md:top-[55%] md:text-lg lg:top-1/2 lg:text-xl">
+            {performance}%
+          </span>
+          <button
+            tabIndex="0"
+            onClick={() => showModal("financial-performance")}
+            className="w-full rounded-md border-4 border-black py-3 text-md md:w-3/5 md:text-[20px] lg:w-4/6 dark:border-white"
+          >
+            Saiba Mais
+          </button>
+        </div>
       </div>
     </div>
   );

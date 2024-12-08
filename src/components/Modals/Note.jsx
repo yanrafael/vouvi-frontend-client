@@ -1,9 +1,29 @@
 import Modal from "./Modal";
 import { useState } from "react";
+import axios from "axios";
 
 function Note() {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
+
+  const handleSave = async (event) => {
+    event.preventDefault(); // Evita o comportamento padrão do formulário
+
+    const newAnnotation = {
+      title: title,
+      text: note,
+    };
+
+    try {
+      await axios.post("https://backend.vouvi.com.br/annotation", newAnnotation); // Faz o POST
+      alert("Anotação salva com sucesso!"); // Alerta de sucesso
+      setTitle(""); // Limpa o campo de título
+      setNote(""); // Limpa o campo de texto
+    } catch (error) {
+      console.error("Erro ao salvar a anotação:", error);
+      alert("Erro ao salvar a anotação. Tente novamente."); // Alerta de erro
+    }
+  };
 
   return (
     <Modal
@@ -14,12 +34,7 @@ function Note() {
       iconWidth={32}
       top
     >
-      <form
-        onSubmit={(event) => {
-          event.target.reset();
-        }}
-        className="w-[35vw]"
-      >
+      <form onSubmit={handleSave} className="w-[35vw]">
         <div className="flex flex-col rounded-md bg-[#FFB515] p-4">
           <input
             type="text"
@@ -42,15 +57,25 @@ function Note() {
                 "repeating-linear-gradient(to bottom, #FFB515, #FFB515 2.3rem, #000 2.3rem, #000 2.5rem)",
               backgroundColor: "rgba(0, 0, 0, 0)",
             }}
-            maxLength={150}
+            maxLength={300}
           ></textarea>
         </div>
 
         <div className="mt-8 flex w-full justify-between text-[30px] font-bold">
-          <button className="rounded-sm bg-black/50 p-6 transition-colors hover:bg-[#FFB515]">
+          <button
+            type="button" // Define o botão como "button" para evitar o envio automático
+            onClick={() => {
+              setTitle(""); // Limpa o campo de título
+              setNote(""); // Limpa o campo de texto
+            }}
+            className="rounded-sm bg-black/50 p-6 transition-colors hover:bg-[#FFB515]"
+          >
             Cancelar
           </button>
-          <button className="rounded-sm p-6 transition-colors hover:bg-[#FFB515]">
+          <button
+            type="submit" // Submete o formulário
+            className="rounded-sm p-6 transition-colors hover:bg-[#FFB515]"
+          >
             Salvar anotação
           </button>
         </div>

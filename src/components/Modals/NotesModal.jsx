@@ -1,17 +1,33 @@
 import Modal from "./Modal";
 import NoteCard from "../Cards/NoteCard";
 import showModal from "../../utils/showModal";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function NotesModal() {
-  const nota =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua jkvofmapfmo jfkldjaokfj jo jfodkaj fofdjaofjodsaj fjkamfioewjmkl joi fdjaoj fojdao pfj odasifjsdoaio.";
+  const [notes, setNotes] = useState([]); // Estado para armazenar anotações
+
+    useEffect(() => {
+      const fetchNotes = async () => {
+        try {
+          const response = await axios.get("https://backend.vouvi.com.br/annotation");
+          setNotes(response.data); // Atualiza o estado com as anotações do backend
+        } catch (error) {
+          console.error("Erro ao buscar anotações:", error);
+        }
+      };
+  
+      fetchNotes();
+    }, [notes]);
+  
+    const sortedNotes = [...notes].sort((a, b) => b.id - a.id);
 
   return (
     <Modal
       title="Anotações livres"
       id="notes-modal"
-      icon={"mdi:note-outline"}
-      iconColor={"green"}
+      icon={"solar:notes-bold"}
+      iconColor={"#8B4A00"}
       iconWidth={32}
       top
     >
@@ -20,23 +36,16 @@ function NotesModal() {
           <button
             onClick={() => showModal("note-modal")}
             type="button"
-            className="w-full rounded-[9px] border-4 border-[#8B4A00] p-2 sm:text-md xs:text-[20px] text-[18px] font-semibold text-[#8B4A00] transition-all hover:text-black"
+            className="w-full rounded-[16px] border-4 dark:bg-yellow bg-[transparent] dark:border-0 border-[#8B4A00] p-2 sm:text-md xs:text-[20px] text-[18px] font-semibold text-[#8B4A00] transition-all duration-300 dark:hover:bg-white hover:text-black"
           >
             Adicionar anotação
           </button>
         </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
-        <li>
-          <NoteCard title="Título" content={nota} />
-        </li>
+        {sortedNotes.map((note) => (
+          <li key={note.id}>
+            <NoteCard title={note.title} content={note.text} />
+          </li>
+        ))}
       </ul>
     </Modal>
   );
