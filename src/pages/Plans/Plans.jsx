@@ -96,7 +96,7 @@ function Plans() {
   return (
     <>
       <HeaderIntern
-        iconActiveNumber={1}
+        iconActiveNumber={''}
         darkMode={darkMode}
         setDarkMode={setDarkMode}
       >

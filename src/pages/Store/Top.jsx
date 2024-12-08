@@ -7,6 +7,7 @@ import StoreButton from "../../components/Buttons/StoreButton";
 
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 function Top() {
   const [btnColor, setBtnColor] = useState(0);
@@ -27,7 +28,9 @@ function Top() {
             toda a família.
           </p>
           <div className="relative mt-14 w-fit pb-10">
-            <PrimaryButton text={"Assinar agora!"} />
+            <Link to='/plans'>
+              <PrimaryButton text={"Assinar agora!"} />
+            </Link>
           </div>
         </div>
         <img
