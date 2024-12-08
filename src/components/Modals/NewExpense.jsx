@@ -35,7 +35,7 @@ function NewExpense() {
       .then((response) => {
         console.log("Transação salva com sucesso:", response.data);
         clearForm();
-        hideModal("new-income"); // Fecha o modal após a requisição.
+        hideModal("new-expense"); // Fecha o modal após a requisição.
       })
       .catch((error) => {
         console.error("Erro ao salvar a transação:", error);
